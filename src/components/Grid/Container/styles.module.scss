@@ -1,0 +1,23 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.container {
+	position: relative;
+
+	margin: 1rem auto;
+	padding: 0 1rem;
+
+	width: 100%;
+
+	@include media-query("lg") {
+		padding: 0 2.5rem;
+	}
+}
+
+.fullHeight {
+	height: 100%;
+}
+
+.customWidth {
+	max-width: var(--custom-width);
+}

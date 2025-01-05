@@ -1,0 +1,54 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+
+	flex: 0 1 auto;
+	min-height: calc(100% + 1rem);
+	margin: -0.5rem;
+
+	& + & {
+		margin-top: 1rem;
+	}
+}
+
+.nowrap {
+	flex-wrap: nowrap;
+}
+
+.fitContent {
+	width: fit-content;
+}
+
+@each $bpName in $breakpointsNames {
+	@include media-query($bpName, "min") {
+		@each $al in $align {
+			$value: nth($al, 2);
+
+			.#{$bpName}Align-#{$value} {
+				align-items: $value;
+			}
+		}
+
+		@each $ju in $justify {
+			$value: nth($ju, 2);
+
+			.#{$bpName}Justify-#{$value} {
+				justify-content: $value;
+			}
+		}
+
+		@for $i from 1 to 20 {
+			.#{$bpName}Order-#{$i} {
+				order: $i;
+			}
+		}
+
+		.#{$bpName}Reverse {
+			flex-direction: row-reverse;
+		}
+	}
+}

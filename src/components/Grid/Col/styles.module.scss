@@ -1,0 +1,45 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.col {
+	box-sizing: border-box;
+	max-width: 100%;
+
+	padding: 0.5rem;
+	flex: 1;
+
+	& {
+		min-height: auto;
+	}
+}
+
+@each $bpName in $breakpointsNames {
+	@include media-query($bpName, "min") {
+		@each $col in $columns {
+			.#{$bpName}-#{$col} {
+				flex-basis: #{(100 / 12) * $col} + "%";
+				max-width: #{(100 / 12) * $col} + "%";
+			}
+		}
+
+		@each $offset in $offsets {
+			.#{$bpName}Offset-#{$offset} {
+				margin-left: #{(100 / 12) * $offset} + "%";
+			}
+		}
+
+		@each $al in $align {
+			$value: nth($al, 2);
+
+			.#{$bpName}AlignSelf-#{$value} {
+				align-self: $value;
+			}
+		}
+
+		@for $i from 1 to 20 {
+			.#{$bpName}Order-#{$i} {
+				order: $i;
+			}
+		}
+	}
+}

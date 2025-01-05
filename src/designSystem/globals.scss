@@ -1,0 +1,101 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+:root {
+	// color palette
+	--neutral-background: #ffffff;
+	--neutral-light: #f3f4f6;
+	--neutral-border: #a8b0bd;
+	--neutral-text: #121417;
+
+	--primary-hover: #000a33;
+	--primary-main: #0a1fa3;
+	--primary-active: #2548f8;
+	--primary-contrast-text: #000000;
+
+	--accent-hover: #00c27a;
+	--accent-main: #00e48f;
+	--accent-active: #00ffa0;
+	--accent-contrast-text: #000a33;
+}
+
+// dark theme
+[data-theme="dark"] {
+	// color palette
+	--neutral-background: #121417;
+	--neutral-border: #dcdfe5;
+	--neutral-text: #ffffff;
+}
+
+// global reset
+*,
+*::after,
+*:before {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	font-family: inherit;
+}
+
+html,
+body {
+	scroll-behavior: smooth;
+	height: -webkit-fill-available;
+
+	background-color: var(--neutral-background);
+	color: var(--neutral-text);
+
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+
+	font-family: var(--font-inter);
+	font-display: swap;
+	font-size: 16px;
+	line-height: 1.3;
+}
+
+body {
+	overflow-x: hidden;
+	margin-right: calc(-1 * (100vw - 100%));
+
+	&.freeze {
+		overflow-y: hidden;
+	}
+}
+
+main {
+	width: 100%;
+	height: 100%;
+}
+
+h1,
+h2,
+h3,
+h4 {
+	font-family: var(--font-grotesk);
+	font-weight: 400;
+	font-size: 2rem;
+}
+
+a {
+	font-weight: 500;
+	color: var(--primary-active);
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		color: var(--primary-active);
+	}
+}
+
+button {
+	cursor: pointer;
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit;
+}

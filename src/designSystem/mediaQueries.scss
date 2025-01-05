@@ -1,0 +1,18 @@
+@import "variables";
+
+// Mixin for both min-width and max-width media queries
+@mixin media-query($breakpoint, $type: "min") {
+	$query: "";
+
+	@if $type == "min" {
+		$query: "min-width: #{map-get($breakpoints, $breakpoint)}px";
+	} @else if $type == "max" {
+		$query: "max-width: #{map-get($breakpoints, $breakpoint) - 1}px";
+	} @else {
+		@error "Invalid media query type. Use 'min' or 'max'.";
+	}
+
+	@media only screen and (#{$query}) {
+		@content;
+	}
+}
