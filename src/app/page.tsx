@@ -3,10 +3,12 @@ import Col from "@/components/atoms/Grid/Col";
 import Container from "@/components/atoms/Grid/Container";
 import Row from "@/components/atoms/Grid/Row";
 import { Justify } from "@/components/atoms/Grid/interfaces";
+import Homepage from "@/pages/Homepage";
 
 export default function Home() {
   return (
     <main>
+      <Homepage />
       <Background>
         <Container fullHeight>
           <Row>

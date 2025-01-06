@@ -1,0 +1,24 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.background {
+  --sidebar-width: 300px;
+  --background-color: var(--neutral-background);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  height: 100%;
+  min-height: 100vh;
+
+  background: var(--background-color);
+  background-position: center;
+  background-attachment: fixed;
+
+  transition: padding 0.3s ease-in;
+
+  @include media-query("lg") {
+    padding-top: map-get($headerHeight, "md");
+  }
+}
