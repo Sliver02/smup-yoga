@@ -1,8 +1,8 @@
-import Background from "@/components/Background";
-import Col from "@/components/Grid/Col";
-import Container from "@/components/Grid/Container";
-import Row from "@/components/Grid/Row";
-import { Justify } from "@/components/Grid/interfaces";
+import Background from "@/components/atoms/Background";
+import Col from "@/components/atoms/Grid/Col";
+import Container from "@/components/atoms/Grid/Container";
+import Row from "@/components/atoms/Grid/Row";
+import { Justify } from "@/components/atoms/Grid/interfaces";
 
 export default function Home() {
   return (
@@ -11,28 +11,48 @@ export default function Home() {
         <Container fullHeight>
           <Row>
             <Col xs={12} md={4} lg={3}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={4} lg={3}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={4} lg={3}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={12} lg={3}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
@@ -41,14 +61,24 @@ export default function Home() {
           </Row>
           <Row>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
@@ -59,14 +89,24 @@ export default function Home() {
         <Container>
           <Row xsJustify={Justify.between}>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
@@ -75,14 +115,24 @@ export default function Home() {
           </Row>
           <Row xsJustify={Justify.between}>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
             </Col>
             <Col xs={12} md={6}>
-              <div style={{ padding: "0.5rem", border: "1px solid black" }}>
+              <div
+                style={{
+                  padding: "0.5rem",
+                  border: "1px solid var(--neutral-border)",
+                }}
+              >
                 <h1>Lorem ipsum dolor sit amet consectetur.</h1>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
