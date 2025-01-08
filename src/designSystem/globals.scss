@@ -1,40 +1,50 @@
 @import "@/designSystem/variables";
 @import "@/designSystem/mediaQueries";
+@import "@/designSystem/text";
 
 :root {
   // color palette
-  --neutral-background: #ffffff;
-  --neutral-light: #f3f4f6;
-  --neutral-border: #a8b0bd;
-  --neutral-text: #121417;
+  --neutral-background: #f4f6ff;
+  --neutral-light: #f4f6ff;
+  --neutral-border: #bdbfca;
+  --neutral-text: #1c1d23;
 
-  --primary-hover: #000a33;
-  --primary-main: #0a1fa3;
-  --primary-active: #2548f8;
-  --primary-contrast-text: #000000;
+  --primary-hover: #eabdb6;
+  --primary-main: #fee9dd;
+  --primary-active: #fcdad2;
+  --primary-contrast-text: #1c1d23;
 
-  --accent-hover: #00c27a;
-  --accent-main: #00e48f;
-  --accent-active: #00ffa0;
-  --accent-contrast-text: #000a33;
+  --accent-background: #a0314b;
+  --accent-hover: #e05d7c;
+  --accent-main: #e97f95;
+  --accent-active: #f59eb3;
+  --accent-contrast-text: #1c1d23;
+
+  --secondary-light: #edbfe4;
+  --secondary-main: #c886ba;
+  --secondary-dark: #a4528f;
+
+  --thertiary-light: #ffdeb3;
+  --thertiary-main: #f3c98b;
+  --thertiary-dark: #eba055;
 }
 
 // dark theme
-[data-theme="dark"] {
-  // color palette
-  --neutral-background: #121417;
-  --neutral-border: #dcdfe5;
-  --neutral-text: #ffffff;
-}
+// [data-theme="dark"] {
+//   // color palette
+//   --neutral-background: #1c1d23;
+//   --neutral-border: #dcdfe5;
+//   --neutral-text: #ffffff;
+// }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    // color palette
-    --neutral-background: #121417;
-    --neutral-border: #dcdfe5;
-    --neutral-text: #ffffff;
-  }
-}
+// @media (prefers-color-scheme: dark) {
+//   :root {
+//     // color palette
+//     --neutral-background: #1c1d23;
+//     --neutral-border: #bdbfca;
+//     --neutral-text: #f4f6ff;
+//   }
+// }
 
 // global reset
 *,
@@ -64,8 +74,8 @@ body {
 
   font-family: var(--font-inter);
   font-display: swap;
-  font-size: 16px;
-  line-height: 1.3;
+  font-size: $font-md;
+  line-height: 1.2;
 }
 
 body {
@@ -80,15 +90,6 @@ body {
 main {
   width: 100%;
   height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-family: var(--font-grotesk);
-  font-weight: 400;
-  font-size: 2rem;
 }
 
 a {

@@ -1,9 +1,8 @@
-import styles from "./styles.module.scss";
 import { BaseProps } from "@/common/globalInterfaces";
-import Background from "@/components/atoms/Background";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Align } from "@/components/atoms/Grid/interfaces";
+import { Justify } from "@/components/atoms/Grid/interfaces";
 import classNames from "classnames";
+import styles from "./styles.module.scss";
 
 export interface HeroProps extends BaseProps {
   title: string;
@@ -13,16 +12,24 @@ export interface HeroProps extends BaseProps {
 const Hero = ({ className, title, subtitle }: HeroProps) => {
   return (
     <div className={classNames(className, styles.hero)}>
-      <Background backgroundColor="black">
+      <div className={classNames(styles.textWrapper, "text--align-center")}>
         <Container>
-          <Row xsAlign={Align.baseline}>
-            <Col>
+          <Row xsJustify={Justify.center}>
+            <Col xs={12} lg={8}>
               <h1>{title}</h1>
-              <p>{subtitle}</p>
+              <p
+                className={classNames(
+                  "text--strong",
+                  "text--p-xl",
+                  "text--strong"
+                )}
+              >
+                {subtitle}
+              </p>
             </Col>
           </Row>
         </Container>
-      </Background>
+      </div>
     </div>
   );
 };

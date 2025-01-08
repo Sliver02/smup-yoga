@@ -19,7 +19,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -31,7 +31,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -43,7 +43,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -55,7 +55,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -69,7 +69,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -81,7 +81,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -97,7 +97,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -109,7 +109,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -123,7 +123,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
@@ -135,7 +135,7 @@ export default function Home() {
                   border: "1px solid var(--neutral-border)",
                 }}
               >
-                <h1>Lorem ipsum dolor sit amet consectetur.</h1>
+                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
                 voluptatum nisi!
               </div>
