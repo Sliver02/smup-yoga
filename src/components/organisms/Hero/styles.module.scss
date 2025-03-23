@@ -1,15 +1,15 @@
 .hero {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 90vh;
-  max-height: 1150px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 90vh;
+	max-height: 1150px;
 
-  background-color: var(--primary-hover);
+	background-color: var(--primary-hover);
 
-  .textWrapper {
-    width: 100%;
-    display: flex;
-    margin-top: 30vh;
-  }
+	.textWrapper {
+		width: 100%;
+		display: flex;
+		margin-top: 30vh;
+	}
 }

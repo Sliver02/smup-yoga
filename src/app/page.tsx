@@ -6,143 +6,143 @@ import { Justify } from "@/components/atoms/Grid/interfaces";
 import Homepage from "@/pages/Homepage";
 
 export default function Home() {
-  return (
-    <main>
-      <Homepage />
-      <Background>
-        <Container fullHeight>
-          <Row>
-            <Col xs={12} md={4} lg={3}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={4} lg={3}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={4} lg={3}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={12} lg={3}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-          </Row>
-          <Row>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-          </Row>
-        </Container>
-        <Container>
-          <Row xsJustify={Justify.between}>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-          </Row>
-          <Row xsJustify={Justify.between}>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-            <Col xs={12} md={6}>
-              <div
-                style={{
-                  padding: "0.5rem",
-                  border: "1px solid var(--neutral-border)",
-                }}
-              >
-                <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
-              </div>
-            </Col>
-          </Row>
-        </Container>
-      </Background>
-    </main>
-  );
+	return (
+		<main>
+			<Homepage />
+			<Background>
+				<Container fullHeight>
+					<Row>
+						<Col xs={12} md={4} lg={3}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={4} lg={3}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={4} lg={3}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={12} lg={3}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+					</Row>
+					<Row>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+					</Row>
+				</Container>
+				<Container>
+					<Row xsJustify={Justify.between}>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+					</Row>
+					<Row xsJustify={Justify.between}>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+						<Col xs={12} md={6}>
+							<div
+								style={{
+									padding: "0.5rem",
+									border: "1px solid var(--neutral-border)",
+								}}
+							>
+								<h4>Lorem ipsum dolor sit amet consectetur.</h4>
+								Lorem ipsum dolor sit amet consectetur
+								adipisicing elit. Ad odio voluptatum nisi!
+							</div>
+						</Col>
+					</Row>
+				</Container>
+			</Background>
+		</main>
+	);
 }
