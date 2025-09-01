@@ -1,0 +1,32 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/utils";
+
+.header {
+  position: fixed;
+  display: flex;
+  justify-content: space-between;
+
+  top: 0;
+  width: 100%;
+  padding: 1rem 3rem;
+
+  background-color: black;
+
+  z-index: 12;
+
+  .logoContainer {
+    position: relative;
+    height: 200px;
+    width: 100px;
+  }
+
+  .navbar {
+    display: flex;
+    margin-top: 5rem;
+
+    &__button {
+      margin-left: 0.5rem;
+      @include toRem(font-size, $font-xl);
+    }
+  }
+}
