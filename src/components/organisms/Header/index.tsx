@@ -39,7 +39,12 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <div className={classNames(className, styles.header)}>
       <div className={classNames(className, styles.logoContainer)}>
-        <Image alt="SMUP Yoga - Dolomites" src={"smup_logo_white.svg"} fill />
+        <a
+          className={classNames(className, styles.navbar__button)}
+          href={navButtons[0].url}
+        >
+          <Image alt="SMUP Yoga - Dolomites" src={"smup_logo_white.svg"} fill />
+        </a>
       </div>
       <div className={classNames(className, styles.navbar)}>
         {navButtons.map((button, index) => (

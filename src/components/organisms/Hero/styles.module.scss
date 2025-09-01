@@ -5,7 +5,15 @@
   height: 90vh;
   max-height: 1150px;
 
-  background-color: var(--primary-hover);
+  background-color: var(--neutral-text);
+
+  overflow: hidden;
+  position: relative;
+
+  .backgroundImage {
+    object-fit: cover;
+    opacity: 0.5;
+  }
 
   .textWrapper {
     width: 100%;
