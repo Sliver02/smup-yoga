@@ -10,8 +10,6 @@
   width: 100%;
   padding: 1rem 3rem;
 
-  background-color: black;
-
   z-index: 12;
 
   .logoContainer {
@@ -25,8 +23,9 @@
     margin-top: 5rem;
 
     &__button {
-      margin-left: 0.5rem;
       @include toRem(font-size, $font-xl);
+      margin-left: 2rem;
+      color: var(--neutral-background);
     }
   }
 }

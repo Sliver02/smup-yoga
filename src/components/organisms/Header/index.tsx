@@ -22,6 +22,18 @@ const Header = ({ className }: HeaderProps) => {
       label: "About me",
       url: "#about",
     },
+    {
+      label: "Classes",
+      url: "#classes",
+    },
+    {
+      label: "Experiences",
+      url: "#exp",
+    },
+    {
+      label: "Lifestyle",
+      url: "#life",
+    },
   ];
 
   return (
