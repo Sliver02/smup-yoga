@@ -23,12 +23,12 @@ const Header = ({ className }: HeaderProps) => {
       url: "#about",
     },
     {
-      label: "Classes",
-      url: "#classes",
+      label: "Calendar",
+      url: "#calendar",
     },
     {
-      label: "Experiences",
-      url: "#exp",
+      label: "Events",
+      url: "#events",
     },
     {
       label: "Lifestyle",
