@@ -1,13 +1,9 @@
+"use server";
 import Image, { ImageProps } from "next/image";
-import fs from "node:fs/promises";
-import { getPlaiceholder } from "plaiceholder";
+import { getImagePlaceholderFromRegistry } from "@/scripts/imagePlaceholder";
 
 const ImagePlus = async (props: ImageProps) => {
-  const { src } = props;
-
-  const buffer = await fs.readFile(`./public${src}`);
-
-  const { base64 } = await getPlaiceholder(buffer);
+  const base64 = getImagePlaceholderFromRegistry(props.src as string);
 
   return <Image {...props} placeholder="blur" blurDataURL={base64} />;
 };
