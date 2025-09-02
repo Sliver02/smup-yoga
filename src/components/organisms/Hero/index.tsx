@@ -1,9 +1,9 @@
 import { BaseProps } from "@/common/globalInterfaces";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
+import ImagePlus from "@/components/atoms/ImagePlus";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
-import Image from "next/image";
 
 export interface HeroProps extends BaseProps {
   title: string;
@@ -13,7 +13,7 @@ export interface HeroProps extends BaseProps {
 const Hero = ({ className, title, subtitle }: HeroProps) => {
   return (
     <div className={classNames(className, styles.hero)} id="home">
-      <Image
+      <ImagePlus
         className={classNames(className, styles.backgroundImage)}
         alt="Yoga nature alps Dolomites"
         src="/images/IMG_2617.png"
