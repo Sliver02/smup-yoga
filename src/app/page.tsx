@@ -9,11 +9,7 @@ export default async function Home() {
     <main>
       <>
         <Header />
-        <Hero
-          title="SMUP Yoga"
-          subtitle="Lorem, ipsum dolor sit amet consectetur adipisicing elit.
-                Voluptas, id! Necessitatibus, odit."
-        />
+        <Hero title="SMUP Yoga" subtitle="Yoga & Lifestyle in the Dolomites" />
         <AboutMe />
         <Calendar />
         <LaifeStyle />

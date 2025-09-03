@@ -1,0 +1,32 @@
+.cardDisplay {
+  $width: 400px;
+
+  position: relative;
+  padding: 1rem;
+  max-width: $width;
+
+  .imageContainer {
+    width: 100%;
+    height: 500px;
+    position: relative;
+
+    .backgroundImage {
+      object-fit: cover;
+      border-radius: $width $width 0 0;
+      overflow: hidden;
+    }
+
+    .titleContainer {
+      position: absolute;
+      bottom: -10;
+      left: -1rem;
+      padding: 0.2rem 1rem;
+      background-color: var(--accent-main);
+      color: var(--neutral-background);
+    }
+  }
+
+  .descriptionContainer {
+    margin-top: 1.5rem;
+  }
+}

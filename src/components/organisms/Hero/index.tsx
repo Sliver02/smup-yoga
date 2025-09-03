@@ -27,7 +27,7 @@ const Hero = ({ className, title, subtitle }: HeroProps) => {
               <p
                 className={classNames(
                   "text--strong",
-                  "text--p-xl",
+                  "text--p-xxl",
                   "text--strong"
                 )}
               >

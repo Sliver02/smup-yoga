@@ -2,6 +2,7 @@ import { BaseProps } from "@/common/globalInterfaces";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import Link from "next/link";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -39,12 +40,13 @@ const Header = ({ className }: HeaderProps) => {
   return (
     <div className={classNames(className, styles.header)}>
       <div className={classNames(className, styles.logoContainer)}>
-        <a
+        <Link
           className={classNames(className, styles.navbar__button)}
-          href={navButtons[0].url}
+          href="."
+          replace
         >
           <Image alt="SMUP Yoga - Dolomites" src={"smup_logo_white.svg"} fill />
-        </a>
+        </Link>
       </div>
       <div className={classNames(className, styles.navbar)}>
         {navButtons.map((button, index) => (

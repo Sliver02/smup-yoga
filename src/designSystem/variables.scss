@@ -3,7 +3,7 @@ $font-sm: 12;
 $font-md: 16;
 $font-lg: 20;
 $font-xl: 24;
-$font-xxl: 28;
+$font-xxl: 30;
 
 $font-h-xs: 24;
 $font-h-sm: 32;
@@ -13,34 +13,34 @@ $font-h-xl: 64;
 $font-h-xxl: 80;
 
 $headerHeight: (
-	"xs": 83px,
-	"md": 90px,
+  "xs": 83px,
+  "md": 90px,
 );
 
 $breakpoints: (
-	"xs": 0,
-	"sm": 458,
-	"md": 769,
-	"lg": 1025,
-	"xl": 1441,
-	"xxl": 1921,
+  "xs": 0,
+  "sm": 458,
+  "md": 769,
+  "lg": 1025,
+  "xl": 1441,
+  "xxl": 1921,
 );
 
 $align: (
-	"start": flex-start,
-	"center": center,
-	"end": flex-end,
-	"stretch": stretch,
-	"baseline": baseline,
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "stretch": stretch,
+  "baseline": baseline,
 );
 
 $justify: (
-	"start": flex-start,
-	"center": center,
-	"end": flex-end,
-	"around": space-around,
-	"between": space-between,
-	"evenly": space-evenly,
+  "start": flex-start,
+  "center": center,
+  "end": flex-end,
+  "around": space-around,
+  "between": space-between,
+  "evenly": space-evenly,
 );
 
 $breakpointsNames: ("xs", "sm", "md", "lg", "xl", "xxl");
