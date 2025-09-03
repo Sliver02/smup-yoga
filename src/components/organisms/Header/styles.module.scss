@@ -1,4 +1,5 @@
 @import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
 @import "@/designSystem/utils";
 
 .header {
@@ -8,23 +9,43 @@
   align-items: center;
   top: 0;
   width: 100%;
-  padding: 1rem 5rem;
-
+  padding: 1rem 1rem;
+  color: var(--neutral-background);
   z-index: 12;
+
+  @include media-query("lg") {
+    padding: 1.5rem 5rem;
+  }
 
   .logoContainer {
     position: relative;
-    height: 200px;
-    width: 100px;
+    height: 150px;
+    width: 80px;
+
+    @include media-query("lg") {
+      height: 200px;
+      width: 100px;
+    }
   }
 
   .navbar {
-    display: flex;
+    display: none;
+
+    @include media-query("lg") {
+      display: flex;
+    }
 
     &__button {
       @include toRem(font-size, $font-xl);
       margin-left: 2rem;
-      color: var(--neutral-background);
+    }
+  }
+
+  .hamburger {
+    display: block;
+
+    @include media-query("lg") {
+      display: none;
     }
   }
 }

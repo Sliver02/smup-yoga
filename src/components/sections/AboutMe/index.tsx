@@ -15,23 +15,23 @@ const AboutMe = () => {
             </Col>
           </Row>
           <Row xsJustify={Justify.center}>
-            <Col xs={12} sm={6} lg={4}>
+            <Col xs={12} md={6} lg={4}>
               <CardDisplay
                 image="PXL_20250823_075608610.jpg"
                 title="Anukalana Yoga"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
               />
             </Col>
-            <Col xs={12} sm={6} lg={4}>
+            <Col xs={12} md={6} lg={4}>
               <CardDisplay
                 image="PXL_20250601_164142948.MP.jpg"
                 title="Yin Yoga"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
               />
             </Col>
-            <Col xs={12} sm={6} lg={4}>
+            <Col xs={12} md={6} lg={4}>
               <CardDisplay
-                image="PXL_20250726_114904897.MP.jpg"
+                image="photo_2_2025-09-03_09-38-20.jpg"
                 title="Kid's Yoga"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
               />

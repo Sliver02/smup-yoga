@@ -3,6 +3,7 @@ import classNames from "classnames";
 import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
+import { MenuRounded } from "@mui/icons-material";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -39,25 +40,25 @@ const Header = ({ className }: HeaderProps) => {
 
   return (
     <div className={classNames(className, styles.header)}>
-      <div className={classNames(className, styles.logoContainer)}>
-        <Link
-          className={classNames(className, styles.navbar__button)}
-          href="."
-          replace
-        >
+      <div className={classNames(styles.logoContainer)}>
+        <Link className={classNames(styles.navbar__button)} href="." replace>
           <Image alt="SMUP Yoga - Dolomites" src={"smup_logo_white.svg"} fill />
         </Link>
       </div>
-      <div className={classNames(className, styles.navbar)}>
+      <div className={classNames(styles.navbar)}>
         {navButtons.map((button, index) => (
           <a
             key={index}
-            className={classNames(className, styles.navbar__button)}
+            className={classNames(styles.navbar__button)}
             href={button.url}
           >
             {button.label}
           </a>
         ))}
+      </div>
+
+      <div className={classNames(styles.hamburger)}>
+        <MenuRounded />
       </div>
     </div>
   );
