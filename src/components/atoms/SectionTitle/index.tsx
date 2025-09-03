@@ -1,6 +1,13 @@
 import Image from "next/image";
-import { SectionTitleProps } from "./interfaces";
 import styles from "./styles.module.scss";
+
+export interface SectionTitleProps {
+  text: string;
+  icon?: {
+    type?: "star";
+    color?: string;
+  };
+}
 
 const SectionTitle = ({ text }: SectionTitleProps) => {
   return (
