@@ -14,13 +14,15 @@ const CardDisplay = ({
       <div className={classNames(styles.imageContainer)}>
         <Image
           className={classNames(styles.backgroundImage)}
-          alt={title}
+          alt={title ?? ""}
           src={"/images/" + image}
           fill
         />
-        <div className={classNames(styles.titleContainer)}>
-          <h4 className={classNames("")}>{title}</h4>
-        </div>
+        {title && (
+          <div className={classNames(styles.titleContainer)}>
+            <h4 className={classNames("")}>{title}</h4>
+          </div>
+        )}
       </div>
       {description && (
         <div className={classNames(styles.descriptionContainer)}>

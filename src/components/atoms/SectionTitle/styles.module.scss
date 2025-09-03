@@ -1,0 +1,21 @@
+.sectionTitle {
+  $width: 100px;
+  width: fit-content;
+  display: flex;
+  position: relative;
+  z-index: 1;
+  margin: 2rem auto;
+
+  .iconContainer {
+    z-index: -1;
+    position: absolute;
+    width: $width;
+    height: $width;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    .icon {
+      fill: var(--accent-main);
+    }
+  }
+}
