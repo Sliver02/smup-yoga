@@ -4,7 +4,7 @@ import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
 import LaifeStyle from "@/components/sections/LifeStyle";
 
-export default async function Home() {
+const Home = () => {
   return (
     <main>
       <>
@@ -16,4 +16,6 @@ export default async function Home() {
       </>
     </main>
   );
-}
+};
+
+export default Home;

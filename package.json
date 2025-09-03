@@ -9,10 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emotion/react": "^11.14.0",
-    "@emotion/styled": "^11.14.1",
-    "@mui/icons-material": "^7.3.2",
-    "@mui/material": "^7.3.2",
+    "@heroicons/react": "^2.2.0",
     "@plaiceholder/next": "^3.0.0",
     "lqip-modern": "^2.2.1",
     "next": "15.1.3",

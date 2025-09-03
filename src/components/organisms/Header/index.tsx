@@ -1,9 +1,9 @@
 import { BaseProps } from "@/common/globalInterfaces";
 import classNames from "classnames";
-import styles from "./styles.module.scss";
 import Image from "next/image";
 import Link from "next/link";
-import { MenuRounded } from "@mui/icons-material";
+import styles from "./styles.module.scss";
+import { Bars3Icon } from "@heroicons/react/16/solid";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -58,7 +58,7 @@ const Header = ({ className }: HeaderProps) => {
       </div>
 
       <div className={classNames(styles.hamburger)}>
-        <MenuRounded />
+        <Bars3Icon />
       </div>
     </div>
   );
