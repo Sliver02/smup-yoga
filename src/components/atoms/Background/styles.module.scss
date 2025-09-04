@@ -2,19 +2,17 @@
 @import "@/designSystem/mediaQueries";
 
 .background {
-	--sidebar-width: 300px;
-	--background-color: var(--neutral-background);
+  --sidebar-width: 300px;
 
-	height: 100%;
-	min-height: 100vh;
+  height: 100%;
 
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: center;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: center;
 
-	background: var(--background-color);
-	background-position: center;
-	background-attachment: fixed;
+  background: var(--background-color);
+  background-position: center;
+  background-attachment: fixed;
 
-	transition: padding 0.3s ease-in;
+  transition: padding 0.3s ease-in;
 }

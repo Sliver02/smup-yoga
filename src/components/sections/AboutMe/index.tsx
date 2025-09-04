@@ -7,7 +7,7 @@ import Section from "@/components/organisms/Section";
 const AboutMe = () => {
   return (
     <div id="about">
-      <Section backgroundColor="var(--primary-main)">
+      <Section>
         <Container>
           <Row xsJustify={Justify.start} mdJustify={Justify.center}>
             <Col>

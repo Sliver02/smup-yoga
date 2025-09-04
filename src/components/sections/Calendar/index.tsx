@@ -45,7 +45,6 @@ const Calendar = () => {
   return (
     <div id="calendar">
       <InfiniteText
-        backgroundColor={colorBackground}
         items={[
           "WEEKLY SESSIONS",
           "JOIN NOW",
