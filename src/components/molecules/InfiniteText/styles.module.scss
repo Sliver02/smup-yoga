@@ -1,0 +1,23 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.infiniteText {
+  max-width: 100%;
+  overflow: hidden;
+  border-top: 4px solid var(--neutral-text);
+  border-bottom: 4px solid var(--neutral-text);
+  padding: 1rem 0;
+
+  .item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+
+    .icon {
+      display: block;
+      margin: 0 2rem;
+    }
+  }
+}

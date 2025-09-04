@@ -1,7 +1,13 @@
 import classNames from "classnames";
-import { CardDisplayProps } from "./interfaces";
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import { BaseProps } from "@/common/globalInterfaces";
+
+export interface CardDisplayProps extends BaseProps {
+  image: string;
+  title?: string;
+  description?: string;
+}
 
 const CardDisplay = ({
   className,

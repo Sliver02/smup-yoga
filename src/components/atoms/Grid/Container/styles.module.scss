@@ -16,7 +16,7 @@
   width: 100%;
   max-width: var(--max-width);
 
-  @include media-query("lg") {
+  @include media-query("sm") {
     padding: 0 2.5rem;
   }
 }
