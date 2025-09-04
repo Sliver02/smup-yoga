@@ -7,7 +7,7 @@ import Section from "@/components/organisms/Section";
 const AboutMe = () => {
   return (
     <div id="about">
-      <Section>
+      <Section backgroundColor="var(--primary-main)">
         <Container>
           <Row xsJustify={Justify.start} mdJustify={Justify.center}>
             <Col>
@@ -19,7 +19,7 @@ const AboutMe = () => {
               <CardDisplay
                 image="PXL_20250823_075608610.jpg"
                 title="Anukalana Yoga"
-                description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
+                description="anukalana-yoga-desc"
               />
             </Col>
             <Col xs={12} md={6} lg={4}>

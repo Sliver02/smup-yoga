@@ -13,6 +13,13 @@
   color: var(--neutral-background);
   z-index: 12;
 
+  background: linear-gradient(
+    180deg,
+    #1c1d23aa 0%,
+    #1c1d2355 50%,
+    #1c1d2300 100%
+  );
+
   @include media-query("lg") {
     padding: 1.5rem 5rem;
     align-items: center;

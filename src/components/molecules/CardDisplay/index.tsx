@@ -2,11 +2,12 @@ import classNames from "classnames";
 import Image from "next/image";
 import styles from "./styles.module.scss";
 import { BaseProps } from "@/common/globalInterfaces";
+import { ReactNode } from "react";
 
 export interface CardDisplayProps extends BaseProps {
   image: string;
   title?: string;
-  description?: string;
+  description?: ReactNode;
 }
 
 const CardDisplay = ({

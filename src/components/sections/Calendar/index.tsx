@@ -37,9 +37,12 @@ const Calendar = () => {
     },
   ];
 
+  const colorBackground = "var(--primary-main)";
+
   return (
     <div id="calendar">
       <InfiniteText
+        backgroundColor={colorBackground}
         items={[
           "WEEKLY SESSIONS",
           "JOIN NOW",
@@ -61,7 +64,7 @@ const Calendar = () => {
             left: 0,
             width: "100%",
             height: "100%",
-            background: "linear-gradient(90deg,#f4f6ff 20%, #f4f6ff00 100%)",
+            background: `linear-gradient(90deg,${colorBackground} 20%, #f4f6ff00 100%)`,
           }}
         />
         <Container>

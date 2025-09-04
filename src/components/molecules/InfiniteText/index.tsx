@@ -3,14 +3,20 @@ import classNames from "classnames";
 import MarqueeSlider from "react-marquee-slider";
 import styles from "./styles.module.scss";
 import Image from "next/image";
+import { CSSProperties } from "react";
 
 export interface InfiniteTextProps {
   items: string[];
+  backgroundColor?: string;
 }
 
-const InfiniteText = ({ items }: InfiniteTextProps) => {
+const InfiniteText = ({ items, backgroundColor }: InfiniteTextProps) => {
+  const cssVar = {
+    ["--background-color"]: backgroundColor,
+  } as CSSProperties;
+
   return (
-    <div className={classNames(styles.infiniteText)}>
+    <div className={classNames(styles.infiniteText)} style={cssVar}>
       <MarqueeSlider
         direction="ltr"
         velocity={30}
@@ -21,7 +27,7 @@ const InfiniteText = ({ items }: InfiniteTextProps) => {
       >
         {items.map((item, index) => (
           <h3 key={index} className={classNames(styles.item)}>
-            {item}{" "}
+            {item}
             <Image
               className={classNames(styles.icon)}
               width={40}
