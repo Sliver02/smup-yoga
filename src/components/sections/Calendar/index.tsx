@@ -15,10 +15,7 @@ const Calendar = () => {
       title: "Lunedì",
       rows: ["9:30 - Anukalana, Belluno", "18:30 - Anukalana, Belluno"],
     },
-    {
-      title: "Giovedì",
-      rows: ["11:00 - Yin Yoga, Belluno"],
-    },
+
     {
       title: "Martedì",
       rows: ["17:30 - Anukalana, Ponte nelle Alpi"],
@@ -29,6 +26,10 @@ const Calendar = () => {
         "17:30 - Anukalana, Tai di Cadore",
         "19:00 - Anukalana, Vodo di Cadore",
       ],
+    },
+    {
+      title: "Giovedì",
+      rows: ["11:00 - Yin Yoga, Belluno"],
     },
     {
       title: "Venerdì",

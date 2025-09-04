@@ -76,10 +76,19 @@
 
     z-index: 1;
 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
     &--open {
       display: flex;
       opacity: 1;
       pointer-events: all;
+    }
+
+    &__button {
+      @include toRem(font-size, $font-h-lg);
+      margin: 1rem 0;
     }
 
     @include media-query("lg") {

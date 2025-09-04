@@ -75,7 +75,18 @@ const Header = ({ className }: HeaderProps) => {
 
       <div
         className={classNames(styles.menu, openMenu && styles["menu--open"])}
-      ></div>
+      >
+        {navButtons.map((button, index) => (
+          <a
+            key={index}
+            className={classNames(styles["menu__button"])}
+            href={button.url}
+            onClick={() => setOpenMenu(false)}
+          >
+            {button.label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 };
