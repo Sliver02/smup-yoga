@@ -76,11 +76,11 @@ const Calendar = () => {
                   <strong className={classNames("text--p-xxl")}>
                     {item.title}
                   </strong>
-                  {item.rows.map((row) => (
-                    <>
+                  {item.rows.map((row, index) => (
+                    <span key={index}>
                       <br />
                       {row}
-                    </>
+                    </span>
                   ))}
                 </p>
               </Col>

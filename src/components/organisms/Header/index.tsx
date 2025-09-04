@@ -1,9 +1,11 @@
+"use client";
 import { BaseProps } from "@/common/globalInterfaces";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.scss";
 import { Bars3Icon } from "@heroicons/react/16/solid";
+import { useState } from "react";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -15,6 +17,8 @@ export interface NavButtonsProps {
 }
 
 const Header = ({ className }: HeaderProps) => {
+  const [openMenu, setOpenMenu] = useState(false);
+
   const navButtons: NavButtonsProps[] = [
     {
       label: "Home",
@@ -62,9 +66,16 @@ const Header = ({ className }: HeaderProps) => {
         ))}
       </div>
 
-      <div className={classNames(styles.hamburger)}>
+      <div
+        className={classNames(styles.hamburger)}
+        onClick={() => setOpenMenu((openMenu) => !openMenu)}
+      >
         <Bars3Icon />
       </div>
+
+      <div
+        className={classNames(styles.menu, openMenu && styles["menu--open"])}
+      ></div>
     </div>
   );
 };

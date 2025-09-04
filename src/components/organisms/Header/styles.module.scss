@@ -22,6 +22,7 @@
     position: relative;
     height: 120px;
     width: 80px;
+    z-index: 3;
 
     @include media-query("lg") {
       height: 200px;
@@ -32,6 +33,7 @@
   .navbar {
     display: none;
     margin-bottom: 2rem;
+    z-index: 2;
 
     a {
       color: white;
@@ -48,12 +50,41 @@
   }
 
   .hamburger {
+    cursor: pointer;
     display: block;
     width: 50px;
     height: 50px;
+    z-index: 3;
 
     @include media-query("lg") {
       display: none;
+    }
+  }
+
+  .menu {
+    opacity: 0;
+    transition: opacity 0.3s;
+    pointer-events: none;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--accent-hover);
+
+    z-index: 1;
+
+    &--open {
+      display: flex;
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    @include media-query("lg") {
+      display: none;
+      pointer-events: none;
     }
   }
 }
