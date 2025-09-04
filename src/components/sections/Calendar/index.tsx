@@ -13,12 +13,15 @@ const Calendar = () => {
   const calendarList: CalendarItem[] = [
     {
       title: "Lunedì",
-      rows: ["9:30 - Anukalana, Belluno", "18:30 - Anukalana, Belluno"],
+      rows: ["9:30 - Vinyasa, Belluno", "18:30 - Vinyasa, Belluno"],
     },
 
     {
       title: "Martedì",
-      rows: ["17:30 - Anukalana, Ponte nelle Alpi"],
+      rows: [
+        "8:30 - Anukalana, Belluno",
+        "17:30 - Anukalana, Ponte nelle Alpi",
+      ],
     },
     {
       title: "Mercoledì",
@@ -33,7 +36,7 @@ const Calendar = () => {
     },
     {
       title: "Venerdì",
-      rows: ["19:30 - Anukalana, Belluno"],
+      rows: ["19:30 - Vinyasa, Belluno"],
     },
   ];
 
