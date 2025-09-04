@@ -17,6 +17,7 @@ const Hero = ({ className, title, subtitle }: HeroProps) => {
         className={classNames(className, styles.backgroundImage)}
         alt="Yoga nature alps Dolomites"
         src="/images/IMG_2617.png"
+        priority
         fill
       />
       <div className={classNames(styles.textWrapper, "text--align-center")}>

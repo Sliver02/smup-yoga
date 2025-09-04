@@ -42,7 +42,12 @@ const Header = ({ className }: HeaderProps) => {
     <div className={classNames(className, styles.header)}>
       <div className={classNames(styles.logoContainer)}>
         <Link className={classNames(styles.navbar__button)} href="." replace>
-          <Image alt="SMUP Yoga - Dolomites" src={"smup_logo_white.svg"} fill />
+          <Image
+            alt="SMUP Yoga - Dolomites"
+            src={"smup_logo_white.svg"}
+            priority
+            fill
+          />
         </Link>
       </div>
       <div className={classNames(styles.navbar)}>

@@ -16,8 +16,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={4} lg={3}>
@@ -28,8 +30,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={4} lg={3}>
@@ -40,8 +44,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={12} lg={3}>
@@ -52,8 +58,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
           </Row>
@@ -66,8 +74,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={6}>
@@ -78,8 +88,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
           </Row>
@@ -94,8 +106,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={6}>
@@ -106,8 +120,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
           </Row>
@@ -120,8 +136,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
             <Col xs={12} md={6}>
@@ -132,8 +150,10 @@ const Filler = () => {
                 }}
               >
                 <h4>Lorem ipsum dolor sit amet consectetur.</h4>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad odio
-                voluptatum nisi!
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad
+                  odio voluptatum nisi!
+                </p>
               </div>
             </Col>
           </Row>

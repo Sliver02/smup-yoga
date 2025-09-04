@@ -9,7 +9,10 @@ const Home = () => {
     <main>
       <>
         <Header />
-        <Hero title="SMUP Yoga" subtitle="Yoga & Lifestyle in the Dolomites" />
+        <Hero
+          title="Sarah Pompanin"
+          subtitle="Yoga & Lifestyle in the Dolomites"
+        />
         <AboutMe />
         <Calendar />
         <LaifeStyle />
