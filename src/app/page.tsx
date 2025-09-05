@@ -3,6 +3,7 @@ import Calendar from "@/components/sections/Calendar";
 import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
 import LaifeStyle from "@/components/sections/LifeStyle";
+import Styles from "@/components/sections/Styles";
 
 const Home = () => {
   return (
@@ -15,6 +16,7 @@ const Home = () => {
         />
         <AboutMe />
         <Calendar />
+        <Styles />
         <LaifeStyle />
       </>
     </main>

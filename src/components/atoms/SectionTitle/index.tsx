@@ -16,7 +16,7 @@ const SectionTitle = ({ text }: SectionTitleProps) => {
         <Image
           className={styles.icon}
           alt={text}
-          src="/icons/star_01.svg"
+          src="/icons/star_01_pink.svg"
           fill
         />
       </span>

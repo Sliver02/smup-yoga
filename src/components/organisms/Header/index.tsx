@@ -33,8 +33,8 @@ const Header = ({ className }: HeaderProps) => {
       url: "#calendar",
     },
     {
-      label: "Events",
-      url: "#events",
+      label: "Styles",
+      url: "#styles",
     },
     {
       label: "Lifestyle",
