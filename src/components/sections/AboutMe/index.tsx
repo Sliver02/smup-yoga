@@ -10,14 +10,11 @@ const AboutMe = () => {
     <div id="about">
       <Section>
         <Container>
-          <Row xsJustify={Justify.start} mdJustify={Justify.center}>
-            <Col></Col>
-          </Row>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>
             <Col xs={12} md={5}>
               <CardFrame image="PXL_20250112_213040356.jpg" alt="Kid's Yoga" />
             </Col>
-            <Col xs={12} md={5}>
+            <Col xs={12} md={4}>
               <SectionTitle text="About me" />
               <p className={classNames("text--p-lg")}>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
