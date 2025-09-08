@@ -33,7 +33,7 @@ const CardDisplay = ({
       </div>
       {description && (
         <div className={classNames(styles.descriptionContainer)}>
-          <p>{description}</p>
+          <p className={classNames("text--p-lg")}>{description}</p>
         </div>
       )}
     </div>
