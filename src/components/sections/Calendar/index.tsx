@@ -3,6 +3,7 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 import InfiniteText from "@/components/molecules/InfiniteText";
 import Section from "@/components/organisms/Section";
 import classNames from "classnames";
+import styles from "./styles.module.scss";
 
 export interface CalendarItem {
   title: string;
@@ -40,10 +41,8 @@ const Calendar = () => {
     },
   ];
 
-  const colorBackground = "var(--primary-main)";
-
   return (
-    <div id="calendar">
+    <div id="calendar" className={classNames(styles.calendar)}>
       <InfiniteText
         items={[
           "WEEKLY SESSIONS",
@@ -58,17 +57,8 @@ const Calendar = () => {
           "LIVE",
         ]}
       />
-      <Section backgroundImage="IMG_2646.jpg">
-        <div
-          style={{
-            position: "absolute",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            background: `linear-gradient(90deg,${colorBackground} 20%, #f4f6ff00 100%)`,
-          }}
-        />
+      <Section backgroundImage={"IMG_2646.jpg"}>
+        <div className={classNames(styles.backgroundGradient)} />
         <Container>
           <Row>
             <Col xs={12} lg={6}>

@@ -1,0 +1,22 @@
+.calendar {
+  .backgroundGradient {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      125deg,
+      var(--primary-active) 30%,
+      transparent 100%
+    );
+    //   url(https://grainy-gradients.vercel.app/noise.svg);
+  }
+
+  .backgroundImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+  }
+}

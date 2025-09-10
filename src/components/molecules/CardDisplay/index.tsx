@@ -27,7 +27,7 @@ const CardDisplay = ({
         />
         {title && (
           <div className={classNames(styles.titleContainer)}>
-            <h4 className={classNames("")}>{title}</h4>
+            <h4>{title}</h4>
           </div>
         )}
       </div>
