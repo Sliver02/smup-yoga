@@ -1,4 +1,5 @@
 import "@/designSystem/globals.scss";
+import classNames from "classnames";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
@@ -28,8 +29,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
-      <body className={`${inter.variable} ${rightGrotesk.variable}`}>
-        {children}
+      <body className={classNames(inter.variable, rightGrotesk.variable)}>
+        <div className={classNames("root")}>{children}</div>
       </body>
     </html>
   );

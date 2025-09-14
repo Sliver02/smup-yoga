@@ -89,6 +89,10 @@ body {
   &.freeze {
     overflow-y: hidden;
   }
+
+  .root {
+    isolation: isolate;
+  }
 }
 
 main {

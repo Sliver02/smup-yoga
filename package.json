@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@base-ui-components/react": "^1.0.0-beta.3",
     "@heroicons/react": "^2.2.0",
     "@plaiceholder/next": "^3.0.0",
     "lqip-modern": "^2.2.1",
