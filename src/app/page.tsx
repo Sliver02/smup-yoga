@@ -2,7 +2,7 @@ import AboutMe from "@/components/sections/AboutMe";
 import Calendar from "@/components/sections/Calendar";
 import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
-import LaifeStyle from "@/components/sections/LifeStyle";
+import Contact from "@/components/sections/Contact";
 import Styles from "@/components/sections/Styles";
 
 const Home = () => {
@@ -17,7 +17,7 @@ const Home = () => {
         <AboutMe />
         <Calendar />
         <Styles />
-        <LaifeStyle />
+        <Contact />
       </>
     </main>
   );

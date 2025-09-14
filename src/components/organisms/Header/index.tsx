@@ -37,8 +37,8 @@ const Header = ({ className }: HeaderProps) => {
       url: "#styles",
     },
     {
-      label: "Lifestyle",
-      url: "#life",
+      label: "Contact",
+      url: "#contact",
     },
   ];
 

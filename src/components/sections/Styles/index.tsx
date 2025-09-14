@@ -9,9 +9,9 @@ const Styles = () => {
     <div id="styles">
       <Section>
         <Container>
-          <Row xsJustify={Justify.start} mdJustify={Justify.center}>
+          <Row>
             <Col>
-              <SectionTitle text="Styles & Specializations" />
+              <SectionTitle text="Styles & Specializations" center />
             </Col>
           </Row>
           <Row xsJustify={Justify.center}>

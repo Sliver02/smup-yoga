@@ -1,18 +1,22 @@
 import Image from "next/image";
 import styles from "./styles.module.scss";
+import { BaseProps } from "@/common/globalInterfaces";
+import classNames from "classnames";
 
-export interface SectionTitleProps {
+export interface SectionTitleProps extends BaseProps {
   text: string;
-  icon?: {
-    type?: "star";
-    color?: string;
-  };
+  center?: boolean;
 }
 
-const SectionTitle = ({ text }: SectionTitleProps) => {
+const SectionTitle = ({ text, center }: SectionTitleProps) => {
   return (
-    <span className={styles.sectionTitle}>
-      <span className={styles.iconContainer}>
+    <span
+      className={classNames(
+        styles["sectionTitle"],
+        center && styles["sectionTitle--center"]
+      )}
+    >
+      <span className={classNames(styles.iconContainer)}>
         <Image
           className={styles.icon}
           alt={text}

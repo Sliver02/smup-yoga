@@ -6,6 +6,10 @@
   z-index: 1;
   margin: 3rem 0;
 
+  &--center {
+    margin: 3rem auto;
+  }
+
   .iconContainer {
     z-index: -1;
     position: absolute;
