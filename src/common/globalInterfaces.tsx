@@ -48,3 +48,8 @@ export enum Surface {
   "border" = "border",
   "flat" = "flat",
 }
+
+export interface AlertResponse {
+  severity: "success" | "warning" | "error";
+  text: string;
+}

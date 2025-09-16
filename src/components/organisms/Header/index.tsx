@@ -1,12 +1,11 @@
 "use client";
 import { BaseProps } from "@/common/globalInterfaces";
+import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./styles.module.scss";
-import { Bars3Icon } from "@heroicons/react/16/solid";
 import { useState } from "react";
-
+import styles from "./styles.module.scss";
 export interface HeaderProps extends BaseProps {
   prot?: string;
 }
@@ -70,7 +69,7 @@ const Header = ({ className }: HeaderProps) => {
         className={classNames(styles.hamburger)}
         onClick={() => setOpenMenu((openMenu) => !openMenu)}
       >
-        <Bars3Icon />
+        <MenuRoundedIcon />
       </div>
 
       <div

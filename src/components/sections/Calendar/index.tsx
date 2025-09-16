@@ -61,13 +61,13 @@ const Calendar = () => {
         <div className={classNames(styles.backgroundGradient)} />
         <Container>
           <Row>
-            <Col xs={12} lg={6} lgOffset={1}>
+            <Col xs={12} lg={5} lgOffset={1}>
               <SectionTitle text="Calendar" />
             </Col>
           </Row>
           {calendarList.map((item, index) => (
             <Row key={index}>
-              <Col xs={12} lg={6} lgOffset={1}>
+              <Col xs={12} lg={5} lgOffset={1}>
                 <p className={classNames("text--p-xl")}>
                   <strong className={classNames("text--p-xxl")}>
                     {item.title}

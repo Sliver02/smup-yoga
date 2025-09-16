@@ -29,6 +29,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" data-theme="light">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+      </head>
       <body className={classNames(inter.variable, rightGrotesk.variable)}>
         <div className={classNames("root")}>{children}</div>
       </body>
