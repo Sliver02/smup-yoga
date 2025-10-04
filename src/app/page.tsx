@@ -7,6 +7,7 @@ import Contact from "@/components/sections/Contact";
 import Styles from "@/components/sections/Styles";
 import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
+import Footer from "@/components/organisms/Footer";
 
 const Home = () => {
   const theme = createTheme({
@@ -31,6 +32,7 @@ const Home = () => {
         <Calendar />
         <Styles />
         <Contact />
+        <Footer />
       </ThemeProvider>
     </main>
   );

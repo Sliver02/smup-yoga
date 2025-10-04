@@ -1,0 +1,36 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+@import "@/designSystem/utils";
+
+.footer {
+  margin-top: 10rem;
+  padding: 4rem 0;
+  color: var(--neutral-light);
+  background-color: var(--neutral-text);
+
+  border-radius: 2rem 2rem 0 0;
+
+  .footer__text {
+    margin-bottom: 1rem;
+    text-align: center;
+
+    @include media-query("lg") {
+      margin-bottom: 0;
+      text-align: left;
+    }
+  }
+
+  .footer__links {
+    display: flex;
+    gap: 1.5rem;
+
+    a {
+      color: var(--neutral-background);
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
