@@ -58,7 +58,12 @@ const Calendar = () => {
           "LIVE",
         ]}
       />
-      <Section backgroundImage={"IMG_2646.jpg"}>
+      <Section
+        backgroundImage={{
+          src: "IMG_2646",
+          alt: "Outside Yoga practice in the Dolomites",
+        }}
+      >
         <div className={classNames(styles.backgroundGradient)} />
         <Container>
           <Row>

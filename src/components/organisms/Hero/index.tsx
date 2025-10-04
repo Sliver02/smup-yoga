@@ -17,6 +17,8 @@ const Hero = ({ className, title, subtitle }: HeroProps) => {
         className={classNames(className, styles.backgroundImage)}
         alt="Yoga nature alps Dolomites"
         src="/images/IMG_2617.png"
+        placeholder="blur"
+        blurDataURL="/images/IMG_2617_placeholder.png"
         priority
         fill
       />

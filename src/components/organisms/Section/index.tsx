@@ -6,7 +6,11 @@ import Image from "next/image";
 
 export interface SectionProps extends BaseProps {
   backgroundColor?: string;
-  backgroundImage?: string;
+  backgroundImage?: {
+    src: string;
+    alt: string;
+    format?: "png" | "jpg" | "jpeg" | "webp";
+  };
 }
 
 const Section = ({
@@ -25,7 +29,20 @@ const Section = ({
         <Image
           className={classNames(styles.backgroundImage)}
           alt=""
-          src={"/images/" + backgroundImage}
+          src={
+            "/images/" +
+            backgroundImage.src +
+            "." +
+            (backgroundImage.format || "jpg")
+          }
+          placeholder="blur"
+          blurDataURL={
+            "/images/" +
+            backgroundImage.src +
+            "_placeholder" +
+            "." +
+            (backgroundImage.format || "jpg")
+          }
           fill
         />
       )}

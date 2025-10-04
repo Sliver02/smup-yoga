@@ -14,7 +14,7 @@ const AboutMe = () => {
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>
             <Col xs={12} md={5}>
-              <CardFrame image="PXL_20250112_213040356.jpg" alt="Kid's Yoga" />
+              <CardFrame image="PXL_20250112_213040356" alt="Kid's Yoga" />
             </Col>
             <Col xs={12} md={4}>
               <SectionTitle text="About me" />
