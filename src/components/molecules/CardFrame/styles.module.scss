@@ -11,7 +11,7 @@
 
   margin: 3rem 1rem;
 
-  @include media-query("lg") {
+  @include mediaQuery("lg") {
     --width: 400px;
     --height: 600px;
   }

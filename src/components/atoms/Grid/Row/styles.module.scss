@@ -2,53 +2,53 @@
 @import "@/designSystem/mediaQueries";
 
 .row {
-	display: flex;
-	flex-direction: row;
-	flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
 
-	flex: 0 1 auto;
-	min-height: calc(100% + 1rem);
-	margin: -0.5rem;
+  flex: 0 1 auto;
+  min-height: calc(100% + 1rem);
+  margin: -0.5rem;
 
-	& + & {
-		margin-top: 1rem;
-	}
+  & + & {
+    margin-top: 1rem;
+  }
 }
 
 .nowrap {
-	flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 
 .fitContent {
-	width: fit-content;
+  width: fit-content;
 }
 
 @each $bpName in $breakpointsNames {
-	@include media-query($bpName, "min") {
-		@each $al in $align {
-			$value: nth($al, 2);
+  @include mediaQuery($bpName, "min") {
+    @each $al in $align {
+      $value: nth($al, 2);
 
-			.#{$bpName}Align-#{$value} {
-				align-items: $value;
-			}
-		}
+      .#{$bpName}Align-#{$value} {
+        align-items: $value;
+      }
+    }
 
-		@each $ju in $justify {
-			$value: nth($ju, 2);
+    @each $ju in $justify {
+      $value: nth($ju, 2);
 
-			.#{$bpName}Justify-#{$value} {
-				justify-content: $value;
-			}
-		}
+      .#{$bpName}Justify-#{$value} {
+        justify-content: $value;
+      }
+    }
 
-		@for $i from 1 to 20 {
-			.#{$bpName}Order-#{$i} {
-				order: $i;
-			}
-		}
+    @for $i from 1 to 20 {
+      .#{$bpName}Order-#{$i} {
+        order: $i;
+      }
+    }
 
-		.#{$bpName}Reverse {
-			flex-direction: row-reverse;
-		}
-	}
+    .#{$bpName}Reverse {
+      flex-direction: row-reverse;
+    }
+  }
 }

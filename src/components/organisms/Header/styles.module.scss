@@ -20,7 +20,7 @@
     #1c1d2300 100%
   );
 
-  @include media-query("lg") {
+  @include mediaQuery("lg") {
     padding: 1.5rem 5rem;
     align-items: center;
   }
@@ -31,7 +31,7 @@
     width: 80px;
     z-index: 3;
 
-    @include media-query("lg") {
+    @include mediaQuery("lg") {
       height: 200px;
       width: 100px;
     }
@@ -46,7 +46,7 @@
       color: white;
     }
 
-    @include media-query("lg") {
+    @include mediaQuery("lg") {
       display: flex;
     }
 
@@ -63,7 +63,7 @@
     height: 50px;
     z-index: 3;
 
-    @include media-query("lg") {
+    @include mediaQuery("lg") {
       display: none;
     }
   }
@@ -98,7 +98,7 @@
       margin: 1rem 0;
     }
 
-    @include media-query("lg") {
+    @include mediaQuery("lg") {
       display: none;
       pointer-events: none;
     }

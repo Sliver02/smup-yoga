@@ -10,7 +10,7 @@
   margin: auto;
   max-width: var(--width);
 
-  @include media-query("lg") {
+  @include mediaQuery("lg") {
     --width: 400px;
     --height: 460px;
 

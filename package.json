@@ -22,7 +22,7 @@
     "plaiceholder": "^3.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "react-marquee-slider": "^1.1.5",
+    "react-fast-marquee": "^1.6.5",
     "sharp": "^0.34.3"
   },
   "devDependencies": {
