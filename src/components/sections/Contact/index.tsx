@@ -5,6 +5,7 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 import emailjs from "@emailjs/browser";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import { Alert, Button, TextField } from "@mui/material";
+import classNames from "classnames";
 import { FormEvent, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
@@ -77,10 +78,16 @@ const Contact = () => {
   return (
     <div id="contact">
       <form onSubmit={submitForm}>
-        <Container customWidth="1000px">
+        <Container>
           <Row>
             <Col>
               <SectionTitle text="Contact me" />
+              <p className={classNames("text--p-lg")}>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
+                perferendis vitae totam quae pariatur amet aspernatur enim eaque
+                accusantium libero tenetur necessitatibus molestias ea hic,
+                animi, repellat veniam harum quasi.
+              </p>
             </Col>
           </Row>
           <Row>
