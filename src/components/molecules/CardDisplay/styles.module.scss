@@ -3,12 +3,11 @@
 
 .cardDisplay {
   --width: 300px;
-  --height: 360px;
+  --height: 500px;
 
   position: relative;
   padding: 1rem;
   margin: auto;
-  max-width: var(--width);
 
   @include mediaQuery("lg") {
     --width: 400px;
