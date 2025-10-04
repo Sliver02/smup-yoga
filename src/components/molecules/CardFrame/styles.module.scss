@@ -7,13 +7,12 @@
   --radius1: 15rem;
   --radius2: 1rem;
 
-  // max-width: var(--width);
-
   margin: 3rem 1rem;
 
   @include mediaQuery("lg") {
     --width: 400px;
     --height: 600px;
+    max-width: var(--width);
   }
 
   .imageContainer {
