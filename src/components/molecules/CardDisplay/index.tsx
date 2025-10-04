@@ -6,6 +6,7 @@ import { ReactNode } from "react";
 
 export interface CardDisplayProps extends BaseProps {
   image: string;
+  imageFormat?: string;
   title?: string;
   description?: ReactNode;
 }
@@ -15,6 +16,7 @@ const CardDisplay = ({
   title,
   description,
   image,
+  imageFormat = "jpg",
 }: CardDisplayProps) => {
   return (
     <div className={classNames(className, styles.cardDisplay)}>
@@ -22,7 +24,9 @@ const CardDisplay = ({
         <Image
           className={classNames(styles.backgroundImage)}
           alt={title ?? ""}
-          src={"/images/" + image}
+          src={"/images/" + image + "." + imageFormat}
+          placeholder="blur"
+          blurDataURL={"/images/" + image + "_placeholder." + imageFormat}
           fill
         />
         {title && (

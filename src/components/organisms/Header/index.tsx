@@ -70,7 +70,7 @@ const Header = ({ className }: HeaderProps) => {
         className={classNames(styles.hamburger)}
         onClick={() => setOpenMenu((openMenu) => !openMenu)}
       >
-        <MenuRoundedIcon />
+        <MenuRoundedIcon fontSize="large" />
       </div>
 
       <div

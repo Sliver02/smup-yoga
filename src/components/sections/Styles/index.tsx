@@ -17,21 +17,21 @@ const Styles = () => {
           <Row xsJustify={Justify.center}>
             <Col xs={12} md={6} lg={4}>
               <CardDisplay
-                image="PXL_20250823_075608610.jpg"
+                image="PXL_20250823_075608610"
                 title="Anukalana Yoga"
                 description="anukalana-yoga-desc"
               />
             </Col>
             <Col xs={12} md={6} lg={4}>
               <CardDisplay
-                image="PXL_20250601_164142948.MP.jpg"
+                image="PXL_20250601_164142948.MP"
                 title="Yin Yoga"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
               />
             </Col>
             <Col xs={12} md={6} lg={4}>
               <CardDisplay
-                image="photo_2_2025-09-03_09-38-20.jpg"
+                image="photo_2_2025-09-03_09-38-20"
                 title="Kid's Yoga"
                 description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet reiciendis dolores id!"
               />
