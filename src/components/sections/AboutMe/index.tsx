@@ -4,10 +4,12 @@ import SectionTitle from "@/components/atoms/SectionTitle";
 import CardFrame from "@/components/molecules/CardFrame";
 import Section from "@/components/organisms/Section";
 import classNames from "classnames";
+import styles from "./styles.module.scss";
 
 const AboutMe = () => {
   return (
-    <div id="about">
+    <div id="about" className={classNames(styles.about)}>
+      <div className={classNames(styles.backgroundGradient)} />
       <Section>
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>

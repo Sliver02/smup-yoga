@@ -13,8 +13,8 @@ const Home = () => {
     palette: {
       mode: "light",
       primary: {
-        main: "#85a371",
-        contrastText: "#343d2d",
+        main: "#e05d7c",
+        contrastText: "#5f1224",
       },
     },
   });

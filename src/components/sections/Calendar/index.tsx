@@ -44,6 +44,7 @@ const Calendar = () => {
   return (
     <div id="calendar" className={classNames(styles.calendar)}>
       <InfiniteText
+        backgroundColor="var(--primary-active)"
         items={[
           "WEEKLY SESSIONS",
           "JOIN NOW",

@@ -28,9 +28,6 @@ const Contact = () => {
     message: "",
   });
 
-  console.log(loading, "loading");
-  console.log(alert, "alert");
-
   const htmlContent = renderToStaticMarkup(<ContactTemplate {...form} />);
 
   const submitForm = async (e: FormEvent<HTMLFormElement>) => {
