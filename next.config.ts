@@ -2,7 +2,10 @@ import type { NextConfig } from "next";
 import withPlaiceholder from "@plaiceholder/next";
 
 const nextConfig: NextConfig = {
-  /* config options here */
+  i18n: {
+    locales: ["en", "it"], // Supported languages
+    defaultLocale: "it", // Default language
+  },
 };
 
 export default withPlaiceholder(nextConfig);
