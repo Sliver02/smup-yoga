@@ -11,7 +11,7 @@ const inter = Inter({
 });
 
 const rightGrotesk = localFont({
-  src: "../../public/fonts/RightGrotesk.woff2",
+  src: "../../../public/fonts/RightGrotesk.woff2",
   weight: "400",
   display: "swap",
   variable: "--font-grotesk",
