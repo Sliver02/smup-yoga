@@ -1,0 +1,25 @@
+{
+  "header": {
+    "home": "Home",
+    "about": "About me",
+    "calendar": "Calendar",
+    "styles": "Styles",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "Sarah Pompanin",
+    "subtitle": "Yoga & Lifestyle in the Dolomites"
+  },
+  "about": {
+    "title": "About me",
+    "description": "I'm Sarah Pompanin, a certified yoga instructor (RYT 200) based in the stunning Dolomites, Italy. My journey into yoga began in 2015, and since then, I've been passionate about sharing its transformative power with others."
+  },
+  "InfiniteText": {
+    "join-now": "Join now",
+    "weekly-classes": "Weekly classes",
+    "live-yoga": "Live yoga",
+    "relax": "Relax",
+    "breathe": "Breathe",
+    "live": "Live"
+  }
+}
