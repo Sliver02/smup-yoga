@@ -20,6 +20,8 @@ const SKIP_PREFIXES = [
   "/robots.txt",
   "/sitemap.xml",
   "/sitemap-0.xml",
+  "/_next/static/",
+  "/_next/image/",
 ];
 
 // simple file-extension check (png,jpg,svg,css,js,woff2,ico,...)
@@ -44,5 +46,6 @@ export default function middleware(req: NextRequest) {
 export const config = {
   matcher: [
     "/", // Match the root path explicitly
+    "/((?!api|_next|static|.*\\..*).*)",
   ],
 };
