@@ -3,6 +3,10 @@ import classNames from "classnames";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import { NextIntlClientProvider } from "next-intl";
+import { getMessages } from "next-intl/server";
+import { notFound } from "next/navigation"; // Next.js API for 404 handling
+import { routing } from "@/i18n/routing";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -55,13 +59,26 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
+  params,
 }: {
   children: React.ReactNode;
+  params: Promise<{ locale: string }>;
 }) {
+  // Extract the locale from the route params (async for Next.js App Router)
+  const { locale } = await params;
+
+  // Validate that the requested locale is supported
+  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
+    notFound();
+  }
+
+  // Load the translation messages for the selected locale
+  const messages = await getMessages({ locale });
+
   return (
-    <html lang="en" data-theme="light">
+    <html lang={locale} data-theme="light">
       <head>
         <link
           rel="stylesheet"
@@ -69,7 +86,9 @@ export default function RootLayout({
         />
       </head>
       <body className={classNames(inter.variable, rightGrotesk.variable)}>
-        <div className={classNames("root")}>{children}</div>
+        <NextIntlClientProvider messages={messages}>
+          <div className={classNames("root")}>{children}</div>
+        </NextIntlClientProvider>
       </body>
     </html>
   );
