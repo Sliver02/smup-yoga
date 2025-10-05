@@ -2,8 +2,8 @@ import { BaseProps } from "@/common/globalInterfaces";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
 import classNames from "classnames";
-import styles from "./styles.module.scss";
 import Image from "next/image";
+import styles from "./styles.module.scss";
 
 export interface HeroProps extends BaseProps {
   title: string;

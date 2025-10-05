@@ -4,6 +4,7 @@ import InfiniteText from "@/components/molecules/InfiniteText";
 import Section from "@/components/organisms/Section";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
+import { useTranslations } from "next-intl";
 
 export interface CalendarItem {
   title: string;
@@ -11,32 +12,34 @@ export interface CalendarItem {
 }
 
 const Calendar = () => {
+  const t = useTranslations("calendar");
+
   const calendarList: CalendarItem[] = [
     {
-      title: "Lunedì",
+      title: t("monday"),
       rows: ["9:30 - Vinyasa, Belluno", "18:30 - Vinyasa, Belluno"],
     },
 
     {
-      title: "Martedì",
+      title: t("tuesday"),
       rows: [
         "8:30 - Anukalana, Belluno",
         "17:30 - Anukalana, Ponte nelle Alpi",
       ],
     },
     {
-      title: "Mercoledì",
+      title: t("wednesday"),
       rows: [
         "17:30 - Anukalana, Tai di Cadore",
         "19:00 - Anukalana, Vodo di Cadore",
       ],
     },
     {
-      title: "Giovedì",
+      title: t("thursday"),
       rows: ["11:00 - Yin Yoga, Belluno"],
     },
     {
-      title: "Venerdì",
+      title: t("friday"),
       rows: ["19:30 - Vinyasa, Belluno"],
     },
   ];
@@ -46,16 +49,16 @@ const Calendar = () => {
       <InfiniteText
         backgroundColor="var(--primary-active)"
         items={[
-          "WEEKLY SESSIONS",
-          "JOIN NOW",
-          "RELAX",
-          "BREATH",
-          "LIVE",
-          "WEEKLY SESSIONS",
-          "JOIN NOW",
-          "RELAX",
-          "BREATH",
-          "LIVE",
+          t("loop.weekly-classes"),
+          t("loop.join-now"),
+          t("loop.relax"),
+          t("loop.breathe"),
+          t("loop.live"),
+          t("loop.weekly-classes"),
+          t("loop.join-now"),
+          t("loop.relax"),
+          t("loop.breathe"),
+          t("loop.live"),
         ]}
       />
       <Section
@@ -68,7 +71,7 @@ const Calendar = () => {
         <Container>
           <Row>
             <Col xs={12} lg={5} lgOffset={1}>
-              <SectionTitle text="Calendar" />
+              <SectionTitle text={t("calendar")} />
             </Col>
           </Row>
           {calendarList.map((item, index) => (

@@ -1,13 +1,14 @@
 "use client";
-import AboutMe from "@/components/sections/AboutMe";
-import Calendar from "@/components/sections/Calendar";
+import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
+import AboutMe from "@/components/sections/AboutMe";
+import Calendar from "@/components/sections/Calendar";
 import Contact from "@/components/sections/Contact";
 import Styles from "@/components/sections/Styles";
-import { createTheme } from "@mui/material";
 import { ThemeProvider } from "@emotion/react";
-import Footer from "@/components/organisms/Footer";
+import { createTheme } from "@mui/material";
+import { useTranslations } from "next-intl";
 
 const Home = () => {
   const theme = createTheme({
@@ -20,14 +21,13 @@ const Home = () => {
     },
   });
 
+  const t = useTranslations("hero");
+
   return (
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero
-          title="Sarah Pompanin"
-          subtitle="Yoga & Lifestyle in the Dolomites"
-        />
+        <Hero title={t("title")} subtitle={t("subtitle")} />
         <AboutMe />
         <Calendar />
         <Styles />

@@ -20,7 +20,7 @@ const InfiniteText = ({ items, backgroundColor }: InfiniteTextProps) => {
       <Marquee>
         {items.map((item, index) => (
           <h3 key={index} className={classNames(styles.item)}>
-            {item}
+            {item.toUpperCase()}
             <Image
               className={classNames(styles.icon)}
               width={40}

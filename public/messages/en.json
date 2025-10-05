@@ -12,14 +12,27 @@
   },
   "about": {
     "title": "About me",
-    "description": "I'm Sarah Pompanin, a certified yoga instructor (RYT 200) based in the stunning Dolomites, Italy. My journey into yoga began in 2015, and since then, I've been passionate about sharing its transformative power with others."
+    "description1": "<strong>Hi, I'm Sarah and I live in the Dolomites!</strong> I am a dynamic and curious person and this has led me to explore many things, in the end I decided that Yoga was my path. I firmly believe that in this society people need to reconnect with themselves, with nature and with their breath.",
+    "description2": "<strong>I started practicing Yoga in 2016 and I immediately fell in love with it.</strong> It was a period of overthinking and during the hours of Yoga I managed not to think for a whole hour, almost like magic.",
+    "description3": "After raving to anyone about its benefits (I still do), I decided to undertake teacher training in Milan. I trained with the Samadhi school, which founded Anukalana Yoga.",
+    "description4": "<strong>Anukalana means integration</strong>, in fact it is a style that combines many notions: obviously Asana, Pranayama, Meditations, but also myofascia, meridians and energy centers. It bases movements on fluidity, coordination with the breath and gentleness. What fascinated me most about this style is that it is suitable for everyone. It is not competitive, but truly aimed at the well-being of each individual."
   },
-  "InfiniteText": {
-    "join-now": "Join now",
-    "weekly-classes": "Weekly classes",
-    "live-yoga": "Live yoga",
-    "relax": "Relax",
-    "breathe": "Breathe",
-    "live": "Live"
+  "calendar": {
+    "title": "Calendar",
+    "monday": "Monday",
+    "tuesday": "Tuesday",
+    "wednesday": "Wednesday",
+    "thursday": "Thursday",
+    "friday": "Friday",
+    "saturday": "Saturday",
+    "sunday": "Sunday",
+    "loop": {
+      "join-now": "Join now",
+      "weekly-classes": "Weekly classes",
+      "live-yoga": "Live yoga",
+      "relax": "Relax",
+      "breathe": "Breathe",
+      "live": "Live"
+    }
   }
 }

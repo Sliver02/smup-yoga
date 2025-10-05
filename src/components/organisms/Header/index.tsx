@@ -6,6 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
+import { useTranslations } from "next-intl";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -17,27 +18,28 @@ export interface NavButtonsProps {
 }
 
 const Header = ({ className }: HeaderProps) => {
+  const t = useTranslations("header");
   const [openMenu, setOpenMenu] = useState(false);
 
   const navButtons: NavButtonsProps[] = [
     {
-      label: "Home",
+      label: t("home"),
       url: "#home",
     },
     {
-      label: "About me",
+      label: t("about"),
       url: "#about",
     },
     {
-      label: "Calendar",
+      label: t("calendar"),
       url: "#calendar",
     },
     {
-      label: "Styles",
+      label: t("styles"),
       url: "#styles",
     },
     {
-      label: "Contact",
+      label: t("contact"),
       url: "#contact",
     },
   ];
