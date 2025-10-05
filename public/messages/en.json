@@ -34,5 +34,29 @@
       "breathe": "Breathe",
       "live": "Live"
     }
+  },
+  "styles": {
+    "title": "Styles & Specializations",
+    "anukalana": {
+      "title": "Anukalana Yoga",
+      "description": "Anukalana falls within the branch of dynamic Yoga. This means that during the lessons we will move between the Asanas. And we will do it to the rhythm of our BREATH. We will pulse with it and each one at their own pace respecting their own body. Thanks to FLUIDITY we will soften the movements, giving the tensions the possibility to gently melt away and to enter deeper into the asana with each breath. Imagine a wave that crosses you. With practice we will begin to create HARMONY between mind and body through the breath. We will find awareness in our movements and in our thoughts."
+    },
+    "yin": {
+      "title": "Yin Yoga",
+      "description": "Yin yoga is a slow-paced style of yoga in which poses are held for longer periods of time than in more active styles. We will get comfortable with cushions called 'bolsters', yoga blocks, and whatever else is needed to make the asanas comfortable and perfectly suited to everyone's needs and flexibility. The purpose of yin yoga is to stimulate the connective tissue, applying optimal tension for a certain time and maintaining deep breathing. By doing this, the connective tissue lengthens, strengthens, and slowly opens up, creating more space between the joints, improving their movement and making them more solid, stable, and strong, and increasing muscle flexibility."
+    },
+    "kids": {
+      "title": "Kid's Yoga",
+      "description": "Getting children involved in Yoga is very important nowadays. The Bimbiyoga method has a playful and fun approach to capture children's attention. We will explore the Asanas through stories, songs, and games. There will also be moments of listening, awareness, and small meditations."
+    }
+  },
+  "contact": {
+    "title": "Contact me",
+    "description": "For any information do not hesitate to contact me! You can write me an email or contact me on social media.",
+    "email": "Email",
+    "name": "Full Name",
+    "message": "Message",
+    "send": "Send!",
+    "social": "Social"
   }
 }

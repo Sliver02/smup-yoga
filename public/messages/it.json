@@ -34,5 +34,29 @@
       "breathe": "Respira",
       "live": "Vivi"
     }
+  },
+  "styles": {
+    "title": "Stili & Specializzazioni",
+    "anukalana": {
+      "title": "Anukalana Yoga",
+      "description": "Anukalana rientra nella branchia degli Yoga dinamici. Questo significa che durante le lezioni ci muoveremo tra le Asana. E lo faremo al ritmo del nostro RESPIRO. Pulseremo con esso e ognuno al proprio ritmo rispettando il proprio corpo. Grazie alla FLUIDITÀ andremo ad ammorbidire i movimenti, dando la possibilità alle tensioni di sciogliersi delicatamente e di entrare ad ogni respiro più in profondità nell'asana. Immaginatevi un onda che vi attraversa. Con la pratica inizieremo a creare un'ARMONIA tra la mente e corpo attraverso il respiro. Troveremo la consapevolezza nei nostri movimenti e nei nostri pensieri."
+    },
+    "yin": {
+      "title": "Yin Yoga",
+      "description": "Lo yin yoga è un tipo di yoga dal ritmo lento in cui le posizioni vengono mantenute più a lungo rispetto al solito. Ci metteremo comodi con cuscini chiamati “bolster”, blocchi yoga e quant’altro sia necessario per rendere gli asana comodi e perfettamente adatti alle esigenze ed alla flessibilità di tutti. Lo scopo dello yin yoga è quello di stimolare il tessuto connettivo, applicando una tensione ottimale per un certo tempo e mantenendo una respirazione profonda. Così facendo il tessuto connettivo si allunga, si fortifica e si apre lentamente, creando più spazio tra le articolazioni, migliorandone il movimento e rendendole più salde, stabili e forti, e aumentando la flessibilità muscolare."
+    },
+    "kids": {
+      "title": "Kid's Yoga",
+      "description": "Far avvicinare allo Yoga i più piccoli è molto importante al giorno d’oggi. Il metodo Bimbiyoga ha un approccio giocoso e divertente così da catturare l’attenzione dei bambini. Andremo ad esplorare le Asana attraverso storie, canzoni e giochi. Non mancheranno momenti di ascolto, consapevolezza e piccole meditazioni."
+    }
+  },
+  "contact": {
+    "title": "Contattami",
+    "description": "Per qualsiasi informazione non esitare a contattarmi! Puoi scrivermi una mail o contattarmi sui social.",
+    "email": "Email",
+    "name": "Nome e Cognome",
+    "message": "Messaggio",
+    "send": "Invia!",
+    "social": "Social"
   }
 }

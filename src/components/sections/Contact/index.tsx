@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import { Alert, Button, TextField } from "@mui/material";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 import { FormEvent, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 
@@ -20,6 +21,8 @@ export interface ContactFormProps {
 }
 
 const Contact = () => {
+  const t = useTranslations("contact");
+
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState<AlertResponse | null>(null);
 
@@ -81,13 +84,8 @@ const Contact = () => {
         <Container>
           <Row>
             <Col>
-              <SectionTitle text="Contact me" />
-              <p className={classNames("text--p-lg")}>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos
-                perferendis vitae totam quae pariatur amet aspernatur enim eaque
-                accusantium libero tenetur necessitatibus molestias ea hic,
-                animi, repellat veniam harum quasi.
-              </p>
+              <SectionTitle text={t("title")} />
+              <p className={classNames("text--p-lg")}>{t("description")}</p>
             </Col>
           </Row>
           <Row>
@@ -96,7 +94,7 @@ const Contact = () => {
                 required
                 fullWidth
                 type="email"
-                label="Email"
+                label={t("email")}
                 onChange={(e) =>
                   setForm((form) => ({ ...form, email: e.target.value }))
                 }
@@ -106,7 +104,7 @@ const Contact = () => {
               <TextField
                 fullWidth
                 required
-                label="Nome Cognome"
+                label={t("name")}
                 onChange={(e) =>
                   setForm((form) => ({ ...form, name: e.target.value }))
                 }
@@ -114,7 +112,7 @@ const Contact = () => {
             </Col>
             <Col xs={12}>
               <TextField
-                label="Messaggio"
+                label={t("message")}
                 rows={8}
                 multiline
                 fullWidth
@@ -132,7 +130,7 @@ const Contact = () => {
                 disabled={loading}
                 startIcon={<SendRoundedIcon />}
               >
-                {loading ? "Loading..." : "Invia!"}
+                {loading ? "Loading..." : t("send")}
               </Button>
             </Col>
           </Row>
