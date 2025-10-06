@@ -71,7 +71,7 @@ const Calendar = () => {
         <Container>
           <Row>
             <Col xs={12} lg={5} lgOffset={1}>
-              <SectionTitle text={t("calendar")} />
+              <SectionTitle text={t("title")} />
             </Col>
           </Row>
           {calendarList.map((item, index) => (

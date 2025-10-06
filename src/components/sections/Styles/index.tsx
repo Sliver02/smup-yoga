@@ -7,11 +7,7 @@ import { useTranslations } from "next-intl";
 
 const Styles = () => {
   const t = useTranslations("styles");
-  {
-    t.rich("description3", {
-      strong: (children) => <strong>{children}</strong>,
-    });
-  }
+
   return (
     <div id="styles">
       <Section>

@@ -38,15 +38,18 @@
     "title": "Styles & Specializations",
     "anukalana": {
       "title": "Anukalana Yoga",
-      "description": "<strong>Anukalana means integration</strong>, in fact it is a style that combines many notions: obviously Asana, Pranayama, Meditations, but also myofascia, meridians and energy centers. It bases movements on fluidity, coordination with the breath and gentleness. What fascinated me most about this style is that it is suitable for everyone. It is not competitive, but truly aimed at the well-being of each individual."
+      "description_long": "<strong>Anukalana means integration</strong>, in fact it is a style that combines many notions: obviously Asana, Pranayama, Meditations, but also myofascia, meridians and energy centers. It bases movements on fluidity, coordination with the breath and gentleness. What fascinated me most about this style is that it is suitable for everyone. It is not competitive, but truly aimed at the well-being of each individual.",
+      "description": "Integrated practice combining asana, pranayama, meditation and fascia/movement work. Gentle, breath‑led sequences that focus on fluidity and overall wellbeing."
     },
     "yin": {
       "title": "Yin Yoga",
-      "description": "Yin yoga is a slow-paced style of yoga in which poses are held for longer periods of time than in more active styles. We will get comfortable with cushions called 'bolsters', yoga blocks, and whatever else is needed to make the asanas comfortable and perfectly suited to everyone's needs and flexibility. The purpose of yin yoga is to stimulate the connective tissue, applying optimal tension for a certain time and maintaining deep breathing. By doing this, the connective tissue lengthens, strengthens, and slowly opens up, creating more space between the joints, improving their movement and making them more solid, stable, and strong, and increasing muscle flexibility."
+      "description_long": "Yin yoga is a slow-paced style of yoga in which poses are held for longer periods of time than in more active styles. We will get comfortable with cushions called 'bolsters', yoga blocks, and whatever else is needed to make the asanas comfortable and perfectly suited to everyone's needs and flexibility. The purpose of yin yoga is to stimulate the connective tissue, applying optimal tension for a certain time and maintaining deep breathing. By doing this, the connective tissue lengthens, strengthens, and slowly opens up, creating more space between the joints, improving their movement and making them more solid, stable, and strong, and increasing muscle flexibility.",
+      "description": "Slow passive postures with props to target connective tissue, increase joint mobility, encourage deep breathing and restorative release for body and mind."
     },
     "kids": {
       "title": "Kid's Yoga",
-      "description": "Getting children involved in Yoga is very important nowadays. The Bimbiyoga method has a playful and fun approach to capture children's attention. We will explore the Asanas through stories, songs, and games. There will also be moments of listening, awareness, and small meditations."
+      "description_long": "Getting children involved in Yoga is very important nowadays. The Bimbiyoga method has a playful and fun approach to capture children's attention. We will explore the Asanas through stories, songs, and games. There will also be moments of listening, awareness, and small meditations.",
+      "description": "Playful, creative sessions using stories, songs and games to teach asanas, breath awareness and mindful listening while building confidence and calm."
     }
   },
   "contact": {
