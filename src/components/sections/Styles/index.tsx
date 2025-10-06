@@ -6,15 +6,15 @@ import Section from "@/components/organisms/Section";
 import { useTranslations } from "next-intl";
 
 const Styles = () => {
-  const t = useTranslations("styles");
+  const t = useTranslations("classes");
 
   return (
-    <div id="styles">
+    <div id="classes">
       <Section>
         <Container>
           <Row>
             <Col>
-              <SectionTitle text="Styles & Specializations" center />
+              <SectionTitle text={t("title")} center />
             </Col>
           </Row>
           <Row xsJustify={Justify.center}>

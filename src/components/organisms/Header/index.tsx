@@ -35,8 +35,8 @@ const Header = ({ className }: HeaderProps) => {
       url: "#calendar",
     },
     {
-      label: t("styles"),
-      url: "#styles",
+      label: t("classes"),
+      url: "#classes",
     },
     {
       label: t("contact"),

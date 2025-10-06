@@ -3,7 +3,7 @@
     "home": "Home",
     "about": "Chi sono",
     "calendar": "Calendario",
-    "styles": "Stili",
+    "classes": "Lezioni",
     "contact": "Contatti"
   },
   "hero": {
@@ -34,8 +34,8 @@
       "live": "Vivi"
     }
   },
-  "styles": {
-    "title": "Stili & Specializzazioni",
+  "classes": {
+    "title": "Cosa insegno",
     "anukalana": {
       "title": "Anukalana Yoga",
       "description": "Pratica integrata che unisce asana, pranayama, meditazione e lavoro miofasciale. Sequenze morbide guidate dal respiro per fluidità e benessere.",
@@ -43,11 +43,11 @@
     },
     "yin": {
       "title": "Yin Yoga",
-      "description": "Sequenze lente e passive con supporti per stimolare il tessuto connettivo, aumentare mobilità, migliorare il respiro e favorire profondo rilascio.",
+      "description": "Sequenze lente e passive con supporti. Utile a stimolare il tessuto connettivo, aumentare mobilità, migliorare il respiro e favorire profondo rilascio.",
       "description_long": "Lo yin yoga è un tipo di yoga dal ritmo lento in cui le posizioni vengono mantenute più a lungo rispetto al solito. Ci metteremo comodi con cuscini chiamati “bolster”, blocchi yoga e quant’altro sia necessario per rendere gli asana comodi e perfettamente adatti alle esigenze ed alla flessibilità di tutti. Lo scopo dello yin yoga è quello di stimolare il tessuto connettivo, applicando una tensione ottimale per un certo tempo e mantenendo una respirazione profonda. Così facendo il tessuto connettivo si allunga, si fortifica e si apre lentamente, creando più spazio tra le articolazioni, migliorandone il movimento e rendendole più salde, stabili e forti, e aumentando la flessibilità muscolare."
     },
     "kids": {
-      "title": "Kid's Yoga",
+      "title": "Yoga Bimbi",
       "description": "Lezioni giocose con storie, canzoni e giochi per esplorare asana, respirazione e attenzione consapevole, sviluppando coordinazione e tranquillità.",
       "description_long": "Far avvicinare allo Yoga i più piccoli è molto importante al giorno d’oggi. Il metodo Bimbiyoga ha un approccio giocoso e divertente così da catturare l’attenzione dei bambini. Andremo ad esplorare le Asana attraverso storie, canzoni e giochi. Non mancheranno momenti di ascolto, consapevolezza e piccole meditazioni."
     }
