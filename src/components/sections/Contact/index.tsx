@@ -3,12 +3,16 @@ import { AlertResponse } from "@/common/globalInterfaces";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import emailjs from "@emailjs/browser";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import { Alert, Button, TextField } from "@mui/material";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
+import Link from "next/link";
 import { FormEvent, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import styles from "./styles.module.scss";
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE as string;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE as string;
@@ -79,7 +83,7 @@ const Contact = () => {
   };
 
   return (
-    <div id="contact">
+    <div id="contact" className={classNames(styles.contact)}>
       <form onSubmit={submitForm}>
         <Container>
           <Row>
@@ -89,6 +93,50 @@ const Contact = () => {
             </Col>
           </Row>
           <Row>
+            <Col xs={12}>
+              <p className={classNames("text--strong", "text--p-lg")}>
+                {t("social")}
+              </p>
+            </Col>
+            <Col xs={12}>
+              <Link
+                href={"https://www.instagram.com/smup_yoga/"}
+                target="_blank"
+                aria-description="Instagram Profile"
+              >
+                <div className={classNames(styles.socialButton)}>
+                  <InstagramIcon
+                    fontSize="large"
+                    className={classNames(styles.icon)}
+                  />
+                  {t("instagram")}
+                </div>
+              </Link>
+            </Col>
+            <Col xs={12}>
+              <Link
+                href={
+                  "https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
+                }
+                target="_blank"
+                aria-description="LinkedIn Profile"
+              >
+                <div className={classNames(styles.socialButton)}>
+                  <LinkedInIcon
+                    fontSize="large"
+                    className={classNames(styles.icon)}
+                  />
+                  {t("linkedin")}
+                </div>
+              </Link>
+            </Col>
+          </Row>
+          <Row>
+            <Col xs={12}>
+              <p className={classNames("text--strong", "text--p-lg")}>
+                {t("email")}
+              </p>
+            </Col>
             <Col xs={12} lg={6}>
               <TextField
                 required

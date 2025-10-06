@@ -6,6 +6,9 @@ import Section from "@/components/organisms/Section";
 import classNames from "classnames";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import Link from "next/link";
 
 const AboutMe = () => {
   const t = useTranslations("about");
@@ -20,22 +23,56 @@ const AboutMe = () => {
               <CardFrame image="PXL_20250112_213040356" alt="Kid's Yoga" />
             </Col>
             <Col xs={12} md={6}>
-              <SectionTitle text={t("title")} />
-              <p className={classNames("text--p-lg")}>
-                {t.rich("description1", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p className={classNames("text--p-lg")}>
-                {t.rich("description2", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p className={classNames("text--p-lg")}>
-                {t.rich("description3", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
+              <div>
+                <Row>
+                  <Col>
+                    <SectionTitle text={t("title")} />
+                    <p className={classNames("text--p-lg")}>
+                      {t.rich("description1", {
+                        strong: (children) => <strong>{children}</strong>,
+                      })}
+                    </p>
+                    <p className={classNames("text--p-lg")}>
+                      {t.rich("description2", {
+                        strong: (children) => <strong>{children}</strong>,
+                      })}
+                    </p>
+                    <p className={classNames("text--p-lg")}>
+                      {t.rich("description3", {
+                        strong: (children) => <strong>{children}</strong>,
+                      })}
+                    </p>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <div className={classNames(styles.socialContainer)}>
+                      <Link
+                        href={"https://www.instagram.com/smup_yoga/"}
+                        target="_blank"
+                        aria-description="Instagram Profile"
+                      >
+                        <InstagramIcon
+                          fontSize="large"
+                          className={classNames(styles.icon)}
+                        />
+                      </Link>
+                      <Link
+                        href={
+                          "https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
+                        }
+                        target="_blank"
+                        aria-description="LinkedIn Profile"
+                      >
+                        <LinkedInIcon
+                          fontSize="large"
+                          className={classNames(styles.icon)}
+                        />
+                      </Link>
+                    </div>
+                  </Col>
+                </Row>
+              </div>
             </Col>
           </Row>
         </Container>

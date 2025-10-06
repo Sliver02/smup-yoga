@@ -1,5 +1,6 @@
 .about {
   position: relative;
+
   .backgroundGradient {
     position: absolute;
     top: 0;
@@ -11,5 +12,20 @@
       var(--primary-active) 30%,
       transparent 100%
     );
+  }
+
+  .socialContainer {
+    .icon {
+      width: 4rem;
+      height: 4rem;
+
+      color: var(--accent-main);
+      transition: 0.3s all;
+
+      &:hover {
+        color: var(--accent-hover);
+        transform: translateY(-5px);
+      }
+    }
   }
 }
