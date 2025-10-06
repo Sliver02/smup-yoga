@@ -36,11 +36,6 @@ const AboutMe = () => {
                   strong: (children) => <strong>{children}</strong>,
                 })}
               </p>
-              <p className={classNames("text--p-lg")}>
-                {t.rich("description4", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
             </Col>
           </Row>
         </Container>

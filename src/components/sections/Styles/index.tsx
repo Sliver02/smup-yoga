@@ -7,7 +7,11 @@ import { useTranslations } from "next-intl";
 
 const Styles = () => {
   const t = useTranslations("styles");
-
+  {
+    t.rich("description3", {
+      strong: (children) => <strong>{children}</strong>,
+    });
+  }
   return (
     <div id="styles">
       <Section>
@@ -22,21 +26,27 @@ const Styles = () => {
               <CardDisplay
                 image="PXL_20250823_075608610"
                 title={t("anukalana.title")}
-                description={t("anukalana.description")}
+                description={t.rich("anukalana.description", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
               />
             </Col>
             <Col xs={12} md={6} lg={4}>
               <CardDisplay
                 image="PXL_20250601_164142948.MP"
                 title={t("yin.title")}
-                description={t("yin.description")}
+                description={t.rich("yin.description", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
               />
             </Col>
             <Col xs={12} md={6} lg={4}>
               <CardDisplay
                 image="photo_2_2025-09-03_09-38-20"
                 title={t("kids.title")}
-                description={t("kids.description")}
+                description={t.rich("kids.description", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
               />
             </Col>
           </Row>
