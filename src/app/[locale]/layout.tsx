@@ -1,12 +1,10 @@
 import "@/designSystem/globals.scss";
 import classNames from "classnames";
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
-import localFont from "next/font/local";
 import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
-import { notFound } from "next/navigation"; // Next.js API for 404 handling
-import { routing } from "@/i18n/routing";
+import { Inter } from "next/font/google";
+import localFont from "next/font/local";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -69,10 +67,19 @@ export default async function RootLayout({
   // Extract the locale from the route params (async for Next.js App Router)
   const { locale } = await params;
 
-  // Validate that the requested locale is supported
-  if (!routing.locales.includes(locale as (typeof routing.locales)[number])) {
-    notFound();
-  }
+  const localBusinessJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    name: "SMUP — Sarah Pompanin",
+    url: `https://smupyoga.com/${locale}/`,
+    email: "smup.yoga@gmail.com",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Cortina d'Ampezzo",
+      addressRegion: "Veneto",
+      addressCountry: "IT",
+    },
+  };
 
   // Load the translation messages for the selected locale
   const messages = await getMessages({ locale });
@@ -83,6 +90,19 @@ export default async function RootLayout({
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        />
+        <link rel="alternate" href="https://smupyoga.com/en/" hrefLang="en" />
+        <link rel="alternate" href="https://smupyoga.com/it/" hrefLang="it" />
+        <link
+          rel="alternate"
+          href="https://smupyoga.com/"
+          hrefLang="x-default"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(localBusinessJsonLd),
+          }}
         />
       </head>
       <body className={classNames(inter.variable, rightGrotesk.variable)}>
