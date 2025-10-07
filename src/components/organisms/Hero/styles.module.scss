@@ -1,3 +1,7 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+@import "@/designSystem/utils";
+
 .hero {
   display: flex;
   flex-direction: column;
@@ -21,5 +25,11 @@
     display: flex;
     margin-top: 50vh;
     color: var(--neutral-background);
+
+    h1 {
+      @include mediaQuery("sm", "max") {
+        font-size: 4rem;
+      }
+    }
   }
 }
