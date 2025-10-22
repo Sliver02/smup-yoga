@@ -1,21 +1,26 @@
 .contact {
-  .socialButton,
-  .icon {
-    color: var(--accent-main);
-    transition: 0.3s all;
-
-    &:hover {
-      color: var(--accent-hover);
-    }
+  .socialContainer {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
   }
 
   .socialButton {
     display: flex;
     align-items: center;
     font-size: 1.2rem;
+    background-color: var(--accent-main);
+    color: white;
+    padding: 0.5rem;
+    padding-right: 2rem;
+    border-radius: 1rem;
+    margin-right: 0.5rem;
+    margin-top: 0.5rem;
+    transition: 0.3s all;
 
     &:hover {
-      transform: translateX(5px);
+      background-color: var(--accent-hover);
+      // transform: translateX(5px);
     }
   }
 
@@ -23,5 +28,6 @@
     width: 4rem;
     height: 4rem;
     margin-right: 1rem;
+    color: white;
   }
 }

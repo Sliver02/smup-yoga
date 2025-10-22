@@ -90,47 +90,48 @@ const Contact = () => {
             <Col>
               <SectionTitle text={t("title")} />
               <p className={classNames("text--p-lg")}>{t("description")}</p>
+
+              <div className={classNames(styles.socialContainer)}>
+                <Link
+                  href={"https://www.instagram.com/smup_yoga/"}
+                  target="_blank"
+                  aria-description="Instagram Profile"
+                >
+                  <button
+                    className={classNames(styles.socialButton)}
+                    aria-label="Sarah Pompanin Instagram"
+                    type="button"
+                  >
+                    <InstagramIcon
+                      fontSize="large"
+                      className={classNames(styles.icon)}
+                    />
+                    {t("instagram")}
+                  </button>
+                </Link>
+                <Link
+                  href={
+                    "https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
+                  }
+                  target="_blank"
+                  aria-description="LinkedIn Profile"
+                >
+                  <button
+                    className={classNames(styles.socialButton)}
+                    aria-label="Sarah Pompanin Linkedin"
+                    type="button"
+                  >
+                    <LinkedInIcon
+                      fontSize="large"
+                      className={classNames(styles.icon)}
+                    />
+                    {t("linkedin")}
+                  </button>
+                </Link>
+              </div>
             </Col>
           </Row>
-          <Row>
-            <Col xs={12}>
-              <p className={classNames("text--strong", "text--p-lg")}>
-                {t("social")}
-              </p>
-            </Col>
-            <Col xs={12}>
-              <Link
-                href={"https://www.instagram.com/smup_yoga/"}
-                target="_blank"
-                aria-description="Instagram Profile"
-              >
-                <div className={classNames(styles.socialButton)}>
-                  <InstagramIcon
-                    fontSize="large"
-                    className={classNames(styles.icon)}
-                  />
-                  {t("instagram")}
-                </div>
-              </Link>
-            </Col>
-            <Col xs={12}>
-              <Link
-                href={
-                  "https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
-                }
-                target="_blank"
-                aria-description="LinkedIn Profile"
-              >
-                <div className={classNames(styles.socialButton)}>
-                  <LinkedInIcon
-                    fontSize="large"
-                    className={classNames(styles.icon)}
-                  />
-                  {t("linkedin")}
-                </div>
-              </Link>
-            </Col>
-          </Row>
+
           <Row>
             <Col xs={12}>
               <p className={classNames("text--strong", "text--p-lg")}>
@@ -182,6 +183,7 @@ const Contact = () => {
               </Button>
             </Col>
           </Row>
+
           {alert && (
             <Row>
               <Col>
