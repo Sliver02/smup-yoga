@@ -3,7 +3,8 @@
 
 .breadcrumb {
   padding: 20px 0;
-  background: var(--neutral-background);
+  font-weight: bold;
+  color: var(--accent-main);
 }
 
 .list {
@@ -28,12 +29,12 @@
 }
 
 .link {
-  color: var(--neutral-text);
+  color: var(--accent-main);
   text-decoration: none;
   transition: color 0.2s ease;
 
   &:hover {
-    color: var(--primary-main);
+    color: var(--accent-hover);
   }
 }
 

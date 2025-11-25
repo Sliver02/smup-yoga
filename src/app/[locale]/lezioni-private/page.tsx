@@ -29,7 +29,12 @@ const PrivateLessonsPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle={t("hero_subtitle")} compact />
+        <Hero 
+          title={t("title")} 
+          subtitle={t("hero_subtitle")} 
+          compact 
+          backgroundImage="/images/PXL_20250101_151738219.jpg"
+        />
 
         <Container>
           <Row>
@@ -49,7 +54,7 @@ const PrivateLessonsPage = () => {
             <Row xsJustify={Justify.center}>
               <Col xs={12} lg={10}>
                 <SectionTitle text={t("title")} center />
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
@@ -57,17 +62,23 @@ const PrivateLessonsPage = () => {
                     marginTop: "40px",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description1") }}
-                />
-                <div
+                >
+                  {t.rich("description1", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "40px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description2") }}
-                />
+                >
+                  {t.rich("description2", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
 
                 <SectionTitle text={t("benefits_title")} />
 

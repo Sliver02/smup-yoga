@@ -30,7 +30,12 @@ const YogaCortinaPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle={t("subtitle")} compact />
+        <Hero 
+          title={t("title")} 
+          subtitle={t("subtitle")} 
+          compact 
+          backgroundImage="/images/IMG_2646.jpg"
+        />
 
         <Container>
           <Row>
@@ -50,15 +55,18 @@ const YogaCortinaPage = () => {
             <Row xsJustify={Justify.center}>
               <Col xs={12} lg={10}>
                 <SectionTitle text={t("title")} center />
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginTop: "40px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description") }}
-                />
+                >
+                  {t.rich("description", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
               </Col>
             </Row>
           </Container>

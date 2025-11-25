@@ -31,7 +31,12 @@ const YinYogaPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle={t("description")} compact />
+        <Hero 
+          title={t("title")} 
+          subtitle={t("description")} 
+          compact 
+          backgroundImage="/images/PXL_20250601_164142948.MP.jpg"
+        />
 
         <Container>
           <Row>
@@ -66,14 +71,17 @@ const YinYogaPage = () => {
                     blurDataURL="/images/PXL_20250601_164142948.MP_placeholder.jpg"
                   />
                 </div>
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description_long") }}
-                />
+                >
+                  {t.rich("description_long", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
               </Col>
             </Row>
           </Container>

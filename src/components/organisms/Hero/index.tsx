@@ -9,9 +9,12 @@ export interface HeroProps extends BaseProps {
   title: string;
   subtitle: string;
   compact?: boolean;
+  backgroundImage?: string;
 }
 
-const Hero = ({ className, title, subtitle, compact = false }: HeroProps) => {
+const Hero = ({ className, title, subtitle, compact = false, backgroundImage = "/images/IMG_2617.png" }: HeroProps) => {
+  const placeholderImage = backgroundImage.replace(/\.(jpg|png|jpeg)$/, "_placeholder.$1");
+  
   return (
     <div
       className={classNames(className, styles.hero, {
@@ -22,9 +25,9 @@ const Hero = ({ className, title, subtitle, compact = false }: HeroProps) => {
       <Image
         className={classNames(className, styles.backgroundImage)}
         alt="Yoga nature alps Dolomites"
-        src="/images/IMG_2617.png"
+        src={backgroundImage}
         placeholder="blur"
-        blurDataURL="/images/IMG_2617_placeholder.png"
+        blurDataURL={placeholderImage}
         priority
         fill
       />

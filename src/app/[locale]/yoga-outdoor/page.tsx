@@ -30,7 +30,12 @@ const OutdoorYogaPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle={t("hero_subtitle")} compact />
+        <Hero 
+          title={t("title")} 
+          subtitle={t("hero_subtitle")} 
+          compact 
+          backgroundImage="/images/PXL_20250726_110233771.MP.jpg"
+        />
 
         <Container>
           <Row>
@@ -65,24 +70,30 @@ const OutdoorYogaPage = () => {
                     blurDataURL="/images/PXL_20250726_110233771.MP_placeholder.jpg"
                   />
                 </div>
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description1") }}
-                />
-                <div
+                >
+                  {t.rich("description1", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "40px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description2") }}
-                />
+                >
+                  {t.rich("description2", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
 
                 <SectionTitle text={t("locations_title")} />
 

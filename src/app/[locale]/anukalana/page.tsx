@@ -31,7 +31,12 @@ const AnukalanaPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle={t("description")} compact />
+        <Hero 
+          title={t("title")} 
+          subtitle={t("description")} 
+          compact 
+          backgroundImage="/images/PXL_20250823_075608610.jpg"
+        />
 
         <Container>
           <Row>
@@ -66,14 +71,17 @@ const AnukalanaPage = () => {
                     blurDataURL="/images/PXL_20250823_075608610_placeholder.jpg"
                   />
                 </div>
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description_long") }}
-                />
+                >
+                  {t.rich("description_long", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
               </Col>
             </Row>
           </Container>

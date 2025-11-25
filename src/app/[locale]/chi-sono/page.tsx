@@ -30,7 +30,12 @@ const AboutPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero title={t("title")} subtitle="Sarah Pompanin" compact />
+        <Hero 
+          title={t("title")} 
+          subtitle="Sarah Pompanin" 
+          compact 
+          backgroundImage="/images/PXL_20250112_213040356.jpg"
+        />
 
         <Container>
           <Row>
@@ -65,65 +70,77 @@ const AboutPage = () => {
                     blurDataURL="/images/PXL_20250112_213040356_placeholder.jpg"
                   />
                 </div>
-                <div
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description1") }}
-                />
-                <div
+                >
+                  {t.rich("description1", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description2") }}
-                />
-                <div
+                >
+                  {t.rich("description2", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{ __html: t("description3") }}
-                />
-                <div
+                >
+                  {t.rich("description3", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{
-                    __html: t("extended_description1"),
-                  }}
-                />
-                <div
+                >
+                  {t.rich("extended_description1", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                     marginBottom: "30px",
                   }}
-                  dangerouslySetInnerHTML={{
-                    __html: t("extended_description2"),
-                  }}
-                />
-                <div
+                >
+                  {t.rich("extended_description2", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
+                <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
                   }}
-                  dangerouslySetInnerHTML={{
-                    __html: t("extended_description3"),
-                  }}
-                />
+                >
+                  {t.rich("extended_description3", {
+                    strong: (children) => <strong>{children}</strong>,
+                  })}
+                </p>
               </Col>
             </Row>
           </Container>
