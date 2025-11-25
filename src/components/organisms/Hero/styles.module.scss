@@ -32,4 +32,26 @@
       }
     }
   }
+
+  &.compact {
+    height: 50vh;
+    max-height: 600px;
+    min-height: 400px;
+
+    .textWrapper {
+      margin-top: 25vh;
+
+      @include mediaQuery("md", "max") {
+        margin-top: 20vh;
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+
+      @include mediaQuery("sm", "max") {
+        font-size: 3rem;
+      }
+    }
+  }
 }

@@ -1,6 +1,7 @@
 "use client";
 import { BaseProps } from "@/common/globalInterfaces";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import classNames from "classnames";
 import Image from "next/image";
 import Link from "next/link";
@@ -12,35 +13,47 @@ export interface HeaderProps extends BaseProps {
   prot?: string;
 }
 
-export interface NavButtonsProps {
+export interface NavItem {
   label: string;
-  url: string;
+  url?: string;
+  children?: NavItem[];
 }
 
 const Header = ({ className }: HeaderProps) => {
   const t = useTranslations("header");
-  const [openMenu, setOpenMenu] = useState(false);
+  const tClasses = useTranslations("classes");
+  const tLoc = useTranslations("locations");
+  const tOutdoor = useTranslations("outdoor");
+  const tPrivate = useTranslations("private");
 
-  const navButtons: NavButtonsProps[] = [
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const navItems: NavItem[] = [
     {
       label: t("home"),
-      url: "#home",
+      url: "/",
     },
     {
       label: t("about"),
-      url: "#about",
-    },
-    {
-      label: t("calendar"),
-      url: "#calendar",
+      url: "/chi-sono",
     },
     {
       label: t("classes"),
-      url: "#classes",
+      children: [
+        { label: tClasses("anukalana.title"), url: "/anukalana" },
+        { label: tClasses("yin.title"), url: "/yin-yoga" },
+        { label: tClasses("kids.title"), url: "/yoga-bimbi" },
+        { label: tOutdoor("title"), url: "/yoga-outdoor" },
+        { label: tPrivate("title"), url: "/lezioni-private" },
+      ],
     },
     {
-      label: t("contact"),
-      url: "#contact",
+      label: tLoc("title"),
+      children: [
+        { label: tLoc("belluno.title"), url: "/yoga-belluno" },
+        { label: tLoc("cortina.title"), url: "/yoga-cortina" },
+      ],
     },
   ];
 
@@ -57,14 +70,52 @@ const Header = ({ className }: HeaderProps) => {
         </Link>
       </div>
       <div className={classNames(styles.navbar)}>
-        {navButtons.map((button, index) => (
-          <a
-            key={index}
-            className={classNames(styles.navbar__button)}
-            href={button.url}
-          >
-            {button.label}
-          </a>
+        {navItems.map((item, index) => (
+          <div key={index} className={styles.navItem}>
+            {item.children ? (
+              <div
+                className={styles.dropdown}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button
+                  className={classNames(
+                    styles.navbar__button,
+                    styles.dropdownButton
+                  )}
+                >
+                  {item.label}
+                  <KeyboardArrowDownIcon fontSize="small" />
+                </button>
+                <div
+                  className={classNames(styles.dropdownMenu, {
+                    [styles.dropdownMenuOpen]: openDropdown === item.label,
+                  })}
+                >
+                  {item.children.map((child, childIndex) => (
+                    <Link
+                      key={childIndex}
+                      href={child.url!}
+                      className={styles.dropdownItem}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : item.url?.startsWith("#") ? (
+              <a className={classNames(styles.navbar__button)} href={item.url}>
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                className={classNames(styles.navbar__button)}
+                href={item.url!}
+              >
+                {item.label}
+              </Link>
+            )}
+          </div>
         ))}
       </div>
 
@@ -78,15 +129,43 @@ const Header = ({ className }: HeaderProps) => {
       <div
         className={classNames(styles.menu, openMenu && styles["menu--open"])}
       >
-        {navButtons.map((button, index) => (
-          <a
-            key={index}
-            className={classNames(styles["menu__button"])}
-            href={button.url}
-            onClick={() => setOpenMenu(false)}
-          >
-            {button.label}
-          </a>
+        {navItems.map((item, index) => (
+          <div key={index} className={styles.mobileNavItem}>
+            {item.children ? (
+              <>
+                <div className={styles.mobileDropdownLabel}>{item.label}</div>
+                {item.children.map((child, childIndex) => (
+                  <Link
+                    key={childIndex}
+                    href={child.url!}
+                    className={classNames(
+                      styles["menu__button"],
+                      styles.mobileSubItem
+                    )}
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </>
+            ) : item.url?.startsWith("#") ? (
+              <a
+                className={classNames(styles["menu__button"])}
+                href={item.url}
+                onClick={() => setOpenMenu(false)}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                className={classNames(styles["menu__button"])}
+                href={item.url!}
+                onClick={() => setOpenMenu(false)}
+              >
+                {item.label}
+              </Link>
+            )}
+          </div>
         ))}
       </div>
     </div>

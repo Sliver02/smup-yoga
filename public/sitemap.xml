@@ -1,34 +1,150 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--
-  Sitemap for SMUP (single-page with anchored sections).
-  Fragments may be ignored by some crawlers; consider adding real landing pages for high-value sections (Cortina, Outdoor, Booking).
--->
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- English root -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <!-- Italian Homepage (default) -->
   <url>
-    <loc>https://smupyoga.com/en/</loc>
-    <lastmod>2025-10-05</lastmod>
+    <loc>https://smupyoga.com/</loc>
+    <lastmod>2025-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/" />
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/" />
   </url>
-  <url>
-    <loc>https://smupyoga.com/en#about</loc>
-    <lastmod>2025-10-05</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.80</priority>
-  </url>
-
-  <!-- Italian root -->
   <url>
     <loc>https://smupyoga.com/it/</loc>
-    <lastmod>2025-10-05</lastmod>
+    <lastmod>2025-11-25</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/" />
   </url>
-   <url>
-    <loc>https://smupyoga.com/it#about</loc>
-    <lastmod>2025-10-05</lastmod>
+  <url>
+    <loc>https://smupyoga.com/en/</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.00</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/" />
+  </url>
+
+  <!-- About Pages -->
+  <url>
+    <loc>https://smupyoga.com/it/chi-sono</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/chi-sono" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/chi-sono</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/chi-sono" />
+  </url>
+
+  <!-- Yoga Styles Pages -->
+  <url>
+    <loc>https://smupyoga.com/it/anukalana</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/anukalana" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/anukalana</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/anukalana" />
+  </url>
+
+  <url>
+    <loc>https://smupyoga.com/it/yin-yoga</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/yin-yoga" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/yin-yoga</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/yin-yoga" />
+  </url>
+
+  <url>
+    <loc>https://smupyoga.com/it/yoga-bimbi</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/yoga-bimbi" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/yoga-bimbi</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/yoga-bimbi" />
+  </url>
+
+  <!-- Location Pages (High Priority for Local SEO) -->
+  <url>
+    <loc>https://smupyoga.com/it/yoga-belluno</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/yoga-belluno" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/yoga-belluno</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/yoga-belluno" />
+  </url>
+
+  <url>
+    <loc>https://smupyoga.com/it/yoga-cortina</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/yoga-cortina" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/yoga-cortina</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/yoga-cortina" />
+  </url>
+
+  <!-- Special Offerings -->
+  <url>
+    <loc>https://smupyoga.com/it/yoga-outdoor</loc>
+    <lastmod>2025-11-25</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/yoga-outdoor" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/yoga-outdoor</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/yoga-outdoor" />
+  </url>
+
+  <url>
+    <loc>https://smupyoga.com/it/lezioni-private</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="en" href="https://smupyoga.com/en/lezioni-private" />
+  </url>
+  <url>
+    <loc>https://smupyoga.com/en/lezioni-private</loc>
+    <lastmod>2025-11-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+    <xhtml:link rel="alternate" hreflang="it" href="https://smupyoga.com/it/lezioni-private" />
   </url>
 </urlset>

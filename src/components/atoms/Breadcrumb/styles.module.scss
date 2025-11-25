@@ -1,0 +1,48 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.breadcrumb {
+  padding: 20px 0;
+  background: var(--neutral-background);
+}
+
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+
+  @include mediaQuery("sm", "max") {
+    font-size: 12px;
+  }
+}
+
+.link {
+  color: var(--neutral-text);
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  &:hover {
+    color: var(--primary-main);
+  }
+}
+
+.current {
+  color: var(--neutral-text-light);
+  font-weight: 500;
+}
+
+.separator {
+  color: var(--neutral-text-light);
+  user-select: none;
+}

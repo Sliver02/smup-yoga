@@ -8,11 +8,17 @@ import styles from "./styles.module.scss";
 export interface HeroProps extends BaseProps {
   title: string;
   subtitle: string;
+  compact?: boolean;
 }
 
-const Hero = ({ className, title, subtitle }: HeroProps) => {
+const Hero = ({ className, title, subtitle, compact = false }: HeroProps) => {
   return (
-    <div className={classNames(className, styles.hero)} id="home">
+    <div
+      className={classNames(className, styles.hero, {
+        [styles.compact]: compact,
+      })}
+      id={compact ? undefined : "home"}
+    >
       <Image
         className={classNames(className, styles.backgroundImage)}
         alt="Yoga nature alps Dolomites"
@@ -22,10 +28,14 @@ const Hero = ({ className, title, subtitle }: HeroProps) => {
         priority
         fill
       />
-      <div className={classNames(styles.textWrapper, "text--align-center")}>
+      <div
+        className={classNames(styles.textWrapper, {
+          "text--align-center": !compact,
+        })}
+      >
         <Container>
-          <Row xsJustify={Justify.center}>
-            <Col xs={12} lg={8}>
+          <Row xsJustify={compact ? Justify.start : Justify.center}>
+            <Col xs={12} lg={compact ? 10 : 8}>
               <h1>{title}</h1>
               <p
                 className={classNames(

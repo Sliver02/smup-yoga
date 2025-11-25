@@ -4,17 +4,24 @@
     "about": "Chi sono",
     "calendar": "Calendario",
     "classes": "Lezioni",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "locations": "Dove insegno"
   },
   "hero": {
     "title": "Sarah Pompanin",
     "subtitle": "Yoga & Lifestyle nelle Dolomiti"
   },
+  "breadcrumbs": {
+    "home": "Home"
+  },
   "about": {
     "title": "Chi sono",
     "description1": "<strong>Ciao, sono Sarah e vivo tra le Dolomiti!</strong> Sono una persona dinamica e curiosa e questo mi ha fatto esplorare molte cose, alla fine ho deciso che lo Yoga era la mia strada. Credo fermamente che in questa società le persone abbiano bisogno di riconnettersi con loro stesse, con la natura e con il respiro.",
     "description2": "<strong>Ho iniziato a praticare Yoga nel 2016 e me ne sono subito innamorata.</strong> Era un periodo di overthinking e nelle ore di Yoga riuscivo a non pensare per 1 ora intera, quasi una magia.",
-    "description3": "Dopo aver decantato a chiunque i suoi benefici (continuo tutt'ora a farlo) ho deciso di intraprendere il teacher training a Milano. Ho fatto la formazione con la scuola Samadhi, che ha fondato lo Yoga Anukalana. "
+    "description3": "Dopo aver decantato a chiunque i suoi benefici (continuo tutt'ora a farlo) ho deciso di intraprendere il teacher training a Milano. Ho fatto la formazione con la scuola Samadhi, che ha fondato lo Yoga Anukalana.",
+    "extended_description1": "Insegno yoga a <strong>Cortina d'Ampezzo, Belluno, Ponte nelle Alpi, e in tutta la zona del Cadore</strong> (Tai di Cadore, Vodo di Cadore, Calalzo). Offro lezioni di gruppo in studio e sessioni private personalizzate, sia in presenza che online.",
+    "extended_description2": "Sono certificata in <strong>Anukalana Yoga</strong> (scuola Samadhi Milano) e specializzata anche in <strong>Yin Yoga, Yoga per Bambini e Pilates</strong>. La mia missione è aiutare le persone a ritrovare equilibrio, benessere e connessione con sé stesse attraverso la pratica dello yoga.",
+    "extended_description3": "Durante l'estate organizzo <strong>sessioni di yoga all'aperto</strong> in location suggestive delle Dolomiti, tra cui il BAR ALPINO di Calalzo di Cadore, Malga Caseera Razzo a Vigo, e dopo escursioni presso rifugi in quota. Sono disponibile anche per eventi privati e ritiri yoga."
   },
   "calendar": {
     "title": "Calendario",
@@ -62,5 +69,61 @@
     "social": "Social",
     "instagram": "Seguimi su instagram",
     "linkedin": "Collaboriamo su Linkedin"
+  },
+  "locations": {
+    "title": "Dove insegno",
+    "subtitle": "Lezioni di yoga a Cortina, Belluno e in tutto il Cadore",
+    "belluno": {
+      "title": "Yoga a Belluno",
+      "subtitle": "Lezioni di Anukalana, Vinyasa e Yin Yoga",
+      "description": "Insegno regolarmente a <strong>Belluno</strong> con diverse classi settimanali di Anukalana, Vinyasa e Yin Yoga. Le lezioni si svolgono in studi accoglienti e sono adatte a tutti i livelli, dai principianti agli studenti avanzati."
+    },
+    "cortina": {
+      "title": "Yoga a Cortina d'Ampezzo e Cadore",
+      "subtitle": "Lezioni in studio e outdoor nelle Dolomiti",
+      "description": "A <strong>Cortina d'Ampezzo e nella zona del Cadore</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) offro lezioni settimanali di Anukalana Yoga e sessioni speciali outdoor durante l'estate. Disponibile anche per eventi privati e ritiri yoga in location suggestive delle Dolomiti."
+    },
+    "schedule_title": "Orario delle lezioni",
+    "locations_list": {
+      "belluno": "Belluno",
+      "ponte": "Ponte nelle Alpi",
+      "tai": "Tai di Cadore",
+      "vodo": "Vodo di Cadore",
+      "cortina": "Cortina d'Ampezzo"
+    }
+  },
+  "outdoor": {
+    "title": "Yoga Outdoor",
+    "subtitle": "Sessioni estive all'aria aperta nelle Dolomiti",
+    "hero_subtitle": "Pratica yoga all'aria aperta tra le montagne",
+    "description1": "Durante i mesi estivi organizzo <strong>sessioni di yoga all'aperto</strong> in alcune delle location più suggestive delle Dolomiti. Praticare yoga immersi nella natura amplifica i benefici della pratica, favorendo una connessione profonda con l'ambiente circostante.",
+    "description2": "Le sessioni outdoor sono aperte a tutti i livelli e includono pratiche di Anukalana, Vinyasa e meditazioni guidate. Un'esperienza unica per rigenerarsi corpo e mente.",
+    "locations_title": "Dove pratichiamo",
+    "location1_name": "BAR ALPINO - Calalzo di Cadore",
+    "location1_desc": "Sessioni mattutine con vista sulle Dolomiti in una location accogliente e panoramica.",
+    "location2_name": "Malga Caseera Razzo - Vigo",
+    "location2_desc": "Yoga in quota circondati dai pascoli alpini, un'esperienza di connessione totale con la natura.",
+    "location3_name": "Rifugi e sentieri delle Dolomiti",
+    "location3_desc": "Eventi speciali presso rifugi e dopo escursioni nelle zone di Cortina, Belluno e Cadore.",
+    "cta": "Interessato alle sessioni outdoor? Contattami per conoscere il calendario estivo!"
+  },
+  "private": {
+    "title": "Lezioni Private",
+    "subtitle": "Sessioni personalizzate online e in presenza",
+    "hero_subtitle": "Pratica su misura per te",
+    "description1": "Offro <strong>lezioni private di yoga personalizzate</strong> sia in presenza (Cortina, Belluno, Cadore) che online. Ogni sessione è progettata sulle tue esigenze specifiche, che tu sia principiante o praticante avanzato.",
+    "description2": "Le lezioni private sono ideali per chi desidera un'attenzione individuale, ha obiettivi specifici (flessibilità, forza, rilassamento) o preferisce praticare in un ambiente riservato.",
+    "benefits_title": "Perché scegliere una lezione privata",
+    "benefit1": "Programma completamente personalizzato",
+    "benefit2": "Orari flessibili adatti ai tuoi impegni",
+    "benefit3": "Attenzione individuale su postura e allineamento",
+    "benefit4": "Progressione più rapida nella pratica",
+    "benefit5": "Disponibile online da ovunque tu sia",
+    "formats_title": "Formati disponibili",
+    "format1": "Lezione singola (60 o 90 minuti)",
+    "format2": "Pacchetti da 5 o 10 lezioni",
+    "format3": "Lezioni di coppia o piccoli gruppi",
+    "format4": "Sessioni online via Zoom",
+    "cta": "Contattami per prenotare la tua lezione privata!"
   }
 }

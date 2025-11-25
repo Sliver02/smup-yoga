@@ -4,17 +4,24 @@
     "about": "About me",
     "calendar": "Calendar",
     "classes": "Classes",
-    "contact": "Contact"
+    "contact": "Contact",
+    "locations": "Locations"
   },
   "hero": {
     "title": "Sarah Pompanin",
     "subtitle": "Yoga & Lifestyle in the Dolomites"
   },
+  "breadcrumbs": {
+    "home": "Home"
+  },
   "about": {
     "title": "About me",
     "description1": "<strong>Hi, I'm Sarah and I live in the Dolomites!</strong> I am a dynamic and curious person and this has led me to explore many things, in the end I decided that Yoga was my path. I firmly believe that in this society people need to reconnect with themselves, with nature and with their breath.",
     "description2": "<strong>I started practicing Yoga in 2016 and I immediately fell in love with it.</strong> It was a period of overthinking and during the hours of Yoga I managed not to think for a whole hour, almost like magic.",
-    "description3": "After raving to anyone about its benefits (I still do), I decided to undertake teacher training in Milan. I trained with the Samadhi school, which founded Anukalana Yoga."
+    "description3": "After raving to anyone about its benefits (I still do), I decided to undertake teacher training in Milan. I trained with the Samadhi school, which founded Anukalana Yoga.",
+    "extended_description1": "I teach yoga in <strong>Cortina d'Ampezzo, Belluno, Ponte nelle Alpi, and throughout the Cadore region</strong> (Tai di Cadore, Vodo di Cadore, Calalzo). I offer group classes in studios and personalized private sessions, both in-person and online.",
+    "extended_description2": "I am certified in <strong>Anukalana Yoga</strong> (Samadhi School Milan) and also specialized in <strong>Yin Yoga, Kids Yoga, and Pilates</strong>. My mission is to help people rediscover balance, wellbeing, and connection with themselves through the practice of yoga.",
+    "extended_description3": "During summer I organize <strong>outdoor yoga sessions</strong> in stunning Dolomites locations, including BAR ALPINO in Calalzo di Cadore, Malga Caseera Razzo in Vigo, and after mountain hikes at various rifugi. I'm also available for private events and yoga retreats."
   },
   "calendar": {
     "title": "Calendar",
@@ -59,6 +66,64 @@
     "name": "Full Name",
     "message": "Message",
     "send": "Send!",
-    "social": "Social"
+    "social": "Social",
+    "instagram": "Follow me on Instagram",
+    "linkedin": "Connect on LinkedIn"
+  },
+  "locations": {
+    "title": "Where I Teach",
+    "subtitle": "Yoga classes in Cortina, Belluno and throughout Cadore",
+    "belluno": {
+      "title": "Yoga in Belluno",
+      "subtitle": "Anukalana, Vinyasa and Yin Yoga classes",
+      "description": "I regularly teach in <strong>Belluno</strong> with several weekly classes of Anukalana, Vinyasa, and Yin Yoga. Classes are held in welcoming studios and are suitable for all levels, from beginners to advanced students."
+    },
+    "cortina": {
+      "title": "Yoga in Cortina d'Ampezzo and Cadore",
+      "subtitle": "Studio and outdoor classes in the Dolomites",
+      "description": "In <strong>Cortina d'Ampezzo and the Cadore region</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) I offer weekly Anukalana Yoga classes and special outdoor sessions during summer. Also available for private events and yoga retreats in stunning Dolomites locations."
+    },
+    "schedule_title": "Class Schedule",
+    "locations_list": {
+      "belluno": "Belluno",
+      "ponte": "Ponte nelle Alpi",
+      "tai": "Tai di Cadore",
+      "vodo": "Vodo di Cadore",
+      "cortina": "Cortina d'Ampezzo"
+    }
+  },
+  "outdoor": {
+    "title": "Outdoor Yoga",
+    "subtitle": "Summer sessions in the open air in the Dolomites",
+    "hero_subtitle": "Practice yoga outdoors in the mountains",
+    "description1": "During summer months I organize <strong>outdoor yoga sessions</strong> in some of the most stunning locations in the Dolomites. Practicing yoga immersed in nature amplifies the benefits of the practice, fostering a deep connection with the surrounding environment.",
+    "description2": "Outdoor sessions are open to all levels and include Anukalana, Vinyasa practices, and guided meditations. A unique experience to rejuvenate body and mind.",
+    "locations_title": "Where we practice",
+    "location1_name": "BAR ALPINO - Calalzo di Cadore",
+    "location1_desc": "Morning sessions with Dolomites views in a welcoming and panoramic location.",
+    "location2_name": "Malga Caseera Razzo - Vigo",
+    "location2_desc": "High-altitude yoga surrounded by alpine pastures, an experience of total connection with nature.",
+    "location3_name": "Rifugi and Dolomites trails",
+    "location3_desc": "Special events at mountain huts and after hikes in the Cortina, Belluno, and Cadore areas.",
+    "cta": "Interested in outdoor sessions? Contact me to learn about the summer schedule!"
+  },
+  "private": {
+    "title": "Private Lessons",
+    "subtitle": "Personalized sessions online and in-person",
+    "hero_subtitle": "Practice tailored for you",
+    "description1": "I offer <strong>personalized private yoga lessons</strong> both in-person (Cortina, Belluno, Cadore) and online. Each session is designed around your specific needs, whether you're a beginner or advanced practitioner.",
+    "description2": "Private lessons are ideal for those who want individual attention, have specific goals (flexibility, strength, relaxation), or prefer to practice in a private setting.",
+    "benefits_title": "Why choose a private lesson",
+    "benefit1": "Fully personalized program",
+    "benefit2": "Flexible scheduling to fit your commitments",
+    "benefit3": "Individual attention on posture and alignment",
+    "benefit4": "Faster progression in your practice",
+    "benefit5": "Available online from wherever you are",
+    "formats_title": "Available formats",
+    "format1": "Single session (60 or 90 minutes)",
+    "format2": "Packages of 5 or 10 lessons",
+    "format3": "Couple or small group sessions",
+    "format4": "Online sessions via Zoom",
+    "cta": "Contact me to book your private lesson!"
   }
 }
