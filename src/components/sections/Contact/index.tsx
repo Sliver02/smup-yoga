@@ -1,28 +1,38 @@
 import ContactTemplate from "@/common/emailTemplates/ContactTemplate";
 import { AlertResponse } from "@/common/globalInterfaces";
+import Alert from "@/components/atoms/Alert";
+import Button from "@/components/atoms/Button";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import SectionTitle from "@/components/atoms/SectionTitle";
+import TextField from "@/components/atoms/TextField";
+import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
-import { Alert, Button, TextField } from "@mui/material";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { FormEvent, useState } from "react";
+import { useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
 import styles from "./styles.module.scss";
 
 const serviceId = process.env.NEXT_PUBLIC_EMAILJS_SERVICE as string;
 const templateId = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE as string;
 const publicKey = process.env.NEXT_PUBLIC_EMAILJS_KEY as string;
 
-export interface ContactFormProps {
-  name: string;
-  email: string;
-  message: string;
-}
+const contactSchema = z.object({
+  name: z.string().min(2, "Name must be at least 2 characters"),
+  email: z
+    .string()
+    .min(1, "Email is required")
+    .includes("@", { message: "Invalid email address" }),
+  message: z.string().optional(),
+});
+
+export type ContactFormProps = z.infer<typeof contactSchema>;
 
 const Contact = () => {
   const t = useTranslations("contact");
@@ -30,40 +40,43 @@ const Contact = () => {
   const [loading, setLoading] = useState(false);
   const [alert, setAlert] = useState<AlertResponse | null>(null);
 
-  const [form, setForm] = useState<ContactFormProps>({
-    name: "",
-    email: "",
-    message: "",
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+    reset,
+  } = useForm<ContactFormProps>({
+    resolver: zodResolver(contactSchema),
   });
 
-  const htmlContent = renderToStaticMarkup(<ContactTemplate {...form} />);
-
-  const submitForm = async (e: FormEvent<HTMLFormElement>) => {
-    console.log("submit-form");
-    e.preventDefault();
+  const submitForm = async (data: ContactFormProps) => {
+    console.log("submit-form", data);
 
     try {
       setLoading(true);
       setAlert(null);
 
+      const htmlContent = renderToStaticMarkup(<ContactTemplate {...data} />);
+
       const res = await emailjs.send(
         serviceId,
         templateId,
         {
-          name: form?.name,
-          email: form?.email,
-          title: "RSVP inviato da " + form?.name,
+          name: data.name,
+          email: data.email,
+          title: "RSVP inviato da " + data.name,
           message_html: htmlContent,
         },
         publicKey
       );
 
-      if (res.text == "OK") {
+      if (res.text === "OK") {
         console.log("Email inviata!");
         setAlert({
           severity: "success",
           text: "Email inviata!",
         });
+        reset();
       } else {
         console.error("Errore nell'invio");
         setAlert({
@@ -84,7 +97,7 @@ const Contact = () => {
 
   return (
     <div id="contact" className={classNames(styles.contact)}>
-      <form onSubmit={submitForm}>
+      <form onSubmit={handleSubmit(submitForm)}>
         <Container>
           <Row>
             <Col>
@@ -140,23 +153,19 @@ const Contact = () => {
             </Col>
             <Col xs={12} lg={6}>
               <TextField
-                required
                 fullWidth
                 type="email"
                 label={t("email")}
-                onChange={(e) =>
-                  setForm((form) => ({ ...form, email: e.target.value }))
-                }
+                error={errors.email?.message}
+                {...register("email")}
               />
             </Col>
             <Col xs={12} lg={6}>
               <TextField
                 fullWidth
-                required
                 label={t("name")}
-                onChange={(e) =>
-                  setForm((form) => ({ ...form, name: e.target.value }))
-                }
+                error={errors.name?.message}
+                {...register("name")}
               />
             </Col>
             <Col xs={12}>
@@ -165,9 +174,7 @@ const Contact = () => {
                 rows={8}
                 multiline
                 fullWidth
-                onChange={(e) =>
-                  setForm((form) => ({ ...form, message: e.target.value }))
-                }
+                {...register("message")}
               />
             </Col>
             <Col xs={12}>

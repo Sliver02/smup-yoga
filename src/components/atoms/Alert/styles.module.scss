@@ -1,0 +1,91 @@
+@import "@/designSystem/variables";
+@import "@/designSystem/mediaQueries";
+
+.alert {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 1rem;
+  border-radius: 0.25rem;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+.content {
+  flex: 1;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0;
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+
+  &:hover {
+    opacity: 1;
+  }
+
+  &:focus {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+    border-radius: 0.125rem;
+  }
+}
+
+// Severity variants
+.success {
+  &.outlined {
+    border: 1px solid #4caf50;
+    color: #2e7d32;
+    background-color: #f1f8f4;
+  }
+
+  &.filled {
+    background-color: #4caf50;
+    color: white;
+  }
+}
+
+.error {
+  &.outlined {
+    border: 1px solid var(--accent-background);
+    color: var(--accent-background);
+    background-color: #fef1f2;
+  }
+
+  &.filled {
+    background-color: var(--accent-background);
+    color: white;
+  }
+}
+
+.warning {
+  &.outlined {
+    border: 1px solid #ff9800;
+    color: #e65100;
+    background-color: #fff4e6;
+  }
+
+  &.filled {
+    background-color: #ff9800;
+    color: white;
+  }
+}
+
+.info {
+  &.outlined {
+    border: 1px solid #2196f3;
+    color: #0d47a1;
+    background-color: #e3f2fd;
+  }
+
+  &.filled {
+    background-color: #2196f3;
+    color: white;
+  }
+}

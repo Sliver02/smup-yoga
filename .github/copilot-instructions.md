@@ -11,8 +11,8 @@ Next.js 15 yoga studio website using TypeScript, SCSS modules, custom Grid syste
 - **Next.js 15** (app router, async params) + TypeScript (strict mode)
 - **Styling**: SCSS modules + custom design system (`src/designSystem/`)
 - **i18n**: next-intl with middleware locale detection (Italian default, English alt)
-- **UI**: Material-UI (@mui/material v7) for forms/icons ONLY
-- **Forms**: EmailJS (@emailjs/browser) + MUI TextField/Button
+- **UI**: Material-UI (@mui/icons-material) for icons ONLY
+- **Forms**: react-hook-form + zod + EmailJS (@emailjs/browser)
 - **Images**: Next.js Image with blur placeholders (manual `_placeholder.jpg` files)
 - **Fonts**: Inter (Google) + RightGrotesk (local woff2)
 
@@ -52,7 +52,7 @@ public/
 
 ### 1. Component Structure (4-Tier Atomic Design)
 
-- **atoms/**: Grid system (Container/Row/Col), Background, SectionTitle, Button, TextField
+- **atoms/**: Grid system (Container/Row/Col), Background, SectionTitle, Button, TextField, Alert
 - **molecules/**: CardDisplay, CardFrame, InfiniteText (composites)
 - **organisms/**: Header, Footer, Hero, Section (layout wrappers)
 - **sections/**: AboutMe, Contact, Calendar, Styles (full page sections — client components)
@@ -251,7 +251,7 @@ await emailjs.send(
 - `NEXT_PUBLIC_EMAILJS_TEMPLATE`
 - `NEXT_PUBLIC_EMAILJS_KEY`
 
-### 9. Layout & Metadata Pattern
+### 10. Layout & Metadata Pattern
 
 **Root layout** (`src/app/[locale]/layout.tsx`):
 
@@ -350,9 +350,9 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 
 ### Forms
 
-- EmailJS for contact forms (not react-hook-form/zod in current codebase)
-- Material-UI TextField/Button components
-- Email template rendered with `renderToStaticMarkup()`
+- react-hook-form + zod for validation (custom TextField/Button/Alert components)
+- Material-UI icons ONLY (no form components)
+- EmailJS integration with `renderToStaticMarkup()` for email templates
 
 ## Critical Don'ts
 
@@ -372,5 +372,5 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 4. Import SCSS variables from `@/designSystem/`, not `@styles/`
 5. Use custom Grid system (Container/Row/Col) with enum props
 6. Create manual blur placeholders for all images
-7. Use Material-UI for form inputs only (TextField, Button, Alert)
+7. Use custom form components (TextField, Button, Alert) with react-hook-form + zod
 8. Check `src/components/` for existing components before creating new ones
