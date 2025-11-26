@@ -371,7 +371,8 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 ❌ Don't assume English is default — Italian is the default locale
 ❌ Don't use `className={\`\${styles.x}\`}`— use`classNames()`library
 ❌ Don't create test files unless specifically requested (not in current codebase)
-❌ **Don't hardcode URLs** — ALWAYS use`RouteEnum` for internal links
+❌ **Don't hardcode URLs** — ALWAYS use`RouteEnum`for internal links
+❌ **NEVER use`<style jsx>`or`<style jsx global>`tags** — use SCSS modules or inline`style={{}}` attributes instead
 
 ## When Suggesting Code
 

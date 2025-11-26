@@ -1,6 +1,6 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Justify } from "@/components/atoms/Grid/interfaces";
+import { Align, Justify } from "@/components/atoms/Grid/interfaces";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
@@ -10,6 +10,7 @@ import Contact from "@/components/sections/Contact";
 import Locations from "@/components/sections/Locations";
 import { ThemeProvider, createTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const YogaCortinaPage = () => {
   const theme = createTheme({
@@ -42,15 +43,35 @@ const YogaCortinaPage = () => {
 
         <Section>
           <Container>
-            <Row xsJustify={Justify.center}>
-              <Col xs={12} lg={10}>
-                <SectionTitle text={t("title")} center />
+            <Row xsJustify={Justify.center} mdAlign={Align.center}>
+              <Col xs={12} md={5}>
+                <div
+                  style={{
+                    display: "none",
+                  }}
+                  className="desktop-image"
+                >
+                  <Image
+                    src="/images/IMG_2646.jpg"
+                    alt="Yoga a Cortina d'Ampezzo"
+                    width={600}
+                    height={400}
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "12px",
+                    }}
+                    placeholder="blur"
+                    blurDataURL="/images/IMG_2646_placeholder.jpg"
+                  />
+                </div>
+              </Col>
+              <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
                 <p
                   style={{
                     fontSize: "18px",
                     lineHeight: "1.8",
                     color: "var(--neutral-text)",
-                    marginTop: "40px",
                   }}
                 >
                   {t.rich("description", {
@@ -61,6 +82,14 @@ const YogaCortinaPage = () => {
             </Row>
           </Container>
         </Section>
+
+        <style jsx global>{`
+          @media (min-width: 769px) {
+            .desktop-image {
+              display: block !important;
+            }
+          }
+        `}</style>
 
         <Locations priorityLocation="Cadore" />
         <Contact />

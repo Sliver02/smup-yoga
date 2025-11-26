@@ -1,6 +1,6 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Justify } from "@/components/atoms/Grid/interfaces";
+import { Align, Justify } from "@/components/atoms/Grid/interfaces";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
@@ -32,7 +32,7 @@ const KidsYogaPage = () => {
         <Header />
         <Hero
           title={t("title")}
-          subtitle={t("description")}
+          subtitle={t("hero_subtitle")}
           compact
           backgroundImage="/images/photo_2_2025-09-03_09-38-20.jpg"
           breadcrumbItems={[
@@ -43,15 +43,19 @@ const KidsYogaPage = () => {
 
         <Section>
           <Container>
-            <Row xsJustify={Justify.center}>
-              <Col xs={12} lg={10}>
-                <SectionTitle text={t("title")} center />
-                <div style={{ marginTop: "40px", marginBottom: "40px" }}>
+            <Row xsJustify={Justify.center} mdAlign={Align.center}>
+              <Col xs={12} md={5}>
+                <div
+                  style={{
+                    display: "none",
+                  }}
+                  className="desktop-image"
+                >
                   <Image
                     src="/images/photo_2_2025-09-03_09-38-20.jpg"
                     alt="Kids Yoga"
-                    width={1200}
-                    height={800}
+                    width={600}
+                    height={400}
                     style={{
                       width: "100%",
                       height: "auto",
@@ -61,6 +65,8 @@ const KidsYogaPage = () => {
                     blurDataURL="/images/photo_2_2025-09-03_09-38-20_placeholder.jpg"
                   />
                 </div>
+              </Col>
+              <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
                 <p
                   style={{
                     fontSize: "18px",
@@ -76,6 +82,13 @@ const KidsYogaPage = () => {
             </Row>
           </Container>
         </Section>
+        <style jsx global>{`
+          @media (min-width: 769px) {
+            .desktop-image {
+              display: block !important;
+            }
+          }
+        `}</style>
 
         <Locations />
         <Contact />

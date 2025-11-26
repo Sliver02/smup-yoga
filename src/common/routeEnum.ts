@@ -9,6 +9,6 @@ export enum RouteEnum {
   PRIVATE_LESSONS = "/private-lessons",
   YIN = "/yin-yoga",
   ANUKALANA = "/anukalana-yoga",
-  KID = "/yoga-bimbi",
+  KID = "/kids-yoga",
   PRIVACY = "/privacy-policy",
 }
