@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
 import { useTranslations } from "next-intl";
+import { RouteEnum } from "@/common/routeEnum";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
@@ -21,10 +22,6 @@ export interface NavItem {
 
 const Header = ({ className }: HeaderProps) => {
   const t = useTranslations("header");
-  const tClasses = useTranslations("classes");
-  const tLoc = useTranslations("locations");
-  const tOutdoor = useTranslations("outdoor");
-  const tPrivate = useTranslations("private");
 
   const [openMenu, setOpenMenu] = useState(false);
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
@@ -32,27 +29,27 @@ const Header = ({ className }: HeaderProps) => {
   const navItems: NavItem[] = [
     {
       label: t("home"),
-      url: "/",
+      url: RouteEnum.HOME,
     },
     {
       label: t("about"),
-      url: "/chi-sono",
+      url: RouteEnum.ABOUT,
     },
     {
       label: t("classes"),
       children: [
-        { label: tClasses("anukalana.title"), url: "/anukalana" },
-        { label: tClasses("yin.title"), url: "/yin-yoga" },
-        { label: tClasses("kids.title"), url: "/yoga-bimbi" },
-        { label: tOutdoor("title"), url: "/yoga-outdoor" },
-        { label: tPrivate("title"), url: "/lezioni-private" },
+        { label: t("anukalana"), url: RouteEnum.ANUKALANA },
+        { label: t("yin"), url: RouteEnum.YIN },
+        { label: t("kids"), url: RouteEnum.KID },
+        { label: t("outdoor"), url: RouteEnum.OUTDOOR },
+        { label: t("private"), url: RouteEnum.PRIVATE_LESSONS },
       ],
     },
     {
-      label: tLoc("title"),
+      label: t("locations"),
       children: [
-        { label: tLoc("belluno.title"), url: "/yoga-belluno" },
-        { label: tLoc("cortina.title"), url: "/yoga-cortina" },
+        { label: t("belluno"), url: RouteEnum.BELLUNO },
+        { label: t("cortina"), url: RouteEnum.CORTINA },
       ],
     },
   ];

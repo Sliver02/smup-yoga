@@ -5,7 +5,14 @@
     "calendar": "Calendar",
     "classes": "Classes",
     "contact": "Contact",
-    "locations": "Locations"
+    "locations": "Locations",
+    "anukalana": "Anukalana Yoga",
+    "yin": "Yin Yoga",
+    "kids": "Kids Yoga",
+    "outdoor": "Outdoor Yoga",
+    "private": "Private Lessons",
+    "belluno": "Belluno",
+    "cortina": "Cortina & Cadore"
   },
   "hero": {
     "title": "Sarah Pompanin",
