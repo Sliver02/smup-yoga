@@ -48,6 +48,26 @@
       "live": "Live"
     }
   },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Last updated: November 26, 2025",
+    "intro": "This Privacy Policy describes how SMUP Yoga (\"we\", \"us\", or \"our\") collects, uses, and protects your personal information when you use our website and services.",
+    "section1_title": "1. Information We Collect",
+    "section1_content": "When you contact us through our website, we collect the following information: your name, email address, and any message you choose to send us. This information is provided voluntarily by you when you fill out our contact form.",
+    "section2_title": "2. How We Use Your Information",
+    "section2_content": "We use the information you provide solely to respond to your inquiries, schedule yoga classes, and communicate with you about our services. We will never sell, rent, or share your personal information with third parties for marketing purposes.",
+    "section3_title": "3. Data Storage and Security",
+    "section3_content": "Your contact form submissions are processed through EmailJS, a third-party email service. We retain your information only as long as necessary to fulfill the purposes outlined in this policy. We implement appropriate security measures to protect your personal data from unauthorized access or disclosure.",
+    "section4_title": "4. Your Rights",
+    "section4_content": "Under GDPR and Italian privacy law, you have the right to access, correct, or delete your personal data. You may also object to or restrict certain processing of your data. To exercise these rights, please contact us at smup.yoga@gmail.com.",
+    "section5_title": "5. Third-Party Services",
+    "section5_content": "Our website uses EmailJS to process contact form submissions. EmailJS has its own privacy policy governing the use of your information. We do not use cookies or tracking technologies on this website.",
+    "section6_title": "6. Changes to This Policy",
+    "section6_content": "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated revision date.",
+    "section7_title": "7. Contact Us",
+    "section7_content": "If you have any questions about this Privacy Policy or how we handle your personal information, please contact us at:",
+    "contact_info": "SMUP Yoga\nEmail: smup.yoga@gmail.com\nPhone: +39 366 145 0576\nAddress: Viale Dolomiti 9, 32014 Ponte nelle Alpi (BL), Italy"
+  },
   "classes": {
     "title": "What I teach",
     "anukalana": {

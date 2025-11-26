@@ -43,7 +43,6 @@ const PrivateLessonsPage = () => {
           <Container>
             <Row xsJustify={Justify.center}>
               <Col xs={12} lg={10}>
-                <SectionTitle text={t("title")} center />
                 <p
                   style={{
                     fontSize: "18px",

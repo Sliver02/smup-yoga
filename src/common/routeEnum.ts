@@ -6,8 +6,9 @@ export enum RouteEnum {
   CORTINA = "/yoga-cortina",
   BELLUNO = "/yoga-belluno",
   OUTDOOR = "/yoga-outdoor",
-  PRIVATE_LESSONS = "/lezioni-private",
+  PRIVATE_LESSONS = "/private-lessons",
   YIN = "/yin-yoga",
-  ANUKALANA = "/anukalana",
+  ANUKALANA = "/anukalana-yoga",
   KID = "/yoga-bimbi",
+  PRIVACY = "/privacy-policy",
 }

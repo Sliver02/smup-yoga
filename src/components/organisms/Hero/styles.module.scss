@@ -22,14 +22,15 @@
 
   .breadcrumbWrapper {
     position: absolute;
-    bottom: 20px;
+    top: map-get($headerHeight, "xs");
     left: 0;
     width: 100%;
     z-index: 10;
-    padding: 0;
+    padding: 16px 0;
 
     @include mediaQuery("md") {
-      bottom: 30px;
+      top: map-get($headerHeight, "md");
+      padding: 20px 0;
     }
 
     :global(nav) {

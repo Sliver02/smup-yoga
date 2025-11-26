@@ -5,11 +5,68 @@
 .footer {
   margin: 0 auto;
   margin-top: 10rem;
-  padding: 4rem 2rem;
+  padding: 4rem 2rem 2rem;
   color: var(--neutral-light);
   background-color: var(--neutral-text);
 
   border-radius: 2rem 2rem 0 0;
 
   max-width: 1920px;
+
+  .footerTitle {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+  }
+
+  .footerList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2rem;
+
+    li {
+      margin-bottom: 0.75rem;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+      transition: color 0.2s ease;
+      display: inline-block;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
+
+  .socialLink {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .copyright {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.875rem;
+
+    p {
+      margin: 0.25rem 0;
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.8);
+      text-decoration: none;
+
+      &:hover {
+        color: white;
+      }
+    }
+  }
 }
