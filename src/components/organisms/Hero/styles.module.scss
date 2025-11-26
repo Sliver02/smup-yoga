@@ -20,6 +20,37 @@
     opacity: 0.5;
   }
 
+  .breadcrumbWrapper {
+    position: absolute;
+    top: map-get($headerHeight, "xs");
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    padding: 16px 0;
+
+    @include mediaQuery("md") {
+      top: map-get($headerHeight, "md");
+      padding: 20px 0;
+    }
+
+    :global(nav) {
+      padding: 0 !important;
+      color: white !important;
+    }
+
+    :global(a) {
+      color: white !important;
+
+      &:hover {
+        opacity: 0.7 !important;
+      }
+    }
+
+    :global(span) {
+      color: rgba(255, 255, 255, 0.9) !important;
+    }
+  }
+
   .textWrapper {
     width: 100%;
     display: flex;
@@ -29,6 +60,28 @@
     h1 {
       @include mediaQuery("sm", "max") {
         font-size: 4rem;
+      }
+    }
+  }
+
+  &.compact {
+    height: 50vh;
+    max-height: 600px;
+    min-height: 400px;
+
+    .textWrapper {
+      margin-top: 25vh;
+
+      @include mediaQuery("md", "max") {
+        margin-top: 20vh;
+      }
+    }
+
+    h1 {
+      font-size: 4rem;
+
+      @include mediaQuery("sm", "max") {
+        font-size: 3rem;
       }
     }
   }

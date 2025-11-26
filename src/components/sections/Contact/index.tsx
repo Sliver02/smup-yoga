@@ -5,14 +5,11 @@ import Button from "@/components/atoms/Button";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import SectionTitle from "@/components/atoms/SectionTitle";
 import TextField from "@/components/atoms/TextField";
-import { zodResolver } from "@hookform/resolvers/zod";
 import emailjs from "@emailjs/browser";
-import InstagramIcon from "@mui/icons-material/Instagram";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { zodResolver } from "@hookform/resolvers/zod";
 import SendRoundedIcon from "@mui/icons-material/SendRounded";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
 import { useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { useForm } from "react-hook-form";
@@ -104,7 +101,7 @@ const Contact = () => {
               <SectionTitle text={t("title")} />
               <p className={classNames("text--p-lg")}>{t("description")}</p>
 
-              <div className={classNames(styles.socialContainer)}>
+              {/* <div className={classNames(styles.socialContainer)}>
                 <Link
                   href={"https://www.instagram.com/smup_yoga/"}
                   target="_blank"
@@ -141,7 +138,7 @@ const Contact = () => {
                     {t("linkedin")}
                   </button>
                 </Link>
-              </div>
+              </div> */}
             </Col>
           </Row>
 

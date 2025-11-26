@@ -21,15 +21,15 @@ const rightGrotesk = localFont({
 
 export const metadata: Metadata = {
   title: {
-    default: "SMUP — Sarah Pompanin | Yoga in the Dolomites",
+    default: "SMUP — Sarah Pompanin | Yoga Cortina, Belluno, Cadore",
     template: "%s | SMUP Yoga",
   },
   description:
-    "Outdoor and studio yoga by Sarah Pompanin (SMUP) — group & private lessons in the Venetian Dolomites. Summer outdoor sessions, private bookings, and Cortina 2026 offerings.",
+    "Yoga with Sarah Pompanin (SMUP) in Cortina d'Ampezzo, Belluno, and Cadore. Anukalana, Yin, Kids Yoga. Group classes, private lessons, outdoor sessions in the Dolomites. Online and in-person.",
   openGraph: {
-    title: "SMUP — Yoga in the Dolomites",
+    title: "SMUP — Yoga Cortina, Belluno, Cadore Dolomites",
     description:
-      "Outdoor and studio yoga by Sarah Pompanin (SMUP). Group & private lessons in the Venetian Dolomites.",
+      "Yoga classes with Sarah Pompanin in Cortina, Belluno, Cadore. Anukalana, Yin, Kids Yoga. Group & private lessons in the Dolomites.",
     url: "https://smupyoga.com",
     siteName: "SMUP Yoga",
     images: [
@@ -69,15 +69,101 @@ export default async function RootLayout({
 
   const localBusinessJsonLd = {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    name: "SMUP — Sarah Pompanin",
+    "@type": ["YogaStudio", "SportsActivityLocation"],
+    name: "SMUP — Sarah Pompanin Yoga",
+    alternateName: "SMUP Yoga",
     url: `https://smupyoga.com/${locale}/`,
     email: "smup.yoga@gmail.com",
+    telephone: "+39 366 145 0576",
     address: {
       "@type": "PostalAddress",
-      addressLocality: "Cortina d'Ampezzo",
-      addressRegion: "Veneto",
+      streetAddress: "Viale Dolomiti 9",
+      addressLocality: "Ponte nelle Alpi",
+      postalCode: "32014",
+      addressRegion: "Belluno",
       addressCountry: "IT",
+    },
+    geo: {
+      "@type": "GeoCoordinates",
+      latitude: "46.1786",
+      longitude: "12.2981",
+    },
+    areaServed: [
+      {
+        "@type": "City",
+        name: "Cortina d'Ampezzo",
+      },
+      {
+        "@type": "City",
+        name: "Belluno",
+      },
+      {
+        "@type": "City",
+        name: "Ponte nelle Alpi",
+      },
+      {
+        "@type": "AdministrativeArea",
+        name: "Cadore",
+      },
+    ],
+    priceRange: "€€",
+    openingHoursSpecification: [
+      {
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+        opens: "08:30",
+        closes: "20:00",
+      },
+    ],
+    hasOfferCatalog: {
+      "@type": "OfferCatalog",
+      name: "Yoga Classes",
+      itemListElement: [
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Anukalana Yoga",
+            description:
+              locale === "it"
+                ? "Pratica integrata che unisce asana, pranayama, meditazione e lavoro miofasciale"
+                : "Integrated practice combining asana, pranayama, meditation and fascia work",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: "Yin Yoga",
+            description:
+              locale === "it"
+                ? "Sequenze lente e passive con supporti"
+                : "Slow passive postures aided by props",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "it" ? "Yoga Bimbi" : "Kids Yoga",
+            description:
+              locale === "it"
+                ? "Lezioni giocose per bambini"
+                : "Playful sessions for children",
+          },
+        },
+        {
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: locale === "it" ? "Lezioni Private" : "Private Lessons",
+            description:
+              locale === "it"
+                ? "Lezioni private online e in presenza"
+                : "Private lessons online and in-person",
+          },
+        },
+      ],
     },
   };
 

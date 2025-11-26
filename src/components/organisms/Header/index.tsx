@@ -1,46 +1,56 @@
 "use client";
 import { BaseProps } from "@/common/globalInterfaces";
+import { RouteEnum } from "@/common/routeEnum";
+import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import MenuRoundedIcon from "@mui/icons-material/MenuRounded";
 import classNames from "classnames";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import styles from "./styles.module.scss";
-import { useTranslations } from "next-intl";
 
 export interface HeaderProps extends BaseProps {
   prot?: string;
 }
 
-export interface NavButtonsProps {
+export interface NavItem {
   label: string;
-  url: string;
+  url?: string;
+  children?: NavItem[];
 }
 
 const Header = ({ className }: HeaderProps) => {
   const t = useTranslations("header");
-  const [openMenu, setOpenMenu] = useState(false);
 
-  const navButtons: NavButtonsProps[] = [
+  const [openMenu, setOpenMenu] = useState(false);
+  const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+  const navItems: NavItem[] = [
     {
       label: t("home"),
-      url: "#home",
+      url: RouteEnum.HOME,
     },
     {
       label: t("about"),
-      url: "#about",
-    },
-    {
-      label: t("calendar"),
-      url: "#calendar",
+      url: RouteEnum.ABOUT,
     },
     {
       label: t("classes"),
-      url: "#classes",
+      children: [
+        { label: t("anukalana"), url: RouteEnum.ANUKALANA },
+        { label: t("yin"), url: RouteEnum.YIN },
+        { label: t("kids"), url: RouteEnum.KID },
+        { label: t("outdoor"), url: RouteEnum.OUTDOOR },
+        { label: t("private"), url: RouteEnum.PRIVATE_LESSONS },
+      ],
     },
     {
-      label: t("contact"),
-      url: "#contact",
+      label: t("locations"),
+      children: [
+        { label: t("belluno"), url: RouteEnum.BELLUNO },
+        { label: t("cortina"), url: RouteEnum.CORTINA },
+      ],
     },
   ];
 
@@ -57,14 +67,52 @@ const Header = ({ className }: HeaderProps) => {
         </Link>
       </div>
       <div className={classNames(styles.navbar)}>
-        {navButtons.map((button, index) => (
-          <a
-            key={index}
-            className={classNames(styles.navbar__button)}
-            href={button.url}
-          >
-            {button.label}
-          </a>
+        {navItems.map((item, index) => (
+          <div key={index} className={styles.navItem}>
+            {item.children ? (
+              <div
+                className={styles.dropdown}
+                onMouseEnter={() => setOpenDropdown(item.label)}
+                onMouseLeave={() => setOpenDropdown(null)}
+              >
+                <button
+                  className={classNames(
+                    styles.navbar__button,
+                    styles.dropdownButton
+                  )}
+                >
+                  {item.label}
+                  <KeyboardArrowDownIcon fontSize="small" />
+                </button>
+                <div
+                  className={classNames(styles.dropdownMenu, {
+                    [styles.dropdownMenuOpen]: openDropdown === item.label,
+                  })}
+                >
+                  {item.children.map((child, childIndex) => (
+                    <Link
+                      key={childIndex}
+                      href={child.url!}
+                      className={styles.dropdownItem}
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            ) : item.url?.startsWith("#") ? (
+              <a className={classNames(styles.navbar__button)} href={item.url}>
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                className={classNames(styles.navbar__button)}
+                href={item.url!}
+              >
+                {item.label}
+              </Link>
+            )}
+          </div>
         ))}
       </div>
 
@@ -78,15 +126,43 @@ const Header = ({ className }: HeaderProps) => {
       <div
         className={classNames(styles.menu, openMenu && styles["menu--open"])}
       >
-        {navButtons.map((button, index) => (
-          <a
-            key={index}
-            className={classNames(styles["menu__button"])}
-            href={button.url}
-            onClick={() => setOpenMenu(false)}
-          >
-            {button.label}
-          </a>
+        {navItems.map((item, index) => (
+          <div key={index} className={styles.mobileNavItem}>
+            {item.children ? (
+              <>
+                <div className={styles.mobileDropdownLabel}>{item.label}</div>
+                {item.children.map((child, childIndex) => (
+                  <Link
+                    key={childIndex}
+                    href={child.url!}
+                    className={classNames(
+                      styles["menu__button"],
+                      styles.mobileSubItem
+                    )}
+                    onClick={() => setOpenMenu(false)}
+                  >
+                    {child.label}
+                  </Link>
+                ))}
+              </>
+            ) : item.url?.startsWith("#") ? (
+              <a
+                className={classNames(styles["menu__button"])}
+                href={item.url}
+                onClick={() => setOpenMenu(false)}
+              >
+                {item.label}
+              </a>
+            ) : (
+              <Link
+                className={classNames(styles["menu__button"])}
+                href={item.url!}
+                onClick={() => setOpenMenu(false)}
+              >
+                {item.label}
+              </Link>
+            )}
+          </div>
         ))}
       </div>
     </div>

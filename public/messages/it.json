@@ -4,17 +4,31 @@
     "about": "Chi sono",
     "calendar": "Calendario",
     "classes": "Lezioni",
-    "contact": "Contatti"
+    "contact": "Contatti",
+    "locations": "Dove insegno",
+    "anukalana": "Anukalana Yoga",
+    "yin": "Yin Yoga",
+    "kids": "Yoga Bimbi",
+    "outdoor": "Yoga Outdoor",
+    "private": "Lezioni Private",
+    "belluno": "Belluno",
+    "cortina": "Cortina & Cadore"
   },
   "hero": {
     "title": "Sarah Pompanin",
     "subtitle": "Yoga & Lifestyle nelle Dolomiti"
   },
+  "breadcrumbs": {
+    "home": "Home"
+  },
   "about": {
     "title": "Chi sono",
     "description1": "<strong>Ciao, sono Sarah e vivo tra le Dolomiti!</strong> Sono una persona dinamica e curiosa e questo mi ha fatto esplorare molte cose, alla fine ho deciso che lo Yoga era la mia strada. Credo fermamente che in questa società le persone abbiano bisogno di riconnettersi con loro stesse, con la natura e con il respiro.",
     "description2": "<strong>Ho iniziato a praticare Yoga nel 2016 e me ne sono subito innamorata.</strong> Era un periodo di overthinking e nelle ore di Yoga riuscivo a non pensare per 1 ora intera, quasi una magia.",
-    "description3": "Dopo aver decantato a chiunque i suoi benefici (continuo tutt'ora a farlo) ho deciso di intraprendere il teacher training a Milano. Ho fatto la formazione con la scuola Samadhi, che ha fondato lo Yoga Anukalana. "
+    "description3": "Dopo aver decantato a chiunque i suoi benefici (continuo tutt'ora a farlo) ho deciso di intraprendere il teacher training a Milano. Ho fatto la formazione con la scuola Samadhi, che ha fondato lo Yoga Anukalana.",
+    "extended_description1": "Insegno yoga a <strong>Cortina d'Ampezzo, Belluno, Ponte nelle Alpi, e in tutta la zona del Cadore</strong> (Tai di Cadore, Vodo di Cadore, Calalzo). Offro lezioni di gruppo in studio e sessioni private personalizzate, sia in presenza che online.",
+    "extended_description2": "Sono certificata in <strong>Anukalana Yoga</strong> (scuola Samadhi Milano) e specializzata anche in <strong>Yin Yoga, Yoga per Bambini e Pilates</strong>. La mia missione è aiutare le persone a ritrovare equilibrio, benessere e connessione con sé stesse attraverso la pratica dello yoga.",
+    "extended_description3": "Durante l'estate organizzo <strong>sessioni di yoga all'aperto</strong> in location suggestive delle Dolomiti, tra cui il BAR ALPINO di Calalzo di Cadore, Malga Caseera Razzo a Vigo, e dopo escursioni presso rifugi in quota. Sono disponibile anche per eventi privati e ritiri yoga."
   },
   "calendar": {
     "title": "Calendario",
@@ -34,22 +48,45 @@
       "live": "Vivi"
     }
   },
+  "privacy": {
+    "title": "Privacy Policy",
+    "last_updated": "Ultimo aggiornamento: 26 novembre 2025",
+    "intro": "Questa Privacy Policy descrive come SMUP Yoga (\"noi\", \"nostro\") raccoglie, utilizza e protegge le tue informazioni personali quando utilizzi il nostro sito web e i nostri servizi.",
+    "section1_title": "1. Informazioni che Raccogliamo",
+    "section1_content": "Quando ci contatti attraverso il nostro sito web, raccogliamo le seguenti informazioni: il tuo nome, indirizzo email e qualsiasi messaggio tu scelga di inviarci. Queste informazioni sono fornite volontariamente da te quando compili il nostro modulo di contatto.",
+    "section2_title": "2. Come Utilizziamo le Tue Informazioni",
+    "section2_content": "Utilizziamo le informazioni che fornisci esclusivamente per rispondere alle tue richieste, programmare lezioni di yoga e comunicare con te riguardo ai nostri servizi. Non venderemo, affitteremo o condivideremo mai le tue informazioni personali con terze parti per scopi di marketing.",
+    "section3_title": "3. Conservazione e Sicurezza dei Dati",
+    "section3_content": "Le tue richieste tramite modulo di contatto sono elaborate attraverso EmailJS, un servizio email di terze parti. Conserviamo le tue informazioni solo per il tempo necessario a soddisfare gli scopi indicati in questa policy. Implementiamo misure di sicurezza appropriate per proteggere i tuoi dati personali da accessi o divulgazioni non autorizzati.",
+    "section4_title": "4. I Tuoi Diritti",
+    "section4_content": "Ai sensi del GDPR e della legge italiana sulla privacy, hai il diritto di accedere, correggere o cancellare i tuoi dati personali. Puoi anche opporti o limitare determinati trattamenti dei tuoi dati. Per esercitare questi diritti, contattaci all'indirizzo smup.yoga@gmail.com.",
+    "section5_title": "5. Servizi di Terze Parti",
+    "section5_content": "Il nostro sito web utilizza EmailJS per elaborare le richieste del modulo di contatto. EmailJS ha la propria privacy policy che regola l'uso delle tue informazioni. Non utilizziamo cookie o tecnologie di tracciamento su questo sito web.",
+    "section6_title": "6. Modifiche a Questa Policy",
+    "section6_content": "Potremmo aggiornare questa Privacy Policy di tanto in tanto. Eventuali modifiche saranno pubblicate su questa pagina con una data di revisione aggiornata.",
+    "section7_title": "7. Contattaci",
+    "section7_content": "Se hai domande su questa Privacy Policy o su come gestiamo le tue informazioni personali, contattaci a:",
+    "contact_info": "SMUP Yoga\nEmail: smup.yoga@gmail.com\nTelefono: +39 366 145 0576\nIndirizzo: Viale Dolomiti 9, 32014 Ponte nelle Alpi (BL), Italia"
+  },
   "classes": {
     "title": "Cosa insegno",
     "anukalana": {
       "title": "Anukalana Yoga",
+      "hero_subtitle": "Integrazione attraverso il movimento fluido",
       "description": "Pratica integrata che unisce asana, pranayama, meditazione e lavoro miofasciale. Sequenze morbide guidate dal respiro per fluidità e benessere.",
       "description_long": "<strong>Anukalana significa integrazione</strong>, infatti è uno stile che unisce tante nozioni: ovviamente Asana, Pranayama, Meditazioni, ma anche miofascia, meridiani e centri energetici. Basa i movimenti sulla fluidità, la coordinazione col respiro e la dolcezza. Ciò che più mi ha affascinato di questo stile è che è adatto a tutti. Non è competitivo, ma veramente rivolto al benessere di ognuno."
     },
     "yin": {
       "title": "Yin Yoga",
+      "hero_subtitle": "Immobilità profonda e rigenerazione",
       "description": "Sequenze lente e passive con supporti. Utile a stimolare il tessuto connettivo, aumentare mobilità, migliorare il respiro e favorire profondo rilascio.",
-      "description_long": "Lo yin yoga è un tipo di yoga dal ritmo lento in cui le posizioni vengono mantenute più a lungo rispetto al solito. Ci metteremo comodi con cuscini chiamati “bolster”, blocchi yoga e quant’altro sia necessario per rendere gli asana comodi e perfettamente adatti alle esigenze ed alla flessibilità di tutti. Lo scopo dello yin yoga è quello di stimolare il tessuto connettivo, applicando una tensione ottimale per un certo tempo e mantenendo una respirazione profonda. Così facendo il tessuto connettivo si allunga, si fortifica e si apre lentamente, creando più spazio tra le articolazioni, migliorandone il movimento e rendendole più salde, stabili e forti, e aumentando la flessibilità muscolare."
+      "description_long": "Lo yin yoga è un tipo di yoga dal ritmo lento in cui le posizioni vengono mantenute più a lungo rispetto al solito. Ci metteremo comodi con cuscini chiamati \"bolster\", blocchi yoga e quant'altro sia necessario per rendere gli asani comodi e perfettamente adatti alle esigenze ed alla flessibilità di tutti. Lo scopo dello yin yoga è quello di stimolare il tessuto connettivo, applicando una tensione ottimale per un certo tempo e mantenendo una respirazione profonda. Così facendo il tessuto connettivo si allunga, si fortifica e si apre lentamente, creando più spazio tra le articolazioni, migliorandone il movimento e rendendole più salde, stabili e forti, e aumentando la flessibilità muscolare."
     },
     "kids": {
       "title": "Yoga Bimbi",
+      "hero_subtitle": "Pratica giocosa per giovani menti",
       "description": "Lezioni giocose con storie, canzoni e giochi per esplorare asana, respirazione e attenzione consapevole, sviluppando coordinazione e tranquillità.",
-      "description_long": "Far avvicinare allo Yoga i più piccoli è molto importante al giorno d’oggi. Il metodo Bimbiyoga ha un approccio giocoso e divertente così da catturare l’attenzione dei bambini. Andremo ad esplorare le Asana attraverso storie, canzoni e giochi. Non mancheranno momenti di ascolto, consapevolezza e piccole meditazioni."
+      "description_long": "Far avvicinare allo Yoga i più piccoli è molto importante al giorno d'oggi. Il metodo Bimbiyoga ha un approccio giocoso e divertente così da catturare l'attenzione dei bambini. Andremo ad esplorare le Asana attraverso storie, canzoni e giochi. Non mancheranno momenti di ascolto, consapevolezza e piccole meditazioni."
     }
   },
   "contact": {
@@ -62,5 +99,61 @@
     "social": "Social",
     "instagram": "Seguimi su instagram",
     "linkedin": "Collaboriamo su Linkedin"
+  },
+  "locations": {
+    "title": "Dove insegno",
+    "subtitle": "Lezioni di yoga a Cortina, Belluno e in tutto il Cadore",
+    "belluno": {
+      "title": "Yoga a Belluno",
+      "subtitle": "Lezioni di Anukalana, Vinyasa e Yin Yoga",
+      "description": "Insegno regolarmente a <strong>Belluno</strong> con diverse classi settimanali di Anukalana, Vinyasa e Yin Yoga. Le lezioni si svolgono in studi accoglienti e sono adatte a tutti i livelli, dai principianti agli studenti avanzati."
+    },
+    "cortina": {
+      "title": "Yoga a Cortina d'Ampezzo e Cadore",
+      "subtitle": "Lezioni in studio e outdoor nelle Dolomiti",
+      "description": "A <strong>Cortina d'Ampezzo e nella zona del Cadore</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) offro lezioni settimanali di Anukalana Yoga e sessioni speciali outdoor durante l'estate. Disponibile anche per eventi privati e ritiri yoga in location suggestive delle Dolomiti."
+    },
+    "schedule_title": "Orario delle lezioni",
+    "locations_list": {
+      "belluno": "Belluno",
+      "ponte": "Ponte nelle Alpi",
+      "tai": "Tai di Cadore",
+      "vodo": "Vodo di Cadore",
+      "cortina": "Cortina d'Ampezzo"
+    }
+  },
+  "outdoor": {
+    "title": "Yoga Outdoor",
+    "subtitle": "Sessioni estive all'aria aperta nelle Dolomiti",
+    "hero_subtitle": "Pratica yoga all'aria aperta tra le montagne",
+    "description1": "Durante i mesi estivi organizzo <strong>sessioni di yoga all'aperto</strong> in alcune delle location più suggestive delle Dolomiti. Praticare yoga immersi nella natura amplifica i benefici della pratica, favorendo una connessione profonda con l'ambiente circostante.",
+    "description2": "Le sessioni outdoor sono aperte a tutti i livelli e includono pratiche di Anukalana, Vinyasa e meditazioni guidate. Un'esperienza unica per rigenerarsi corpo e mente.",
+    "locations_title": "Dove pratichiamo",
+    "location1_name": "BAR ALPINO - Calalzo di Cadore",
+    "location1_desc": "Sessioni mattutine con vista sulle Dolomiti in una location accogliente e panoramica.",
+    "location2_name": "Malga Caseera Razzo - Vigo",
+    "location2_desc": "Yoga in quota circondati dai pascoli alpini, un'esperienza di connessione totale con la natura.",
+    "location3_name": "Rifugi e sentieri delle Dolomiti",
+    "location3_desc": "Eventi speciali presso rifugi e dopo escursioni nelle zone di Cortina, Belluno e Cadore.",
+    "cta": "Interessato alle sessioni outdoor? Contattami per conoscere il calendario estivo!"
+  },
+  "private": {
+    "title": "Lezioni Private",
+    "subtitle": "Sessioni personalizzate online e in presenza",
+    "hero_subtitle": "Pratica su misura per te",
+    "description1": "Offro <strong>lezioni private di yoga personalizzate</strong> sia in presenza (Cortina, Belluno, Cadore) che online. Ogni sessione è progettata sulle tue esigenze specifiche, che tu sia principiante o praticante avanzato.",
+    "description2": "Le lezioni private sono ideali per chi desidera un'attenzione individuale, ha obiettivi specifici (flessibilità, forza, rilassamento) o preferisce praticare in un ambiente riservato.",
+    "benefits_title": "Perché scegliere una lezione privata",
+    "benefit1": "Programma completamente personalizzato",
+    "benefit2": "Orari flessibili adatti ai tuoi impegni",
+    "benefit3": "Attenzione individuale su postura e allineamento",
+    "benefit4": "Progressione più rapida nella pratica",
+    "benefit5": "Disponibile online da ovunque tu sia",
+    "formats_title": "Formati disponibili",
+    "format1": "Lezione singola (60 o 90 minuti)",
+    "format2": "Pacchetti da 5 o 10 lezioni",
+    "format3": "Lezioni di coppia o piccoli gruppi",
+    "format4": "Sessioni online via Zoom",
+    "cta": "Contattami per prenotare la tua lezione privata!"
   }
 }
