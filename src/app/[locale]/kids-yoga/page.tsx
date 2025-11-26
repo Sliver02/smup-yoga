@@ -1,5 +1,4 @@
 "use client";
-import Breadcrumb from "@/components/atoms/Breadcrumb";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
 import SectionTitle from "@/components/atoms/SectionTitle";
@@ -31,25 +30,16 @@ const KidsYogaPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero 
-          title={t("title")} 
-          subtitle={t("description")} 
-          compact 
+        <Hero
+          title={t("title")}
+          subtitle={t("description")}
+          compact
           backgroundImage="/images/photo_2_2025-09-03_09-38-20.jpg"
+          breadcrumbItems={[
+            { label: tCommon("home"), href: "/" },
+            { label: t("title") },
+          ]}
         />
-
-        <Container>
-          <Row>
-            <Col>
-              <Breadcrumb
-                items={[
-                  { label: tCommon("home"), href: "/" },
-                  { label: t("title") },
-                ]}
-              />
-            </Col>
-          </Row>
-        </Container>
 
         <Section>
           <Container>

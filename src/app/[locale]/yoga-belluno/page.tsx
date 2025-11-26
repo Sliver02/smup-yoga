@@ -1,5 +1,4 @@
 "use client";
-import Breadcrumb from "@/components/atoms/Breadcrumb";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
 import SectionTitle from "@/components/atoms/SectionTitle";
@@ -30,25 +29,16 @@ const YogaBellunoPage = () => {
     <main>
       <ThemeProvider theme={theme}>
         <Header />
-        <Hero 
-          title={t("title")} 
-          subtitle={t("subtitle")} 
-          compact 
+        <Hero
+          title={t("title")}
+          subtitle={t("subtitle")}
+          compact
           backgroundImage="/images/PXL_20250112_213048967.MP.jpg"
+          breadcrumbItems={[
+            { label: tCommon("home"), href: "/" },
+            { label: t("title") },
+          ]}
         />
-
-        <Container>
-          <Row>
-            <Col>
-              <Breadcrumb
-                items={[
-                  { label: tCommon("home"), href: "/" },
-                  { label: t("title") },
-                ]}
-              />
-            </Col>
-          </Row>
-        </Container>
 
         <Section>
           <Container>

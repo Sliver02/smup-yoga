@@ -1,4 +1,5 @@
 import { BaseProps } from "@/common/globalInterfaces";
+import Breadcrumb, { BreadcrumbItem } from "@/components/atoms/Breadcrumb";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
 import classNames from "classnames";
@@ -10,11 +11,22 @@ export interface HeroProps extends BaseProps {
   subtitle: string;
   compact?: boolean;
   backgroundImage?: string;
+  breadcrumbItems?: BreadcrumbItem[];
 }
 
-const Hero = ({ className, title, subtitle, compact = false, backgroundImage = "/images/IMG_2617.png" }: HeroProps) => {
-  const placeholderImage = backgroundImage.replace(/\.(jpg|png|jpeg)$/, "_placeholder.$1");
-  
+const Hero = ({
+  className,
+  title,
+  subtitle,
+  compact = false,
+  backgroundImage = "/images/IMG_2617.png",
+  breadcrumbItems,
+}: HeroProps) => {
+  const placeholderImage = backgroundImage.replace(
+    /\.(jpg|png|jpeg)$/,
+    "_placeholder.$1"
+  );
+
   return (
     <div
       className={classNames(className, styles.hero, {
@@ -31,6 +43,7 @@ const Hero = ({ className, title, subtitle, compact = false, backgroundImage = "
         priority
         fill
       />
+
       <div
         className={classNames(styles.textWrapper, {
           "text--align-center": !compact,
@@ -50,6 +63,11 @@ const Hero = ({ className, title, subtitle, compact = false, backgroundImage = "
                 {subtitle}
               </p>
             </Col>
+            {breadcrumbItems && breadcrumbItems.length > 0 && (
+              <Col xs={12}>
+                <Breadcrumb items={breadcrumbItems} />
+              </Col>
+            )}
           </Row>
         </Container>
       </div>

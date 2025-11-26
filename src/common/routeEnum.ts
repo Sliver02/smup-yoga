@@ -1,12 +1,13 @@
 export enum RouteEnum {
   HOME = "/",
-  ABOUT = "/about",
+  CALENDAR = "/#calendar",
   CONTACT = "/#contact",
+  ABOUT = "/about",
   CORTINA = "/yoga-cortina",
   BELLUNO = "/yoga-belluno",
   OUTDOOR = "/yoga-outdoor",
-  PRIVATE_LESSONS = "/private-lessons",
+  PRIVATE_LESSONS = "/lezioni-private",
   YIN = "/yin-yoga",
-  ANUKALANA = "/anukalana-yoga",
-  KID = "/kid-yoga",
+  ANUKALANA = "/anukalana",
+  KID = "/yoga-bimbi",
 }

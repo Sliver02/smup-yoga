@@ -162,6 +162,14 @@ import "@/designSystem/variables.scss";
 - `Color`, `Status`, `Size`, `Surface` enums
 - Use these instead of string literals for props
 
+**RouteEnum** (`src/common/routeEnum.ts`):
+
+- **CRITICAL**: ALWAYS use `RouteEnum` for internal links
+- Maps all website routes: `HOME`, `ABOUT`, `ANUKALANA`, `YIN`, `KID`, `BELLUNO`, `CORTINA`, `OUTDOOR`, `PRIVATE_LESSONS`, `CALENDAR`, `CONTACT`
+- Import: `import { RouteEnum } from "@/common/routeEnum";`
+- Usage: `<Link href={RouteEnum.ABOUT}>`, `<a href={RouteEnum.CALENDAR}>`
+- **Never hardcode paths** like `"/chi-sono"` or `"/#calendar"` — use the enum
+
 ### 6. Images with Manual Blur Placeholders
 
 **Pattern** (see `Section` organism):
@@ -361,8 +369,9 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 ❌ Don't use string literals for alignment — use `Justify.center`, `Align.start`
 ❌ Don't import from `@styles/` — use `@/designSystem/`
 ❌ Don't assume English is default — Italian is the default locale
-❌ Don't use `className={\`\${styles.x}\`}`— use`classNames()` library
+❌ Don't use `className={\`\${styles.x}\`}`— use`classNames()`library
 ❌ Don't create test files unless specifically requested (not in current codebase)
+❌ **Don't hardcode URLs** — ALWAYS use`RouteEnum` for internal links
 
 ## When Suggesting Code
 
