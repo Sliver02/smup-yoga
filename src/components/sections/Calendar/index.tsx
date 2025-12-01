@@ -40,7 +40,7 @@ const Calendar = () => {
     },
     {
       title: t("friday"),
-      rows: ["19:30 - Vinyasa, Belluno"],
+      rows: ["17:30 - Kid's Yoga, Vodo di Cadore"],
     },
   ];
 

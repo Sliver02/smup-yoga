@@ -114,6 +114,11 @@
       "description": "A <strong>Cortina d'Ampezzo e nella zona del Cadore</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) offro lezioni settimanali di Anukalana Yoga e sessioni speciali outdoor durante l'estate. Disponibile anche per eventi privati e ritiri yoga in location suggestive delle Dolomiti."
     },
     "schedule_title": "Orario delle lezioni",
+    "time_slots": {
+      "morning": "Mattina",
+      "afternoon": "Pomeriggio",
+      "evening": "Sera"
+    },
     "locations_list": {
       "belluno": "Belluno",
       "ponte": "Ponte nelle Alpi",

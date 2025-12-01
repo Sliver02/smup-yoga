@@ -2,27 +2,92 @@
 @use "../../../designSystem/mediaQueries";
 
 .locations {
-  background: var(--neutral-background);
 }
 
-.scheduleGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 20px;
+.scheduleTable {
   margin-top: 40px;
+  width: 100%;
+  overflow-x: auto;
 
-  @include mediaQueries.media("sm", "max") {
-    grid-template-columns: 1fr;
-    gap: 16px;
+  @include mediaQueries.media("md", "max") {
+    font-size: 14px;
   }
 }
 
+.headerRow {
+  display: grid;
+  grid-template-columns: 120px repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+
+  @include mediaQueries.media("md", "max") {
+    grid-template-columns: 80px repeat(5, 1fr);
+    gap: 8px;
+  }
+}
+
+.dayHeader {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--neutral-text);
+  text-align: center;
+  padding: 12px 8px;
+
+  @include mediaQueries.media("md", "max") {
+    font-size: 14px;
+    padding: 8px 4px;
+  }
+}
+
+.scheduleRow {
+  display: grid;
+  grid-template-columns: 120px repeat(5, 1fr);
+  gap: 12px;
+  margin-bottom: 12px;
+
+  @include mediaQueries.media("md", "max") {
+    grid-template-columns: 80px repeat(5, 1fr);
+    gap: 8px;
+  }
+}
+
+.timeSlotLabel {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--neutral-text);
+  text-align: center;
+  padding: 12px 8px;
+
+  @include mediaQueries.media("md", "max") {
+    font-size: 12px;
+    padding: 8px 4px;
+  }
+}
+
+.cell {
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
 .scheduleCard {
-  background: var(--surface-primary);
+  background: var(--primary-main);
   border-radius: 12px;
-  padding: 24px;
+  padding: 16px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+
+  @include mediaQueries.media("md", "max") {
+    padding: 12px 8px;
+  }
 
   &:hover {
     transform: translateY(-4px);
@@ -30,23 +95,48 @@
   }
 
   &.priority {
-    border: 2px solid var(--primary-main);
-    background: var(--surface-secondary);
+    border: 2px solid var(--accent-main);
+    background: var(--primary-hover);
+  }
+
+  &.highlight {
+    background: var(--accent-main);
+    color: white;
+    box-shadow: 0 4px 12px rgba(224, 93, 124, 0.3);
+
+    .time,
+    .type,
+    .location {
+      color: white;
+    }
+
+    &:hover {
+      background: var(--accent-hover);
+      box-shadow: 0 6px 20px rgba(224, 93, 124, 0.4);
+    }
   }
 }
 
-.day {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--neutral-text);
-  margin-bottom: 8px;
+.emptyCell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-border);
+  font-size: 24px;
+  width: 100%;
+  min-height: 80px;
 }
 
 .time {
-  font-size: 24px;
-  font-weight: 500;
-  color: var(--primary-main);
-  margin-bottom: 12px;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--accent-main);
+  margin-bottom: 8px;
+
+  @include mediaQueries.media("md", "max") {
+    font-size: 16px;
+    margin-bottom: 4px;
+  }
 }
 
 .type {
@@ -54,10 +144,18 @@
   font-weight: 600;
   color: var(--neutral-text);
   margin-bottom: 4px;
+
+  @include mediaQueries.media("md", "max") {
+    font-size: 14px;
+  }
 }
 
 .location {
-  font-size: 14px;
-  color: var(--neutral-text-light);
-  font-style: italic;
+  font-size: 13px;
+  color: var(--neutral-text);
+  opacity: 0.8;
+
+  @include mediaQueries.media("md", "max") {
+    font-size: 11px;
+  }
 }
