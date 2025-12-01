@@ -9,6 +9,7 @@ import Contact from "@/components/sections/Contact";
 import Locations from "@/components/sections/Locations";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import "@/designSystem/utils.scss";
 
 const YogaBellunoPage = () => {
   const t = useTranslations("locations.belluno");
@@ -32,35 +33,20 @@ const YogaBellunoPage = () => {
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>
             <Col xs={12} md={5}>
-              <div
-                style={{
-                  display: "none",
-                }}
-                className="desktop-image"
-              >
+              <div className="desktop-only">
                 <Image
                   src="/images/PXL_20250112_213048967.MP.jpg"
                   alt="Yoga a Belluno"
                   width={600}
                   height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: "12px",
-                  }}
+                  className="responsive-image"
                   placeholder="blur"
                   blurDataURL="/images/PXL_20250112_213048967.MP_placeholder.jpg"
                 />
               </div>
             </Col>
             <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                }}
-              >
+              <p className="text--p-lg">
                 {t.rich("description", {
                   strong: (children) => <strong>{children}</strong>,
                 })}

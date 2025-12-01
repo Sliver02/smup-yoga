@@ -9,6 +9,7 @@ import Section from "@/components/organisms/Section";
 import Contact from "@/components/sections/Contact";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import "@/designSystem/utils.scss";
 
 const OutdoorYogaPage = () => {
   const t = useTranslations("outdoor");
@@ -32,137 +33,71 @@ const OutdoorYogaPage = () => {
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center} gap="30px">
             <Col xs={12} md={5}>
-              <div style={{ display: "none" }} className="desktop-image">
+              <div className="desktop-only">
                 <Image
                   src="/images/PXL_20250726_110233771.MP.jpg"
                   alt="Outdoor Yoga"
                   width={600}
                   height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: "12px",
-                  }}
+                  className="responsive-image"
                   placeholder="blur"
                   blurDataURL="/images/PXL_20250726_110233771.MP_placeholder.jpg"
                 />
               </div>
             </Col>
             <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("description1", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "40px",
-                }}
-              >
-                {t.rich("description2", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-
-              <SectionTitle text={t("locations_title")} />
-
-              <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    fontWeight: "600",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {t("location1_name")}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "1.6",
-                    color: "var(--neutral-text-light)",
-                  }}
-                >
-                  {t("location1_desc")}
-                </p>
-              </div>
-
-              <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    fontWeight: "600",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {t("location2_name")}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "1.6",
-                    color: "var(--neutral-text-light)",
-                  }}
-                >
-                  {t("location2_desc")}
-                </p>
-              </div>
-
-              <div style={{ marginTop: "30px", marginBottom: "40px" }}>
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    fontWeight: "600",
-                    marginBottom: "10px",
-                  }}
-                >
-                  {t("location3_name")}
-                </h3>
-                <p
-                  style={{
-                    fontSize: "16px",
-                    lineHeight: "1.6",
-                    color: "var(--neutral-text-light)",
-                  }}
-                >
-                  {t("location3_desc")}
-                </p>
-              </div>
-
-              <div
-                style={{
-                  padding: "30px",
-                  background: "var(--surface-secondary)",
-                  borderRadius: "12px",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textAlign: "center",
-                }}
-              >
-                {t("cta")}
-              </div>
+              <Row gap="30px">
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("description1", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <Row gap="10px">
+                    <Col xs={12}>
+                      <p className="text--p-lg">
+                        {t.rich("description2", {
+                          strong: (children) => <strong>{children}</strong>,
+                        })}
+                      </p>
+                    </Col>
+                    <Col xs={12}>
+                      <SectionTitle text={t("locations_title")} />
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={12}>
+                  <Row gap="10px">
+                    <Col xs={12}>
+                      <h3 className="location-heading">
+                        {t("location1_name")}
+                      </h3>
+                      <p className="text--p-md">{t("location1_desc")}</p>
+                    </Col>
+                    <Col xs={12}>
+                      <h3 className="location-heading">
+                        {t("location2_name")}
+                      </h3>
+                      <p className="text--p-md">{t("location2_desc")}</p>
+                    </Col>
+                    <Col xs={12}>
+                      <h3 className="location-heading">
+                        {t("location3_name")}
+                      </h3>
+                      <p className="text--p-md">{t("location3_desc")}</p>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={12}>
+                  <div className="cta-box">{t("cta")}</div>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
       </Section>
-
-      <style jsx global>{`
-        @media (min-width: 769px) {
-          .desktop-image {
-            display: block !important;
-          }
-        }
-      `}</style>
 
       <Contact />
       <Footer />

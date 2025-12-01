@@ -9,6 +9,7 @@ import Contact from "@/components/sections/Contact";
 import Locations from "@/components/sections/Locations";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import "@/designSystem/utils.scss";
 
 const YinYogaPage = () => {
   const t = useTranslations("classes.yin");
@@ -32,35 +33,20 @@ const YinYogaPage = () => {
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>
             <Col xs={12} md={5}>
-              <div
-                style={{
-                  display: "none",
-                }}
-                className="desktop-image"
-              >
+              <div className="desktop-only">
                 <Image
                   src="/images/PXL_20250601_164142948.MP.jpg"
                   alt="Yin Yoga"
                   width={600}
                   height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: "12px",
-                  }}
+                  className="responsive-image"
                   placeholder="blur"
                   blurDataURL="/images/PXL_20250601_164142948.MP_placeholder.jpg"
                 />
               </div>
             </Col>
             <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                }}
-              >
+              <p className="text--p-lg">
                 {t.rich("description_long", {
                   strong: (children) => <strong>{children}</strong>,
                 })}
@@ -69,13 +55,6 @@ const YinYogaPage = () => {
           </Row>
         </Container>
       </Section>
-      <style jsx global>{`
-        @media (min-width: 769px) {
-          .desktop-image {
-            display: block !important;
-          }
-        }
-      `}</style>
 
       <Locations />
       <Contact />

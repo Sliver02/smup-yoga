@@ -9,6 +9,7 @@ import Contact from "@/components/sections/Contact";
 import Locations from "@/components/sections/Locations";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import "@/designSystem/utils.scss";
 
 const YogaCortinaPage = () => {
   const t = useTranslations("locations.cortina");
@@ -32,35 +33,20 @@ const YogaCortinaPage = () => {
         <Container>
           <Row xsJustify={Justify.center} mdAlign={Align.center}>
             <Col xs={12} md={5}>
-              <div
-                style={{
-                  display: "none",
-                }}
-                className="desktop-image"
-              >
+              <div className="desktop-only">
                 <Image
                   src="/images/IMG_2646.jpg"
                   alt="Yoga a Cortina d'Ampezzo"
                   width={600}
                   height={400}
-                  style={{
-                    width: "100%",
-                    height: "auto",
-                    borderRadius: "12px",
-                  }}
+                  className="responsive-image"
                   placeholder="blur"
                   blurDataURL="/images/IMG_2646_placeholder.jpg"
                 />
               </div>
             </Col>
             <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                }}
-              >
+              <p className="text--p-lg">
                 {t.rich("description", {
                   strong: (children) => <strong>{children}</strong>,
                 })}
@@ -69,14 +55,6 @@ const YogaCortinaPage = () => {
           </Row>
         </Container>
       </Section>
-
-      <style jsx global>{`
-        @media (min-width: 769px) {
-          .desktop-image {
-            display: block !important;
-          }
-        }
-      `}</style>
 
       <Locations priorityLocation="Cortina" />
       <Contact />

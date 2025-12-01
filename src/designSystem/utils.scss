@@ -1,3 +1,61 @@
+@use "mediaQueries";
+@use "variables";
+
 @mixin toRem($property, $value) {
   #{$property}: calc($value / 16) + rem;
+}
+
+// Typography utilities - using text.scss variables
+.section-heading {
+  @include toRem(font-size, variables.$font-xl);
+  font-weight: 600;
+  margin-top: 40px;
+  margin-bottom: 16px;
+}
+
+.location-heading {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+// List utilities
+.styled-list {
+  @include toRem(font-size, variables.$font-lg);
+  line-height: 2;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+}
+
+// Image utilities
+.responsive-image {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.desktop-only {
+  display: none;
+
+  @include mediaQueries.media("md") {
+    display: block;
+  }
+}
+
+// Layout utilities
+.cta-box {
+  padding: 30px;
+  background: var(--surface-secondary);
+  border-radius: 12px;
+  @include toRem(font-size, variables.$font-lg);
+  font-weight: 500;
+  text-align: center;
+}
+
+.info-card {
+  background: var(--neutral-background-light);
+  padding: 20px;
+  border-radius: 8px;
+  white-space: pre-line;
 }

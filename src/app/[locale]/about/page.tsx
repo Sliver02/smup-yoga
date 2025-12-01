@@ -7,6 +7,7 @@ import Hero from "@/components/organisms/Hero";
 import Section from "@/components/organisms/Section";
 import Contact from "@/components/sections/Contact";
 import { useTranslations } from "next-intl";
+import "@/designSystem/utils.scss";
 
 const AboutPage = () => {
   const t = useTranslations("about");
@@ -30,77 +31,50 @@ const AboutPage = () => {
         <Container>
           <Row xsJustify={Justify.center}>
             <Col xs={12} lg={10}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("description1", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("description2", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("description3", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("extended_description1", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("extended_description2", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                }}
-              >
-                {t.rich("extended_description3", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
+              <Row gap="30px">
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("description1", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("description2", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("description3", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("extended_description1", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("extended_description2", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+                <Col xs={12}>
+                  <p className="text--p-lg">
+                    {t.rich("extended_description3", {
+                      strong: (children) => <strong>{children}</strong>,
+                    })}
+                  </p>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>

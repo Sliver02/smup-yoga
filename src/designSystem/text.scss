@@ -125,4 +125,28 @@ p {
   &--italic {
     font-style: italic;
   }
+
+  &--line-height {
+    &-normal {
+      line-height: 1.6;
+    }
+
+    &-relaxed {
+      line-height: 1.8;
+    }
+
+    &-loose {
+      line-height: 2;
+    }
+  }
+
+  &--color {
+    &-default {
+      color: var(--neutral-text);
+    }
+
+    &-light {
+      color: var(--neutral-text-light);
+    }
+  }
 }

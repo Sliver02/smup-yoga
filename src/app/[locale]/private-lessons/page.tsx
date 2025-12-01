@@ -8,6 +8,7 @@ import Hero from "@/components/organisms/Hero";
 import Section from "@/components/organisms/Section";
 import Contact from "@/components/sections/Contact";
 import { useTranslations } from "next-intl";
+import "@/designSystem/utils.scss";
 
 const PrivateLessonsPage = () => {
   const t = useTranslations("private");
@@ -31,79 +32,48 @@ const PrivateLessonsPage = () => {
         <Container>
           <Row xsJustify={Justify.center}>
             <Col xs={12} lg={10}>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginTop: "40px",
-                  marginBottom: "30px",
-                }}
-              >
-                {t.rich("description1", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "1.8",
-                  color: "var(--neutral-text)",
-                  marginBottom: "40px",
-                }}
-              >
-                {t.rich("description2", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-
-              <SectionTitle text={t("benefits_title")} />
-
-              <ul
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "2",
-                  marginTop: "20px",
-                  marginBottom: "40px",
-                  paddingLeft: "20px",
-                }}
-              >
-                <li>{t("benefit1")}</li>
-                <li>{t("benefit2")}</li>
-                <li>{t("benefit3")}</li>
-                <li>{t("benefit4")}</li>
-                <li>{t("benefit5")}</li>
-              </ul>
-
-              <SectionTitle text={t("formats_title")} />
-
-              <ul
-                style={{
-                  fontSize: "18px",
-                  lineHeight: "2",
-                  marginTop: "20px",
-                  marginBottom: "40px",
-                  paddingLeft: "20px",
-                }}
-              >
-                <li>{t("format1")}</li>
-                <li>{t("format2")}</li>
-                <li>{t("format3")}</li>
-                <li>{t("format4")}</li>
-              </ul>
-
-              <div
-                style={{
-                  padding: "30px",
-                  background: "var(--surface-secondary)",
-                  borderRadius: "12px",
-                  fontSize: "18px",
-                  fontWeight: "500",
-                  textAlign: "center",
-                }}
-              >
-                {t("cta")}
-              </div>
+              <Row gap="40px">
+                <Col xs={12}>
+                  <Row gap="30px">
+                    <Col xs={12}>
+                      <p className="text--p-lg">
+                        {t.rich("description1", {
+                          strong: (children) => <strong>{children}</strong>,
+                        })}
+                      </p>
+                    </Col>
+                    <Col xs={12}>
+                      <p className="text--p-lg">
+                        {t.rich("description2", {
+                          strong: (children) => <strong>{children}</strong>,
+                        })}
+                      </p>
+                    </Col>
+                  </Row>
+                </Col>
+                <Col xs={12}>
+                  <SectionTitle text={t("benefits_title")} />
+                  <ul className="styled-list">
+                    <li>{t("benefit1")}</li>
+                    <li>{t("benefit2")}</li>
+                    <li>{t("benefit3")}</li>
+                    <li>{t("benefit4")}</li>
+                    <li>{t("benefit5")}</li>
+                  </ul>
+                </Col>
+                <Col xs={12}>
+                  <SectionTitle text={t("formats_title")} />
+                  <ul className="styled-list">
+                    <li>{t("format1")}</li>
+                    <li>{t("format2")}</li>
+                    <li>{t("format3")}</li>
+                    <li>{t("format4")}</li>
+                  </ul>
+                </Col>
+                <Col xs={12}>
+                  <div className="cta-box">{t("cta")}</div>
+                </Col>
+              </Row>
             </Col>
           </Row>
         </Container>
