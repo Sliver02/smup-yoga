@@ -1,5 +1,5 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
 
 .cardDisplay {
   --width: 300px;
@@ -9,7 +9,7 @@
   padding: 1rem;
   margin: auto;
 
-  @include mediaQuery("lg") {
+  @include mediaQueries.media("lg") {
     --width: 400px;
     --height: 460px;
 

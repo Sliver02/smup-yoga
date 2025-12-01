@@ -1,6 +1,6 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
-@import "@/designSystem/text";
+@use "variables";
+@use "mediaQueries";
+@use "text";
 
 :root {
   // color palette
@@ -74,11 +74,11 @@ body {
 
   font-family: var(--font-inter);
   font-display: swap;
-  font-size: $font-md;
+  font-size: variables.$font-md;
   line-height: 1.2;
 
-  @include mediaQuery("lg") {
-    font-size: $font-md;
+  @include mediaQueries.media("lg") {
+    font-size: variables.$font-md;
   }
 }
 

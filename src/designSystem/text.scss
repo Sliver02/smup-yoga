@@ -1,5 +1,5 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/utils";
+@use "variables";
+@use "utils";
 
 h1,
 h2,
@@ -19,20 +19,20 @@ h4 {
 }
 
 h1 {
-  @include toRem(font-size, $font-h-xxl);
+  @include utils.toRem(font-size, variables.$font-h-xxl);
 }
 
 h2 {
-  @include toRem(font-size, $font-h-xl);
+  @include utils.toRem(font-size, variables.$font-h-xl);
   font-size: 3.5rem;
 }
 
 h3 {
-  @include toRem(font-size, $font-h-lg);
+  @include utils.toRem(font-size, variables.$font-h-lg);
 }
 
 h4 {
-  @include toRem(font-size, $font-h-md);
+  @include utils.toRem(font-size, variables.$font-h-md);
 }
 
 p {
@@ -60,53 +60,53 @@ p {
 
   &--h {
     &-xs {
-      @include toRem(font-size, $font-h-xs);
+      @include utils.toRem(font-size, variables.$font-h-xs);
     }
 
     &-sm {
-      @include toRem(font-size, $font-h-sm);
+      @include utils.toRem(font-size, variables.$font-h-sm);
     }
 
     &-md {
-      @include toRem(font-size, $font-h-md);
+      @include utils.toRem(font-size, variables.$font-h-md);
     }
 
     &-lg {
-      @include toRem(font-size, $font-h-lg);
+      @include utils.toRem(font-size, variables.$font-h-lg);
     }
 
     &-xl {
-      @include toRem(font-size, $font-h-xl);
+      @include utils.toRem(font-size, variables.$font-h-xl);
     }
 
     &-xxl {
-      @include toRem(font-size, $font-h-xxl);
+      @include utils.toRem(font-size, variables.$font-h-xxl);
     }
   }
 
   &--p {
     &-xs {
-      @include toRem(font-size, $font-xs);
+      @include utils.toRem(font-size, variables.$font-xs);
     }
 
     &-sm {
-      @include toRem(font-size, $font-sm);
+      @include utils.toRem(font-size, variables.$font-sm);
     }
 
     &-md {
-      @include toRem(font-size, $font-md);
+      @include utils.toRem(font-size, variables.$font-md);
     }
 
     &-lg {
-      @include toRem(font-size, $font-lg);
+      @include utils.toRem(font-size, variables.$font-lg);
     }
 
     &-xl {
-      @include toRem(font-size, $font-xl);
+      @include utils.toRem(font-size, variables.$font-xl);
     }
 
     &-xxl {
-      @include toRem(font-size, $font-xxl);
+      @include utils.toRem(font-size, variables.$font-xxl);
     }
   }
 

@@ -1,5 +1,6 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "sass:list";
+@use "../../../../designSystem/variables";
+@use "../../../../designSystem/mediaQueries";
 
 .col {
   box-sizing: border-box;
@@ -13,23 +14,23 @@
   }
 }
 
-@each $bpName in $breakpointsNames {
-  @include mediaQuery($bpName, "min") {
-    @each $col in $columns {
+@each $bpName in variables.$breakpointsNames {
+  @include mediaQueries.media($bpName, "min") {
+    @each $col in variables.$columns {
       .#{$bpName}-#{$col} {
         flex-basis: #{(100 / 12) * $col} + "%";
         max-width: #{(100 / 12) * $col} + "%";
       }
     }
 
-    @each $offset in $offsets {
+    @each $offset in variables.$offsets {
       .#{$bpName}Offset-#{$offset} {
         margin-left: #{(100 / 12) * $offset} + "%";
       }
     }
 
-    @each $al in $align {
-      $value: nth($al, 2);
+    @each $al in variables.$align {
+      $value: list.nth($al, 2);
 
       .#{$bpName}AlignSelf-#{$value} {
         align-self: $value;

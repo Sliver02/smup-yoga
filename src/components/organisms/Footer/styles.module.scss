@@ -1,6 +1,6 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
-@import "@/designSystem/utils";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
+@use "../../../designSystem/utils";
 
 .footer {
   margin: 0 auto;

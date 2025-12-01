@@ -1,5 +1,5 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
 
 .infiniteText {
   background: var(--background-color);
@@ -12,7 +12,7 @@
 
   min-height: 40px;
 
-  @include mediaQuery("lg") {
+  @include mediaQueries.media("lg") {
     min-height: 80px;
   }
 

@@ -1,6 +1,7 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
-@import "@/designSystem/utils";
+@use "sass:map";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
+@use "../../../designSystem/utils";
 
 .hero {
   display: flex;
@@ -22,14 +23,14 @@
 
   .breadcrumbWrapper {
     position: absolute;
-    top: map-get($headerHeight, "xs");
+    top: map.get(variables.$headerHeight, "xs");
     left: 0;
     width: 100%;
     z-index: 10;
     padding: 16px 0;
 
-    @include mediaQuery("md") {
-      top: map-get($headerHeight, "md");
+    @include mediaQueries.media("md") {
+      top: map.get(variables.$headerHeight, "md");
       padding: 20px 0;
     }
 
@@ -58,7 +59,7 @@
     color: var(--neutral-background);
 
     h1 {
-      @include mediaQuery("sm", "max") {
+      @include mediaQueries.media("sm", "max") {
         font-size: 4rem;
       }
     }
@@ -72,7 +73,7 @@
     .textWrapper {
       margin-top: 25vh;
 
-      @include mediaQuery("md", "max") {
+      @include mediaQueries.media("md", "max") {
         margin-top: 20vh;
       }
     }
@@ -80,7 +81,7 @@
     h1 {
       font-size: 4rem;
 
-      @include mediaQuery("sm", "max") {
+      @include mediaQueries.media("sm", "max") {
         font-size: 3rem;
       }
     }

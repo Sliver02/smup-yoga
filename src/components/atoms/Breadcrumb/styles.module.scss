@@ -1,5 +1,5 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
 
 .breadcrumb {
   padding: 20px 0;
@@ -23,7 +23,7 @@
   gap: 8px;
   font-size: 14px;
 
-  @include mediaQuery("sm", "max") {
+  @include mediaQueries.media("sm", "max") {
     font-size: 12px;
   }
 }

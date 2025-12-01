@@ -1,6 +1,6 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
-@import "@/designSystem/utils";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
+@use "../../../designSystem/utils";
 
 .header {
   position: fixed;
@@ -20,7 +20,7 @@
     #1c1d2300 100%
   );
 
-  @include mediaQuery("lg") {
+  @include mediaQueries.media("lg") {
     padding: 1.5rem 5rem;
     align-items: center;
   }
@@ -31,7 +31,7 @@
     width: 80px;
     z-index: 3;
 
-    @include mediaQuery("lg") {
+    @include mediaQueries.media("lg") {
       height: 200px;
       width: 100px;
     }
@@ -46,13 +46,13 @@
       color: white;
     }
 
-    @include mediaQuery("lg") {
+    @include mediaQueries.media("lg") {
       display: flex;
       gap: 2rem;
     }
 
     &__button {
-      @include toRem(font-size, $font-xl);
+      @include utils.toRem(font-size, variables.$font-xl);
       background: none;
       border: none;
       color: white;
@@ -124,7 +124,7 @@
   }
 
   .MuiSvgIcon-root {
-    @include toRem(font-size, $font-h-lg);
+    @include utils.toRem(font-size, variables.$font-h-lg);
     background-color: red;
   }
 
@@ -135,7 +135,7 @@
 
     font-size: 2rem;
 
-    @include mediaQuery("lg") {
+    @include mediaQueries.media("lg") {
       display: none;
     }
   }
@@ -166,13 +166,13 @@
     }
 
     &__button {
-      @include toRem(font-size, $font-h-lg);
+      @include utils.toRem(font-size, variables.$font-h-lg);
       margin: 0.5rem 0;
       color: white;
       text-decoration: none;
     }
 
-    @include mediaQuery("lg") {
+    @include mediaQueries.media("lg") {
       display: none;
       pointer-events: none;
     }
@@ -186,14 +186,14 @@
   }
 
   .mobileDropdownLabel {
-    @include toRem(font-size, $font-h-lg);
+    @include utils.toRem(font-size, variables.$font-h-lg);
     font-weight: 600;
     color: white;
     margin-bottom: 0.5rem;
   }
 
   .mobileSubItem {
-    @include toRem(font-size, $font-xl);
+    @include utils.toRem(font-size, variables.$font-xl);
     margin: 0.3rem 0;
     opacity: 0.9;
 

@@ -1,5 +1,6 @@
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "sass:list";
+@use "../../../../designSystem/variables";
+@use "../../../../designSystem/mediaQueries";
 
 .row {
   display: flex;
@@ -23,18 +24,18 @@
   width: fit-content;
 }
 
-@each $bpName in $breakpointsNames {
-  @include mediaQuery($bpName, "min") {
-    @each $al in $align {
-      $value: nth($al, 2);
+@each $bpName in variables.$breakpointsNames {
+  @include mediaQueries.media($bpName, "min") {
+    @each $al in variables.$align {
+      $value: list.nth($al, 2);
 
       .#{$bpName}Align-#{$value} {
         align-items: $value;
       }
     }
 
-    @each $ju in $justify {
-      $value: nth($ju, 2);
+    @each $ju in variables.$justify {
+      $value: list.nth($ju, 2);
 
       .#{$bpName}Justify-#{$value} {
         justify-content: $value;
