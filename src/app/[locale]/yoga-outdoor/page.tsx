@@ -9,57 +9,6 @@ import Section from "@/components/organisms/Section";
 import Contact from "@/components/sections/Contact";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import type { Metadata } from "next";
-
-export async function generateMetadata({
-  params,
-}: {
-  params: Promise<{ locale: string }>;
-}): Promise<Metadata> {
-  const { locale } = await params;
-  const isItalian = locale === "it";
-  
-  return {
-    title: isItalian ? "Yoga Outdoor" : "Outdoor Yoga",
-    description: isItalian
-      ? "Sessioni di yoga all'aperto nelle Dolomiti. BAR ALPINO Calalzo, Malga Caseera Razzo, rifugi. Pratica yoga immersi nella natura con Sarah Pompanin."
-      : "Outdoor yoga sessions in the Dolomites. BAR ALPINO Calalzo, Malga Caseera Razzo, mountain huts. Practice yoga immersed in nature with Sarah Pompanin.",
-    openGraph: {
-      title: isItalian
-        ? "Yoga Outdoor — Sessioni estive nelle Dolomiti"
-        : "Outdoor Yoga — Summer sessions in the Dolomites",
-      description: isItalian
-        ? "Pratica yoga all'aria aperta in location suggestive delle Dolomiti. Anukalana, Vinyasa e meditazioni guidate."
-        : "Practice yoga outdoors in stunning Dolomites locations. Anukalana, Vinyasa and guided meditations.",
-      url: `https://smupyoga.com/${locale}/yoga-outdoor/`,
-      siteName: "SMUP Yoga",
-      images: [
-        {
-          url: "https://smupyoga.com/images/PXL_20250726_110233771.MP.jpg",
-          width: 1200,
-          height: 630,
-          alt: "Yoga Outdoor nelle Dolomiti",
-        },
-      ],
-      locale: isItalian ? "it_IT" : "en_US",
-      type: "website",
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: isItalian ? "Yoga Outdoor" : "Outdoor Yoga",
-      description: isItalian
-        ? "Sessioni estive nelle Dolomiti"
-        : "Summer sessions in the Dolomites",
-    },
-    alternates: {
-      canonical: `https://smupyoga.com/${locale}/yoga-outdoor/`,
-      languages: {
-        en: "https://smupyoga.com/en/yoga-outdoor/",
-        it: "https://smupyoga.com/it/yoga-outdoor/",
-      },
-    },
-  };
-}
 
 const OutdoorYogaPage = () => {
   const t = useTranslations("outdoor");
@@ -67,156 +16,156 @@ const OutdoorYogaPage = () => {
 
   return (
     <main>
-        <Header />
-        <Hero
-          title={t("title")}
-          subtitle={t("hero_subtitle")}
-          compact
-          backgroundImage="/images/PXL_20250726_110233771.MP.jpg"
-          breadcrumbItems={[
-            { label: tCommon("home"), href: "/" },
-            { label: t("title") },
-          ]}
-        />
+      <Header />
+      <Hero
+        title={t("title")}
+        subtitle={t("hero_subtitle")}
+        compact
+        backgroundImage="/images/PXL_20250726_110233771.MP.jpg"
+        breadcrumbItems={[
+          { label: tCommon("home"), href: "/" },
+          { label: t("title") },
+        ]}
+      />
 
-        <Section>
-          <Container>
-            <Row xsJustify={Justify.center} mdAlign={Align.center} gap="30px">
-              <Col xs={12} md={5}>
-                <div style={{ display: "none" }} className="desktop-image">
-                  <Image
-                    src="/images/PXL_20250726_110233771.MP.jpg"
-                    alt="Outdoor Yoga"
-                    width={600}
-                    height={400}
-                    style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "12px",
-                    }}
-                    placeholder="blur"
-                    blurDataURL="/images/PXL_20250726_110233771.MP_placeholder.jpg"
-                  />
-                </div>
-              </Col>
-              <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-                <p
+      <Section>
+        <Container>
+          <Row xsJustify={Justify.center} mdAlign={Align.center} gap="30px">
+            <Col xs={12} md={5}>
+              <div style={{ display: "none" }} className="desktop-image">
+                <Image
+                  src="/images/PXL_20250726_110233771.MP.jpg"
+                  alt="Outdoor Yoga"
+                  width={600}
+                  height={400}
                   style={{
-                    fontSize: "18px",
-                    lineHeight: "1.8",
-                    color: "var(--neutral-text)",
-                    marginBottom: "30px",
-                  }}
-                >
-                  {t.rich("description1", {
-                    strong: (children) => <strong>{children}</strong>,
-                  })}
-                </p>
-                <p
-                  style={{
-                    fontSize: "18px",
-                    lineHeight: "1.8",
-                    color: "var(--neutral-text)",
-                    marginBottom: "40px",
-                  }}
-                >
-                  {t.rich("description2", {
-                    strong: (children) => <strong>{children}</strong>,
-                  })}
-                </p>
-
-                <SectionTitle text={t("locations_title")} />
-
-                <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "600",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {t("location1_name")}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      lineHeight: "1.6",
-                      color: "var(--neutral-text-light)",
-                    }}
-                  >
-                    {t("location1_desc")}
-                  </p>
-                </div>
-
-                <div style={{ marginTop: "30px", marginBottom: "30px" }}>
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "600",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {t("location2_name")}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      lineHeight: "1.6",
-                      color: "var(--neutral-text-light)",
-                    }}
-                  >
-                    {t("location2_desc")}
-                  </p>
-                </div>
-
-                <div style={{ marginTop: "30px", marginBottom: "40px" }}>
-                  <h3
-                    style={{
-                      fontSize: "22px",
-                      fontWeight: "600",
-                      marginBottom: "10px",
-                    }}
-                  >
-                    {t("location3_name")}
-                  </h3>
-                  <p
-                    style={{
-                      fontSize: "16px",
-                      lineHeight: "1.6",
-                      color: "var(--neutral-text-light)",
-                    }}
-                  >
-                    {t("location3_desc")}
-                  </p>
-                </div>
-
-                <div
-                  style={{
-                    padding: "30px",
-                    background: "var(--surface-secondary)",
+                    width: "100%",
+                    height: "auto",
                     borderRadius: "12px",
-                    fontSize: "18px",
-                    fontWeight: "500",
-                    textAlign: "center",
+                  }}
+                  placeholder="blur"
+                  blurDataURL="/images/PXL_20250726_110233771.MP_placeholder.jpg"
+                />
+              </div>
+            </Col>
+            <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
+              <p
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.8",
+                  color: "var(--neutral-text)",
+                  marginBottom: "30px",
+                }}
+              >
+                {t.rich("description1", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
+              </p>
+              <p
+                style={{
+                  fontSize: "18px",
+                  lineHeight: "1.8",
+                  color: "var(--neutral-text)",
+                  marginBottom: "40px",
+                }}
+              >
+                {t.rich("description2", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
+              </p>
+
+              <SectionTitle text={t("locations_title")} />
+
+              <div style={{ marginTop: "30px", marginBottom: "30px" }}>
+                <h3
+                  style={{
+                    fontSize: "22px",
+                    fontWeight: "600",
+                    marginBottom: "10px",
                   }}
                 >
-                  {t("cta")}
-                </div>
-              </Col>
-            </Row>
-          </Container>
-        </Section>
+                  {t("location1_name")}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: "1.6",
+                    color: "var(--neutral-text-light)",
+                  }}
+                >
+                  {t("location1_desc")}
+                </p>
+              </div>
 
-        <style jsx global>{`
-          @media (min-width: 769px) {
-            .desktop-image {
-              display: block !important;
-            }
+              <div style={{ marginTop: "30px", marginBottom: "30px" }}>
+                <h3
+                  style={{
+                    fontSize: "22px",
+                    fontWeight: "600",
+                    marginBottom: "10px",
+                  }}
+                >
+                  {t("location2_name")}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: "1.6",
+                    color: "var(--neutral-text-light)",
+                  }}
+                >
+                  {t("location2_desc")}
+                </p>
+              </div>
+
+              <div style={{ marginTop: "30px", marginBottom: "40px" }}>
+                <h3
+                  style={{
+                    fontSize: "22px",
+                    fontWeight: "600",
+                    marginBottom: "10px",
+                  }}
+                >
+                  {t("location3_name")}
+                </h3>
+                <p
+                  style={{
+                    fontSize: "16px",
+                    lineHeight: "1.6",
+                    color: "var(--neutral-text-light)",
+                  }}
+                >
+                  {t("location3_desc")}
+                </p>
+              </div>
+
+              <div
+                style={{
+                  padding: "30px",
+                  background: "var(--surface-secondary)",
+                  borderRadius: "12px",
+                  fontSize: "18px",
+                  fontWeight: "500",
+                  textAlign: "center",
+                }}
+              >
+                {t("cta")}
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+
+      <style jsx global>{`
+        @media (min-width: 769px) {
+          .desktop-image {
+            display: block !important;
           }
-        `}</style>
+        }
+      `}</style>
 
-        <Contact />
-        <Footer />
+      <Contact />
+      <Footer />
     </main>
   );
 };
