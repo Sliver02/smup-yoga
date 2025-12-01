@@ -406,3 +406,4 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 6. Create manual blur placeholders for all images
 7. Use custom form components (TextField, Button, Alert) with react-hook-form + zod
 8. Check `src/components/` for existing components before creating new ones
+9. When generating metadata or translations, if the text is identical in both languages, use a single string instead of ternary operators (e.g., `title: "Same Title"` not `title: isItalian ? "Same Title" : "Same Title"`)

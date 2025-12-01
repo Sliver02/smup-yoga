@@ -5,6 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
+import ThemeProviderWrapper from "./ThemeProviderWrapper";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -193,7 +194,9 @@ export default async function RootLayout({
       </head>
       <body className={classNames(inter.variable, rightGrotesk.variable)}>
         <NextIntlClientProvider messages={messages}>
-          <div className={classNames("root")}>{children}</div>
+          <ThemeProviderWrapper>
+            <div className={classNames("root")}>{children}</div>
+          </ThemeProviderWrapper>
         </NextIntlClientProvider>
       </body>
     </html>
