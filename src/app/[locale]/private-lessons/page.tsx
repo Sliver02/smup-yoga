@@ -7,7 +7,6 @@ import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
 import Section from "@/components/organisms/Section";
 import Contact from "@/components/sections/Contact";
-import { ThemeProvider, createTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
@@ -62,22 +61,11 @@ export async function generateMetadata({
 }
 
 const PrivateLessonsPage = () => {
-  const theme = createTheme({
-    palette: {
-      mode: "light",
-      primary: {
-        main: "#e05d7c",
-        contrastText: "#5f1224",
-      },
-    },
-  });
-
   const t = useTranslations("private");
   const tCommon = useTranslations("breadcrumbs");
 
   return (
     <main>
-      <ThemeProvider theme={theme}>
         <Header />
         <Hero
           title={t("title")}
@@ -174,7 +162,6 @@ const PrivateLessonsPage = () => {
 
         <Contact />
         <Footer />
-      </ThemeProvider>
     </main>
   );
 };

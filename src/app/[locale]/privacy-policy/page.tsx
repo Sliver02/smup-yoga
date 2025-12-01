@@ -5,7 +5,6 @@ import Footer from "@/components/organisms/Footer";
 import Header from "@/components/organisms/Header";
 import Hero from "@/components/organisms/Hero";
 import Section from "@/components/organisms/Section";
-import { ThemeProvider, createTheme } from "@mui/material";
 import { useTranslations } from "next-intl";
 import type { Metadata } from "next";
 
@@ -47,22 +46,11 @@ export async function generateMetadata({
 }
 
 const PrivacyPolicyPage = () => {
-  const theme = createTheme({
-    palette: {
-      mode: "light",
-      primary: {
-        main: "#e05d7c",
-        contrastText: "#5f1224",
-      },
-    },
-  });
-
   const t = useTranslations("privacy");
   const tCommon = useTranslations("breadcrumbs");
 
   return (
     <main>
-      <ThemeProvider theme={theme}>
         <Header />
         <Hero
           title={t("title")}
@@ -255,7 +243,6 @@ const PrivacyPolicyPage = () => {
         </Section>
 
         <Footer />
-      </ThemeProvider>
     </main>
   );
 };
