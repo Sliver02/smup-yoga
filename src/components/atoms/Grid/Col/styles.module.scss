@@ -18,14 +18,14 @@
   @include mediaQueries.media($bpName, "min") {
     @each $col in variables.$columns {
       .#{$bpName}-#{$col} {
-        flex-basis: #{(100 / 12) * $col} + "%";
-        max-width: #{(100 / 12) * $col} + "%";
+        flex-basis: #{calc(100 / 12) * $col} + "%";
+        max-width: #{calc(100 / 12) * $col} + "%";
       }
     }
 
     @each $offset in variables.$offsets {
       .#{$bpName}Offset-#{$offset} {
-        margin-left: #{(100 / 12) * $offset} + "%";
+        margin-left: #{calc(100 / 12) * $offset} + "%";
       }
     }
 
