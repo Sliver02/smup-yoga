@@ -115,32 +115,50 @@ export default MyComponent;
 
 ### 4. SCSS Module Pattern
 
+**CRITICAL**: Project uses modern Sass `@use` syntax, NOT `@import` (which is deprecated).
+
 ```scss
-@import "@/designSystem/variables";
-@import "@/designSystem/mediaQueries";
+@use "../../../designSystem/variables";
+@use "../../../designSystem/mediaQueries";
 
 .wrapper {
   // Use CSS custom properties from globals.scss
   background: var(--neutral-background);
   color: var(--neutral-text);
 
-  // Use mediaQuery mixin (NOT @include mobile)
-  @include mediaQuery("md") {
+  // Use media mixin with namespace (NOT @include mediaQuery)
+  @include mediaQueries.media("md") {
     /* min-width: 769px */
     padding: 32px;
   }
 
-  @include mediaQuery("md", "max") {
+  @include mediaQueries.media("md", "max") {
     /* max-width: 768px */
     padding: 16px;
   }
+
+  // Access SCSS variables with namespace
+  font-size: variables.$font-md;
 }
 ```
+
+**Key differences from old `@import` pattern**:
+
+- Use `@use` instead of `@import` (imports are namespaced)
+- Access mixins: `@include mediaQueries.media()` NOT `@include mediaQuery()`
+- Access variables: `variables.$font-md` NOT `$font-md`
+- Use relative paths: `"../../../designSystem/variables"` (absolute paths don't work reliably)
 
 **Available CSS variables** (`src/designSystem/globals.scss`):
 
 - Colors: `--neutral-background`, `--neutral-text`, `--primary-main`, `--accent-main`, etc.
-- NO spacing/radius variables — use SCSS vars like `$font-md: 16` (in px, no unit)
+- NO spacing/radius variables — use SCSS vars like `variables.$font-md: 16` (in px, no unit)
+
+**When to use SCSS imports**:
+
+- Only import if you actually use SCSS variables, mixins, or functions
+- Files using only CSS custom properties (var()) don't need imports
+- Don't import unused design system files
 
 ### 5. TypeScript Patterns
 
@@ -335,8 +353,9 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 ### Design System Location
 
 - **NOT** `src/styles/` — it's `src/designSystem/`
-- Import with: `@import "@/designSystem/variables"`
-- Media queries via `@include mediaQuery("md")` NOT `@media`
+- Import with: `@use "../../../designSystem/variables"` (use relative paths, NOT absolute)
+- Media queries via `@include mediaQueries.media("md")` NOT `@media` or `@include mediaQuery()`
+- Always use namespaced syntax with `@use` (modern Sass)
 
 ### Path Aliases
 
@@ -365,14 +384,17 @@ NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
 ## Critical Don'ts
 
 ❌ Don't use `@atoms/` imports — use `@/components/atoms/`
-❌ Don't use `@include mobile` — use `@include mediaQuery("md", "max")`
+❌ Don't use `@import` in SCSS — use `@use` with namespaced access
+❌ Don't use `@include mediaQuery()` — use `@include mediaQueries.media()`
+❌ Don't use `$font-md` directly — use `variables.$font-md`
 ❌ Don't use string literals for alignment — use `Justify.center`, `Align.start`
 ❌ Don't import from `@styles/` — use `@/designSystem/`
 ❌ Don't assume English is default — Italian is the default locale
 ❌ Don't use `className={\`\${styles.x}\`}`— use`classNames()`library
 ❌ Don't create test files unless specifically requested (not in current codebase)
 ❌ **Don't hardcode URLs** — ALWAYS use`RouteEnum`for internal links
-❌ **NEVER use`<style jsx>`or`<style jsx global>`tags** — use SCSS modules or inline`style={{}}` attributes instead
+❌ **NEVER use`<style jsx>`or`<style jsx global>`tags** — use SCSS modules or inline`style={{}}`attributes instead
+❌ **Don't use absolute paths in SCSS** — use relative paths like`"../../../designSystem/variables"`
 
 ## When Suggesting Code
 
