@@ -4,6 +4,121 @@
 
 Next.js 15 yoga studio website using TypeScript, SCSS modules, custom Grid system, and next-intl (en/it). Built for Sarah Pompanin's yoga practice in the Dolomites with Material-UI components and EmailJS contact forms.
 
+## Project Setup & Installation
+
+### Prerequisites
+
+- **Node.js**: v20 or higher
+- **npm**: v9 or higher
+- **PowerShell**: Default shell for Windows development
+
+### Initial Setup
+
+1. **Clone the repository**:
+```powershell
+git clone https://github.com/Sliver02/smup_yoga.git
+cd smup-yoga
+```
+
+2. **Install dependencies**:
+```powershell
+npm install
+```
+
+### Dependencies Overview
+
+**Production Dependencies**:
+- `next@15.1.3` — Next.js framework (app router)
+- `react@19.0.0` & `react-dom@19.0.0` — React 19
+- `next-intl@4.3.9` — Internationalization (en/it)
+- `@mui/icons-material@7.3.2` & `@mui/material@7.3.2` — Material-UI (icons only)
+- `@emotion/react@11.14.0` & `@emotion/styled@11.14.1` — MUI peer dependencies
+- `react-hook-form@7.66.1` — Form state management
+- `@hookform/resolvers@5.2.2` — Form validation resolvers
+- `zod@4.1.13` — Schema validation
+- `@emailjs/browser@4.4.1` — Email service integration
+- `react-fast-marquee@1.6.5` — Infinite text scroll animation
+- `sharp@0.34.3` — Image optimization
+- `lqip-modern@2.2.1` — Low-quality image placeholders
+
+**Development Dependencies**:
+- `typescript@5` — TypeScript compiler
+- `sass@1.83.1` & `sass-loader@16.0.4` — SCSS compilation
+- `classnames@2.5.1` — CSS class utility
+- `eslint@9` & `eslint-config-next@15.1.3` — Linting
+- `@types/node`, `@types/react`, `@types/react-dom` — Type definitions
+
+### Environment Configuration
+
+Create a `.env.local` file in the root directory:
+
+```env
+# EmailJS Configuration (required for contact form)
+NEXT_PUBLIC_EMAILJS_SERVICE=service_xxxxx
+NEXT_PUBLIC_EMAILJS_TEMPLATE=template_xxxxx
+NEXT_PUBLIC_EMAILJS_KEY=user_xxxxx
+```
+
+**How to get EmailJS credentials**:
+1. Sign up at [emailjs.com](https://www.emailjs.com/)
+2. Create a service (Gmail, Outlook, etc.)
+3. Create an email template with variables: `{{name}}`, `{{email}}`, `{{message_html}}`
+4. Copy Service ID, Template ID, and Public Key to `.env.local`
+
+### Development Commands
+
+```powershell
+# Start development server (with Turbopack)
+npm run dev
+
+# Build for production
+npm run build
+
+# Start production server
+npm run start
+
+# Run ESLint
+npm run lint
+```
+
+Development server runs at `http://localhost:3000`
+
+### Project Configuration Files
+
+- `next.config.ts` — Next.js config with next-intl plugin
+- `tsconfig.json` — TypeScript config with `@/*` and `@public/*` aliases
+- `eslint.config.mjs` — ESLint configuration
+- `src/middleware.ts` — i18n middleware (skips static assets)
+- `src/i18n/routing.ts` — Locale config (Italian default)
+
+### First-Time Setup Checklist
+
+- [ ] Install dependencies: `npm install`
+- [ ] Create `.env.local` with EmailJS credentials
+- [ ] Verify fonts exist: `public/fonts/RightGrotesk.woff2`
+- [ ] Verify images have blur placeholders: `public/images/*_placeholder.jpg`
+- [ ] Run dev server: `npm run dev`
+- [ ] Test both locales: `http://localhost:3000/it` and `http://localhost:3000/en`
+- [ ] Test contact form (requires valid EmailJS config)
+
+### Troubleshooting
+
+**SCSS compilation errors**:
+- Ensure relative paths in `@use` statements: `@use "../../../designSystem/variables"`
+- Never use `@import` (deprecated) — always use `@use`
+
+**i18n issues**:
+- Check `public/messages/en.json` and `public/messages/it.json` exist
+- Verify middleware doesn't block routes in `src/middleware.ts`
+
+**Image blur placeholder errors**:
+- Each image needs a corresponding `_placeholder.jpg` file
+- Example: `photo.jpg` requires `photo_placeholder.jpg`
+
+**TypeScript errors**:
+- Run `npm run build` to see all type errors
+- Check path aliases match `tsconfig.json`: `@/*` and `@public/*`
+
 ## Core Architecture
 
 ### Tech Stack
