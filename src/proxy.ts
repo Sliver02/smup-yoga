@@ -1,4 +1,4 @@
-// Import the Next.js middleware helper from next-intl
+// Import the Next.js proxy helper from next-intl
 import createMiddleware from "next-intl/middleware";
 
 // Import your routing configuration which contains all locales, defaultLocale, and pathnames
@@ -27,7 +27,7 @@ const SKIP_PREFIXES = [
 // simple file-extension check (png,jpg,svg,css,js,woff2,ico,...)
 const hasFileExt = (pathname: string) => /\.[a-zA-Z0-9]{1,6}$/.test(pathname);
 
-export default function middleware(req: NextRequest) {
+export function proxy(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
   // skip known prefixes or file-like requests so public/* is never routed through intl middleware
@@ -42,7 +42,7 @@ export default function middleware(req: NextRequest) {
   return intlMiddleware(req);
 }
 
-// Next.js middleware configuration object
+// Next.js proxy configuration object
 export const config = {
   matcher: [
     "/", // Match the root path explicitly
