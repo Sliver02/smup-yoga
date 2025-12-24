@@ -6,7 +6,7 @@ const ContactTemplate: React.FC<Readonly<ContactFormProps>> = ({
   message,
 }) => (
   <div>
-    <h1>RSVP ricevuto da {name}</h1>
+    <h1>Richiesta inviata da smupyoga.com</h1>
     <p>
       <strong>Name:</strong> {name}
       <br />
