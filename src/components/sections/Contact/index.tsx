@@ -59,12 +59,13 @@ const Contact = () => {
         serviceId,
         templateId,
         {
+          reciver_email: process.env.NEXT_PUBLIC_RECEIVER_EMAIL,
           name: data.name,
           email: data.email,
-          title: "RSVP inviato da " + data.name,
+          title: `Request from ${data.name}`,
           message_html: htmlContent,
         },
-        publicKey
+        publicKey,
       );
 
       if (res.text === "OK") {
