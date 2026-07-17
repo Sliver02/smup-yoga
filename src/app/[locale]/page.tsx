@@ -1,11 +1,11 @@
 "use client";
-import Footer from "@/components/organisms/Footer";
-import Header from "@/components/organisms/Header";
-import Hero from "@/components/organisms/Hero";
-import AboutMe from "@/components/sections/AboutMe";
-import Calendar from "@/components/sections/Calendar";
-import Contact from "@/components/sections/Contact";
-import Styles from "@/components/sections/Styles";
+import { Footer } from "@/components/organisms/Footer";
+import { Header } from "@/components/organisms/Header";
+import { Hero } from "@/components/organisms/Hero";
+import { AboutMe } from "@/components/sections/AboutMe";
+import { Calendar } from "@/components/sections/Calendar";
+import { Contact } from "@/components/sections/Contact";
+import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 
 const Home = () => {

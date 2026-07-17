@@ -1,0 +1,83 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	font-family: inherit;
+	font-weight: 500;
+	border-radius: 0.25rem;
+	cursor: pointer;
+	transition:
+		background-color 0.2s ease,
+		color 0.2s ease,
+		border-color 0.2s ease;
+	border: 1px solid transparent;
+	text-decoration: none;
+	white-space: nowrap;
+
+	&[data-disabled] {
+		opacity: 0.4;
+		pointer-events: none;
+	}
+}
+
+// ── variants ─────────────────────────────────────────────────────────────────
+
+.contained {
+	background-color: var(--color-primary);
+	color: var(--color-primary-text);
+	border-color: var(--color-primary);
+
+	&:hover {
+		background-color: var(--color-primary-hover);
+		border-color: var(--color-primary-hover);
+	}
+}
+
+.outlined {
+	background-color: transparent;
+	color: var(--color-primary);
+	border-color: var(--color-primary);
+
+	&:hover {
+		background-color: var(--color-primary);
+		color: var(--color-primary-text);
+	}
+}
+
+.text {
+	background-color: transparent;
+	color: var(--color-primary);
+
+	&:hover {
+		color: var(--color-primary-hover);
+	}
+}
+
+// ── sizes ─────────────────────────────────────────────────────────────────────
+
+.small {
+	padding: 0.25rem 0.75rem;
+	font-size: 0.875rem;
+}
+
+.medium {
+	padding: 0.5rem 1.25rem;
+	font-size: 1rem;
+}
+
+.large {
+	padding: 0.75rem 1.75rem;
+	font-size: 1.125rem;
+}
+
+// ── modifiers ─────────────────────────────────────────────────────────────────
+
+.fullWidth {
+	width: 100%;
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+}

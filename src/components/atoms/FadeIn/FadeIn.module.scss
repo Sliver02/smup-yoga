@@ -1,0 +1,8 @@
+.fadeIn {
+	// gsap manages opacity/transform via autoAlpha; hint the compositor.
+	will-change: opacity, transform;
+
+	// Pre-hide before JS runs so the "from" state has no flash of content.
+	// gsap's autoAlpha flips visibility back on once the trigger fires.
+	visibility: hidden;
+}

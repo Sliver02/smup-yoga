@@ -5,148 +5,138 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--font-grotesk);
-  font-weight: bold;
-  line-height: 90%;
+	font-family: var(--font-heading);
+	font-weight: bold;
+	line-height: 90%;
 
-  & + & {
-    margin-top: 1rem;
-  }
+	& + & {
+		margin-top: 1rem;
+	}
 
-  + p {
-    margin-top: 1rem;
-  }
+	+ p {
+		margin-top: 1rem;
+	}
 }
 
 h1 {
-  @include utils.toRem(font-size, variables.$font-h-xxl);
+	@include utils.toRem(font-size, variables.$font-h-xxl);
 }
 
 h2 {
-  @include utils.toRem(font-size, variables.$font-h-xl);
-  font-size: 3.5rem;
+	@include utils.toRem(font-size, variables.$font-h-xl);
+	font-size: 3.5rem;
 }
 
 h3 {
-  @include utils.toRem(font-size, variables.$font-h-lg);
+	@include utils.toRem(font-size, variables.$font-h-lg);
 }
 
 h4 {
-  @include utils.toRem(font-size, variables.$font-h-md);
+	@include utils.toRem(font-size, variables.$font-h-md);
 }
 
 p {
-  font-size: 1rem;
+	font-family: var(--font-body);
+	font-size: 1rem;
 
-  & + & {
-    margin-top: 1rem;
-  }
+	& + & {
+		margin-top: 1rem;
+	}
+
+	& + h1,
+	& + h2,
+	& + h3,
+	& + h4 {
+		margin-top: 1rem;
+	}
 }
 
-// generic text modifiers
 .text {
-  &--align {
-    &-left {
-      text-align: left;
-    }
-    &-center {
-      text-align: center;
-    }
+	&--align {
+		&-left {
+			text-align: left;
+		}
 
-    &-right {
-      text-align: right;
-    }
-  }
+		&-center {
+			text-align: center;
+		}
 
-  &--h {
-    &-xs {
-      @include utils.toRem(font-size, variables.$font-h-xs);
-    }
+		&-right {
+			text-align: right;
+		}
+	}
 
-    &-sm {
-      @include utils.toRem(font-size, variables.$font-h-sm);
-    }
+	&--h {
+		&-xs {
+			@include utils.toRem(font-size, variables.$font-h-xs);
+		}
 
-    &-md {
-      @include utils.toRem(font-size, variables.$font-h-md);
-    }
+		&-sm {
+			@include utils.toRem(font-size, variables.$font-h-sm);
+		}
 
-    &-lg {
-      @include utils.toRem(font-size, variables.$font-h-lg);
-    }
+		&-md {
+			@include utils.toRem(font-size, variables.$font-h-md);
+		}
 
-    &-xl {
-      @include utils.toRem(font-size, variables.$font-h-xl);
-    }
+		&-lg {
+			@include utils.toRem(font-size, variables.$font-h-lg);
+		}
 
-    &-xxl {
-      @include utils.toRem(font-size, variables.$font-h-xxl);
-    }
-  }
+		&-xl {
+			@include utils.toRem(font-size, variables.$font-h-xl);
+		}
 
-  &--p {
-    &-xs {
-      @include utils.toRem(font-size, variables.$font-xs);
-    }
+		&-xxl {
+			@include utils.toRem(font-size, variables.$font-h-xxl);
+		}
+	}
 
-    &-sm {
-      @include utils.toRem(font-size, variables.$font-sm);
-    }
+	&--p {
+		&-xs {
+			@include utils.toRem(font-size, variables.$font-xs);
+		}
 
-    &-md {
-      @include utils.toRem(font-size, variables.$font-md);
-    }
+		&-sm {
+			@include utils.toRem(font-size, variables.$font-sm);
+		}
 
-    &-lg {
-      @include utils.toRem(font-size, variables.$font-lg);
-    }
+		&-md {
+			@include utils.toRem(font-size, variables.$font-md);
+		}
 
-    &-xl {
-      @include utils.toRem(font-size, variables.$font-xl);
-    }
+		&-lg {
+			@include utils.toRem(font-size, variables.$font-lg);
+		}
 
-    &-xxl {
-      @include utils.toRem(font-size, variables.$font-xxl);
-    }
-  }
+		&-xl {
+			@include utils.toRem(font-size, variables.$font-xl);
+		}
 
-  &--grotesk {
-    font-family: var(--font-grotesk);
-  }
+		&-xxl {
+			@include utils.toRem(font-size, variables.$font-xxl);
+		}
+	}
 
-  &--regular {
-    font-weight: normal;
-  }
+	&--strong {
+		font-weight: 700;
+	}
 
-  &--strong {
-    font-weight: 700;
-  }
+	&--italic {
+		font-style: italic;
+	}
 
-  &--italic {
-    font-style: italic;
-  }
+	&--line-height {
+		&-normal {
+			line-height: 1.6;
+		}
 
-  &--line-height {
-    &-normal {
-      line-height: 1.6;
-    }
+		&-relaxed {
+			line-height: 1.8;
+		}
 
-    &-relaxed {
-      line-height: 1.8;
-    }
-
-    &-loose {
-      line-height: 2;
-    }
-  }
-
-  &--color {
-    &-default {
-      color: var(--neutral-text);
-    }
-
-    &-light {
-      color: var(--neutral-text-light);
-    }
-  }
+		&-loose {
+			line-height: 2;
+		}
+	}
 }

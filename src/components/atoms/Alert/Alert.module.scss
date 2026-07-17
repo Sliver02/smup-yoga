@@ -1,0 +1,86 @@
+.alert {
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-between;
+	gap: 1rem;
+	padding: 0.75rem 1rem;
+	border-radius: 0.25rem;
+}
+
+.content {
+	flex: 1;
+	font-size: 0.9375rem;
+	line-height: 1.5;
+}
+
+.closeButton {
+	flex-shrink: 0;
+	font-size: 1.25rem;
+	line-height: 1;
+	opacity: 0.7;
+	transition: opacity 0.15s ease;
+
+	&:hover {
+		opacity: 1;
+	}
+
+	&:focus-visible {
+		outline: 2px solid currentColor;
+		outline-offset: 2px;
+		border-radius: 0.125rem;
+	}
+}
+
+// ── severity × variant ───────────────────────────────────────────────────────
+
+.success {
+	&.outlined {
+		border: 1px solid var(--color-success);
+		color: var(--color-success);
+		background-color: transparent;
+	}
+
+	&.filled {
+		background-color: var(--color-success);
+		color: var(--color-text-inverse);
+	}
+}
+
+.error {
+	&.outlined {
+		border: 1px solid var(--color-error);
+		color: var(--color-error);
+		background-color: transparent;
+	}
+
+	&.filled {
+		background-color: var(--color-error);
+		color: var(--color-text-inverse);
+	}
+}
+
+.warning {
+	&.outlined {
+		border: 1px solid var(--color-warning);
+		color: var(--color-warning);
+		background-color: transparent;
+	}
+
+	&.filled {
+		background-color: var(--color-warning);
+		color: var(--color-text-inverse);
+	}
+}
+
+.info {
+	&.outlined {
+		border: 1px solid var(--color-border-focus);
+		color: var(--color-border-focus);
+		background-color: transparent;
+	}
+
+	&.filled {
+		background-color: var(--color-border-focus);
+		color: var(--color-text-inverse);
+	}
+}

@@ -1,0 +1,153 @@
+"use client";
+import { BaseProps } from "@/common/globalInterfaces";
+import { RouteEnum } from "@/common/routeEnum";
+import classNames from "classnames";
+import { ChevronDown, Menu } from "lucide-react";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
+import Link from "next/link";
+import { useState } from "react";
+import styles from "./Header.module.scss";
+
+export interface HeaderProps extends BaseProps {
+	prot?: string;
+}
+
+export interface NavItem {
+	label: string;
+	url?: string;
+	children?: NavItem[];
+}
+
+export const Header = ({ className }: HeaderProps) => {
+	const t = useTranslations("header");
+
+	const [openMenu, setOpenMenu] = useState(false);
+	const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+
+	const navItems: NavItem[] = [
+		{
+			label: t("home"),
+			url: RouteEnum.HOME,
+		},
+		{
+			label: t("about"),
+			url: RouteEnum.ABOUT,
+		},
+		{
+			label: t("classes"),
+			children: [
+				{ label: t("anukalana"), url: RouteEnum.ANUKALANA },
+				{ label: t("yin"), url: RouteEnum.YIN },
+				{ label: t("kids"), url: RouteEnum.KID },
+				{ label: t("outdoor"), url: RouteEnum.OUTDOOR },
+				{ label: t("private"), url: RouteEnum.PRIVATE_LESSONS },
+			],
+		},
+		{
+			label: t("locations"),
+			children: [
+				{ label: t("belluno"), url: RouteEnum.BELLUNO },
+				{ label: t("cortina"), url: RouteEnum.CORTINA },
+			],
+		},
+	];
+
+	return (
+		<div className={classNames(className, styles.header)}>
+			<div className={classNames(styles.logoContainer)}>
+				<Link className={classNames(styles.navbar__button)} href="." replace>
+					<Image alt="SMUP Yoga - Dolomites" src={"/smup_logo_white.svg"} priority fill />
+				</Link>
+			</div>
+			<div className={classNames(styles.navbar)}>
+				{navItems.map((item, index) => (
+					<div key={index} className={styles.navItem}>
+						{item.children ? (
+							<div
+								className={styles.dropdown}
+								onMouseEnter={() => setOpenDropdown(item.label)}
+								onMouseLeave={() => setOpenDropdown(null)}
+							>
+								<button
+									className={classNames(styles.navbar__button, styles.dropdownButton)}
+								>
+									{item.label}
+									<ChevronDown size={18} />
+								</button>
+								<div
+									className={classNames(styles.dropdownMenu, {
+										[styles.dropdownMenuOpen]: openDropdown === item.label,
+									})}
+								>
+									{item.children.map((child, childIndex) => (
+										<Link
+											key={childIndex}
+											href={child.url!}
+											className={styles.dropdownItem}
+										>
+											{child.label}
+										</Link>
+									))}
+								</div>
+							</div>
+						) : item.url?.startsWith("#") ? (
+							<a className={classNames(styles.navbar__button)} href={item.url}>
+								{item.label}
+							</a>
+						) : (
+							<Link className={classNames(styles.navbar__button)} href={item.url!}>
+								{item.label}
+							</Link>
+						)}
+					</div>
+				))}
+			</div>
+
+			<div
+				className={classNames(styles.hamburger)}
+				onClick={() => setOpenMenu((openMenu) => !openMenu)}
+			>
+				<Menu size={28} />
+			</div>
+
+			<div className={classNames(styles.menu, openMenu && styles["menu--open"])}>
+				{navItems.map((item, index) => (
+					<div key={index} className={styles.mobileNavItem}>
+						{item.children ? (
+							<>
+								<div className={styles.mobileDropdownLabel}>{item.label}</div>
+								{item.children.map((child, childIndex) => (
+									<Link
+										key={childIndex}
+										href={child.url!}
+										className={classNames(styles["menu__button"], styles.mobileSubItem)}
+										onClick={() => setOpenMenu(false)}
+									>
+										{child.label}
+									</Link>
+								))}
+							</>
+						) : item.url?.startsWith("#") ? (
+							<a
+								className={classNames(styles["menu__button"])}
+								href={item.url}
+								onClick={() => setOpenMenu(false)}
+							>
+								{item.label}
+							</a>
+						) : (
+							<Link
+								className={classNames(styles["menu__button"])}
+								href={item.url!}
+								onClick={() => setOpenMenu(false)}
+							>
+								{item.label}
+							</Link>
+						)}
+					</div>
+				))}
+			</div>
+		</div>
+	);
+};

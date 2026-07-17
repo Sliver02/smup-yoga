@@ -1,0 +1,90 @@
+.trigger {
+	display: inline-flex;
+	align-items: center;
+	gap: 0.3rem;
+	font-size: 0.9375rem;
+	color: var(--color-text);
+	cursor: pointer;
+	transition: color 0.15s ease;
+
+	&:hover {
+		color: var(--color-primary);
+	}
+
+	&[data-popup-open] {
+		color: var(--color-primary);
+
+		.chevron {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.chevron {
+	width: 1em;
+	height: 1em;
+	transition: transform 0.15s ease;
+}
+
+// ── popup ─────────────────────────────────────────────────────────────────────
+
+.positioner {
+	z-index: 100;
+}
+
+.popup {
+	min-width: 12rem;
+	background-color: var(--color-bg-raised);
+	border: 1px solid var(--color-border);
+	border-radius: 0.375rem;
+	padding: 0.25rem;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+	// Enter/exit animation driven by base-ui data-state attributes.
+	transform-origin: top center;
+	opacity: 0;
+	transform: scale(0.96);
+	transition:
+		opacity 0.15s ease,
+		transform 0.15s ease;
+
+	&[data-open] {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.item {
+	display: flex;
+	align-items: center;
+	gap: 0.5rem;
+	padding: 0.5rem 0.75rem;
+	font-size: 0.9375rem;
+	border-radius: 0.2rem;
+	cursor: pointer;
+	color: var(--color-text);
+	transition: background-color 0.1s ease;
+
+	&:focus-visible {
+		outline: none;
+		background-color: var(--color-bg-sunken);
+	}
+
+	&[data-highlighted] {
+		background-color: var(--color-bg-sunken);
+	}
+
+	&[data-disabled] {
+		opacity: 0.4;
+		cursor: not-allowed;
+	}
+}
+
+.itemIcon {
+	display: inline-flex;
+
+	svg {
+		width: 1.1em;
+		height: 1.1em;
+	}
+}

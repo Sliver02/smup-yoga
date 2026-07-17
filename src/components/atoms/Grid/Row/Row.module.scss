@@ -1,0 +1,47 @@
+@use "sass:list";
+@use "../../../../designSystem/variables";
+@use "../../../../designSystem/mediaQueries";
+
+.row {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	flex: 0 1 auto;
+	margin: -0.5rem;
+
+	& + & {
+		margin-top: 0.5rem;
+	}
+}
+
+.nowrap {
+	flex-wrap: nowrap;
+}
+
+.fitContent {
+	width: fit-content;
+}
+
+@each $bpName in variables.$breakpointsNames {
+	@include mediaQueries.media($bpName) {
+		@each $al in variables.$align {
+			$value: list.nth($al, 2);
+
+			.#{$bpName}Align-#{$value} {
+				align-items: $value;
+			}
+		}
+
+		@each $ju in variables.$justify {
+			$value: list.nth($ju, 2);
+
+			.#{$bpName}Justify-#{$value} {
+				justify-content: $value;
+			}
+		}
+
+		.#{$bpName}Reverse {
+			flex-direction: row-reverse;
+		}
+	}
+}

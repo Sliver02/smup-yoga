@@ -2,118 +2,177 @@
 @use "mediaQueries";
 @use "text";
 
+// ─── Layer 1: Palette primitives ─────────────────────────────────────────────
+// Raw SMUP brand ramps — never reference these directly in components.
+// Swap brand colors here; semantic tokens below pick them up automatically.
 :root {
-  // color palette
-  --neutral-background: #f4f6ff;
-  --neutral-light: #f4f6ff;
-  --neutral-border: #bdbfca;
-  --neutral-text: #1c1d23;
+	--palette-neutral-0: #ffffff;
+	--palette-neutral-50: #f4f6ff; // cool near-white surface
+	--palette-neutral-300: #bdbfca; // border
+	--palette-neutral-600: #6b6d78; // muted text
+	--palette-neutral-900: #1c1d23; // text
+	--palette-neutral-1000: #000000;
 
-  --primary-hover: #eabdb6;
-  --primary-main: #fee9dd;
-  --primary-active: #fcdad2;
-  --primary-contrast-text: #1c1d23;
+	// peach (surface / "primary" in brand terms)
+	--palette-peach-300: #fcdad2;
+	--palette-peach-400: #eabdb6;
+	--palette-peach-500: #fee9dd;
 
-  --accent-background: #a0314b;
-  --accent-hover: #e05d7c;
-  --accent-main: #e97f95;
-  --accent-active: #f59eb3;
-  --accent-contrast-text: #1c1d23;
+	// rose (interactive / "accent" in brand terms)
+	--palette-rose-300: #f59eb3;
+	--palette-rose-500: #e97f95;
+	--palette-rose-600: #e05d7c;
+	--palette-rose-800: #a0314b;
 
-  --secondary-light: #edbfe4;
-  --secondary-main: #c886ba;
-  --secondary-dark: #a4528f;
+	// mauve (secondary)
+	--palette-mauve-300: #edbfe4;
+	--palette-mauve-500: #c886ba;
+	--palette-mauve-700: #a4528f;
 
-  --thertiary-light: #ffdeb3;
-  --thertiary-main: #f3c98b;
-  --thertiary-dark: #eba055;
+	// amber (tertiary)
+	--palette-amber-300: #ffdeb3;
+	--palette-amber-500: #f3c98b;
+	--palette-amber-700: #eba055;
+
+	--palette-error-500: #ef4444;
+	--palette-success-500: #22c55e;
+	--palette-warning-500: #f97316;
 }
 
-// dark theme
-// [data-theme="dark"] {
-//   // color palette
-//   --neutral-background: #1c1d23;
-//   --neutral-border: #dcdfe5;
-//   --neutral-text: #ffffff;
-// }
+// ─── Layer 2: Semantic tokens ─────────────────────────────────────────────────
+// Components reference only these — never palette values directly.
+:root {
+	--color-bg: var(--palette-peach-500);
+	--color-bg-raised: var(--palette-neutral-0);
+	--color-bg-sunken: var(--palette-peach-300);
+	--color-bg-inverse: var(--palette-rose-800);
 
-// @media (prefers-color-scheme: dark) {
-//   :root {
-//     // color palette
-//     --neutral-background: #1c1d23;
-//     --neutral-border: #bdbfca;
-//     --neutral-text: #f4f6ff;
-//   }
-// }
+	--color-text: var(--palette-neutral-900);
+	--color-text-secondary: var(--palette-neutral-600);
+	--color-text-disabled: var(--palette-neutral-300);
+	--color-text-inverse: var(--palette-neutral-0);
 
-// global reset
+	--color-border: var(--palette-neutral-300);
+	--color-border-focus: var(--palette-rose-500);
+
+	--color-primary: var(--palette-rose-500);
+	--color-primary-hover: var(--palette-rose-600);
+	--color-primary-text: var(--palette-neutral-900);
+
+	--color-accent: var(--palette-mauve-500);
+	--color-accent-hover: var(--palette-mauve-700);
+
+	--color-error: var(--palette-error-500);
+	--color-success: var(--palette-success-500);
+	--color-warning: var(--palette-warning-500);
+
+	// Fonts — wired via next/font in app/[locale]/layout.tsx
+	--font-body: var(--font-inter), system-ui, -apple-system, sans-serif;
+	--font-heading: var(--font-grotesk), system-ui, sans-serif;
+}
+
+// ─── Layer 2b: Brand-semantic aliases ─────────────────────────────────────────
+// SMUP's original token names, now backed by Layer-1 primitives (still two-layer,
+// no raw hex in components). Kept so brand components resolve to their exact colors.
+:root {
+	--neutral-background: var(--palette-neutral-50);
+	--neutral-light: var(--palette-neutral-50);
+	--neutral-border: var(--palette-neutral-300);
+	--neutral-text: var(--palette-neutral-900);
+	--neutral-text-light: var(--palette-neutral-600); // was undefined before rebase
+	--neutral-background-light: var(--palette-neutral-50); // was undefined before rebase
+
+	--primary-main: var(--palette-peach-500);
+	--primary-active: var(--palette-peach-300);
+	--primary-hover: var(--palette-peach-400);
+	--primary-contrast-text: var(--palette-neutral-900);
+
+	--accent-background: var(--palette-rose-800);
+	--accent-main: var(--palette-rose-500);
+	--accent-hover: var(--palette-rose-600);
+	--accent-active: var(--palette-rose-300);
+	--accent-contrast-text: var(--palette-neutral-900);
+
+	--secondary-light: var(--palette-mauve-300);
+	--secondary-main: var(--palette-mauve-500);
+	--secondary-dark: var(--palette-mauve-700);
+
+	--tertiary-light: var(--palette-amber-300);
+	--tertiary-main: var(--palette-amber-500);
+	--tertiary-dark: var(--palette-amber-700);
+
+	--surface-secondary: var(--palette-peach-300); // was undefined before rebase
+}
+
+// ─── Dark mode ────────────────────────────────────────────────────────────────
+// Not currently enabled (site ships light-only). The two-layer structure is ready:
+// remap Layer-2 tokens under [data-theme="dark"] when needed. No prefers-color-scheme.
+
+// ─── CSS Reset ────────────────────────────────────────────────────────────────
 *,
 *::after,
-*:before {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  box-sizing: border-box;
-  font-family: inherit;
+*::before {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	box-sizing: border-box;
+	font-family: inherit;
 }
 
 html,
 body {
-  scroll-behavior: smooth;
-  height: -webkit-fill-available;
+	scroll-behavior: smooth;
+	height: -webkit-fill-available;
 
-  background-color: var(--primary-main);
-  color: var(--neutral-text);
+	background-color: var(--color-bg);
+	color: var(--color-text);
 
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
 
-  font-family: var(--font-inter);
-  font-display: swap;
-  font-size: variables.$font-md;
-  line-height: 1.2;
-
-  @include mediaQueries.media("lg") {
-    font-size: variables.$font-md;
-  }
+	font-family: var(--font-body);
+	font-display: swap;
+	font-size: #{variables.$font-md}px;
+	line-height: 1.2;
 }
 
 body {
-  overflow-x: hidden;
-  margin-right: calc(-1 * (100vw - 100%));
+	overflow-x: hidden;
+	// Prevents layout shift when a scrollbar appears/disappears
+	margin-right: calc(-1 * (100vw - 100%));
 
-  &.freeze {
-    overflow-y: hidden;
-  }
+	&.freeze {
+		overflow-y: hidden;
+	}
 
-  .root {
-    isolation: isolate;
-  }
+	.root {
+		isolation: isolate;
+	}
 }
 
 main {
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 100%;
 }
 
 a {
-  font-weight: 500;
-  color: var(--primary-active);
-  text-decoration: none;
+	font-weight: 500;
+	color: var(--color-primary);
+	text-decoration: none;
 
-  &:hover,
-  &:focus {
-    color: var(--primary-active);
-  }
+	&:hover,
+	&:focus {
+		color: var(--color-primary-hover);
+	}
 }
 
 button {
-  cursor: pointer;
-  background-color: transparent;
-  text-decoration: none;
-  color: inherit;
+	cursor: pointer;
+	background-color: transparent;
+	text-decoration: none;
+	color: inherit;
 }

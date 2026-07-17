@@ -1,0 +1,6 @@
+.background {
+	height: 100%;
+	background: var(--background-color, var(--color-bg));
+	background-position: center;
+	background-size: cover;
+}

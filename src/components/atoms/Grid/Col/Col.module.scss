@@ -1,0 +1,43 @@
+@use "sass:list";
+@use "../../../../designSystem/variables";
+@use "../../../../designSystem/mediaQueries";
+
+.col {
+	box-sizing: border-box;
+	padding: 0.5rem;
+	flex: 1;
+	max-width: 100%;
+	min-height: auto;
+}
+
+@each $bpName in variables.$breakpointsNames {
+	@include mediaQueries.media($bpName) {
+		@each $col in variables.$columns {
+			.#{$bpName}-#{$col} {
+				flex-basis: #{calc(100 / 12) * $col + "%"};
+				max-width: #{calc(100 / 12) * $col + "%"};
+				flex-grow: 0;
+			}
+		}
+
+		@each $offset in variables.$offsets {
+			.#{$bpName}Offset-#{$offset} {
+				margin-left: #{calc(100 / 12) * $offset + "%"};
+			}
+		}
+
+		@each $al in variables.$align {
+			$value: list.nth($al, 2);
+
+			.#{$bpName}AlignSelf-#{$value} {
+				align-self: $value;
+			}
+		}
+
+		@for $i from 1 through 12 {
+			.#{$bpName}Order-#{$i} {
+				order: $i;
+			}
+		}
+	}
+}

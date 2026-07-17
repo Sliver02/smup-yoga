@@ -1,11 +1,11 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
-import Footer from "@/components/organisms/Footer";
-import Header from "@/components/organisms/Header";
-import Hero from "@/components/organisms/Hero";
-import Section from "@/components/organisms/Section";
-import Contact from "@/components/sections/Contact";
+import { Footer } from "@/components/organisms/Footer";
+import { Header } from "@/components/organisms/Header";
+import { Hero } from "@/components/organisms/Hero";
+import { Section } from "@/components/organisms/Section";
+import { Contact } from "@/components/sections/Contact";
 import { useTranslations } from "next-intl";
 import "@/designSystem/utils.scss";
 

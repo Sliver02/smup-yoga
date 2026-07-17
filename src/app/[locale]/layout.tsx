@@ -5,7 +5,7 @@ import { NextIntlClientProvider } from "next-intl";
 import { getMessages } from "next-intl/server";
 import { Inter } from "next/font/google";
 import localFont from "next/font/local";
-import ThemeProviderWrapper from "./ThemeProviderWrapper";
+import { SmoothScroll } from "@/components/atoms/SmoothScroll";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -174,10 +174,6 @@ export default async function RootLayout({
   return (
     <html lang={locale} data-theme="light">
       <head>
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/icon?family=Material+Icons"
-        />
         <link rel="alternate" href="https://smupyoga.com/en/" hrefLang="en" />
         <link rel="alternate" href="https://smupyoga.com/it/" hrefLang="it" />
         <link
@@ -194,9 +190,9 @@ export default async function RootLayout({
       </head>
       <body className={classNames(inter.variable, rightGrotesk.variable)}>
         <NextIntlClientProvider messages={messages}>
-          <ThemeProviderWrapper>
+          <SmoothScroll>
             <div className={classNames("root")}>{children}</div>
-          </ThemeProviderWrapper>
+          </SmoothScroll>
         </NextIntlClientProvider>
       </body>
     </html>

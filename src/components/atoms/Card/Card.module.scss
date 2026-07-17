@@ -1,0 +1,50 @@
+@use "../../../designSystem/utils";
+@use "../../../designSystem/variables";
+
+.card {
+	display: flex;
+	flex-direction: column;
+	gap: 0.75rem;
+	height: 100%;
+
+	padding: 1.5rem;
+	border-radius: 0.5rem;
+	background-color: var(--color-bg-raised);
+	border: 1px solid var(--color-border);
+
+	transition:
+		transform 0.2s ease,
+		border-color 0.2s ease;
+
+	&:hover {
+		transform: translateY(-4px);
+		border-color: var(--color-border-focus);
+	}
+}
+
+.icon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5rem;
+	height: 2.5rem;
+	border-radius: 0.5rem;
+	color: var(--color-primary);
+	background-color: var(--color-bg-sunken);
+}
+
+.title {
+	@include utils.toRem(font-size, variables.$font-lg);
+	font-weight: 600;
+	color: var(--color-text);
+}
+
+.body {
+	@include utils.toRem(font-size, variables.$font-md);
+	color: var(--color-text-secondary);
+}
+
+.footer {
+	margin-top: auto;
+	padding-top: 0.75rem;
+}
