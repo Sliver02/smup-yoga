@@ -172,7 +172,11 @@ export default async function RootLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} data-theme="light">
+    <html
+      lang={locale}
+      data-theme="light"
+      className={classNames(inter.variable, rightGrotesk.variable)}
+    >
       <head>
         <link rel="alternate" href="https://smupyoga.com/en/" hrefLang="en" />
         <link rel="alternate" href="https://smupyoga.com/it/" hrefLang="it" />
@@ -188,7 +192,7 @@ export default async function RootLayout({
           }}
         />
       </head>
-      <body className={classNames(inter.variable, rightGrotesk.variable)}>
+      <body>
         <NextIntlClientProvider messages={messages}>
           <SmoothScroll>
             <div className={classNames("root")}>{children}</div>

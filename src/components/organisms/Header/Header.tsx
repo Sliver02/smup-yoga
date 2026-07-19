@@ -7,6 +7,7 @@ import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { useScroll } from "@/hooks/useScroll";
 import styles from "./Header.module.scss";
 
 export interface HeaderProps extends BaseProps {
@@ -24,6 +25,8 @@ export const Header = ({ className }: HeaderProps) => {
 
 	const [openMenu, setOpenMenu] = useState(false);
 	const [openDropdown, setOpenDropdown] = useState<string | null>(null);
+	const { scrollY } = useScroll();
+	const scrolled = scrollY > 8;
 
 	const navItems: NavItem[] = [
 		{
@@ -54,7 +57,7 @@ export const Header = ({ className }: HeaderProps) => {
 	];
 
 	return (
-		<div className={classNames(className, styles.header)}>
+		<div className={classNames(className, styles.header, { [styles.scrolled]: scrolled })}>
 			<div className={classNames(styles.logoContainer)}>
 				<Link className={classNames(styles.navbar__button)} href="." replace>
 					<Image alt="SMUP Yoga - Dolomites" src={"/smup_logo_white.svg"} priority fill />
