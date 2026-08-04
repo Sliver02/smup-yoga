@@ -63,11 +63,25 @@
     }
   }
 
+  // Right-hand group: nav (desktop), language switch, hamburger (mobile) —
+  // one row so they share a baseline. The 2rem lifts the row off the bottom of
+  // the tall-logo header, matching where the nav used to sit.
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    z-index: 3;
+    pointer-events: auto;
+
+    @include mediaQueries.media("lg") {
+      gap: 2rem;
+    }
+  }
+
   .navbar {
     display: none;
-    margin-bottom: 2rem;
     z-index: 2;
-    pointer-events: auto;
 
     a {
       color: white;

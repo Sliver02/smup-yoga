@@ -20,18 +20,32 @@ export interface DropdownProps {
 	items: DropdownItem[];
 	/** Which side of the trigger the popup opens on. */
 	side?: "top" | "bottom" | "left" | "right";
+	/** Accessible name — required when the trigger has no visible text. */
+	ariaLabel?: string;
+	/** Drop the trailing chevron (icon-only triggers). */
+	hideChevron?: boolean;
 	className?: string;
+	/** Restyle the popup (e.g. the Header's dark menu). */
+	popupClassName?: string;
 }
 
-export const Dropdown = ({ label, items, side = "bottom", className }: DropdownProps) => (
+export const Dropdown = ({
+	label,
+	items,
+	side = "bottom",
+	ariaLabel,
+	hideChevron,
+	className,
+	popupClassName,
+}: DropdownProps) => (
 	<Menu.Root>
-		<Menu.Trigger className={classNames(styles.trigger, className)}>
+		<Menu.Trigger className={classNames(styles.trigger, className)} aria-label={ariaLabel}>
 			{label}
-			<ChevronDown className={styles.chevron} aria-hidden />
+			{!hideChevron && <ChevronDown className={styles.chevron} aria-hidden />}
 		</Menu.Trigger>
 		<Menu.Portal>
 			<Menu.Positioner className={styles.positioner} side={side} sideOffset={8}>
-				<Menu.Popup className={styles.popup}>
+				<Menu.Popup className={classNames(styles.popup, popupClassName)}>
 					{items.map((item) => (
 						<Menu.Item
 							key={item.label}

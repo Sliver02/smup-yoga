@@ -1,6 +1,7 @@
 "use client";
 import { BaseProps } from "@/common/globalInterfaces";
 import { RouteEnum } from "@/common/routeEnum";
+import { LanguageSwitcher } from "@/components/molecules/LanguageSwitcher";
 import classNames from "classnames";
 import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
@@ -63,55 +64,62 @@ export const Header = ({ className }: HeaderProps) => {
 					<Image alt="SMUP Yoga - Dolomites" src={"/smup_logo_white.svg"} priority fill />
 				</Link>
 			</div>
-			<div className={classNames(styles.navbar)}>
-				{navItems.map((item, index) => (
-					<div key={index} className={styles.navItem}>
-						{item.children ? (
-							<div
-								className={styles.dropdown}
-								onMouseEnter={() => setOpenDropdown(item.label)}
-								onMouseLeave={() => setOpenDropdown(null)}
-							>
-								<button
-									className={classNames(styles.navbar__button, styles.dropdownButton)}
-								>
-									{item.label}
-									<ChevronDown size={18} />
-								</button>
+			<div className={styles.actions}>
+				<div className={classNames(styles.navbar)}>
+					{navItems.map((item, index) => (
+						<div key={index} className={styles.navItem}>
+							{item.children ? (
 								<div
-									className={classNames(styles.dropdownMenu, {
-										[styles.dropdownMenuOpen]: openDropdown === item.label,
-									})}
+									className={styles.dropdown}
+									onMouseEnter={() => setOpenDropdown(item.label)}
+									onMouseLeave={() => setOpenDropdown(null)}
 								>
-									{item.children.map((child, childIndex) => (
-										<Link
-											key={childIndex}
-											href={child.url!}
-											className={styles.dropdownItem}
-										>
-											{child.label}
-										</Link>
-									))}
+									<button
+										className={classNames(
+											styles.navbar__button,
+											styles.dropdownButton
+										)}
+									>
+										{item.label}
+										<ChevronDown size={18} />
+									</button>
+									<div
+										className={classNames(styles.dropdownMenu, {
+											[styles.dropdownMenuOpen]: openDropdown === item.label,
+										})}
+									>
+										{item.children.map((child, childIndex) => (
+											<Link
+												key={childIndex}
+												href={child.url!}
+												className={styles.dropdownItem}
+											>
+												{child.label}
+											</Link>
+										))}
+									</div>
 								</div>
-							</div>
-						) : item.url?.startsWith("#") ? (
-							<a className={classNames(styles.navbar__button)} href={item.url}>
-								{item.label}
-							</a>
-						) : (
-							<Link className={classNames(styles.navbar__button)} href={item.url!}>
-								{item.label}
-							</Link>
-						)}
-					</div>
-				))}
-			</div>
+							) : item.url?.startsWith("#") ? (
+								<a className={classNames(styles.navbar__button)} href={item.url}>
+									{item.label}
+								</a>
+							) : (
+								<Link className={classNames(styles.navbar__button)} href={item.url!}>
+									{item.label}
+								</Link>
+							)}
+						</div>
+					))}
+				</div>
 
-			<div
-				className={classNames(styles.hamburger)}
-				onClick={() => setOpenMenu((openMenu) => !openMenu)}
-			>
-				<Menu size={28} />
+				<LanguageSwitcher />
+
+				<div
+					className={classNames(styles.hamburger)}
+					onClick={() => setOpenMenu((openMenu) => !openMenu)}
+				>
+					<Menu size={28} />
+				</div>
 			</div>
 
 			<div className={classNames(styles.menu, openMenu && styles["menu--open"])}>

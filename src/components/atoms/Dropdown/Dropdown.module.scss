@@ -3,7 +3,9 @@
 	align-items: center;
 	gap: 0.3rem;
 	font-size: 0.9375rem;
-	color: var(--color-text);
+	// Inherited so the trigger works on dark surfaces (e.g. the Header) too;
+	// `body` sets --color-text, so light-background usages are unchanged.
+	color: inherit;
 	cursor: pointer;
 	transition: color 0.15s ease;
 

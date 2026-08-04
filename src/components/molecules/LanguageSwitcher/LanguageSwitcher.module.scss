@@ -1,0 +1,48 @@
+.switcher {
+	padding: 0;
+}
+
+.globe {
+	position: relative;
+	display: inline-flex;
+}
+
+// Matches the Header's own nav dropdowns (dark panel, light text).
+.popup {
+	background-color: var(--neutral-text);
+	border-color: transparent;
+	border-radius: 8px;
+	padding: 0;
+	overflow: hidden;
+
+	[role="menuitem"] {
+		padding: 12px 20px;
+		border-radius: 0;
+		font-size: 16px;
+		color: var(--neutral-background);
+
+		&:hover,
+		&[data-highlighted] {
+			background-color: var(--primary-main);
+			color: white;
+		}
+	}
+}
+
+.badge {
+	position: absolute;
+	right: -0.25rem;
+	bottom: -0.25rem;
+
+	padding: 0 0.15rem;
+	border-radius: 0.15rem;
+
+	background-color: white;
+	color: var(--neutral-text);
+
+	font-size: 0.5rem;
+	font-weight: 700;
+	line-height: 1.4;
+	letter-spacing: 0.02em;
+	text-transform: uppercase;
+}
