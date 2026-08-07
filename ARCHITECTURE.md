@@ -154,9 +154,31 @@ that `Col` reads.
 
 ## Images — blur-up placeholders
 
-Photography uses Next.js `<Image placeholder="blur">`. Each source image has a
-hand-made low-res companion (`*_placeholder.*`) in `public/images/`, used to build the
-`blurDataURL`. When adding a photo, add its placeholder too.
+Photography uses Next.js `<Image placeholder="blur">`. **Always import the image** —
+Next then generates the blur data at build time. There is nothing to maintain by hand:
+
+```tsx
+import heroImage from "@public/images/IMG_2646.jpg";
+
+<Image src={heroImage} placeholder="blur" fill />;
+```
+
+Components that render photography therefore take `StaticImageData`, not a path string
+(`CardFrame`, `CardDisplay`, `Section.backgroundImage`, `Hero.backgroundImage`), and the
+call site owns the import. The `@public/*` alias keeps those imports readable.
+
+**Never pass a path to `blurDataURL`.** It must be a `data:` URI. A path such as
+`/images/foo_placeholder.jpg` appears to work under `next dev` but renders nothing in a
+production build: `next/image` wraps the value in an SVG data URI, and an SVG loaded as
+an image cannot fetch external resources. Static imports avoid the problem entirely, and
+also give Next the blur dimensions it needs to set the placeholder's `viewBox` so the
+blur matches the image's aspect ratio.
+
+Static imports supply intrinsic `width`/`height` too. Pass explicit values only to force
+a different box than the source aspect ratio (as the class detail images do).
+
+Images referenced from `openGraph` metadata stay plain absolute URL strings — those are
+consumed by external crawlers, not by `next/image`.
 
 ## Marquee
 
