@@ -1,31 +1,27 @@
 .about {
-  position: relative;
+	position: relative;
 
-  .backgroundGradient {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(
-      -45deg,
-      var(--primary-active) 30%,
-      transparent 100%
-    );
-  }
+	.backgroundGradient {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background: linear-gradient(-45deg, var(--primary-active) 30%, transparent 100%);
+	}
 
-  .socialContainer {
-    .icon {
-      width: 4rem;
-      height: 4rem;
+	.socialContainer {
+		.icon {
+			width: 4rem;
+			height: 4rem;
 
-      color: var(--accent-main);
-      transition: 0.3s all;
+			color: var(--accent-main);
+			transition: 0.3s all;
 
-      &:hover {
-        color: var(--accent-hover);
-        transform: translateY(-5px);
-      }
-    }
-  }
+			&:hover {
+				color: var(--accent-hover);
+				transform: translateY(-5px);
+			}
+		}
+	}
 }

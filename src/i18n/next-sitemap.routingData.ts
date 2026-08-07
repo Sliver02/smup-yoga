@@ -4,18 +4,18 @@
 
 // All supported locales for the application
 const locales = [
-  "en",
-  "it", // Italian
+	"en",
+	"it", // Italian
 ];
 
 // Mapping of base paths to localized URLs for each locale
 // This ensures that each page has proper localized URLs in the sitemap
 const pathnames = {
-  // Homepage - same path for all locales
-  "/": {
-    en: "/",
-    it: "/",
-  },
+	// Homepage - same path for all locales
+	"/": {
+		en: "/",
+		it: "/",
+	},
 };
 
 // Export the routing data for next-sitemap configuration

@@ -2,28 +2,28 @@
 @use "../../../designSystem/mediaQueries";
 
 .section {
-  height: 100%;
-  min-height: 80vh;
-  padding: 2rem 0;
+	height: 100%;
+	min-height: 80vh;
+	padding: 2rem 0;
 
-  background: var(--background-color);
-  background-position: center;
-  background-attachment: fixed;
+	background: var(--background-color);
+	background-position: center;
+	background-attachment: fixed;
 
-  transition: padding 0.3s ease-in;
+	transition: padding 0.3s ease-in;
 
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 
-  .content {
-    width: 100%;
-    flex: 1;
-  }
+	.content {
+		width: 100%;
+		flex: 1;
+	}
 
-  .backgroundImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+	.backgroundImage {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }

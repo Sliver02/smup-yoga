@@ -9,19 +9,19 @@ import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 
 const Home = () => {
-  const t = useTranslations("hero");
+	const t = useTranslations("hero");
 
-  return (
-    <main>
-      <Header />
-      <Hero title={t("title")} subtitle={t("subtitle")} />
-      <AboutMe />
-      <Calendar />
-      <Styles />
-      <Contact />
-      <Footer />
-    </main>
-  );
+	return (
+		<main>
+			<Header />
+			<Hero title={t("title")} subtitle={t("subtitle")} />
+			<AboutMe />
+			<Calendar />
+			<Styles />
+			<Contact />
+			<Footer />
+		</main>
+	);
 };
 
 export default Home;
