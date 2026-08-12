@@ -2,8 +2,9 @@ import { RouteEnum } from "@/common/routeEnum";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import classNames from "classnames";
 import { Instagram, Linkedin } from "@/components/atoms/SocialIcons";
+import { Link } from "@/i18n/routing";
 import { useTranslations } from "next-intl";
-import Link from "next/link";
+import NextLink from "next/link";
 import styles from "./Footer.module.scss";
 
 export const Footer = () => {
@@ -54,10 +55,10 @@ export const Footer = () => {
 								<Link href={RouteEnum.ABOUT}>{t("about")}</Link>
 							</li>
 							<li>
-								<Link href={RouteEnum.CALENDAR}>Calendar</Link>
+								<Link href={RouteEnum.CONTACT}>{t("contact")}</Link>
 							</li>
 							<li>
-								<Link href={RouteEnum.CONTACT}>Contact</Link>
+								<Link href={RouteEnum.PRIVACY}>{t("privacy")}</Link>
 							</li>
 						</ul>
 					</Col>
@@ -65,24 +66,24 @@ export const Footer = () => {
 						<h3 className={styles.footerTitle}>Social</h3>
 						<ul className={styles.footerList}>
 							<li>
-								<Link
+								<NextLink
 									href="https://www.instagram.com/smup_yoga/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className={styles.socialLink}
 								>
 									<Instagram size={18} /> Instagram
-								</Link>
+								</NextLink>
 							</li>
 							<li>
-								<Link
+								<NextLink
 									href="https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
 									target="_blank"
 									rel="noopener noreferrer"
 									className={styles.socialLink}
 								>
 									<Linkedin size={18} /> LinkedIn
-								</Link>
+								</NextLink>
 							</li>
 						</ul>
 					</Col>
@@ -92,17 +93,17 @@ export const Footer = () => {
 						<div className={styles.copyright}>
 							<p>
 								© 2024 SMUP Yoga - All rights reserved |{" "}
-								<Link href={RouteEnum.PRIVACY}>Privacy Policy</Link>
+								<Link href={RouteEnum.PRIVACY}>{t("privacy")}</Link>
 							</p>
 							<p>
 								Website by{" "}
-								<Link
+								<NextLink
 									href="https://www.jacopopanzera.com/"
 									target="_blank"
 									rel="noopener noreferrer"
 								>
 									Jacopo Panzera
-								</Link>
+								</NextLink>
 							</p>
 						</div>
 					</Col>

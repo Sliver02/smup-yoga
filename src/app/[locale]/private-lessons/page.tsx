@@ -1,17 +1,22 @@
 "use client";
+import { RouteEnum } from "@/common/routeEnum";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Justify } from "@/components/atoms/Grid/interfaces";
+import { Align, Justify } from "@/components/atoms/Grid/interfaces";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
+import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
+import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import "@/designSystem/utils.scss";
 
 const PrivateLessonsPage = () => {
   const t = useTranslations("private");
+  const tClasses = useTranslations("classes");
   const tCommon = useTranslations("breadcrumbs");
 
   return (
@@ -30,55 +35,66 @@ const PrivateLessonsPage = () => {
 
       <Section>
         <Container>
-          <Row xsJustify={Justify.center}>
-            <Col xs={12} lg={10}>
-              <Row gap="40px">
-                <Col xs={12}>
-                  <Row gap="30px">
-                    <Col xs={12}>
-                      <p className="text--p-lg">
-                        {t.rich("description1", {
-                          strong: (children) => <strong>{children}</strong>,
-                        })}
-                      </p>
-                    </Col>
-                    <Col xs={12}>
-                      <p className="text--p-lg">
-                        {t.rich("description2", {
-                          strong: (children) => <strong>{children}</strong>,
-                        })}
-                      </p>
-                    </Col>
-                  </Row>
-                </Col>
-                <Col xs={12}>
-                  <SectionTitle text={t("benefits_title")} />
-                  <ul className="styled-list">
-                    <li>{t("benefit1")}</li>
-                    <li>{t("benefit2")}</li>
-                    <li>{t("benefit3")}</li>
-                    <li>{t("benefit4")}</li>
-                    <li>{t("benefit5")}</li>
-                  </ul>
-                </Col>
-                <Col xs={12}>
-                  <SectionTitle text={t("formats_title")} />
-                  <ul className="styled-list">
-                    <li>{t("format1")}</li>
-                    <li>{t("format2")}</li>
-                    <li>{t("format3")}</li>
-                    <li>{t("format4")}</li>
-                  </ul>
-                </Col>
-                <Col xs={12}>
-                  <div className="cta-box">{t("cta")}</div>
-                </Col>
-              </Row>
+          <Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
+            <Col xs={12} md={5}>
+              <Image
+                src="/images/PXL_20250101_151738219.jpg"
+                alt="Private yoga lesson"
+                width={600}
+                height={400}
+                className="responsive-image"
+                placeholder="blur"
+                blurDataURL="/images/PXL_20250101_151738219_placeholder.jpg"
+              />
+            </Col>
+            <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
+              <p className="text--p-lg text--measure">
+                {t.rich("description1", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
+              </p>
+              <p className="text--p-lg text--measure">
+                {t.rich("description2", {
+                  strong: (children) => <strong>{children}</strong>,
+                })}
+              </p>
+              <p className="text--p-lg text--measure">{t("description3")}</p>
             </Col>
           </Row>
         </Container>
       </Section>
 
+      <Section backgroundColor="var(--primary-active)">
+        <Container>
+          <Row gap="1rem 0">
+            <Col xs={12} lg={6}>
+              <SectionTitle text={t("benefits_title")} />
+              <ul className="styled-list">
+                <li>{t("benefit1")}</li>
+                <li>{t("benefit2")}</li>
+                <li>{t("benefit3")}</li>
+                <li>{t("benefit4")}</li>
+                <li>{t("benefit5")}</li>
+              </ul>
+            </Col>
+            <Col xs={12} lg={6}>
+              <SectionTitle text={t("formats_title")} />
+              <ul className="styled-list">
+                <li>{t("format1")}</li>
+                <li>{t("format2")}</li>
+                <li>{t("format3")}</li>
+                <li>{t("format4")}</li>
+              </ul>
+            </Col>
+          </Row>
+        </Container>
+      </Section>
+
+      <Styles
+        exclude={RouteEnum.PRIVATE_LESSONS}
+        title={tClasses("other_title")}
+      />
+      <BookCta image="PXL_20250101_151738219" />
       <Contact />
       <Footer />
     </main>

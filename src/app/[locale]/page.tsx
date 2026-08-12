@@ -1,23 +1,39 @@
 "use client";
+import { InfiniteText } from "@/components/molecules/InfiniteText";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { AboutMe } from "@/components/sections/AboutMe";
-import { Calendar } from "@/components/sections/Calendar";
+import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
+import { InstagramFeed } from "@/components/sections/InstagramFeed";
 import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 
 const Home = () => {
   const t = useTranslations("hero");
+  const tMarquee = useTranslations("marquee");
+
+  const marqueeItems = [
+    tMarquee("weekly-classes"),
+    tMarquee("join-now"),
+    tMarquee("relax"),
+    tMarquee("breathe"),
+    tMarquee("live"),
+  ];
 
   return (
     <main>
       <Header />
       <Hero title={t("title")} subtitle={t("subtitle")} />
       <AboutMe />
-      <Calendar />
+      <InfiniteText
+        backgroundColor="var(--primary-active)"
+        items={[...marqueeItems, ...marqueeItems]}
+      />
       <Styles />
+      <BookCta />
+      <InstagramFeed />
       <Contact />
       <Footer />
     </main>

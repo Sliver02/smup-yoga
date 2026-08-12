@@ -1,14 +1,20 @@
-import classNames from "classnames";
-import Image from "next/image";
-import styles from "./CardDisplay.module.scss";
 import { BaseProps } from "@/common/globalInterfaces";
+import { Link } from "@/i18n/routing";
+import classNames from "classnames";
+import { ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { ReactNode } from "react";
+import styles from "./CardDisplay.module.scss";
 
 export interface CardDisplayProps extends BaseProps {
   image: string;
   imageFormat?: string;
   title?: string;
   description?: ReactNode;
+  /** Turns the whole card into a link to a detail page. */
+  href?: string;
+  /** Label of the affordance shown on linked cards. */
+  cta?: string;
 }
 
 export const CardDisplay = ({
@@ -17,29 +23,49 @@ export const CardDisplay = ({
   description,
   image,
   imageFormat = "jpg",
+  href,
+  cta,
 }: CardDisplayProps) => {
-  return (
-    <div className={classNames(className, styles.cardDisplay)}>
-      <div className={classNames(styles.imageContainer)}>
+  const content = (
+    <>
+      <div className={classNames(styles.media)}>
         <Image
-          className={classNames(styles.backgroundImage)}
+          className={classNames(styles.image)}
           alt={title ?? ""}
           src={"/images/" + image + "." + imageFormat}
           placeholder="blur"
           blurDataURL={"/images/" + image + "_placeholder." + imageFormat}
+          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
           fill
         />
-        {title && (
-          <div className={classNames(styles.titleContainer)}>
-            <h4>{title}</h4>
-          </div>
+      </div>
+      <div className={classNames(styles.body)}>
+        {title && <h4 className={classNames(styles.title)}>{title}</h4>}
+        {description && (
+          <p className={classNames(styles.description)}>{description}</p>
+        )}
+        {href && cta && (
+          <span className={classNames(styles.cta)}>
+            {cta}
+            <ArrowUpRight size={18} />
+          </span>
         )}
       </div>
-      {description && (
-        <div className={classNames(styles.descriptionContainer)}>
-          <p className={classNames("text--p-lg")}>{description}</p>
-        </div>
-      )}
-    </div>
+    </>
+  );
+
+  if (!href) {
+    return (
+      <div className={classNames(className, styles.cardDisplay)}>{content}</div>
+    );
+  }
+
+  return (
+    <Link
+      href={href}
+      className={classNames(className, styles.cardDisplay, styles.linked)}
+    >
+      {content}
+    </Link>
   );
 };

@@ -1,0 +1,177 @@
+@use "sass:list";
+@use "../../../designSystem/mediaQueries";
+
+// Mosaic tile table — tune the whole layout here.
+// key = tile position (1 = most recent, biggest, captioned)
+// value = (row-start, col-start, row-span, col-span, z-index, nudge-x, nudge-y)
+//
+// Tiles are laid out on a 12-column grid without grid overlap; the nudges then
+// pull them across the gap so neighbours overlap by ~0.5–1rem, like a pinboard.
+// Sizes are graded by position: earlier = larger = more prominent.
+$mosaic: (
+	1: (4, 1, 7, 5, 6, 0px, 0px),
+	2: (1, 6, 5, 4, 5, -1.25rem, 1rem),
+	3: (2, 10, 5, 3, 4, -0.75rem, -0.5rem),
+	4: (6, 6, 5, 3, 5, -1.5rem, -0.75rem),
+	5: (7, 9, 5, 4, 4, -1rem, 0.5rem),
+	6: (11, 1, 4, 4, 3, 0.75rem, -1.5rem),
+	7: (11, 5, 5, 4, 4, -0.5rem, -1rem),
+	8: (12, 9, 4, 4, 3, -1rem, -0.75rem),
+	9: (1, 1, 3, 3, 2, 1rem, 1rem),
+);
+
+.intro {
+	max-width: 60ch;
+	margin: 0 auto 3rem;
+	color: var(--neutral-text-light);
+}
+
+.collage {
+	display: grid;
+	gap: 0.5rem;
+	// Keeps the tile z-indexes from competing with anything else on the page.
+	isolation: isolate;
+
+	// Mobile: no overlap — a plain 2-up grid stays readable at thumb size.
+	grid-template-columns: repeat(2, 1fr);
+
+	@include mediaQueries.media("md") {
+		grid-template-columns: repeat(12, 1fr);
+		grid-auto-rows: clamp(2rem, 3.2vw, 3.6rem);
+	}
+}
+
+.tile {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+
+	transition: transform 0.3s ease;
+
+	// Mobile only: uniform squares, most recent spans the full width.
+	aspect-ratio: 1;
+
+	&:first-child {
+		grid-column: span 2;
+		aspect-ratio: 3 / 2;
+	}
+
+	&:hover,
+	&:focus-visible {
+		transform: translate(var(--dx, 0px), calc(var(--dy, 0px) - 4px));
+		z-index: 10;
+
+		.overlay {
+			opacity: 1;
+		}
+
+		.image {
+			transform: scale(1.06);
+		}
+	}
+
+	@include mediaQueries.media("md") {
+		aspect-ratio: auto;
+		transform: translate(var(--dx, 0px), var(--dy, 0px));
+
+		&:first-child {
+			grid-column: auto;
+			aspect-ratio: auto;
+		}
+	}
+}
+
+@include mediaQueries.media("md") {
+	@each $index, $tile in $mosaic {
+		.tile:nth-child(#{$index}) {
+			grid-area: #{list.nth($tile, 1)} / #{list.nth($tile, 2)} / span
+				#{list.nth($tile, 3)} / span #{list.nth($tile, 4)};
+			z-index: list.nth($tile, 5);
+			--dx: #{list.nth($tile, 6)};
+			--dy: #{list.nth($tile, 7)};
+		}
+	}
+}
+
+.frame {
+	position: relative;
+	flex: 1;
+	min-height: 0;
+	overflow: hidden;
+
+	// Softened take on the CardFrame / CardDisplay leaf: fixed radii so the shape
+	// reads the same on a wide tile and a tall one.
+	border-radius: 2.5rem 0.5rem 2.5rem 0.5rem;
+	background-color: var(--primary-active);
+	box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
+}
+
+.image {
+	object-fit: cover;
+	transition: transform 0.4s ease;
+}
+
+.overlay {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	color: var(--neutral-background);
+	background-color: color-mix(in srgb, var(--accent-background) 55%, transparent);
+
+	opacity: 0;
+	transition: opacity 0.3s ease;
+}
+
+.caption {
+	display: block;
+	padding: 0.75rem 0.25rem 0;
+	font-size: 0.8125rem;
+	line-height: 1.5;
+	color: var(--neutral-text-light);
+}
+
+.captionLabel {
+	display: block;
+	margin-bottom: 0.125rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	color: var(--accent-main);
+}
+
+.cta {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	width: fit-content;
+	margin: 3rem auto 0;
+	padding: 0.75rem 1.5rem;
+
+	border: 2px solid var(--accent-main);
+	border-radius: 2rem;
+	color: var(--accent-main);
+	font-weight: 600;
+
+	transition:
+		background-color 0.3s ease,
+		color 0.3s ease;
+
+	&:hover,
+	&:focus-visible {
+		background-color: var(--accent-main);
+		color: var(--neutral-background);
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.tile,
+	.image,
+	.overlay,
+	.cta {
+		transition: none;
+	}
+}

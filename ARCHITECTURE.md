@@ -86,7 +86,7 @@ utility class already covers it. For colors, always reference semantic tokens
 atoms/       — no dependencies on other components
 molecules/   — composed of atoms only
 organisms/   — composed of atoms + molecules
-sections/    — page-composition blocks (project tier; e.g. AboutMe, Calendar, Styles, Locations, Contact)
+sections/    — page-composition blocks (project tier; e.g. AboutMe, Styles, InstagramFeed, BookCta, Contact)
 app/[locale] — pages assembled from sections/organisms
 ```
 

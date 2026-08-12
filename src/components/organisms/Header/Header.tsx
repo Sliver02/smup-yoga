@@ -2,11 +2,11 @@
 import { BaseProps } from "@/common/globalInterfaces";
 import { RouteEnum } from "@/common/routeEnum";
 import { LanguageSwitcher } from "@/components/molecules/LanguageSwitcher";
+import { Link } from "@/i18n/routing";
 import classNames from "classnames";
 import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { useScroll } from "@/hooks/useScroll";
 import styles from "./Header.module.scss";

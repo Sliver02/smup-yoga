@@ -61,9 +61,9 @@ src/
 │   ├── atoms/             # Grid, Button, Input, Alert, Card, Checkbox,
 │   │                      #   Select, Dropdown, Autocomplete, Background,
 │   │                      #   SectionTitle, Breadcrumb, FadeIn, SmoothScroll
-│   ├── molecules/         # CardDisplay, CardFrame, InfiniteText
+│   ├── molecules/         # CardDisplay, CardFrame, InfiniteText, LanguageSwitcher
 │   ├── organisms/         # Header, Footer, Hero, Section
-│   └── sections/          # AboutMe, Calendar, Styles, Locations, Contact
+│   └── sections/          # AboutMe, Styles, InstagramFeed, BookCta, Contact
 ├── designSystem/
 │   ├── globals.scss       # two-layer CSS tokens + reset
 │   ├── variables.scss     # font scales, breakpoints, spacing maps

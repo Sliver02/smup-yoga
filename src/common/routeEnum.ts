@@ -1,7 +1,9 @@
 export enum RouteEnum {
   HOME = "/",
-  CALENDAR = "/#calendar",
   CONTACT = "/#contact",
+  /** Same-page jump — Contact is rendered on every page. */
+  CONTACT_HASH = "#contact",
+  EMAIL = "mailto:smup.yoga@gmail.com",
   ABOUT = "/about",
   CORTINA = "/yoga-cortina",
   BELLUNO = "/yoga-belluno",
