@@ -12,7 +12,7 @@ import { Contact } from "@/components/sections/Contact";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import pageImage from "@public/images/PXL_20250601_164142948.MP.jpg";
+import pageImage from "@public/images/PXL_20250823_080536915.jpg";
 import "@/designSystem/utils.scss";
 
 const PilatesPage = () => {

@@ -24,7 +24,7 @@ export async function generateMetadata({
 			siteName: "SMUP Yoga",
 			images: [
 				{
-					url: "https://smupyoga.com/images/PXL_20250601_164142948.MP.jpg",
+					url: "https://smupyoga.com/images/PXL_20250823_080536915.jpg",
 					width: 1200,
 					height: 630,
 					alt: "Pilates",

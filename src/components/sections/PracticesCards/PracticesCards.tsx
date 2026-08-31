@@ -13,6 +13,7 @@ import yinImage from "@public/images/PXL_20250601_164142948.MP.jpg";
 import kidsImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
 import outdoorImage from "@public/images/PXL_20250726_110233771.MP.jpg";
 import privateImage from "@public/images/PXL_20250101_151738219.jpg";
+import pilatesImage from "@public/images/PXL_20250823_080536915.jpg";
 import styles from "./PracticesCards.module.scss";
 
 interface Practice {
@@ -27,7 +28,7 @@ const PRACTICES: Practice[] = [
 	{ key: "kids", href: RouteEnum.KID, image: kidsImage },
 	{ key: "outdoor", href: RouteEnum.OUTDOOR, image: outdoorImage },
 	{ key: "private", href: RouteEnum.PRIVATE_LESSONS, image: privateImage },
-	{ key: "pilates", href: RouteEnum.PILATES, image: privateImage },
+	{ key: "pilates", href: RouteEnum.PILATES, image: pilatesImage },
 ];
 
 export interface PracticesCardsProps {
