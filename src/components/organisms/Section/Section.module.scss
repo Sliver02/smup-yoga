@@ -2,31 +2,31 @@
 @use "../../../designSystem/mediaQueries";
 
 .section {
-  // Fluid rhythm instead of a forced 80vh: short sections no longer float in a
-  // void, tall ones still breathe. Padding scales with the viewport.
-  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
-  // Anchors (#classes, #contact) land below the fixed header instead of under it.
-  scroll-margin-top: 6rem;
+	// Fluid rhythm instead of a forced 80vh: short sections no longer float in a
+	// void, tall ones still breathe. Padding scales with the viewport.
+	padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+	// Anchors (#classes, #contact) land below the fixed header instead of under it.
+	scroll-margin-top: 6rem;
 
-  background: var(--background-color);
-  background-position: center;
+	background: var(--background-color);
+	background-position: center;
 
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 
-  .content {
-    width: 100%;
-    flex: 1;
-    // Keeps content above a background image and any scrim a consumer layers on
-    // the section root via ::after.
-    position: relative;
-    z-index: 1;
-  }
+	.content {
+		width: 100%;
+		flex: 1;
+		// Keeps content above a background image and any scrim a consumer layers on
+		// the section root via ::after.
+		position: relative;
+		z-index: 1;
+	}
 
-  .backgroundImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+	.backgroundImage {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
 }

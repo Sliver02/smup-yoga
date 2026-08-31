@@ -1,28 +1,28 @@
 .sectionTitle {
-  $width: 100px;
-  width: fit-content;
-  display: flex;
-  position: relative;
-  z-index: 1;
-  // Was a flat 3rem top and bottom, which double-counted the section padding
-  // above it and left the title floating away from the content it labels.
-  margin: 0 0 clamp(1.25rem, 3vw, 2rem);
+	$width: 100px;
+	width: fit-content;
+	display: flex;
+	position: relative;
+	z-index: 1;
+	// Was a flat 3rem top and bottom, which double-counted the section padding
+	// above it and left the title floating away from the content it labels.
+	margin: 0 0 clamp(1.25rem, 3vw, 2rem);
 
-  &--center {
-    margin-inline: auto;
-  }
+	&--center {
+		margin-inline: auto;
+	}
 
-  .iconContainer {
-    z-index: -1;
-    position: absolute;
-    width: $width;
-    height: $width;
-    top: 50%;
-    left: 0;
-    transform: translate(-50%, -50%);
+	.iconContainer {
+		z-index: -1;
+		position: absolute;
+		width: $width;
+		height: $width;
+		top: 50%;
+		left: 0;
+		transform: translate(-50%, -50%);
 
-    .icon {
-      fill: var(--accent-main);
-    }
-  }
+		.icon {
+			fill: var(--accent-main);
+		}
+	}
 }

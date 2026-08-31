@@ -9,74 +9,85 @@ import { useTranslations } from "next-intl";
 import "@/designSystem/utils.scss";
 
 const PrivacyPolicyPage = () => {
-  const t = useTranslations("privacy");
-  const tCommon = useTranslations("breadcrumbs");
+	const t = useTranslations("privacy");
+	const tCommon = useTranslations("breadcrumbs");
 
-  return (
-    <main>
-      <Header />
-      <Hero
-        title={t("title")}
-        subtitle={t("last_updated")}
-        compact
-        breadcrumbItems={[
-          { label: tCommon("home"), href: "/" },
-          { label: t("title") },
-        ]}
-      />
+	return (
+		<main>
+			<Header />
+			<Hero
+				title={t("title")}
+				subtitle={t("last_updated")}
+				compact
+				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
+			/>
 
-      <Section>
-        <Container>
-          <Row xsJustify={Justify.center}>
-            <Col xs={12} lg={10}>
-              <Row gap="30px">
-                <Col xs={12}>
-                  <p className="text--p-lg">{t("intro")}</p>
-                </Col>
-                <Col xs={12}>
-                  <Row gap="20px">
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section1_title")}</h2>
-                      <p className="text--p-lg">{t("section1_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section2_title")}</h2>
-                      <p className="text--p-lg">{t("section2_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section3_title")}</h2>
-                      <p className="text--p-lg">{t("section3_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section4_title")}</h2>
-                      <p className="text--p-lg">{t("section4_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section5_title")}</h2>
-                      <p className="text--p-lg">{t("section5_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section6_title")}</h2>
-                      <p className="text--p-lg">{t("section6_content")}</p>
-                    </Col>
-                    <Col xs={12}>
-                      <h2 className="section-heading">{t("section7_title")}</h2>
-                      <p className="text--p-lg">{t("section7_content")}</p>
-                      <p className="text--p-lg info-card">
-                        {t("contact_info")}
-                      </p>
-                    </Col>
-                  </Row>
-                </Col>
-              </Row>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
+			<Section>
+				<Container>
+					<Row xsJustify={Justify.center}>
+						<Col xs={12} lg={10}>
+							<Row gap="30px">
+								<Col xs={12}>
+									<p className="text--p-lg">{t("intro")}</p>
+								</Col>
+								<Col xs={12}>
+									<Row gap="20px">
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section1_title")}
+											</h2>
+											<p className="text--p-lg">{t("section1_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section2_title")}
+											</h2>
+											<p className="text--p-lg">{t("section2_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section3_title")}
+											</h2>
+											<p className="text--p-lg">{t("section3_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section4_title")}
+											</h2>
+											<p className="text--p-lg">{t("section4_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section5_title")}
+											</h2>
+											<p className="text--p-lg">{t("section5_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section6_title")}
+											</h2>
+											<p className="text--p-lg">{t("section6_content")}</p>
+										</Col>
+										<Col xs={12}>
+											<h2 className="section-heading">
+												{t("section7_title")}
+											</h2>
+											<p className="text--p-lg">{t("section7_content")}</p>
+											<p className="text--p-lg info-card">
+												{t("contact_info")}
+											</p>
+										</Col>
+									</Row>
+								</Col>
+							</Row>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 
-      <Footer />
-    </main>
-  );
+			<Footer />
+		</main>
+	);
 };
 
 export default PrivacyPolicyPage;

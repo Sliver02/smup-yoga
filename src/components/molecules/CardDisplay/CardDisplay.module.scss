@@ -1,102 +1,102 @@
 .cardDisplay {
-  // Full-width in its column — the old fixed `--width` + 2.5rem side padding left
-  // a gutter inside a gutter and shrank the photo on wide screens.
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-  color: inherit;
+	// Full-width in its column — the old fixed `--width` + 2.5rem side padding left
+	// a gutter inside a gutter and shrank the photo on wide screens.
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: inherit;
 
-  .media {
-    width: 100%;
-    // Ratio instead of a fixed px height: the image tracks its column at every
-    // width rather than letterboxing on mobile and cropping on wide screens.
-    aspect-ratio: 4 / 5;
-    position: relative;
-    overflow: hidden;
+	.media {
+		width: 100%;
+		// Ratio instead of a fixed px height: the image tracks its column at every
+		// width rather than letterboxing on mobile and cropping on wide screens.
+		aspect-ratio: 4 / 5;
+		position: relative;
+		overflow: hidden;
 
-    // Arch — the brand shape. Percentage radii (horizontal / vertical) keep the
-    // dome proportional at any card width; the old `var(--width)` px value
-    // flattened into a plain rounded corner once the column got wide.
-    border-radius: 50% 50% 1rem 1rem / 32% 32% 1rem 1rem;
-    background-color: var(--primary-active);
+		// Arch — the brand shape. Percentage radii (horizontal / vertical) keep the
+		// dome proportional at any card width; the old `var(--width)` px value
+		// flattened into a plain rounded corner once the column got wide.
+		border-radius: 50% 50% 1rem 1rem / 32% 32% 1rem 1rem;
+		background-color: var(--primary-active);
 
-    transition: transform 0.35s ease;
+		transition: transform 0.35s ease;
 
-    .image {
-      object-fit: cover;
-      transition: transform 0.5s ease;
-    }
-  }
+		.image {
+			object-fit: cover;
+			transition: transform 0.5s ease;
+		}
+	}
 
-  .body {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    gap: 0.5rem;
-    padding: 1.25rem 0.25rem 0;
-  }
+	.body {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		gap: 0.5rem;
+		padding: 1.25rem 0.25rem 0;
+	}
 
-  .title {
-    transition: color 0.25s ease;
-  }
+	.title {
+		transition: color 0.25s ease;
+	}
 
-  .description {
-    // Cap the measure so three columns of copy stay scannable.
-    max-width: 46ch;
-    color: var(--neutral-text);
-  }
+	.description {
+		// Cap the measure so three columns of copy stay scannable.
+		max-width: 46ch;
+		color: var(--neutral-text);
+	}
 
-  .cta {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.375rem;
+	.cta {
+		display: inline-flex;
+		align-items: center;
+		gap: 0.375rem;
 
-    margin-top: auto;
-    padding-top: 0.75rem;
+		margin-top: auto;
+		padding-top: 0.75rem;
 
-    color: var(--accent-hover);
-    font-weight: 600;
+		color: var(--accent-hover);
+		font-weight: 600;
 
-    svg {
-      transition: transform 0.25s ease;
-    }
-  }
+		svg {
+			transition: transform 0.25s ease;
+		}
+	}
 }
 
 .linked {
-  &:hover,
-  &:focus-visible {
-    color: inherit;
+	&:hover,
+	&:focus-visible {
+		color: inherit;
 
-    .media {
-      transform: translateY(-6px);
-    }
+		.media {
+			transform: translateY(-6px);
+		}
 
-    .image {
-      transform: scale(1.05);
-    }
+		.image {
+			transform: scale(1.05);
+		}
 
-    .title {
-      color: var(--accent-hover);
-    }
+		.title {
+			color: var(--accent-hover);
+		}
 
-    .cta svg {
-      transform: translate(3px, -3px);
-    }
-  }
+		.cta svg {
+			transform: translate(3px, -3px);
+		}
+	}
 
-  &:focus-visible {
-    outline: 2px solid var(--color-border-focus);
-    outline-offset: 6px;
-    border-radius: 1rem;
-  }
+	&:focus-visible {
+		outline: 2px solid var(--color-border-focus);
+		outline-offset: 6px;
+		border-radius: 1rem;
+	}
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .cardDisplay .media,
-  .cardDisplay .image,
-  .cardDisplay .title,
-  .cardDisplay .cta svg {
-    transition: none;
-  }
+	.cardDisplay .media,
+	.cardDisplay .image,
+	.cardDisplay .title,
+	.cardDisplay .cta svg {
+		transition: none;
+	}
 }

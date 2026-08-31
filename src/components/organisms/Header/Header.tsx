@@ -104,7 +104,10 @@ export const Header = ({ className }: HeaderProps) => {
 									{item.label}
 								</a>
 							) : (
-								<Link className={classNames(styles.navbar__button)} href={item.url!}>
+								<Link
+									className={classNames(styles.navbar__button)}
+									href={item.url!}
+								>
 									{item.label}
 								</Link>
 							)}
@@ -132,7 +135,10 @@ export const Header = ({ className }: HeaderProps) => {
 									<Link
 										key={childIndex}
 										href={child.url!}
-										className={classNames(styles["menu__button"], styles.mobileSubItem)}
+										className={classNames(
+											styles["menu__button"],
+											styles.mobileSubItem
+										)}
 										onClick={() => setOpenMenu(false)}
 									>
 										{child.label}

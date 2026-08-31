@@ -4,71 +4,71 @@
 @use "../../../designSystem/utils";
 
 .hero {
-  display: flex;
-  flex-direction: column;
-  // Text sits at the bottom via flex + padding, not a 50vh margin that used to
-  // push it out of the clipped box on short/landscape screens.
-  justify-content: flex-end;
-  // svh, not vh: mobile browser chrome no longer overshoots the viewport.
-  min-height: min(82svh, 900px);
-  padding-bottom: clamp(2rem, 7vh, 5rem);
+	display: flex;
+	flex-direction: column;
+	// Text sits at the bottom via flex + padding, not a 50vh margin that used to
+	// push it out of the clipped box on short/landscape screens.
+	justify-content: flex-end;
+	// svh, not vh: mobile browser chrome no longer overshoots the viewport.
+	min-height: min(82svh, 900px);
+	padding-bottom: clamp(2rem, 7vh, 5rem);
 
-  background-color: var(--neutral-text);
+	background-color: var(--neutral-text);
 
-  overflow: hidden;
-  position: relative;
+	overflow: hidden;
+	position: relative;
 
-  .backgroundImage {
-    object-fit: cover;
-    object-position: left;
-    opacity: 0.5;
-  }
+	.backgroundImage {
+		object-fit: cover;
+		object-position: left;
+		opacity: 0.5;
+	}
 
-  .breadcrumbWrapper {
-    position: absolute;
-    top: map.get(variables.$headerHeight, "xs");
-    left: 0;
-    width: 100%;
-    z-index: 10;
-    padding: 16px 0;
+	.breadcrumbWrapper {
+		position: absolute;
+		top: map.get(variables.$headerHeight, "xs");
+		left: 0;
+		width: 100%;
+		z-index: 10;
+		padding: 16px 0;
 
-    @include mediaQueries.media("md") {
-      top: map.get(variables.$headerHeight, "md");
-      padding: 20px 0;
-    }
+		@include mediaQueries.media("md") {
+			top: map.get(variables.$headerHeight, "md");
+			padding: 20px 0;
+		}
 
-    :global(nav) {
-      padding: 0 !important;
-      color: white !important;
-    }
+		:global(nav) {
+			padding: 0 !important;
+			color: white !important;
+		}
 
-    :global(a) {
-      color: white !important;
+		:global(a) {
+			color: white !important;
 
-      &:hover {
-        opacity: 0.7 !important;
-      }
-    }
+			&:hover {
+				opacity: 0.7 !important;
+			}
+		}
 
-    :global(span) {
-      color: rgba(255, 255, 255, 0.9) !important;
-    }
-  }
+		:global(span) {
+			color: rgba(255, 255, 255, 0.9) !important;
+		}
+	}
 
-  .textWrapper {
-    width: 100%;
-    display: flex;
-    position: relative;
-    z-index: 1;
-    color: var(--neutral-background);
-  }
+	.textWrapper {
+		width: 100%;
+		display: flex;
+		position: relative;
+		z-index: 1;
+		color: var(--neutral-background);
+	}
 
-  &.compact {
-    min-height: clamp(340px, 44svh, 520px);
-    padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
+	&.compact {
+		min-height: clamp(340px, 44svh, 520px);
+		padding-bottom: clamp(1.5rem, 4vh, 2.5rem);
 
-    h1 {
-      font-size: clamp(2.25rem, 5vw, 4rem);
-    }
-  }
+		h1 {
+			font-size: clamp(2.25rem, 5vw, 4rem);
+		}
+	}
 }

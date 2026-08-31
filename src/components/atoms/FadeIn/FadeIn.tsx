@@ -57,9 +57,7 @@ export const FadeIn = ({
 					scrollTrigger: {
 						trigger: el,
 						start: "top 85%",
-						toggleActions: repeat
-							? "restart none none reset"
-							: "play none none none",
+						toggleActions: repeat ? "restart none none reset" : "play none none none",
 					},
 				}
 			);

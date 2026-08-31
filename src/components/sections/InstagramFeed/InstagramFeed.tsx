@@ -40,7 +40,13 @@ export const InstagramFeed = () => {
 					<Row xsJustify={Justify.center}>
 						<Col xs={12} lg={10}>
 							<SectionTitle text={t("title")} center />
-							<p className={classNames(styles.intro, "text--p-lg", "text--align-center")}>
+							<p
+								className={classNames(
+									styles.intro,
+									"text--p-lg",
+									"text--align-center"
+								)}
+							>
 								{t("subtitle")}
 							</p>
 						</Col>

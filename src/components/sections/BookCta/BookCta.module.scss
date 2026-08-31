@@ -1,39 +1,39 @@
 .band {
-  color: var(--color-text-inverse);
-  overflow: hidden;
+	color: var(--color-text-inverse);
+	overflow: hidden;
 
-  // Scrim over the photo — the band carries body copy, so contrast is not optional.
-  &::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--palette-neutral-1000) 55%, transparent) 0%,
-      color-mix(in srgb, var(--accent-background) 65%, transparent) 100%
-    );
-  }
+	// Scrim over the photo — the band carries body copy, so contrast is not optional.
+	&::after {
+		content: "";
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			180deg,
+			color-mix(in srgb, var(--palette-neutral-1000) 55%, transparent) 0%,
+			color-mix(in srgb, var(--accent-background) 65%, transparent) 100%
+		);
+	}
 }
 
 .title {
-  text-wrap: balance;
+	text-wrap: balance;
 }
 
 .description {
-  max-width: 52ch;
-  margin: 1.25rem auto 0;
+	max-width: 52ch;
+	margin: 1.25rem auto 0;
 }
 
 .actions {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1rem;
+	margin-top: 2rem;
 }
 
 .secondaryButton {
-  // Rose on a dark photo reads muddy — remap the button's own tokens to inverse.
-  --color-primary: var(--color-text-inverse);
-  --color-primary-text: var(--color-text);
+	// Rose on a dark photo reads muddy — remap the button's own tokens to inverse.
+	--color-primary: var(--color-text-inverse);
+	--color-primary-text: var(--color-text);
 }

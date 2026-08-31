@@ -2,30 +2,30 @@
 @use "../../../designSystem/mediaQueries";
 
 .infiniteText {
-  background: var(--background-color);
+	background: var(--background-color);
 
-  max-width: 100%;
-  overflow: hidden;
-  border-top: 4px solid var(--neutral-text);
-  border-bottom: 4px solid var(--neutral-text);
-  padding: 1rem 0;
+	max-width: 100%;
+	overflow: hidden;
+	border-top: 4px solid var(--neutral-text);
+	border-bottom: 4px solid var(--neutral-text);
+	padding: 1rem 0;
 
-  min-height: 40px;
+	min-height: 40px;
 
-  @include mediaQueries.media("lg") {
-    min-height: 80px;
-  }
+	@include mediaQueries.media("lg") {
+		min-height: 80px;
+	}
 
-  .item {
-    position: relative;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    justify-content: space-between;
+	.item {
+		position: relative;
+		display: flex;
+		align-items: center;
+		width: 100%;
+		justify-content: space-between;
 
-    .icon {
-      display: block;
-      margin: 0 2rem;
-    }
-  }
+		.icon {
+			display: block;
+			margin: 0 2rem;
+		}
+	}
 }

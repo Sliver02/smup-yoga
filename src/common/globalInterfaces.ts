@@ -50,7 +50,7 @@ export enum Size {
 }
 
 export enum Surface {
-	"raised" = "raised",
-	"border" = "border",
-	"flat" = "flat",
+	raised = "raised",
+	border = "border",
+	flat = "flat",
 }

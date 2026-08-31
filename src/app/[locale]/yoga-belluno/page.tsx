@@ -11,75 +11,72 @@ import { Contact } from "@/components/sections/Contact";
 import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import pageImage from "@public/images/PXL_20250112_213048967.MP.jpg";
 import "@/designSystem/utils.scss";
 
 const YogaBellunoPage = () => {
-  const t = useTranslations("locations.belluno");
-  const tLoc = useTranslations("locations");
-  const tCommon = useTranslations("breadcrumbs");
+	const t = useTranslations("locations.belluno");
+	const tLoc = useTranslations("locations");
+	const tCommon = useTranslations("breadcrumbs");
 
-  return (
-    <main>
-      <Header />
-      <Hero
-        title={t("title")}
-        subtitle={t("subtitle")}
-        compact
-        backgroundImage="/images/PXL_20250112_213048967.MP.jpg"
-        breadcrumbItems={[
-          { label: tCommon("home"), href: "/" },
-          { label: t("title") },
-        ]}
-      />
+	return (
+		<main>
+			<Header />
+			<Hero
+				title={t("title")}
+				subtitle={t("subtitle")}
+				compact
+				backgroundImage={pageImage}
+				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
+			/>
 
-      <Section>
-        <Container>
-          <Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
-            <Col xs={12} md={5}>
-              <Image
-                src="/images/PXL_20250112_213048967.MP.jpg"
-                alt="Yoga a Belluno"
-                width={600}
-                height={400}
-                className="responsive-image"
-                placeholder="blur"
-                blurDataURL="/images/PXL_20250112_213048967.MP_placeholder.jpg"
-              />
-            </Col>
-            <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p className="text--p-lg text--measure">
-                {t.rich("description", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-              <p className="text--p-lg text--measure">{t("description2")}</p>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
+			<Section>
+				<Container>
+					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
+						<Col xs={12} md={5}>
+							<Image
+								src={pageImage}
+								alt="Yoga a Belluno"
+								width={600}
+								height={400}
+								className="responsive-image"
+								placeholder="blur"
+							/>
+						</Col>
+						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
+							<p className="text--p-lg text--measure">
+								{t.rich("description", {
+									strong: (children) => <strong>{children}</strong>,
+								})}
+							</p>
+							<p className="text--p-lg text--measure">{t("description2")}</p>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 
-      <Section backgroundColor="var(--primary-active)">
-        <Container>
-          <Row xsJustify={Justify.center}>
-            <Col xs={12} lg={9}>
-              <SectionTitle text={tLoc("venues_title")} />
-              <ul className="styled-list">
-                <li>{t("venue1")}</li>
-                <li>{t("venue2")}</li>
-                <li>{t("venue3")}</li>
-                <li>{t("venue4")}</li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
+			<Section backgroundColor="var(--primary-active)">
+				<Container>
+					<Row xsJustify={Justify.center}>
+						<Col xs={12} lg={9}>
+							<SectionTitle text={tLoc("venues_title")} />
+							<ul className="styled-list">
+								<li>{t("venue1")}</li>
+								<li>{t("venue2")}</li>
+								<li>{t("venue3")}</li>
+								<li>{t("venue4")}</li>
+							</ul>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 
-      <Styles />
-      <BookCta image="PXL_20250112_213048967.MP" />
-      <Contact />
-      <Footer />
-    </main>
-  );
+			<Styles />
+			<BookCta image={pageImage} />
+			<Contact />
+			<Footer />
+		</main>
+	);
 };
 
 export default YogaBellunoPage;

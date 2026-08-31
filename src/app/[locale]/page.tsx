@@ -11,33 +11,33 @@ import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 
 const Home = () => {
-  const t = useTranslations("hero");
-  const tMarquee = useTranslations("marquee");
+	const t = useTranslations("hero");
+	const tMarquee = useTranslations("marquee");
 
-  const marqueeItems = [
-    tMarquee("weekly-classes"),
-    tMarquee("join-now"),
-    tMarquee("relax"),
-    tMarquee("breathe"),
-    tMarquee("live"),
-  ];
+	const marqueeItems = [
+		tMarquee("weekly-classes"),
+		tMarquee("join-now"),
+		tMarquee("relax"),
+		tMarquee("breathe"),
+		tMarquee("live"),
+	];
 
-  return (
-    <main>
-      <Header />
-      <Hero title={t("title")} subtitle={t("subtitle")} />
-      <AboutMe />
-      <InfiniteText
-        backgroundColor="var(--primary-active)"
-        items={[...marqueeItems, ...marqueeItems]}
-      />
-      <Styles />
-      <BookCta />
-      <InstagramFeed />
-      <Contact />
-      <Footer />
-    </main>
-  );
+	return (
+		<main>
+			<Header />
+			<Hero title={t("title")} subtitle={t("subtitle")} />
+			<AboutMe />
+			<InfiniteText
+				backgroundColor="var(--primary-active)"
+				items={[...marqueeItems, ...marqueeItems]}
+			/>
+			<Styles />
+			<BookCta />
+			<InstagramFeed />
+			<Contact />
+			<Footer />
+		</main>
+	);
 };
 
 export default Home;

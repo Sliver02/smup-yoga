@@ -4,27 +4,19 @@ import { BaseProps } from "@/common/globalInterfaces";
 import classNames from "classnames";
 
 export interface SectionTitleProps extends BaseProps {
-  text: string;
-  center?: boolean;
+	text: string;
+	center?: boolean;
 }
 
 export const SectionTitle = ({ text, center }: SectionTitleProps) => {
-  return (
-    <span
-      className={classNames(
-        styles["sectionTitle"],
-        center && styles["sectionTitle--center"]
-      )}
-    >
-      <span className={classNames(styles.iconContainer)}>
-        <Image
-          className={styles.icon}
-          alt={text}
-          src="/icons/star_01_pink.svg"
-          fill
-        />
-      </span>
-      <h3>{text}</h3>
-    </span>
-  );
+	return (
+		<span
+			className={classNames(styles["sectionTitle"], center && styles["sectionTitle--center"])}
+		>
+			<span className={classNames(styles.iconContainer)}>
+				<Image className={styles.icon} alt={text} src="/icons/star_01_pink.svg" fill />
+			</span>
+			<h3>{text}</h3>
+		</span>
+	);
 };

@@ -12,82 +12,79 @@ import { Contact } from "@/components/sections/Contact";
 import { Styles } from "@/components/sections/Styles";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import pageImage from "@public/images/PXL_20250823_075608610.jpg";
 import "@/designSystem/utils.scss";
 
 const AnukalanaPage = () => {
-  const t = useTranslations("classes.anukalana");
-  const tClasses = useTranslations("classes");
-  const tCommon = useTranslations("breadcrumbs");
+	const t = useTranslations("classes.anukalana");
+	const tClasses = useTranslations("classes");
+	const tCommon = useTranslations("breadcrumbs");
 
-  return (
-    <main>
-      <Header />
-      <Hero
-        title={t("title")}
-        subtitle={t("hero_subtitle")}
-        compact
-        backgroundImage="/images/PXL_20250823_075608610.jpg"
-        breadcrumbItems={[
-          { label: tCommon("home"), href: "/" },
-          { label: t("title") },
-        ]}
-      />
+	return (
+		<main>
+			<Header />
+			<Hero
+				title={t("title")}
+				subtitle={t("hero_subtitle")}
+				compact
+				backgroundImage={pageImage}
+				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
+			/>
 
-      <Section>
-        <Container>
-          <Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
-            <Col xs={12} md={5}>
-              <Image
-                src="/images/PXL_20250823_075608610.jpg"
-                alt="Anukalana Yoga"
-                width={600}
-                height={400}
-                className="responsive-image"
-                placeholder="blur"
-                blurDataURL="/images/PXL_20250823_075608610_placeholder.jpg"
-              />
-            </Col>
-            <Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-              <p className="text--p-lg text--measure">
-                {t.rich("description_long", {
-                  strong: (children) => <strong>{children}</strong>,
-                })}
-              </p>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
+			<Section>
+				<Container>
+					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
+						<Col xs={12} md={5}>
+							<Image
+								src={pageImage}
+								alt="Anukalana Yoga"
+								width={600}
+								height={400}
+								className="responsive-image"
+								placeholder="blur"
+							/>
+						</Col>
+						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
+							<p className="text--p-lg text--measure">
+								{t.rich("description_long", {
+									strong: (children) => <strong>{children}</strong>,
+								})}
+							</p>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 
-      <Section backgroundColor="var(--primary-active)">
-        <Container>
-          <Row gap="1rem 0">
-            <Col xs={12} lg={6}>
-              <SectionTitle text={t("expect_title")} />
-              <ul className="styled-list">
-                <li>{t("expect1")}</li>
-                <li>{t("expect2")}</li>
-                <li>{t("expect3")}</li>
-                <li>{t("expect4")}</li>
-              </ul>
-            </Col>
-            <Col xs={12} lg={6}>
-              <SectionTitle text={t("info_title")} />
-              <ul className="styled-list">
-                <li>{t("info1")}</li>
-                <li>{t("info2")}</li>
-                <li>{t("info3")}</li>
-              </ul>
-            </Col>
-          </Row>
-        </Container>
-      </Section>
+			<Section backgroundColor="var(--primary-active)">
+				<Container>
+					<Row gap="1rem 0">
+						<Col xs={12} lg={6}>
+							<SectionTitle text={t("expect_title")} />
+							<ul className="styled-list">
+								<li>{t("expect1")}</li>
+								<li>{t("expect2")}</li>
+								<li>{t("expect3")}</li>
+								<li>{t("expect4")}</li>
+							</ul>
+						</Col>
+						<Col xs={12} lg={6}>
+							<SectionTitle text={t("info_title")} />
+							<ul className="styled-list">
+								<li>{t("info1")}</li>
+								<li>{t("info2")}</li>
+								<li>{t("info3")}</li>
+							</ul>
+						</Col>
+					</Row>
+				</Container>
+			</Section>
 
-      <Styles exclude={RouteEnum.ANUKALANA} title={tClasses("other_title")} />
-      <BookCta />
-      <Contact />
-      <Footer />
-    </main>
-  );
+			<Styles exclude={RouteEnum.ANUKALANA} title={tClasses("other_title")} />
+			<BookCta />
+			<Contact />
+			<Footer />
+		</main>
+	);
 };
 
 export default AnukalanaPage;
