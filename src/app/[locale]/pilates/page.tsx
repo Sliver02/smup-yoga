@@ -15,8 +15,8 @@ import Image from "next/image";
 import pageImage from "@public/images/PXL_20250601_164142948.MP.jpg";
 import "@/designSystem/utils.scss";
 
-const YinYogaPage = () => {
-	const t = useTranslations("classes.yin");
+const PilatesPage = () => {
+	const t = useTranslations("classes.pilates");
 	const tClasses = useTranslations("classes");
 	const tCommon = useTranslations("breadcrumbs");
 
@@ -37,7 +37,7 @@ const YinYogaPage = () => {
 						<Col xs={12} md={5}>
 							<Image
 								src={pageImage}
-								alt="Yin Yoga"
+								alt="Pilates"
 								width={600}
 								height={400}
 								className="responsive-image"
@@ -87,4 +87,4 @@ const YinYogaPage = () => {
 	);
 };
 
-export default YinYogaPage;
+export default PilatesPage;

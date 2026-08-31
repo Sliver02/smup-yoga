@@ -9,25 +9,25 @@ export async function generateMetadata({
 	const isItalian = locale === "it";
 
 	return {
-		title: "Yin Yoga",
+		title: "Pilates",
 		description: isItalian
-			? "Yin Yoga a Cortina, Belluno e Cadore. Sequenze lente e passive con supporti. Utile a stimolare il tessuto connettivo, aumentare mobilità e favorire il rilassamento profondo."
-			: "Yin Yoga in Cortina, Belluno and Cadore. Slow passive postures aided by props. Stimulates connective tissue, increases mobility and encourages deep relaxation.",
+			? "Pilates a Cortina, Belluno e Cadore. Sequenze lente e passive con supporti. Utile a stimolare il tessuto connettivo, aumentare mobilità e favorire il rilassamento profondo."
+			: "Pilates in Cortina, Belluno and Cadore. Slow passive postures aided by props. Stimulates connective tissue, increases mobility and encourages deep relaxation.",
 		openGraph: {
 			title: isItalian
-				? "Yin Yoga — Immobilità profonda e rigenerazione"
-				: "Yin Yoga — Deep stillness and restoration",
+				? "Pilates — Immobilità profonda e rigenerazione"
+				: "Pilates — Deep stillness and restoration",
 			description: isItalian
-				? "Lezioni di Yin Yoga nelle Dolomiti con Sarah Pompanin. Pratica rigenerante per corpo e mente."
-				: "Yin Yoga classes in the Dolomites with Sarah Pompanin. Restorative practice for body and mind.",
-			url: `https://smupyoga.com/${locale}/yin-yoga/`,
+				? "Lezioni di Pilates nelle Dolomiti con Sarah Pompanin. Pratica rigenerante per corpo e mente."
+				: "Pilates classes in the Dolomites with Sarah Pompanin. Restorative practice for body and mind.",
+			url: `https://smupyoga.com/${locale}/pilates/`,
 			siteName: "SMUP Yoga",
 			images: [
 				{
 					url: "https://smupyoga.com/images/PXL_20250601_164142948.MP.jpg",
 					width: 1200,
 					height: 630,
-					alt: "Yin Yoga",
+					alt: "Pilates",
 				},
 			],
 			locale: isItalian ? "it_IT" : "en_US",
@@ -35,21 +35,21 @@ export async function generateMetadata({
 		},
 		twitter: {
 			card: "summary_large_image",
-			title: "Yin Yoga",
+			title: "Pilates",
 			description: isItalian
 				? "Immobilità profonda nelle Dolomiti"
 				: "Deep stillness in the Dolomites",
 		},
 		alternates: {
-			canonical: `https://smupyoga.com/${locale}/yin-yoga/`,
+			canonical: `https://smupyoga.com/${locale}/pilates/`,
 			languages: {
-				en: "https://smupyoga.com/en/yin-yoga/",
-				it: "https://smupyoga.com/it/yin-yoga/",
+				en: "https://smupyoga.com/en/pilates/",
+				it: "https://smupyoga.com/it/pilates/",
 			},
 		},
 	};
 }
 
-export default function YinYogaLayout({ children }: { children: React.ReactNode }) {
+export default function PilatesLayout({ children }: { children: React.ReactNode }) {
 	return <>{children}</>;
 }

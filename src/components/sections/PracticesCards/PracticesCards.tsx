@@ -18,16 +18,20 @@ import styles from "./PracticesCards.module.scss";
 interface Practice {
 	key: string;
 	href: RouteEnum;
-	image: StaticImageData;
+	image: string;
 }
 
 const PRACTICES: Practice[] = [
-	{ key: "anukalana", href: RouteEnum.ANUKALANA, image: anukalanaImage },
-	{ key: "yin", href: RouteEnum.YIN, image: yinImage },
-	{ key: "kids", href: RouteEnum.KID, image: kidsImage },
-	{ key: "outdoor", href: RouteEnum.OUTDOOR, image: outdoorImage },
-	{ key: "private", href: RouteEnum.PRIVATE_LESSONS, image: privateImage },
-	{ key: "pilates", href: RouteEnum.PILATES, image: privateImage },
+	{ key: "anukalana", href: RouteEnum.ANUKALANA, image: "/images/PXL_20250823_075608610.jpg" },
+	{ key: "yin", href: RouteEnum.YIN, image: "/images/PXL_20250601_164142948.MP.jpg" },
+	{ key: "kids", href: RouteEnum.KID, image: "/images/photo_2_2025-09-03_09-38-20.jpg" },
+	{ key: "outdoor", href: RouteEnum.OUTDOOR, image: "/images/PXL_20250726_110233771.MP.jpg" },
+	{
+		key: "private",
+		href: RouteEnum.PRIVATE_LESSONS,
+		image: "/images/PXL_20250101_151738219.jpg",
+	},
+	{ key: "pilates", href: RouteEnum.PILATES, image: "/images/PXL_20250101_151738219.jpg" },
 ];
 
 export interface PracticesCardsProps {
