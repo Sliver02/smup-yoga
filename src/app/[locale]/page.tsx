@@ -33,7 +33,7 @@ const Home = () => {
 			/>
 			<PracticesCards />
 			<BookCta />
-			<InstagramFeed />
+			{/* <InstagramFeed /> */}
 			<Contact />
 			<Footer />
 		</main>
