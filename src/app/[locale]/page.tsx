@@ -1,5 +1,4 @@
 "use client";
-import { InfiniteText } from "@/components/molecules/InfiniteText";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
@@ -12,25 +11,12 @@ import { useTranslations } from "next-intl";
 
 const Home = () => {
 	const t = useTranslations("hero");
-	const tMarquee = useTranslations("marquee");
-
-	const marqueeItems = [
-		tMarquee("weekly-classes"),
-		tMarquee("join-now"),
-		tMarquee("relax"),
-		tMarquee("breathe"),
-		tMarquee("live"),
-	];
 
 	return (
 		<main>
 			<Header />
 			<Hero title={t("title")} subtitle={t("subtitle")} />
 			<AboutMe />
-			<InfiniteText
-				backgroundColor="var(--primary-active)"
-				items={[...marqueeItems, ...marqueeItems]}
-			/>
 			<PracticesCards />
 			<BookCta />
 			{/* <InstagramFeed /> */}

@@ -2,10 +2,7 @@
 @use "../../../designSystem/mediaQueries";
 
 .section {
-	// Fluid rhythm instead of a forced 80vh: short sections no longer float in a
-	// void, tall ones still breathe. Padding scales with the viewport.
-	padding: clamp(2.5rem, 5vw, 4.5rem) 0;
-	// Anchors (#classes, #contact) land below the fixed header instead of under it.
+	padding: 6rem 0;
 	scroll-margin-top: 6rem;
 
 	margin: 0 auto;
