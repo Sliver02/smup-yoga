@@ -2,9 +2,9 @@ import ContactTemplate from "@/common/emailTemplates/ContactTemplate";
 import { AlertResponse } from "@/common/globalInterfaces";
 import { Alert } from "@/components/atoms/Alert";
 import { Button } from "@/components/atoms/Button";
+import { Card } from "@/components/atoms/Card";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Input } from "@/components/atoms/Input";
-import { SectionTitle } from "@/components/atoms/SectionTitle";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import classNames from "classnames";
@@ -92,71 +92,69 @@ export const Contact = () => {
 		<div id="contact" className={classNames(styles.contact)}>
 			<form onSubmit={handleSubmit(submitForm)}>
 				<Container>
-					<Row>
-						<Col>
-							<SectionTitle text={t("title")} />
-							<p className={classNames("text--p-lg")}>{t("description")}</p>
-						</Col>
-					</Row>
-
-					<Row>
-						<Col xs={12}>
-							<p className={classNames("text--strong", "text--p-lg")}>{t("email")}</p>
-						</Col>
-						<Col xs={12} lg={6}>
-							<Input
-								fullWidth
-								type="email"
-								label={t("email")}
-								error={errors.email?.message}
-								{...register("email")}
-							/>
-						</Col>
-						<Col xs={12} lg={6}>
-							<Input
-								fullWidth
-								label={t("name")}
-								error={errors.name?.message}
-								{...register("name")}
-							/>
-						</Col>
-						<Col xs={12}>
-							<Input
-								label={t("message")}
-								rows={8}
-								multiline
-								fullWidth
-								{...register("message")}
-							/>
-						</Col>
-						<Col xs={12}>
-							<Button
-								fullWidth
-								size="large"
-								type="submit"
-								variant="contained"
-								disabled={loading}
-								icon={<Send size={18} />}
-								iconPosition="start"
-							>
-								{loading ? "Loading..." : t("send")}
-							</Button>
-						</Col>
-					</Row>
-
-					{alert && (
+					<Card
+						title={t("title")}
+						subtitle={t("description")}
+						surface="shadow"
+						size="large"
+						className={styles.formCard}
+					>
 						<Row>
-							<Col>
-								<Alert
-									variant="outlined"
-									severity={alert.severity}
-									onClose={() => setAlert(null)}
+							<Col xs={12} lg={6}>
+								<Input
+									fullWidth
+									type="email"
+									label={t("email")}
+									error={errors.email?.message}
+									{...register("email")}
+								/>
+							</Col>
+							<Col xs={12} lg={6}>
+								<Input
+									fullWidth
+									label={t("name")}
+									error={errors.name?.message}
+									{...register("name")}
+								/>
+							</Col>
+							<Col xs={12}>
+								<Input
+									label={t("message")}
+									rows={8}
+									multiline
+									fullWidth
+									{...register("message")}
+								/>
+							</Col>
+							<Col xs={12}>
+								<Button
+									fullWidth
+									size="large"
+									type="submit"
+									variant="contained"
+									disabled={loading}
+									icon={<Send size={18} />}
+									iconPosition="start"
 								>
-									{alert.text}
-								</Alert>
+									{loading ? "Loading..." : t("send")}
+								</Button>
 							</Col>
 						</Row>
-					)}
+
+						{alert && (
+							<Row>
+								<Col>
+									<Alert
+										variant="outlined"
+										severity={alert.severity}
+										onClose={() => setAlert(null)}
+									>
+										{alert.text}
+									</Alert>
+								</Col>
+							</Row>
+						)}
+					</Card>
 				</Container>
 			</form>
 		</div>

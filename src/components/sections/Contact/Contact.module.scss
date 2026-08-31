@@ -1,4 +1,19 @@
 .contact {
+	// Brand-specific overrides on top of the shared Card atom (surface="shadow") —
+	// bigger radius and a warm background, matching the rest of the site's rounder,
+	// warmer surfaces. No hover override needed: the atom only applies hover/lift
+	// when it's rendered as a link, and this form card never is.
+	.formCard {
+		margin-top: 1.5rem;
+		// Set via the atom's custom properties, not a `padding` shorthand — the
+		// Card's divider bleeds using --card-padding-x, and a plain override here
+		// would silently break that math.
+		--card-padding-x: 2rem;
+		--card-padding-y: 2rem;
+		border-radius: 1.25rem;
+		background-color: var(--surface-card);
+	}
+
 	.socialContainer {
 		display: flex;
 		flex-wrap: wrap;

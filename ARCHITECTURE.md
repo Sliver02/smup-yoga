@@ -80,6 +80,12 @@ utility class already covers it. For colors, always reference semantic tokens
 
 **Compose class names with `classnames`** — never template literals.
 
+**Reuse the `Card` atom instead of hand-rolling a card.** Before adding a
+raised-surface `<div>` with its own padding/radius/shadow classes, check
+`atoms/Card`. Wrap it and pass a `className` for brand-specific overrides
+(radius, shadow, background token) — don't recreate the scaffolding
+(flex layout, base padding, border) that the atom already provides.
+
 ## Atomic design
 
 ```
