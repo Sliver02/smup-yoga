@@ -8,7 +8,7 @@ import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
-import { Styles } from "@/components/sections/Styles";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import pageImage from "@public/images/PXL_20250112_213048967.MP.jpg";
@@ -71,7 +71,7 @@ const YogaBellunoPage = () => {
 				</Container>
 			</Section>
 
-			<Styles />
+			<PracticesCards />
 			<BookCta image={pageImage} />
 			<Contact />
 			<Footer />

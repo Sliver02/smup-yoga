@@ -9,7 +9,7 @@ import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
-import { Styles } from "@/components/sections/Styles";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import pageImage from "@public/images/PXL_20250726_110233771.MP.jpg";
@@ -96,7 +96,7 @@ const OutdoorYogaPage = () => {
 				</Container>
 			</Section>
 
-			<Styles exclude={RouteEnum.OUTDOOR} title={tClasses("other_title")} />
+			<PracticesCards exclude={RouteEnum.OUTDOOR} title={tClasses("other_title")} />
 			<BookCta image={pageImage} />
 			<Contact />
 			<Footer />

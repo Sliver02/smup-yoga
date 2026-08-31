@@ -13,7 +13,7 @@ import yinImage from "@public/images/PXL_20250601_164142948.MP.jpg";
 import kidsImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
 import outdoorImage from "@public/images/PXL_20250726_110233771.MP.jpg";
 import privateImage from "@public/images/PXL_20250101_151738219.jpg";
-import styles from "./Styles.module.scss";
+import styles from "./PracticesCards.module.scss";
 
 interface Practice {
 	key: string;
@@ -27,9 +27,10 @@ const PRACTICES: Practice[] = [
 	{ key: "kids", href: RouteEnum.KID, image: kidsImage },
 	{ key: "outdoor", href: RouteEnum.OUTDOOR, image: outdoorImage },
 	{ key: "private", href: RouteEnum.PRIVATE_LESSONS, image: privateImage },
+	{ key: "pilates", href: RouteEnum.PILATES, image: privateImage },
 ];
 
-export interface StylesProps {
+export interface PracticesCardsProps {
 	/** Route of the page currently open — its own card is dropped from the grid. */
 	exclude?: RouteEnum;
 	/** Overrides the default "What I teach" heading (used for cross-links). */
@@ -37,7 +38,7 @@ export interface StylesProps {
 	backgroundColor?: string;
 }
 
-export const Styles = ({ exclude, title, backgroundColor }: StylesProps) => {
+export const PracticesCards = ({ exclude, title, backgroundColor }: PracticesCardsProps) => {
 	const t = useTranslations("classes");
 	const practices = PRACTICES.filter((practice) => practice.href !== exclude);
 

@@ -9,7 +9,7 @@ import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
-import { Styles } from "@/components/sections/Styles";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import pageImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
@@ -79,7 +79,7 @@ const KidsYogaPage = () => {
 				</Container>
 			</Section>
 
-			<Styles exclude={RouteEnum.KID} title={tClasses("other_title")} />
+			<PracticesCards exclude={RouteEnum.KID} title={tClasses("other_title")} />
 			<BookCta image={pageImage} />
 			<Contact />
 			<Footer />

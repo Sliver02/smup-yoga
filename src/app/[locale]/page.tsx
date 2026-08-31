@@ -7,7 +7,7 @@ import { AboutMe } from "@/components/sections/AboutMe";
 import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
 import { InstagramFeed } from "@/components/sections/InstagramFeed";
-import { Styles } from "@/components/sections/Styles";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 
 const Home = () => {
@@ -31,7 +31,7 @@ const Home = () => {
 				backgroundColor="var(--primary-active)"
 				items={[...marqueeItems, ...marqueeItems]}
 			/>
-			<Styles />
+			<PracticesCards />
 			<BookCta />
 			<InstagramFeed />
 			<Contact />

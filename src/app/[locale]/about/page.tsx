@@ -9,7 +9,7 @@ import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
 import { Contact } from "@/components/sections/Contact";
-import { Styles } from "@/components/sections/Styles";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import pageImage from "@public/images/PXL_20250112_213040356.jpg";
 import "@/designSystem/utils.scss";
@@ -102,7 +102,7 @@ const AboutPage = () => {
 				</Container>
 			</Section>
 
-			<Styles />
+			<PracticesCards />
 			<BookCta />
 			<Contact />
 			<Footer />
