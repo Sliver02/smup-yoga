@@ -106,18 +106,18 @@
 		},
 		"pilates": {
 			"title": "Pilates",
-			"hero_subtitle": "Strengthening and toning exercises",
-			"description_long": "Pilates is a low-impact exercise that focuses on core strength, flexibility, and overall body conditioning. It is suitable for all fitness levels and can be adapted to meet individual needs.",
-			"description": "Low-impact exercises that focus on core strength, flexibility, and overall body conditioning — building stability and control.",
+			"hero_subtitle": "Core strength, controlled breath",
+			"description_long": "Pilates works the body through slow, precise movements: every exercise is controlled from the centre outward, building strength in the deep core and postural muscles while improving flexibility and body awareness. <strong>Although Pilates is a discipline of its own</strong>, the way it is taught here carries the same spirit as the yoga classes — each movement is linked to an inhale or exhale rather than counted out mechanically, sequences are offered without competition or a fixed shape to reach, and a class often closes with a few still minutes borrowed from Yin practice, so the muscles can settle into what they have just built.",
+			"description": "Controlled, breath-led exercises that build core strength, posture and flexibility — taught with the same mindful, non-competitive approach as the yoga classes.",
 			"expect_title": "What a class looks like",
-			"expect1": "Asanas discovered through stories, songs and games, following the Bimbiyoga method.",
-			"expect2": "Breathing exercises turned into play, to name and handle big emotions.",
-			"expect3": "Moments of listening and short meditations, sized for short attention spans.",
-			"expect4": "Group games that build confidence, coordination and respect for others.",
+			"expect1": "Slow, controlled exercises that engage the deep core and postural muscles.",
+			"expect2": "Every movement synced to the breath, the same breath-first principle used across the yoga classes.",
+			"expect3": "Sequences built for precision over repetition — quality of movement matters more than how many reps.",
+			"expect4": "A closing stretch inspired by Yin, to let the muscles release after the work.",
 			"info_title": "Good to know",
-			"info1": "Designed for children roughly 4 to 11 years old, in small groups.",
-			"info2": "45 to 60 minutes, in Vodo di Cadore and on request for schools and associations.",
-			"info3": "Only a mat and comfortable clothes are needed — no experience required."
+			"info1": "Open to every level — sequences are offered with variations, never as a competition.",
+			"info2": "Around 50 to 60 minutes, in studio in Cortina, Belluno and the Cadore area.",
+			"info3": "Bring a mat and comfortable clothes; no equipment or previous experience required."
 		},
 		"outdoor": {
 			"title": "Outdoor Yoga",

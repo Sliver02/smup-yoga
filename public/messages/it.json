@@ -106,18 +106,18 @@
 		},
 		"pilates": {
 			"title": "Pilates",
-			"hero_subtitle": "Pratica di rafforzamento e allungamento",
-			"description": "Lezioni di Pilates per migliorare la postura, la forza e la flessibilità.",
-			"description_long": "Il Pilates è una pratica che combina movimenti controllati con respirazione consapevole. È ideale per migliorare la postura, rafforzare i muscoli e aumentare la flessibilità.",
+			"hero_subtitle": "Forza del centro, respiro controllato",
+			"description": "Esercizi controllati e guidati dal respiro che rafforzano il core, la postura e la flessibilità — insegnati con lo stesso approccio consapevole e non competitivo delle lezioni di yoga.",
+			"description_long": "Il Pilates lavora sul corpo attraverso movimenti lenti e precisi: ogni esercizio parte dal centro e si irradia verso l'esterno, rafforzando il core profondo e i muscoli posturali, e migliorando flessibilità e consapevolezza corporea. <strong>Pur essendo una disciplina a sé</strong>, il modo in cui viene insegnata qui porta lo stesso spirito delle lezioni di yoga — ogni movimento è legato a un'inspirazione o un'espirazione invece che scandito meccanicamente, le sequenze sono proposte senza competizione né una forma fissa da raggiungere, e la lezione si chiude spesso con qualche minuto di immobilità mutuato dallo Yin, perché i muscoli si assestino dopo il lavoro svolto.",
 			"expect_title": "Com'è fatta una lezione",
-			"expect1": "Le asana scoperte attraverso storie, canzoni e giochi, seguendo il metodo Bimbiyoga.",
-			"expect2": "Esercizi di respirazione trasformati in gioco, per dare un nome alle emozioni e gestirle.",
-			"expect3": "Momenti di ascolto e piccole meditazioni, tarate su tempi di attenzione brevi.",
-			"expect4": "Giochi di gruppo che costruiscono fiducia, coordinazione e rispetto degli altri.",
+			"expect1": "Esercizi lenti e controllati che coinvolgono il core profondo e i muscoli posturali.",
+			"expect2": "Ogni movimento sincronizzato al respiro, lo stesso principio del respiro prima di tutto usato nelle lezioni di yoga.",
+			"expect3": "Sequenze costruite sulla precisione più che sulla ripetizione: conta la qualità del movimento, non il numero di volte.",
+			"expect4": "Uno stretching finale ispirato allo Yin, per lasciare che i muscoli si rilassino dopo il lavoro.",
 			"info_title": "Buono a sapersi",
-			"info1": "Pensata per bambini indicativamente dai 4 agli 11 anni, in piccoli gruppi.",
-			"info2": "45-60 minuti, a Vodo di Cadore e su richiesta per scuole e associazioni.",
-			"info3": "Servono solo un tappetino e abiti comodi — nessuna esperienza richiesta."
+			"info1": "Aperta a tutti i livelli — le sequenze sono proposte con varianti, mai come una gara.",
+			"info2": "Circa 50-60 minuti, in studio a Cortina, Belluno e nel Cadore.",
+			"info3": "Servono solo un tappetino e abiti comodi — nessuna attrezzatura o esperienza pregressa richiesta."
 		},
 		"outdoor": {
 			"title": "Yoga Outdoor",
