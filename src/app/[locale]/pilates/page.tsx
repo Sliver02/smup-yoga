@@ -79,7 +79,7 @@ const PilatesPage = () => {
 				</Container>
 			</Section>
 
-			<PracticesCards exclude={RouteEnum.YIN} title={tClasses("other_title")} />
+			<PracticesCards exclude={RouteEnum.PILATES} title={tClasses("other_title")} />
 			<BookCta />
 			<Contact />
 			<Footer />
