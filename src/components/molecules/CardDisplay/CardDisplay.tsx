@@ -2,13 +2,13 @@ import { BaseProps } from "@/common/globalInterfaces";
 import { Link } from "@/i18n/routing";
 import classNames from "classnames";
 import { ArrowUpRight } from "lucide-react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { ReactNode } from "react";
 import styles from "./CardDisplay.module.scss";
 
 export interface CardDisplayProps extends BaseProps {
 	/** Import the image so Next generates its blur placeholder. */
-	image: string;
+	image: StaticImageData;
 	title?: string;
 	description?: ReactNode;
 	/** Turns the whole card into a link to a detail page. */
