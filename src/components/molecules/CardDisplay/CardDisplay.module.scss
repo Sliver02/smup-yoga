@@ -14,18 +14,30 @@
 		position: relative;
 		overflow: hidden;
 
-		// Arch — the brand shape. Percentage radii (horizontal / vertical) keep the
-		// dome proportional at any card width; the old `var(--width)` px value
-		// flattened into a plain rounded corner once the column got wide.
-		border-radius: 50% 50% 1rem 1rem / 32% 32% 1rem 1rem;
+		// Arch on top only — the brand shape. Percentage radii keep the dome
+		// proportional at any card width. Square bottom so the photo fuses flush
+		// into the note below it, with no border of its own.
+		border-radius: 50% 50% 0 0 / 32% 32% 0 0;
 		background-color: var(--primary-active);
-
-		transition: transform 0.35s ease;
 
 		.image {
 			object-fit: cover;
-			transition: transform 0.5s ease;
 		}
+	}
+
+	// The card's only surface — carries the elevation and the click affordance so
+	// the arch itself can stay bare and keep its shape.
+	.note {
+		position: relative;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
+
+		background-color: var(--surface-card);
+		border-radius: 0 0 1rem 1rem;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+		transition: box-shadow 0.35s ease;
 	}
 
 	.body {
@@ -33,7 +45,7 @@
 		flex-direction: column;
 		flex: 1;
 		gap: 0.5rem;
-		padding: 1.25rem 0.25rem 0;
+		padding: 1.1rem 2.5rem 1.25rem 1.1rem;
 	}
 
 	.title {
@@ -43,19 +55,30 @@
 	.description {
 		// Cap the measure so three columns of copy stay scannable.
 		max-width: 46ch;
-		color: var(--neutral-text);
+		color: var(--neutral-text-light);
 	}
 
-	.cta {
-		display: inline-flex;
+	.badge {
+		position: absolute;
+		top: 0;
+		right: 1.1rem;
+		transform: translateY(-50%);
+
+		display: flex;
 		align-items: center;
-		gap: 0.375rem;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		border-radius: 999px;
 
-		margin-top: auto;
-		padding-top: 0.75rem;
-
+		background-color: var(--surface-card);
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
 		color: var(--accent-hover);
-		font-weight: 600;
+
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease,
+			transform 0.35s ease;
 
 		svg {
 			transition: transform 0.25s ease;
@@ -64,24 +87,29 @@
 }
 
 .linked {
+	transition: transform 0.35s ease;
+
 	&:hover,
 	&:focus-visible {
 		color: inherit;
+		transform: translateY(-6px);
 
-		.media {
-			transform: translateY(-6px);
+		.note {
+			box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
 		}
-
-		// .image {
-		// 	transform: scale(1.05);
-		// }
 
 		.title {
 			color: var(--accent-hover);
 		}
 
-		.cta svg {
-			transform: translate(3px, -3px);
+		.badge {
+			background-color: var(--accent-main);
+			color: var(--neutral-background);
+			transform: translateY(-50%) scale(1.08);
+		}
+
+		.badge svg {
+			transform: translate(2px, -2px);
 		}
 	}
 
@@ -93,10 +121,11 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-	.cardDisplay .media,
-	.cardDisplay .image,
-	.cardDisplay .title,
-	.cardDisplay .cta svg {
+	.linked,
+	.note,
+	.title,
+	.badge,
+	.badge svg {
 		transition: none;
 	}
 }

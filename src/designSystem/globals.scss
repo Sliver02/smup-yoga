@@ -102,6 +102,11 @@
 	--tertiary-dark: var(--palette-amber-700);
 
 	--surface-secondary: var(--palette-peach-300); // was undefined before rebase
+
+	// Warm off-white for raised cards — white blended with a touch of peach so it
+	// still reads as "lighter than the page" without the cool blue cast of
+	// --neutral-background (that token is reserved for text-on-dark, not surfaces).
+	--surface-card: color-mix(in srgb, var(--palette-neutral-0) 90%, var(--palette-peach-300) 10%);
 }
 
 // ─── Dark mode ────────────────────────────────────────────────────────────────

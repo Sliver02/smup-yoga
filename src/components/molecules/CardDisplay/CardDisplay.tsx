@@ -13,7 +13,7 @@ export interface CardDisplayProps extends BaseProps {
 	description?: ReactNode;
 	/** Turns the whole card into a link to a detail page. */
 	href?: string;
-	/** Label of the affordance shown on linked cards. */
+	/** Shows the affordance badge on linked cards; text itself isn't displayed. */
 	cta?: string;
 }
 
@@ -37,15 +37,16 @@ export const CardDisplay = ({
 					fill
 				/>
 			</div>
-			<div className={classNames(styles.body)}>
-				{title && <h4 className={classNames(styles.title)}>{title}</h4>}
-				{description && <p className={classNames(styles.description)}>{description}</p>}
+			<div className={classNames(styles.note)}>
 				{href && cta && (
-					<span className={classNames(styles.cta)}>
-						{cta}
+					<span className={classNames(styles.badge)} aria-hidden>
 						<ArrowUpRight size={18} />
 					</span>
 				)}
+				<div className={classNames(styles.body)}>
+					{title && <h4 className={classNames(styles.title)}>{title}</h4>}
+					{description && <p className={classNames(styles.description)}>{description}</p>}
+				</div>
 			</div>
 		</>
 	);
