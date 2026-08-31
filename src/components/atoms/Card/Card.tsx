@@ -56,7 +56,7 @@ export const Card = ({
 	);
 
 	if (!href) {
-		return <article className={classes}>{content}</article>;
+		return <div className={classes}>{content}</div>;
 	}
 
 	return (
