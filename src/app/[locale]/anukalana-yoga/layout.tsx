@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Anukalana Yoga in Cortina, Belluno and Cadore. Integrated practice combining asana, pranayama, meditation and fascia work. Fluid breath-led sequences.",
 		openGraph: {
 			title: isItalian
-				? "Anukalana Yoga — Integrazione attraverso il movimento fluido"
-				: "Anukalana Yoga — Integration through fluid movement",
+				? "Anukalana Yoga | Integrazione attraverso il movimento fluido"
+				: "Anukalana Yoga | Integration through fluid movement",
 			description: isItalian
 				? "Lezioni di Anukalana Yoga nelle Dolomiti con Sarah Pompanin. Adatto a tutti i livelli."
 				: "Anukalana Yoga classes in the Dolomites with Sarah Pompanin. Suitable for all levels.",
@@ -24,7 +24,7 @@ export async function generateMetadata({
 			siteName: "SMUP Yoga",
 			images: [
 				{
-					url: "https://smupyoga.com/images/PXL_20250823_075608610.jpg",
+					url: "https://smupyoga.com/images/PXL_20260701_045401209.jpg",
 					width: 1200,
 					height: 630,
 					alt: "Anukalana Yoga",

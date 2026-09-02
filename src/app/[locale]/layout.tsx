@@ -22,13 +22,13 @@ const rightGrotesk = localFont({
 
 export const metadata: Metadata = {
 	title: {
-		default: "SMUP — Sarah Pompanin | Yoga Cortina, Belluno, Cadore",
+		default: "SMUP | Sarah Pompanin | Yoga Cortina, Belluno, Cadore",
 		template: "%s | SMUP Yoga",
 	},
 	description:
 		"Yoga with Sarah Pompanin (SMUP) in Cortina d'Ampezzo, Belluno, and Cadore. Anukalana, Yin, Kids Yoga. Group classes, private lessons, outdoor sessions in the Dolomites. Online and in-person.",
 	openGraph: {
-		title: "SMUP — Yoga Cortina, Belluno, Cadore Dolomites",
+		title: "SMUP | Yoga Cortina, Belluno, Cadore Dolomites",
 		description:
 			"Yoga classes with Sarah Pompanin in Cortina, Belluno, Cadore. Anukalana, Yin, Kids Yoga. Group & private lessons in the Dolomites.",
 		url: "https://smupyoga.com",
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "SMUP — Yoga in the Dolomites",
+		title: "SMUP | Yoga in the Dolomites",
 		description: "Outdoor and studio yoga by Sarah Pompanin (SMUP).",
 	},
 	alternates: {
@@ -71,7 +71,7 @@ export default async function RootLayout({
 	const localBusinessJsonLd = {
 		"@context": "https://schema.org",
 		"@type": ["YogaStudio", "SportsActivityLocation"],
-		name: "SMUP — Sarah Pompanin Yoga",
+		name: "SMUP | Sarah Pompanin Yoga",
 		alternateName: "SMUP Yoga",
 		url: `https://smupyoga.com/${locale}/`,
 		email: "smup.yoga@gmail.com",

@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Kids Yoga in Cortina, Belluno and Cadore. Playful sessions with stories, songs and games to explore asanas, breathing and mindful awareness.",
 		openGraph: {
 			title: isItalian
-				? "Yoga Bimbi — Pratica giocosa per giovani menti"
-				: "Kids Yoga — Playful practice for young minds",
+				? "Yoga Bimbi | Pratica giocosa per giovani menti"
+				: "Kids Yoga | Playful practice for young minds",
 			description: isItalian
 				? "Lezioni di yoga per bambini nelle Dolomiti con Sarah Pompanin. Metodo Bimbiyoga."
 				: "Kids yoga classes in the Dolomites with Sarah Pompanin. Bimbiyoga method.",

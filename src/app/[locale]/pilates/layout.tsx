@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Pilates in Cortina, Belluno and Cadore. Slow passive postures aided by props. Stimulates connective tissue, increases mobility and encourages deep relaxation.",
 		openGraph: {
 			title: isItalian
-				? "Pilates — Immobilità profonda e rigenerazione"
-				: "Pilates — Deep stillness and restoration",
+				? "Pilates | Immobilità profonda e rigenerazione"
+				: "Pilates | Deep stillness and restoration",
 			description: isItalian
 				? "Lezioni di Pilates nelle Dolomiti con Sarah Pompanin. Pratica rigenerante per corpo e mente."
 				: "Pilates classes in the Dolomites with Sarah Pompanin. Restorative practice for body and mind.",
@@ -24,7 +24,7 @@ export async function generateMetadata({
 			siteName: "SMUP Yoga",
 			images: [
 				{
-					url: "https://smupyoga.com/images/PXL_20250823_080536915.jpg",
+					url: "https://smupyoga.com/images/PXL_20250823_075608610.jpg",
 					width: 1200,
 					height: 630,
 					alt: "Pilates",
