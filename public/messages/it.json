@@ -32,9 +32,9 @@
 	},
 	"cta": {
 		"title": "Pronto a salire sul tappetino?",
-		"description": "Raccontami cosa stai cercando — una lezione di gruppo, una sessione privata o una pratica all'aperto nelle Dolomiti — e ti aiuto a trovare la soluzione giusta.",
+		"description": "Raccontami cosa stai cercando: una lezione di gruppo, una sessione privata o una pratica all'aperto nelle Dolomiti, e ti aiuto a trovare la soluzione giusta.",
 		"primary": "Scrivimi un messaggio",
-		"secondary": "Manda una mail"
+		"secondary": "Seguimi"
 	},
 	"about": {
 		"title": "Chi sono",
@@ -45,40 +45,42 @@
 		"extended_description2": "Sono certificata in <strong>Anukalana Yoga</strong> (scuola Samadhi Milano) e specializzata anche in <strong>Yin Yoga, Yoga per Bambini e Pilates</strong>. La mia missione è aiutare le persone a ritrovare equilibrio, benessere e connessione con sé stesse attraverso la pratica dello yoga.",
 		"extended_description3": "Durante l'estate organizzo <strong>sessioni di yoga all'aperto</strong> in location suggestive delle Dolomiti, tra cui il BAR ALPINO di Calalzo di Cadore, Malga Caseera Razzo a Vigo, e dopo escursioni presso rifugi in quota. Sono disponibile anche per eventi privati e ritiri yoga.",
 		"credentials_title": "Formazione e certificazioni",
-		"credential1": "Teacher training di Anukalana Yoga — scuola Samadhi, Milano",
+		"credential1": "Teacher training di Anukalana Yoga, scuola Samadhi, Milano",
 		"credential2": "Specializzazione in Yin Yoga",
-		"credential3": "Bimbiyoga — metodo di yoga per bambini",
+		"credential3": "Bimbiyoga, metodo di yoga per bambini",
 		"credential4": "Istruttrice di Pilates",
 		"approach_title": "Come insegno",
 		"approach1": "Niente competizione e nessuna forma da raggiungere: ogni sequenza viene proposta con delle varianti, così la pratica si adatta al corpo che si presenta quel giorno.",
-		"approach2": "Prima il respiro. Il movimento lo segue, mai il contrario — è questo che trasforma un'ora di esercizio in un'ora di silenzio.",
+		"approach2": "Prima il respiro. Il movimento lo segue, mai il contrario: è questo che trasforma un'ora di esercizio in un'ora di silenzio.",
 		"approach3": "Gruppi piccoli, così riesco davvero a guardarti, correggere un allineamento e ricordare su cosa stai lavorando."
 	},
 	"classes": {
 		"title": "Cosa insegno",
 		"other_title": "Altre pratiche",
 		"discover": "Scopri",
-		"intro": "Cinque modi di entrare nella pratica — dall'Anukalana fluido alle lunghe tenute dello Yin — in studio tra Belluno e il Cadore, all'aperto nelle Dolomiti o uno a uno.",
+		"intro": "Una pratica per ogni corpo, non uno stampo unico da rispettare: dinamica o immobile, da soli o in gruppo, in studio o sotto il cielo aperto, senza una forma fissa da raggiungere.",
 		"anukalana": {
 			"title": "Anukalana Yoga",
 			"hero_subtitle": "Integrazione attraverso il movimento fluido",
-			"description": "Pratica integrata che unisce asana, pranayama, meditazione e lavoro miofasciale. Sequenze morbide guidate dal respiro, per fluidità e benessere.",
+			"description": "Asana, pranayama, meditazione e lavoro miofasciale in un'unica pratica morbida, guidata dal respiro: movimento fluido, adatto a tutti, mai una gara.",
 			"description_long": "<strong>Anukalana significa integrazione</strong>, infatti è uno stile che unisce tante nozioni: ovviamente Asana, Pranayama, Meditazioni, ma anche miofascia, meridiani e centri energetici. Basa i movimenti sulla fluidità, la coordinazione col respiro e la dolcezza. Ciò che più mi ha affascinato di questo stile è che è adatto a tutti. Non è competitivo, ma veramente rivolto al benessere di ognuno.",
+			"description_long2": "È lo stile con cui ho iniziato. Tre anni di formazione con la scuola Samadhi, e continuo ancora a studiare. In ogni lezione porto la stessa idea: niente si blocca mai del tutto, si accompagna solo verso la forma successiva.",
 			"expect_title": "Com'è fatta una lezione",
 			"expect1": "Un riscaldamento morbido che sincronizza il movimento con il ritmo del respiro.",
 			"expect2": "Sequenze di asana fluide, costruite sulle linee miofasciali e sui centri energetici.",
 			"expect3": "Pranayama per calmare il sistema nervoso prima dell'immobilità.",
 			"expect4": "Una meditazione finale e un savasana lungo, senza fretta.",
 			"info_title": "Buono a sapersi",
-			"info1": "Adatta a tutti i livelli — le sequenze vengono proposte con varianti, mai come una gara.",
+			"info1": "Adatta a tutti i livelli: le sequenze vengono proposte con varianti, mai come una gara.",
 			"info2": "Circa 60-75 minuti, in studio tra Belluno, Ponte nelle Alpi e il Cadore.",
-			"info3": "Porta il tappetino e abiti comodi; blocchi, cinghie e bolster li trovi in sala."
+			"info3": "Servono solo un tappetino e abiti comodi, nessuna esperienza richiesta."
 		},
 		"yin": {
 			"title": "Yin Yoga",
 			"hero_subtitle": "Immobilità profonda e rigenerazione",
-			"description": "Posizioni lente e passive sostenute dai supporti. Stimola il tessuto connettivo, apre le articolazioni e invita a un respiro profondo e rigenerante.",
-			"description_long": "Lo yin yoga è un tipo di yoga dal ritmo lento in cui le posizioni vengono mantenute più a lungo rispetto al solito. Ci metteremo comodi con cuscini chiamati \"bolster\", blocchi yoga e quant'altro sia necessario per rendere gli asani comodi e perfettamente adatti alle esigenze ed alla flessibilità di tutti. Lo scopo dello yin yoga è quello di stimolare il tessuto connettivo, applicando una tensione ottimale per un certo tempo e mantenendo una respirazione profonda. Così facendo il tessuto connettivo si allunga, si fortifica e si apre lentamente, creando più spazio tra le articolazioni, migliorandone il movimento e rendendole più salde, stabili e forti, e aumentando la flessibilità muscolare.",
+			"description": "Posizioni lente e passive, sostenute dai cuscini. Si lascia andare più che spingere: il respiro apre le articolazioni, il tessuto connettivo si rigenera.",
+			"description_long": "Lo yin yoga ha un ritmo lento: le posizioni si tengono più a lungo del solito, comodi tra bolster, blocchi e coperte, finché non sono adatte al corpo e alla flessibilità di chi le pratica quel giorno. Restando fermi e respirando in profondità il tessuto connettivo si allunga e si apre piano, creando più spazio tra le articolazioni, le rende più stabili, più forti, e il corpo più flessibile.",
+			"description_long2": "È la pratica in cui si impara più a lasciar andare che a spingere: si smette di controllare la forma e si lascia che sia il respiro, non la forza, a fare il lavoro.",
 			"expect_title": "Com'è fatta una lezione",
 			"expect1": "Dai tre ai cinque minuti in ogni posizione, sostenuti da bolster, blocchi e coperte.",
 			"expect2": "Respirazione lenta e profonda, che lascia rilasciare il tessuto connettivo invece di forzarlo.",
@@ -86,14 +88,15 @@
 			"expect4": "Un rilassamento guidato finale, perché il corpo assorba la pratica.",
 			"info_title": "Buono a sapersi",
 			"info1": "Utile soprattutto a chi si allena molto, sta seduto tutto il giorno o dorme male.",
-			"info2": "Circa 60 minuti — il ritmo non sale mai, quindi si abbina bene a una pratica dinamica.",
+			"info2": "Circa 60 minuti. Il ritmo non sale mai, quindi si abbina bene a una pratica dinamica.",
 			"info3": "Vestiti a strati: restando fermi il corpo si raffredda."
 		},
 		"kids": {
 			"title": "Yoga Bimbi",
 			"hero_subtitle": "Pratica giocosa per giovani menti",
-			"description": "Lezioni giocose fatte di storie, canzoni e giochi per esplorare asana, respiro e ascolto consapevole — costruendo fiducia e calma.",
+			"description": "Storie, canzoni e giochi per esplorare asana, respiro e ascolto: un modo giocoso di costruire fiducia e calma, fin da piccoli.",
 			"description_long": "Far avvicinare allo Yoga i più piccoli è molto importante al giorno d'oggi. Il metodo Bimbiyoga ha un approccio giocoso e divertente così da catturare l'attenzione dei bambini. Andremo ad esplorare le Asana attraverso storie, canzoni e giochi. Non mancheranno momenti di ascolto, consapevolezza e piccole meditazioni.",
+			"description_long2": "L'ho aggiunto da poco al mio percorso, dopo aver concluso il corso di Bimbiyoga, perché credo che imparare ad ascoltare il proprio respiro faccia bene a qualunque età, meglio ancora se si inizia da piccoli, giocando.",
 			"expect_title": "Com'è fatta una lezione",
 			"expect1": "Le asana scoperte attraverso storie, canzoni e giochi, seguendo il metodo Bimbiyoga.",
 			"expect2": "Esercizi di respirazione trasformati in gioco, per dare un nome alle emozioni e gestirle.",
@@ -102,30 +105,31 @@
 			"info_title": "Buono a sapersi",
 			"info1": "Pensata per bambini indicativamente dai 4 agli 11 anni, in piccoli gruppi.",
 			"info2": "45-60 minuti, a Vodo di Cadore e su richiesta per scuole e associazioni.",
-			"info3": "Servono solo un tappetino e abiti comodi — nessuna esperienza richiesta."
+			"info3": "Servono solo un tappetino e abiti comodi, nessuna esperienza richiesta."
 		},
 		"pilates": {
 			"title": "Pilates",
 			"hero_subtitle": "Forza del centro, respiro controllato",
-			"description": "Esercizi controllati e guidati dal respiro che rafforzano il core, la postura e la flessibilità — insegnati con lo stesso approccio consapevole e non competitivo delle lezioni di yoga.",
-			"description_long": "Il Pilates lavora sul corpo attraverso movimenti lenti e precisi: ogni esercizio parte dal centro e si irradia verso l'esterno, rafforzando il core profondo e i muscoli posturali, e migliorando flessibilità e consapevolezza corporea. <strong>Pur essendo una disciplina a sé</strong>, il modo in cui viene insegnata qui porta lo stesso spirito delle lezioni di yoga — ogni movimento è legato a un'inspirazione o un'espirazione invece che scandito meccanicamente, le sequenze sono proposte senza competizione né una forma fissa da raggiungere, e la lezione si chiude spesso con qualche minuto di immobilità mutuato dallo Yin, perché i muscoli si assestino dopo il lavoro svolto.",
+			"description": "Movimenti lenti e precisi, guidati dal respiro, per rafforzare il core, la postura e la flessibilità, con lo stesso spirito non competitivo delle lezioni di yoga.",
+			"description_long": "Il Pilates lavora sul corpo attraverso movimenti lenti e precisi: ogni esercizio parte dal centro e si irradia verso l'esterno, rafforzando il core profondo e i muscoli posturali, e migliorando flessibilità e consapevolezza corporea.",
+			"description_long2": "<strong>Pur essendo una disciplina a sé</strong>, il modo in cui la insegno porta lo stesso spirito delle lezioni di yoga: ogni movimento segue un'inspirazione o un'espirazione usando il respiro come mezzo, le sequenze si propongono senza competizione né una forma fissa da raggiungere, e la lezione si chiude spesso con qualche minuto di immobilità presa in prestito dallo Yin, perché i muscoli si assestino dopo il lavoro svolto.",
 			"expect_title": "Com'è fatta una lezione",
 			"expect1": "Esercizi lenti e controllati che coinvolgono il core profondo e i muscoli posturali.",
 			"expect2": "Ogni movimento sincronizzato al respiro, lo stesso principio del respiro prima di tutto usato nelle lezioni di yoga.",
 			"expect3": "Sequenze costruite sulla precisione più che sulla ripetizione: conta la qualità del movimento, non il numero di volte.",
 			"expect4": "Uno stretching finale ispirato allo Yin, per lasciare che i muscoli si rilassino dopo il lavoro.",
 			"info_title": "Buono a sapersi",
-			"info1": "Aperta a tutti i livelli — le sequenze sono proposte con varianti, mai come una gara.",
+			"info1": "Aperta a tutti i livelli: le sequenze sono proposte con varianti, mai come una gara.",
 			"info2": "Circa 50-60 minuti, in studio a Cortina, Belluno e nel Cadore.",
-			"info3": "Servono solo un tappetino e abiti comodi — nessuna attrezzatura o esperienza pregressa richiesta."
+			"info3": "Servono solo un tappetino e abiti comodi, nessuna attrezzatura o esperienza pregressa richiesta."
 		},
 		"outdoor": {
 			"title": "Yoga Outdoor",
-			"description": "Pratica estiva all'aria aperta — pascoli d'alta quota, rifugi e terrazze panoramiche nelle Dolomiti, aperta a tutti i livelli."
+			"description": "Pratica estiva sotto il cielo aperto, con la terra sotto i piedi che diventa parte della lezione: pascoli d'alta quota, rifugi e terrazze panoramiche nelle Dolomiti, aperta a tutti i livelli."
 		},
 		"private": {
 			"title": "Lezioni Private",
-			"description": "Sessioni uno a uno costruite sui tuoi obiettivi, in presenza tra Cortina, Belluno e Cadore, oppure online da ovunque tu sia."
+			"description": "Uno a uno, costruita interamente su di te: in presenza tra Cortina, Belluno e Cadore, oppure online, ovunque tu sia."
 		}
 	},
 	"contact": {
@@ -148,28 +152,28 @@
 			"subtitle": "Lezioni di Anukalana, Vinyasa e Yin Yoga",
 			"description": "Insegno regolarmente a <strong>Belluno</strong> con diverse classi settimanali di Anukalana, Vinyasa e Yin Yoga. Le lezioni si svolgono in studi accoglienti e sono adatte a tutti i livelli, dai principianti agli studenti avanzati.",
 			"description2": "Belluno è dove passa la maggior parte della mia settimana: una pratica dinamica al mattino per aprire la giornata, sequenze più lente guidate dal respiro la sera, e lo Yin per chi ha bisogno di rallentare invece di spingere. I gruppi restano piccoli di proposito, così nessuno pratica senza essere visto.",
-			"venue1": "Belluno — Anukalana, Vinyasa e Yin Yoga in uno studio accogliente, aperto a tutti i livelli.",
-			"venue2": "Ponte nelle Alpi — lezioni di Anukalana a pochi minuti dal centro di Belluno.",
-			"venue3": "A casa tua o in azienda — sessioni private e per piccoli gruppi in tutta la provincia.",
-			"venue4": "Online — la stessa pratica in video, ovunque tu sia."
+			"venue1": "Belluno: Anukalana, Vinyasa e Yin Yoga in uno studio accogliente, aperto a tutti i livelli.",
+			"venue2": "Ponte nelle Alpi: lezioni di Anukalana a pochi minuti dal centro di Belluno.",
+			"venue3": "A casa tua o in azienda: sessioni private e per piccoli gruppi in tutta la provincia.",
+			"venue4": "Online: la stessa pratica in video, ovunque tu sia."
 		},
 		"cortina": {
 			"title": "Yoga a Cortina d'Ampezzo e Cadore",
 			"subtitle": "Lezioni in studio e outdoor nelle Dolomiti",
 			"description": "A <strong>Cortina d'Ampezzo e nella zona del Cadore</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) offro lezioni settimanali di Anukalana Yoga e sessioni speciali outdoor durante l'estate. Disponibile anche per eventi privati e ritiri yoga in location suggestive delle Dolomiti.",
-			"description2": "Qui è la valle a dare il ritmo: al chiuso durante l'inverno, all'aperto appena i pascoli si aprono. Se sei in vacanza nelle Dolomiti puoi partecipare anche a una sola lezione — nessun abbonamento, nessun impegno a lungo termine, basta avvisarmi.",
-			"venue1": "Cortina d'Ampezzo — lezioni in studio, più sessioni per ospiti, hotel e gruppi privati.",
-			"venue2": "Vodo di Cadore — Anukalana per adulti e Yoga Bimbi per i più piccoli.",
-			"venue3": "Tai di Cadore — Anukalana Yoga, aperto a tutti i livelli.",
-			"venue4": "Calalzo di Cadore — pratica all'aperto al BAR ALPINO durante l'estate."
+			"description2": "Qui è la valle a dare il ritmo: al chiuso durante l'inverno, all'aperto appena i pascoli si aprono. Se sei in vacanza nelle Dolomiti puoi partecipare anche a una sola lezione: nessun abbonamento, nessun impegno a lungo termine, basta avvisarmi.",
+			"venue1": "Cortina d'Ampezzo: lezioni in studio, più sessioni per ospiti, hotel e gruppi privati.",
+			"venue2": "Vodo di Cadore: Anukalana per adulti e Yoga Bimbi per i più piccoli.",
+			"venue3": "Tai di Cadore: Anukalana Yoga, aperto a tutti i livelli.",
+			"venue4": "Calalzo di Cadore: pratica all'aperto al BAR ALPINO durante l'estate."
 		}
 	},
 	"outdoor": {
 		"title": "Yoga Outdoor",
 		"subtitle": "Sessioni estive all'aria aperta nelle Dolomiti",
 		"hero_subtitle": "Pratica yoga all'aria aperta tra le montagne",
-		"description1": "Durante i mesi estivi organizzo <strong>sessioni di yoga all'aperto</strong> in alcune delle location più suggestive delle Dolomiti. Praticare yoga immersi nella natura amplifica i benefici della pratica, favorendo una connessione profonda con l'ambiente circostante.",
-		"description2": "Le sessioni outdoor sono aperte a tutti i livelli e includono pratiche di Anukalana, Vinyasa e meditazioni guidate. Un'esperienza unica per rigenerarsi corpo e mente.",
+		"description1": "Durante l'estate porto la pratica fuori dallo studio, in alcune delle <strong>location più suggestive delle Dolomiti</strong>: la natura amplifica i benefici dello yoga e crea una connessione più profonda con l'ambiente che ci circonda. Prediligo le ore più fresche, mattina o sera, per restare in equilibrio con l'ambiente invece che contrastarlo.",
+		"description2": "Le sessioni sono aperte a tutti i livelli e includono Anukalana, Vinyasa e meditazioni guidate: un incontro diretto con la terra, le pietre e le montagne, per rigenerare corpo e mente.",
 		"locations_title": "Dove pratichiamo",
 		"location1_name": "BAR ALPINO - Calalzo di Cadore",
 		"location1_desc": "Sessioni mattutine con vista sulle Dolomiti in una location accogliente e panoramica.",
@@ -178,7 +182,7 @@
 		"location3_name": "Rifugi e sentieri delle Dolomiti",
 		"location3_desc": "Eventi speciali presso rifugi e dopo escursioni nelle zone di Cortina, Belluno e Cadore.",
 		"practical_title": "Cosa portare",
-		"practical1": "Un tappetino, o un telo se viaggi leggero — ne porto sempre qualcuno di scorta.",
+		"practical1": "Un tappetino, o un telo se viaggi leggero. Ne porto sempre qualcuno di scorta.",
 		"practical2": "Vestiti a strati: in montagna la mattina è più fredda che a fondovalle, anche ad agosto.",
 		"practical3": "Acqua, crema solare e scarpe adatte a fare a piedi l'ultimo tratto."
 	},
@@ -186,9 +190,9 @@
 		"title": "Lezioni Private",
 		"subtitle": "Sessioni personalizzate online e in presenza",
 		"hero_subtitle": "Pratica su misura per te",
-		"description1": "Offro <strong>lezioni private di yoga personalizzate</strong> sia in presenza (Cortina, Belluno, Cadore) che online. Ogni sessione è progettata sulle tue esigenze specifiche, che tu sia principiante o praticante avanzato.",
-		"description2": "Le lezioni private sono ideali per chi desidera un'attenzione individuale, ha obiettivi specifici (flessibilità, forza, rilassamento) o preferisce praticare in un ambiente riservato.",
-		"description3": "Di solito partiamo da una chiacchierata su cosa cerchi nella pratica e su ciò con cui il tuo corpo sta facendo i conti — un vecchio infortunio, una schiena rigida, un periodo di stress al lavoro. Da lì costruisco una sequenza attorno a te, e la aggiustiamo strada facendo.",
+		"description1": "Le <strong>lezioni private</strong> le costruisco su misura, in presenza (Cortina, Belluno, Cadore) o online. Che tu sia alle prime asana o pratichi già da anni, la sessione parte da dove sei tu, non da un programma fisso.",
+		"description2": "Sono adatte a chi vuole attenzione individuale, ha un obiettivo preciso (più flessibilità, più forza, semplicemente rilassarsi), o preferisce solo uno spazio tutto suo per praticare.",
+		"description3": "Di solito partiamo da una chiacchierata su cosa cerchi nella pratica e su ciò con cui il tuo corpo sta facendo i conti: un vecchio infortunio, una schiena rigida, un periodo di stress al lavoro. Da lì costruisco una sequenza attorno a te, e la aggiustiamo strada facendo.",
 		"benefits_title": "Perché scegliere una lezione privata",
 		"benefit1": "Programma completamente personalizzato",
 		"benefit2": "Orari flessibili adatti ai tuoi impegni",
@@ -203,10 +207,10 @@
 	},
 	"instagram": {
 		"title": "Segui la pratica",
-		"subtitle": "Momenti dalle lezioni, dai ritiri e dalla pratica outdoor nelle Dolomiti — nuovi scatti ogni settimana su Instagram.",
+		"subtitle": "Momenti dalle lezioni, dai ritiri e dalla pratica outdoor nelle Dolomiti, nuovi scatti ogni settimana su Instagram.",
 		"tileAlt": "Apri {handle} su Instagram",
 		"latestLabel": "Ultimo post",
-		"latestCaption": "Lezioni, ritiri e pratica quotidiana — seguimi per orari e nuove date."
+		"latestCaption": "Lezioni, ritiri e pratica quotidiana. Seguimi per orari e nuove date."
 	},
 	"privacy": {
 		"title": "Privacy Policy",

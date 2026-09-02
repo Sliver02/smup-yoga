@@ -32,9 +32,9 @@
 	},
 	"cta": {
 		"title": "Ready to step onto the mat?",
-		"description": "Tell me what you are looking for — a group class, a private session or an outdoor practice in the Dolomites — and I will help you find the right fit.",
+		"description": "Tell me what you are looking for: a group class, a private session or an outdoor practice in the Dolomites, and I will help you find the right fit.",
 		"primary": "Write me a message",
-		"secondary": "Send an email"
+		"secondary": "Follow me"
 	},
 	"about": {
 		"title": "About me",
@@ -45,40 +45,42 @@
 		"extended_description2": "I am certified in <strong>Anukalana Yoga</strong> (Samadhi School Milan) and also specialized in <strong>Yin Yoga, Kids Yoga, and Pilates</strong>. My mission is to help people rediscover balance, wellbeing, and connection with themselves through the practice of yoga.",
 		"extended_description3": "During summer I organize <strong>outdoor yoga sessions</strong> in stunning Dolomites locations, including BAR ALPINO in Calalzo di Cadore, Malga Caseera Razzo in Vigo, and after mountain hikes at various rifugi. I'm also available for private events and yoga retreats.",
 		"credentials_title": "Training and certifications",
-		"credential1": "Anukalana Yoga teacher training — Samadhi School, Milan",
+		"credential1": "Anukalana Yoga teacher training, Samadhi School, Milan",
 		"credential2": "Yin Yoga specialisation",
-		"credential3": "Bimbiyoga — children's yoga method",
+		"credential3": "Bimbiyoga, a children's yoga method",
 		"credential4": "Pilates instructor",
 		"approach_title": "How I teach",
 		"approach1": "No competition and no fixed shape to reach: every sequence is offered with variations, so the practice adapts to the body that showed up today.",
-		"approach2": "Breath first. Movement follows it, never the other way round — that is what turns an hour of exercise into an hour of quiet.",
+		"approach2": "Breath first. Movement follows it, never the other way round: that is what turns an hour of exercise into an hour of quiet.",
 		"approach3": "Small groups, so I can actually see you, adjust an alignment, and remember what you are working on."
 	},
 	"classes": {
 		"title": "What I teach",
 		"other_title": "Other practices",
 		"discover": "Discover",
-		"intro": "Five ways into the practice — from fluid Anukalana to long Yin holds — in studio between Belluno and Cadore, outdoors in the Dolomites, or one to one.",
+		"intro": "A practice for every body, not a single mould to fit: dynamic or still, alone or in a group, in studio or under the open sky, with no fixed shape to reach.",
 		"anukalana": {
 			"title": "Anukalana Yoga",
 			"hero_subtitle": "Integration through fluid movement",
 			"description_long": "<strong>Anukalana means integration</strong>, in fact it is a style that combines many notions: obviously Asana, Pranayama, Meditations, but also myofascia, meridians and energy centers. It bases movements on fluidity, coordination with the breath and gentleness. What fascinated me most about this style is that it is suitable for everyone. It is not competitive, but truly aimed at the well-being of each individual.",
-			"description": "Integrated practice combining asana, pranayama, meditation and fascia work. Gentle, breath-led sequences focused on fluidity and overall wellbeing.",
+			"description_long2": "It's the style I started with. Three years of teacher training with the Samadhi school, and I'm still studying. What I bring into every class is the same idea: nothing ever locks into place, it's only ever moving toward the next shape.",
+			"description": "Asana, pranayama, meditation and fascia work woven into one gentle, breath-led practice: fluid movement open to every body, never a competition.",
 			"expect_title": "What a class looks like",
 			"expect1": "A gentle warm-up that syncs movement to the rhythm of the breath.",
 			"expect2": "Fluid asana sequences built around myofascial lines and energy centres.",
 			"expect3": "Pranayama to settle the nervous system before stillness.",
 			"expect4": "A closing meditation and a long, unhurried savasana.",
 			"info_title": "Good to know",
-			"info1": "Open to every level — sequences are offered with variations, never as a competition.",
+			"info1": "Open to every level: sequences are offered with variations, never as a competition.",
 			"info2": "Around 60 to 75 minutes, in studio between Belluno, Ponte nelle Alpi and Cadore.",
-			"info3": "Bring a mat and comfortable clothes; blocks, straps and bolsters are provided."
+			"info3": "Only a mat and comfortable clothes are needed, no experience required."
 		},
 		"yin": {
 			"title": "Yin Yoga",
 			"hero_subtitle": "Deep stillness and restoration",
-			"description_long": "Yin yoga is a slow-paced style of yoga in which poses are held for longer periods of time than in more active styles. We will get comfortable with cushions called 'bolsters', yoga blocks, and whatever else is needed to make the asanas comfortable and perfectly suited to everyone's needs and flexibility. The purpose of yin yoga is to stimulate the connective tissue, applying optimal tension for a certain time and maintaining deep breathing. By doing this, the connective tissue lengthens, strengthens, and slowly opens up, creating more space between the joints, improving their movement and making them more solid, stable, and strong, and increasing muscle flexibility.",
-			"description": "Slow passive postures held with props. Stimulates connective tissue, opens the joints and invites deep breathing and restorative release.",
+			"description_long": "Yin yoga moves at a slow pace: poses are held longer than usual, propped up with bolsters, blocks and blankets until they fit whatever the body and its flexibility need that day. Staying still and breathing deeply lets the connective tissue lengthen and open slowly, creating more space between the joints, more stable, more resilient, and the body more flexible.",
+			"description_long2": "It's the practice where you learn to let go more than to push: you stop controlling the shape and let the breath, not effort, do the work.",
+			"description": "Slow, passive postures held with props. Less pushing, more letting go: breath opens the joints while the connective tissue restores.",
 			"expect_title": "What a class looks like",
 			"expect1": "Three to five minutes in each shape, supported by bolsters, blocks and blankets.",
 			"expect2": "Slow, deep breathing that lets connective tissue release instead of being forced.",
@@ -86,14 +88,15 @@
 			"expect4": "A guided relaxation to close, so the body absorbs the practice.",
 			"info_title": "Good to know",
 			"info1": "Especially useful if you train hard, sit all day, or sleep badly.",
-			"info2": "Around 60 minutes — the pace never rises, so it pairs well with a dynamic practice.",
+			"info2": "Around 60 minutes. The pace never rises, so it pairs well with a dynamic practice.",
 			"info3": "Wear layers: the body cools down when it stays still."
 		},
 		"kids": {
 			"title": "Kid's Yoga",
 			"hero_subtitle": "Playful practice for young minds",
 			"description_long": "Getting children involved in Yoga is very important nowadays. The Bimbiyoga method has a playful and fun approach to capture children's attention. We will explore the Asanas through stories, songs, and games. There will also be moments of listening, awareness, and small meditations.",
-			"description": "Playful sessions built on stories, songs and games to explore asanas, breath awareness and mindful listening — building confidence and calm.",
+			"description_long2": "I added it to what I teach recently, after finishing my Bimbiyoga certification, because learning to listen to your own breath is good at any age, and better still if it starts young, through play.",
+			"description": "Stories, songs and games to explore asanas, breath and listening: a playful way to build confidence and calm, starting young.",
 			"expect_title": "What a class looks like",
 			"expect1": "Asanas discovered through stories, songs and games, following the Bimbiyoga method.",
 			"expect2": "Breathing exercises turned into play, to name and handle big emotions.",
@@ -102,30 +105,31 @@
 			"info_title": "Good to know",
 			"info1": "Designed for children roughly 4 to 11 years old, in small groups.",
 			"info2": "45 to 60 minutes, in Vodo di Cadore and on request for schools and associations.",
-			"info3": "Only a mat and comfortable clothes are needed — no experience required."
+			"info3": "Only a mat and comfortable clothes are needed, no experience required."
 		},
 		"pilates": {
 			"title": "Pilates",
 			"hero_subtitle": "Core strength, controlled breath",
-			"description_long": "Pilates works the body through slow, precise movements: every exercise is controlled from the centre outward, building strength in the deep core and postural muscles while improving flexibility and body awareness. <strong>Although Pilates is a discipline of its own</strong>, the way it is taught here carries the same spirit as the yoga classes — each movement is linked to an inhale or exhale rather than counted out mechanically, sequences are offered without competition or a fixed shape to reach, and a class often closes with a few still minutes borrowed from Yin practice, so the muscles can settle into what they have just built.",
-			"description": "Controlled, breath-led exercises that build core strength, posture and flexibility — taught with the same mindful, non-competitive approach as the yoga classes.",
+			"description_long": "Pilates works the body through slow, precise movements: every exercise is controlled from the centre outward, building strength in the deep core and postural muscles while improving flexibility and body awareness.",
+			"description_long2": "<strong>Although Pilates is a discipline of its own</strong>, the way I teach it carries the same spirit as the yoga classes: every movement follows an inhale or an exhale, using breath as its vehicle, sequences are offered without competition or a fixed shape to reach, and a class often closes with a few still minutes borrowed from Yin, so the muscles can settle into what they've just built.",
+			"description": "Slow, precise movements guided by the breath, to build core strength, posture and flexibility, with the same non-competitive spirit as the yoga classes.",
 			"expect_title": "What a class looks like",
 			"expect1": "Slow, controlled exercises that engage the deep core and postural muscles.",
 			"expect2": "Every movement synced to the breath, the same breath-first principle used across the yoga classes.",
-			"expect3": "Sequences built for precision over repetition — quality of movement matters more than how many reps.",
+			"expect3": "Sequences built for precision over repetition: quality of movement matters more than how many reps.",
 			"expect4": "A closing stretch inspired by Yin, to let the muscles release after the work.",
 			"info_title": "Good to know",
-			"info1": "Open to every level — sequences are offered with variations, never as a competition.",
+			"info1": "Open to every level: sequences are offered with variations, never as a competition.",
 			"info2": "Around 50 to 60 minutes, in studio in Cortina, Belluno and the Cadore area.",
 			"info3": "Bring a mat and comfortable clothes; no equipment or previous experience required."
 		},
 		"outdoor": {
 			"title": "Outdoor Yoga",
-			"description": "Summer practice in the open air — alpine pastures, mountain huts and panoramic terraces across the Dolomites, open to every level."
+			"description": "Summer practice under open sky, with the ground itself part of the class: alpine pastures, mountain huts and panoramic terraces across the Dolomites, open to every level."
 		},
 		"private": {
 			"title": "Private Lessons",
-			"description": "One-to-one sessions built around your goals, in person between Cortina, Belluno and Cadore, or online from wherever you are."
+			"description": "One-to-one, built entirely around you: in person between Cortina, Belluno and Cadore, or online, wherever you happen to be."
 		}
 	},
 	"contact": {
@@ -148,28 +152,28 @@
 			"subtitle": "Anukalana, Vinyasa and Yin Yoga classes",
 			"description": "I regularly teach in <strong>Belluno</strong> with several weekly classes of Anukalana, Vinyasa, and Yin Yoga. Classes are held in welcoming studios and are suitable for all levels, from beginners to advanced students.",
 			"description2": "Belluno is where most of my week happens: a dynamic morning practice to open the day, slower breath-led sequences in the evening, and Yin for anyone who needs to slow down rather than push. Groups stay small on purpose, so nobody practises unseen.",
-			"venue1": "Belluno — Anukalana, Vinyasa and Yin Yoga in a welcoming studio, all levels welcome.",
-			"venue2": "Ponte nelle Alpi — Anukalana classes a few minutes from the centre of Belluno.",
-			"venue3": "At your place or your office — private and small-group sessions across the province.",
-			"venue4": "Online — the same practice over video, wherever you happen to be."
+			"venue1": "Belluno: Anukalana, Vinyasa and Yin Yoga in a welcoming studio, all levels welcome.",
+			"venue2": "Ponte nelle Alpi: Anukalana classes a few minutes from the centre of Belluno.",
+			"venue3": "At your place or your office: private and small-group sessions across the province.",
+			"venue4": "Online: the same practice over video, wherever you happen to be."
 		},
 		"cortina": {
 			"title": "Yoga in Cortina d'Ampezzo and Cadore",
 			"subtitle": "Studio and outdoor classes in the Dolomites",
 			"description": "In <strong>Cortina d'Ampezzo and the Cadore region</strong> (Vodo di Cadore, Tai di Cadore, Calalzo) I offer weekly Anukalana Yoga classes and special outdoor sessions during summer. Also available for private events and yoga retreats in stunning Dolomites locations.",
-			"description2": "The valley sets the rhythm here: indoors through the winter, outside as soon as the pastures open. If you are visiting the Dolomites you are welcome to drop into a class — no membership, no long-term commitment, just let me know you are coming.",
-			"venue1": "Cortina d'Ampezzo — studio classes, plus sessions for guests, hotels and private groups.",
-			"venue2": "Vodo di Cadore — Anukalana for adults and Kid's Yoga for the little ones.",
-			"venue3": "Tai di Cadore — Anukalana Yoga, open to every level.",
-			"venue4": "Calalzo di Cadore — outdoor practice at BAR ALPINO through the summer."
+			"description2": "The valley sets the rhythm here: indoors through the winter, outside as soon as the pastures open. If you are visiting the Dolomites you are welcome to drop into a class: no membership, no long-term commitment, just let me know you are coming.",
+			"venue1": "Cortina d'Ampezzo: studio classes, plus sessions for guests, hotels and private groups.",
+			"venue2": "Vodo di Cadore: Anukalana for adults and Kid's Yoga for the little ones.",
+			"venue3": "Tai di Cadore: Anukalana Yoga, open to every level.",
+			"venue4": "Calalzo di Cadore: outdoor practice at BAR ALPINO through the summer."
 		}
 	},
 	"outdoor": {
 		"title": "Outdoor Yoga",
 		"subtitle": "Summer sessions in the open air in the Dolomites",
 		"hero_subtitle": "Practice yoga outdoors in the mountains",
-		"description1": "During summer months I organize <strong>outdoor yoga sessions</strong> in some of the most stunning locations in the Dolomites. Practicing yoga immersed in nature amplifies the benefits of the practice, fostering a deep connection with the surrounding environment.",
-		"description2": "Outdoor sessions are open to all levels and include Anukalana, Vinyasa practices, and guided meditations. A unique experience to rejuvenate body and mind.",
+		"description1": "During summer I take the practice outside the studio, into some of the most <strong>striking spots in the Dolomites</strong>: nature amplifies what yoga already does, and builds a deeper connection with the environment around us. I favour the cooler hours, morning or evening, so the practice stays in balance with the place instead of fighting it.",
+		"description2": "Sessions are open to every level and include Anukalana, Vinyasa and guided meditation: a direct meeting with the earth, the stones and the mountains, to reset body and mind.",
 		"locations_title": "Where we practice",
 		"location1_name": "BAR ALPINO - Calalzo di Cadore",
 		"location1_desc": "Morning sessions with Dolomites views in a welcoming and panoramic location.",
@@ -178,7 +182,7 @@
 		"location3_name": "Rifugi and Dolomites trails",
 		"location3_desc": "Special events at mountain huts and after hikes in the Cortina, Belluno, and Cadore areas.",
 		"practical_title": "What to bring",
-		"practical1": "A mat, or a towel if you are travelling light — I carry a few spares.",
+		"practical1": "A mat, or a towel if you are travelling light. I carry a few spares.",
 		"practical2": "Layers: mornings in the mountains are colder than down in the valley, even in August.",
 		"practical3": "Water, sunscreen, and shoes you can walk the last stretch in."
 	},
@@ -186,9 +190,9 @@
 		"title": "Private Lessons",
 		"subtitle": "Personalized sessions online and in-person",
 		"hero_subtitle": "Practice tailored for you",
-		"description1": "I offer <strong>personalized private yoga lessons</strong> both in-person (Cortina, Belluno, Cadore) and online. Each session is designed around your specific needs, whether you're a beginner or advanced practitioner.",
-		"description2": "Private lessons are ideal for those who want individual attention, have specific goals (flexibility, strength, relaxation), or prefer to practice in a private setting.",
-		"description3": "We usually start with a short conversation about what you want from the practice and anything your body is dealing with — an old injury, a stiff back, a stressful stretch at work. From there I build a sequence around you, and we adjust it as you go.",
+		"description1": "<strong>Private lessons</strong> are built around you, in person (Cortina, Belluno, Cadore) or online. Whether you're on your first asana or years into practice, the session starts from where you are, not from a fixed program.",
+		"description2": "They suit anyone who wants individual attention, has a specific goal (more flexibility, more strength, or simply to relax), or just prefers a space that's entirely their own to practise in.",
+		"description3": "We usually start with a short conversation about what you want from the practice and anything your body is dealing with: an old injury, a stiff back, a stressful stretch at work. From there I build a sequence around you, and we adjust it as you go.",
 		"benefits_title": "Why choose a private lesson",
 		"benefit1": "Fully personalized program",
 		"benefit2": "Flexible scheduling to fit your commitments",
@@ -203,10 +207,10 @@
 	},
 	"instagram": {
 		"title": "Follow the practice",
-		"subtitle": "Moments from classes, retreats and outdoor practice in the Dolomites — new frames every week on Instagram.",
+		"subtitle": "Moments from classes, retreats and outdoor practice in the Dolomites, new frames every week on Instagram.",
 		"tileAlt": "Open {handle} on Instagram",
 		"latestLabel": "Latest post",
-		"latestCaption": "Classes, retreats and everyday practice — follow along for schedules and new dates."
+		"latestCaption": "Classes, retreats and everyday practice. Follow along for schedules and new dates."
 	},
 	"privacy": {
 		"title": "Privacy Policy",
