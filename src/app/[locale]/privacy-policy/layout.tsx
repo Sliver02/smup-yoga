@@ -14,7 +14,7 @@ export async function generateMetadata({
 			? "Privacy Policy di SMUP Yoga. Informazioni su come raccogliamo, utilizziamo e proteggiamo i tuoi dati personali."
 			: "SMUP Yoga Privacy Policy. Information on how we collect, use and protect your personal data.",
 		openGraph: {
-			title: "Privacy Policy — SMUP Yoga",
+			title: "Privacy Policy | SMUP Yoga",
 			description: isItalian
 				? "Informativa sulla privacy per il sito SMUP Yoga."
 				: "Privacy policy for SMUP Yoga website.",

@@ -1,19 +1,22 @@
 "use client";
+import { RouteEnum } from "@/common/routeEnum";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Align, Justify } from "@/components/atoms/Grid/interfaces";
+import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
-import { Contact } from "@/components/sections/Contact";
-import { Locations } from "@/components/sections/Locations";
+import { BookCta } from "@/components/sections/BookCta";
+import { PracticeIntro } from "@/components/sections/PracticeIntro";
+import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import pageImage from "@public/images/PXL_20250823_075608610.jpg";
+import pageImage from "@public/images/PXL_20260701_045401209.jpg";
+import introImage from "@public/images/PXL_20260426_083009984.jpg";
 import "@/designSystem/utils.scss";
 
 const AnukalanaPage = () => {
 	const t = useTranslations("classes.anukalana");
+	const tClasses = useTranslations("classes");
 	const tCommon = useTranslations("breadcrumbs");
 
 	return (
@@ -27,34 +30,41 @@ const AnukalanaPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<Section>
+			<PracticeIntro image={introImage} alt="Anukalana Yoga">
+				<p className="text--p-lg text--measure">
+					{t.rich("description_long", {
+						strong: (children) => <strong>{children}</strong>,
+					})}
+				</p>
+				<p className="text--p-lg text--measure">{t("description_long2")}</p>
+			</PracticeIntro>
+
+			<Section backgroundColor="var(--primary-active)">
 				<Container>
-					<Row xsJustify={Justify.center} mdAlign={Align.center}>
-						<Col xs={12} md={5}>
-							<div className="desktop-only">
-								<Image
-									src={pageImage}
-									alt="Anukalana Yoga"
-									width={600}
-									height={400}
-									className="responsive-image"
-									placeholder="blur"
-								/>
-							</div>
+					<Row gap="1rem 0">
+						<Col xs={12} lg={6}>
+							<SectionTitle text={t("expect_title")} />
+							<ul className="styled-list">
+								<li>{t("expect1")}</li>
+								<li>{t("expect2")}</li>
+								<li>{t("expect3")}</li>
+								<li>{t("expect4")}</li>
+							</ul>
 						</Col>
-						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-							<p className="text--p-lg">
-								{t.rich("description_long", {
-									strong: (children) => <strong>{children}</strong>,
-								})}
-							</p>
+						<Col xs={12} lg={6}>
+							<SectionTitle text={t("info_title")} />
+							<ul className="styled-list">
+								<li>{t("info1")}</li>
+								<li>{t("info2")}</li>
+								<li>{t("info3")}</li>
+							</ul>
 						</Col>
 					</Row>
 				</Container>
 			</Section>
 
-			<Locations />
-			<Contact />
+			<PracticesCards exclude={RouteEnum.ANUKALANA} title={tClasses("other_title")} />
+			<BookCta />
 			<Footer />
 		</main>
 	);

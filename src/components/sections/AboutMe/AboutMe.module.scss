@@ -1,5 +1,7 @@
 .about {
-	position: relative;
+	.aboutContent {
+		position: relative;
+	}
 
 	.backgroundGradient {
 		position: absolute;
@@ -21,6 +23,10 @@
 			&:hover {
 				color: var(--accent-hover);
 				transform: translateY(-5px);
+			}
+
+			& {
+				margin-right: 1rem;
 			}
 		}
 	}

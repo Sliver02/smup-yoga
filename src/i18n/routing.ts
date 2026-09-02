@@ -21,13 +21,10 @@ export const routing = defineRouting({
 	// Fallback locale if no match is found
 	defaultLocale: "it",
 
-	// Define localized pathnames for important routes
-	pathnames: {
-		"/": {
-			en: "/",
-			it: "/",
-		},
-	},
+	// No `pathnames` map: every route uses the same path in both locales, so the
+	// identity mapping it used to hold did nothing except narrow `Link`'s href
+	// type to "/" — which is why components reached for next/link instead and
+	// dropped the locale prefix on every internal link.
 });
 
 // Export i18n-aware navigation helpers for usage throughout the app

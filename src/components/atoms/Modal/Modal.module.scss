@@ -1,0 +1,70 @@
+.backdrop {
+	position: fixed;
+	inset: 0;
+	z-index: 200;
+	background-color: color-mix(in srgb, var(--palette-neutral-1000) 55%, transparent);
+	transition: opacity 0.2s ease;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		opacity: 0;
+	}
+}
+
+.popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 201;
+	width: min(36rem, calc(100vw - 2rem));
+	max-height: calc(100vh - 4rem);
+	overflow-y: auto;
+	transform: translate(-50%, -50%);
+	transition:
+		opacity 0.2s ease,
+		transform 0.2s ease;
+
+	&[data-starting-style],
+	&[data-ending-style] {
+		opacity: 0;
+		transform: translate(-50%, -48%);
+	}
+
+	&:focus-visible {
+		outline: none;
+	}
+}
+
+.close {
+	position: absolute;
+	top: 1rem;
+	right: 1rem;
+	z-index: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.25rem;
+	height: 2.25rem;
+	border: none;
+	border-radius: 50%;
+	background-color: var(--color-bg-raised);
+	color: var(--color-text);
+	cursor: pointer;
+	transition: background-color 0.15s ease;
+
+	&:hover {
+		background-color: var(--color-bg-sunken);
+	}
+
+	&:focus-visible {
+		outline: 2px solid var(--color-border-focus);
+		outline-offset: 2px;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.backdrop,
+	.popup {
+		transition: none;
+	}
+}

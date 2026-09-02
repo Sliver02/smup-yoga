@@ -80,13 +80,19 @@ utility class already covers it. For colors, always reference semantic tokens
 
 **Compose class names with `classnames`** — never template literals.
 
+**Reuse the `Card` atom instead of hand-rolling a card.** Before adding a
+raised-surface `<div>` with its own padding/radius/shadow classes, check
+`atoms/Card`. Wrap it and pass a `className` for brand-specific overrides
+(radius, shadow, background token) — don't recreate the scaffolding
+(flex layout, base padding, border) that the atom already provides.
+
 ## Atomic design
 
 ```
 atoms/       — no dependencies on other components
 molecules/   — composed of atoms only
 organisms/   — composed of atoms + molecules
-sections/    — page-composition blocks (project tier; e.g. AboutMe, Calendar, Styles, Locations, Contact)
+sections/    — page-composition blocks (project tier; e.g. AboutMe, Styles, InstagramFeed, BookCta, Contact)
 app/[locale] — pages assembled from sections/organisms
 ```
 

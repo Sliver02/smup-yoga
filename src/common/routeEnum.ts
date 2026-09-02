@@ -1,7 +1,8 @@
 export enum RouteEnum {
 	HOME = "/",
-	CALENDAR = "/#calendar",
 	CONTACT = "/#contact",
+	EMAIL = "mailto:smup.yoga@gmail.com",
+	INSTAGRAM = "https://www.instagram.com/smup_yoga/",
 	ABOUT = "/about",
 	CORTINA = "/yoga-cortina",
 	BELLUNO = "/yoga-belluno",
@@ -10,5 +11,6 @@ export enum RouteEnum {
 	YIN = "/yin-yoga",
 	ANUKALANA = "/anukalana-yoga",
 	KID = "/kids-yoga",
+	PILATES = "/pilates",
 	PRIVACY = "/privacy-policy",
 }

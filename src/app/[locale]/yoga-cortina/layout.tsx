@@ -17,8 +17,8 @@ export async function generateMetadata({
 			: "Yoga classes in Cortina d'Ampezzo and Cadore (Vodo, Tai, Calalzo) with Sarah Pompanin. Anukalana Yoga studio classes and summer outdoor sessions in the Dolomites.",
 		openGraph: {
 			title: isItalian
-				? "Yoga a Cortina d'Ampezzo e Cadore — Studio e Outdoor"
-				: "Yoga in Cortina d'Ampezzo and Cadore — Studio and Outdoor",
+				? "Yoga a Cortina d'Ampezzo e Cadore | Studio e Outdoor"
+				: "Yoga in Cortina d'Ampezzo and Cadore | Studio and Outdoor",
 			description: isItalian
 				? "Lezioni di Anukalana Yoga a Cortina e nel Cadore. Sessioni outdoor estive nelle Dolomiti."
 				: "Anukalana Yoga classes in Cortina and Cadore. Summer outdoor sessions in the Dolomites.",

@@ -1,11 +1,17 @@
+"use client";
 import { BaseProps } from "@/common/globalInterfaces";
 import { Breadcrumb, BreadcrumbItem } from "@/components/atoms/Breadcrumb";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
+import { useScroll } from "@/hooks/useScroll";
 import classNames from "classnames";
 import Image, { StaticImageData } from "next/image";
+import { CSSProperties } from "react";
 import defaultBackground from "@public/images/IMG_2617.png";
 import styles from "./Hero.module.scss";
+
+const PARALLAX_FACTOR = 0.05;
+const PARALLAX_MAX_OFFSET = 24;
 
 export interface HeroProps extends BaseProps {
 	title: string;
@@ -23,6 +29,9 @@ export const Hero = ({
 	backgroundImage = defaultBackground,
 	breadcrumbItems,
 }: HeroProps) => {
+	const { scrollY } = useScroll();
+	const parallaxOffset = Math.min(scrollY * PARALLAX_FACTOR, PARALLAX_MAX_OFFSET);
+
 	return (
 		<div
 			className={classNames(className, styles.hero, {
@@ -37,6 +46,7 @@ export const Hero = ({
 				placeholder="blur"
 				priority
 				fill
+				style={{ "--parallax-offset": `${parallaxOffset}px` } as CSSProperties}
 			/>
 
 			<div

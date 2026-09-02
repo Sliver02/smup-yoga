@@ -4,10 +4,12 @@
 	display: flex;
 	position: relative;
 	z-index: 1;
-	margin: 3rem 0;
+	// Was a flat 3rem top and bottom, which double-counted the section padding
+	// above it and left the title floating away from the content it labels.
+	margin: 0 0 clamp(1.25rem, 3vw, 2rem);
 
 	&--center {
-		margin: 3rem auto;
+		margin-inline: auto;
 	}
 
 	.iconContainer {

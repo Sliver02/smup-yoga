@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Personalized private yoga lessons with Sarah Pompanin. In-person (Cortina, Belluno, Cadore) and online. Tailored program for your needs.",
 		openGraph: {
 			title: isItalian
-				? "Lezioni Private — Sessioni personalizzate"
-				: "Private Lessons — Personalized sessions",
+				? "Lezioni Private | Sessioni personalizzate"
+				: "Private Lessons | Personalized sessions",
 			description: isItalian
 				? "Lezioni di yoga personalizzate in presenza e online. Attenzione individuale e programma su misura."
 				: "Personalized yoga lessons in-person and online. Individual attention and tailored program.",
@@ -24,7 +24,7 @@ export async function generateMetadata({
 			siteName: "SMUP Yoga",
 			images: [
 				{
-					url: "https://smupyoga.com/images/PXL_20250101_151738219.jpg",
+					url: "https://smupyoga.com/images/PXL_20260831_085105491.MP.jpg",
 					width: 1200,
 					height: 630,
 					alt: isItalian ? "Lezioni Private" : "Private Lessons",

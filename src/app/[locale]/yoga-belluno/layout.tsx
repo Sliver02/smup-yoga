@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Yoga classes in Belluno with Sarah Pompanin. Anukalana, Vinyasa and Yin Yoga. Weekly studio classes suitable for all levels.",
 		openGraph: {
 			title: isItalian
-				? "Yoga a Belluno — Anukalana, Vinyasa e Yin Yoga"
-				: "Yoga in Belluno — Anukalana, Vinyasa and Yin Yoga",
+				? "Yoga a Belluno | Anukalana, Vinyasa e Yin Yoga"
+				: "Yoga in Belluno | Anukalana, Vinyasa and Yin Yoga",
 			description: isItalian
 				? "Lezioni settimanali di yoga a Belluno e Ponte nelle Alpi con Sarah Pompanin."
 				: "Weekly yoga classes in Belluno and Ponte nelle Alpi with Sarah Pompanin.",

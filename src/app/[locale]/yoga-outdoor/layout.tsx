@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Outdoor yoga sessions in the Dolomites. BAR ALPINO Calalzo, Malga Caseera Razzo, mountain huts. Practice yoga immersed in nature with Sarah Pompanin.",
 		openGraph: {
 			title: isItalian
-				? "Yoga Outdoor — Sessioni estive nelle Dolomiti"
-				: "Outdoor Yoga — Summer sessions in the Dolomites",
+				? "Yoga Outdoor | Sessioni estive nelle Dolomiti"
+				: "Outdoor Yoga | Summer sessions in the Dolomites",
 			description: isItalian
 				? "Pratica yoga all'aria aperta in location suggestive delle Dolomiti. Anukalana, Vinyasa e meditazioni guidate."
 				: "Practice yoga outdoors in stunning Dolomites locations. Anukalana, Vinyasa and guided meditations.",

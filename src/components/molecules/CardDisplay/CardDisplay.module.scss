@@ -1,45 +1,131 @@
-@use "../../../designSystem/variables";
-@use "../../../designSystem/mediaQueries";
-
 .cardDisplay {
-	--width: 300px;
-	--height: 500px;
+	// Full-width in its column — the old fixed `--width` + 2.5rem side padding left
+	// a gutter inside a gutter and shrank the photo on wide screens.
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: inherit;
 
-	position: relative;
-	padding: 1rem;
-	margin: auto;
+	.media {
+		width: 100%;
+		// Ratio instead of a fixed px height: the image tracks its column at every
+		// width rather than letterboxing on mobile and cropping on wide screens.
+		aspect-ratio: 4 / 5;
+		position: relative;
+		overflow: hidden;
 
-	@include mediaQueries.media("lg") {
-		--width: 400px;
-		--height: 460px;
+		// Arch on top only — the brand shape. Percentage radii keep the dome
+		// proportional at any card width. Square bottom so the photo fuses flush
+		// into the note below it, with no border of its own.
+		border-radius: 50% 50% 0 0 / 32% 32% 0 0;
+		background-color: var(--primary-active);
 
-		padding: 0 2.5rem;
+		.image {
+			object-fit: cover;
+		}
 	}
 
-	.imageContainer {
-		width: 100%;
-		height: var(--height);
+	// The card's only surface — carries the elevation and the click affordance so
+	// the arch itself can stay bare and keep its shape.
+	.note {
 		position: relative;
+		flex: 1;
+		display: flex;
+		flex-direction: column;
 
-		.backgroundImage {
-			object-fit: cover;
-			border-radius: var(--width) var(--width) 0 0;
-			overflow: hidden;
+		background-color: var(--surface-card);
+		border-radius: 0 0 1rem 1rem;
+		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+
+		transition: box-shadow 0.35s ease;
+	}
+
+	.body {
+		display: flex;
+		flex-direction: column;
+		flex: 1;
+		gap: 0.5rem;
+		padding: 1.1rem 2.5rem 1.25rem 1.1rem;
+	}
+
+	.title {
+		transition: color 0.25s ease;
+	}
+
+	.description {
+		// Cap the measure so three columns of copy stay scannable.
+		max-width: 46ch;
+		color: var(--neutral-text-light);
+	}
+
+	.badge {
+		position: absolute;
+		top: 0;
+		right: 1.1rem;
+		transform: translateY(-50%);
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 42px;
+		height: 42px;
+		border-radius: 999px;
+
+		background-color: var(--surface-card);
+		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+		color: var(--accent-hover);
+
+		transition:
+			background-color 0.3s ease,
+			color 0.3s ease,
+			transform 0.35s ease;
+
+		svg {
+			transition: transform 0.25s ease;
+		}
+	}
+}
+
+.linked {
+	transition: transform 0.35s ease;
+
+	&:hover,
+	&:focus-visible {
+		color: inherit;
+		transform: translateY(-6px);
+
+		.note {
+			box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
 		}
 
-		.titleContainer {
-			position: absolute;
-			bottom: -1rem;
-			left: -1rem;
-			padding: 0.5rem 1rem;
+		.title {
+			color: var(--accent-hover);
+		}
+
+		.badge {
 			background-color: var(--accent-main);
 			color: var(--neutral-background);
+			transform: translateY(-50%) scale(1.08);
+		}
 
-			z-index: 1;
+		.badge svg {
+			transform: translate(2px, -2px);
 		}
 	}
 
-	.descriptionContainer {
-		margin-top: 2rem;
+	&:focus-visible {
+		outline: 2px solid var(--color-border-focus);
+		outline-offset: 6px;
+		border-radius: 1rem;
+	}
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.linked,
+	.note,
+	.title,
+	.badge,
+	.badge svg {
+		transition: none;
 	}
 }

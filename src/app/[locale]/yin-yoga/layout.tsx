@@ -15,8 +15,8 @@ export async function generateMetadata({
 			: "Yin Yoga in Cortina, Belluno and Cadore. Slow passive postures aided by props. Stimulates connective tissue, increases mobility and encourages deep relaxation.",
 		openGraph: {
 			title: isItalian
-				? "Yin Yoga — Immobilità profonda e rigenerazione"
-				: "Yin Yoga — Deep stillness and restoration",
+				? "Yin Yoga | Immobilità profonda e rigenerazione"
+				: "Yin Yoga | Deep stillness and restoration",
 			description: isItalian
 				? "Lezioni di Yin Yoga nelle Dolomiti con Sarah Pompanin. Pratica rigenerante per corpo e mente."
 				: "Yin Yoga classes in the Dolomites with Sarah Pompanin. Restorative practice for body and mind.",

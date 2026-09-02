@@ -2,11 +2,11 @@
 import { BaseProps } from "@/common/globalInterfaces";
 import { RouteEnum } from "@/common/routeEnum";
 import { LanguageSwitcher } from "@/components/molecules/LanguageSwitcher";
+import { Link } from "@/i18n/routing";
 import classNames from "classnames";
 import { ChevronDown, Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
 import { useState } from "react";
 import { useScroll } from "@/hooks/useScroll";
 import styles from "./Header.module.scss";
@@ -43,6 +43,7 @@ export const Header = ({ className }: HeaderProps) => {
 			children: [
 				{ label: t("anukalana"), url: RouteEnum.ANUKALANA },
 				{ label: t("yin"), url: RouteEnum.YIN },
+				{ label: t("pilates"), url: RouteEnum.PILATES },
 				{ label: t("kids"), url: RouteEnum.KID },
 				{ label: t("outdoor"), url: RouteEnum.OUTDOOR },
 				{ label: t("private"), url: RouteEnum.PRIVATE_LESSONS },
