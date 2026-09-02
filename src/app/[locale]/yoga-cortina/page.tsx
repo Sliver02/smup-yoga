@@ -1,5 +1,6 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
+import { Justify } from "@/components/atoms/Grid/interfaces";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
