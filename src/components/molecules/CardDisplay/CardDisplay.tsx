@@ -37,17 +37,21 @@ export const CardDisplay = ({
 					fill
 				/>
 			</div>
-			<div className={classNames(styles.note)}>
-				{href && cta && (
-					<span className={classNames(styles.badge)} aria-hidden>
-						<ArrowUpRight size={18} />
-					</span>
-				)}
-				<div className={classNames(styles.body)}>
+			{(title || (href && cta)) && (
+				<div className={classNames(styles.titlePlate)}>
 					{title && <h4 className={classNames(styles.title)}>{title}</h4>}
-					{description && <p className={classNames(styles.description)}>{description}</p>}
+					{href && cta && (
+						<span className={classNames(styles.badge)} aria-hidden>
+							<ArrowUpRight size={18} />
+						</span>
+					)}
 				</div>
-			</div>
+			)}
+			{description && (
+				<div className={classNames(styles.body)}>
+					<p className={classNames(styles.description)}>{description}</p>
+				</div>
+			)}
 		</>
 	);
 

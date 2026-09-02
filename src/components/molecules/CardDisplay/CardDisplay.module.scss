@@ -6,6 +6,19 @@
 	height: 100%;
 	color: inherit;
 
+	// The card's only surface: a true white frame (same token every other raised
+	// surface in the design system uses — Card, Modal, Input…) so it actually
+	// reads as a card against the site's peach page background, instead of
+	// blending into it like the old near-invisible --surface-card tint did.
+	background-color: var(--color-bg-raised);
+	border-radius: 1.5rem;
+	padding: 0.6rem 0.6rem 1.5rem;
+	box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+
+	transition:
+		transform 0.35s ease,
+		box-shadow 0.35s ease;
+
 	.media {
 		width: 100%;
 		// Ratio instead of a fixed px height: the image tracks its column at every
@@ -15,8 +28,8 @@
 		overflow: hidden;
 
 		// Arch on top only — the brand shape. Percentage radii keep the dome
-		// proportional at any card width. Square bottom so the photo fuses flush
-		// into the note below it, with no border of its own.
+		// proportional at any card width. Square bottom so the title plate can
+		// overlap its edge flush.
 		border-radius: 50% 50% 0 0 / 32% 32% 0 0;
 		background-color: var(--primary-active);
 
@@ -25,87 +38,90 @@
 		}
 	}
 
-	// The card's only surface — carries the elevation and the click affordance so
-	// the arch itself can stay bare and keep its shape.
-	.note {
+	// Pulled up over the photo's bottom edge with a negative margin — the same
+	// "straddles the seam" idea the old arrow badge used, now carrying the title
+	// itself so the card's name is the thing visibly bridging image and body.
+	.titlePlate {
 		position: relative;
-		flex: 1;
+		z-index: 1;
+		align-self: flex-start;
 		display: flex;
-		flex-direction: column;
+		align-items: center;
+		gap: 0.6rem;
+		max-width: calc(100% - 1rem);
+		margin: -1.75rem 0 0 0.4rem;
+		padding: 0.65rem 1.1rem;
 
-		background-color: var(--surface-card);
-		border-radius: 0 0 1rem 1rem;
-		box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+		border-radius: 0.85rem;
+		background-color: var(--color-bg-raised);
+		box-shadow: 0 6px 16px rgba(0, 0, 0, 0.16);
 
-		transition: box-shadow 0.35s ease;
-	}
-
-	.body {
-		display: flex;
-		flex-direction: column;
-		flex: 1;
-		gap: 0.5rem;
-		padding: 1.1rem 2.5rem 1.25rem 1.1rem;
+		transition: background-color 0.3s ease;
 	}
 
 	.title {
+		margin: 0;
 		transition: color 0.25s ease;
 	}
 
-	.description {
-		// Cap the measure so three columns of copy stay scannable.
-		max-width: 46ch;
-		color: var(--neutral-text-light);
-	}
-
 	.badge {
-		position: absolute;
-		top: 0;
-		right: 1.1rem;
-		transform: translateY(-50%);
-
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 42px;
-		height: 42px;
+		width: 28px;
+		height: 28px;
+		flex-shrink: 0;
 		border-radius: 999px;
 
-		background-color: var(--surface-card);
-		box-shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+		background-color: var(--accent-active);
 		color: var(--accent-hover);
 
 		transition:
 			background-color 0.3s ease,
 			color 0.3s ease,
-			transform 0.35s ease;
+			transform 0.3s ease;
 
 		svg {
 			transition: transform 0.25s ease;
 		}
 	}
+
+	.body {
+		flex: 1;
+		padding: 0.9rem 1.1rem 0;
+	}
+
+	.description {
+		margin: 0;
+		// Cap the measure so three columns of copy stay scannable.
+		max-width: 46ch;
+		color: var(--neutral-text-light);
+	}
 }
 
 .linked {
-	transition: transform 0.35s ease;
+	transition:
+		transform 0.35s ease,
+		box-shadow 0.35s ease;
 
 	&:hover,
 	&:focus-visible {
 		color: inherit;
-		transform: translateY(-6px);
+		transform: translateY(-8px);
+		box-shadow: 0 20px 32px rgba(0, 0, 0, 0.16);
 
-		.note {
-			box-shadow: 0 16px 26px rgba(0, 0, 0, 0.14);
+		.titlePlate {
+			background-color: var(--accent-main);
 		}
 
 		.title {
-			color: var(--accent-hover);
+			color: var(--neutral-background);
 		}
 
 		.badge {
-			background-color: var(--accent-main);
-			color: var(--neutral-background);
-			transform: translateY(-50%) scale(1.08);
+			background-color: var(--neutral-background);
+			color: var(--accent-hover);
+			transform: scale(1.08);
 		}
 
 		.badge svg {
@@ -116,13 +132,13 @@
 	&:focus-visible {
 		outline: 2px solid var(--color-border-focus);
 		outline-offset: 6px;
-		border-radius: 1rem;
+		border-radius: 1.5rem;
 	}
 }
 
 @media (prefers-reduced-motion: reduce) {
 	.linked,
-	.note,
+	.titlePlate,
 	.title,
 	.badge,
 	.badge svg {
