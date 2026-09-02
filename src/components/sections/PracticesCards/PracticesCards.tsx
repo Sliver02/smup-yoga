@@ -8,12 +8,12 @@ import { Section } from "@/components/organisms/Section";
 import classNames from "classnames";
 import { useTranslations } from "next-intl";
 import { StaticImageData } from "next/image";
-import anukalanaImage from "@public/images/PXL_20250823_075608610.jpg";
+import anukalanaImage from "@public/images/PXL_20260701_045401209.jpg";
 import yinImage from "@public/images/PXL_20250601_164142948.MP.jpg";
 import kidsImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
 import outdoorImage from "@public/images/PXL_20250726_110233771.MP.jpg";
-import privateImage from "@public/images/PXL_20250101_151738219.jpg";
-import pilatesImage from "@public/images/PXL_20250823_080536915.jpg";
+import privateImage from "@public/images/PXL_20260831_085105491.MP.jpg";
+import pilatesImage from "@public/images/PXL_20250823_075608610.jpg";
 import styles from "./PracticesCards.module.scss";
 
 interface Practice {
@@ -25,10 +25,10 @@ interface Practice {
 const PRACTICES: Practice[] = [
 	{ key: "anukalana", href: RouteEnum.ANUKALANA, image: anukalanaImage },
 	{ key: "yin", href: RouteEnum.YIN, image: yinImage },
+	{ key: "pilates", href: RouteEnum.PILATES, image: pilatesImage },
 	{ key: "kids", href: RouteEnum.KID, image: kidsImage },
 	{ key: "outdoor", href: RouteEnum.OUTDOOR, image: outdoorImage },
 	{ key: "private", href: RouteEnum.PRIVATE_LESSONS, image: privateImage },
-	{ key: "pilates", href: RouteEnum.PILATES, image: pilatesImage },
 ];
 
 export interface PracticesCardsProps {

@@ -24,6 +24,9 @@ export const Footer = () => {
 								<Link href={RouteEnum.YIN}>{t("yin")}</Link>
 							</li>
 							<li>
+								<Link href={RouteEnum.PILATES}>{t("pilates")}</Link>
+							</li>
+							<li>
 								<Link href={RouteEnum.KID}>{t("kids")}</Link>
 							</li>
 							<li>

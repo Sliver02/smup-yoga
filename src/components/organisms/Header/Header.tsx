@@ -43,8 +43,8 @@ export const Header = ({ className }: HeaderProps) => {
 			children: [
 				{ label: t("anukalana"), url: RouteEnum.ANUKALANA },
 				{ label: t("yin"), url: RouteEnum.YIN },
-				{ label: t("kids"), url: RouteEnum.KID },
 				{ label: t("pilates"), url: RouteEnum.PILATES },
+				{ label: t("kids"), url: RouteEnum.KID },
 				{ label: t("outdoor"), url: RouteEnum.OUTDOOR },
 				{ label: t("private"), url: RouteEnum.PRIVATE_LESSONS },
 			],
