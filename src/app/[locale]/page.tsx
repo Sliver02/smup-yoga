@@ -4,7 +4,6 @@ import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { AboutMe } from "@/components/sections/AboutMe";
 import { BookCta } from "@/components/sections/BookCta";
-import { Contact } from "@/components/sections/Contact";
 import { InstagramFeed } from "@/components/sections/InstagramFeed";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
@@ -20,7 +19,6 @@ const Home = () => {
 			<PracticesCards />
 			<BookCta />
 			{/* <InstagramFeed /> */}
-			<Contact />
 			<Footer />
 		</main>
 	);

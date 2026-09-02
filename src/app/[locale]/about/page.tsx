@@ -8,10 +8,10 @@ import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
-import { Contact } from "@/components/sections/Contact";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import pageImage from "@public/images/PXL_20250112_213040356.jpg";
+import pageImage from "@public/images/PXL_20260702_065829289.jpg";
+import aboutImage from "@public/images/PXL_20260831_083436827.PORTRAIT.jpg";
 import "@/designSystem/utils.scss";
 
 const AboutPage = () => {
@@ -33,7 +33,7 @@ const AboutPage = () => {
 				<Container>
 					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
 						<Col xs={12} md={5}>
-							<CardFrame image={pageImage} alt="Sarah Pompanin" />
+							<CardFrame image={aboutImage} alt="Sarah Pompanin" />
 						</Col>
 						<Col xs={12} md={6} mdOffset={1}>
 							<p className="text--p-lg text--measure">
@@ -104,7 +104,6 @@ const AboutPage = () => {
 
 			<PracticesCards />
 			<BookCta />
-			<Contact />
 			<Footer />
 		</main>
 	);

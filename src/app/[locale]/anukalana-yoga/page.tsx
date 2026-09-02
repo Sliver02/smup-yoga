@@ -1,18 +1,17 @@
 "use client";
 import { RouteEnum } from "@/common/routeEnum";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Align, Justify } from "@/components/atoms/Grid/interfaces";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
-import { Contact } from "@/components/sections/Contact";
+import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
-import pageImage from "@public/images/PXL_20250823_075608610.jpg";
+import pageImage from "@public/images/PXL_20260701_045401209.jpg";
+import introImage from "@public/images/PXL_20260426_083009984.jpg";
 import "@/designSystem/utils.scss";
 
 const AnukalanaPage = () => {
@@ -31,29 +30,14 @@ const AnukalanaPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<Section>
-				<Container>
-					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
-						<Col xs={12} md={5}>
-							<Image
-								src={pageImage}
-								alt="Anukalana Yoga"
-								width={600}
-								height={400}
-								className="responsive-image"
-								placeholder="blur"
-							/>
-						</Col>
-						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-							<p className="text--p-lg text--measure">
-								{t.rich("description_long", {
-									strong: (children) => <strong>{children}</strong>,
-								})}
-							</p>
-						</Col>
-					</Row>
-				</Container>
-			</Section>
+			<PracticeIntro image={introImage} alt="Anukalana Yoga">
+				<p className="text--p-lg text--measure">
+					{t.rich("description_long", {
+						strong: (children) => <strong>{children}</strong>,
+					})}
+				</p>
+				<p className="text--p-lg text--measure">{t("description_long2")}</p>
+			</PracticeIntro>
 
 			<Section backgroundColor="var(--primary-active)">
 				<Container>
@@ -81,7 +65,6 @@ const AnukalanaPage = () => {
 
 			<PracticesCards exclude={RouteEnum.ANUKALANA} title={tClasses("other_title")} />
 			<BookCta />
-			<Contact />
 			<Footer />
 		</main>
 	);

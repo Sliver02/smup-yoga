@@ -1,17 +1,16 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Align, Justify } from "@/components/atoms/Grid/interfaces";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
-import { Contact } from "@/components/sections/Contact";
+import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import pageImage from "@public/images/PXL_20250112_213048967.MP.jpg";
+import introImage from "@public/images/PXL_20260426_083248296.jpg";
 import "@/designSystem/utils.scss";
 
 const YogaBellunoPage = () => {
@@ -30,30 +29,14 @@ const YogaBellunoPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<Section>
-				<Container>
-					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
-						<Col xs={12} md={5}>
-							<Image
-								src={pageImage}
-								alt="Yoga a Belluno"
-								width={600}
-								height={400}
-								className="responsive-image"
-								placeholder="blur"
-							/>
-						</Col>
-						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-							<p className="text--p-lg text--measure">
-								{t.rich("description", {
-									strong: (children) => <strong>{children}</strong>,
-								})}
-							</p>
-							<p className="text--p-lg text--measure">{t("description2")}</p>
-						</Col>
-					</Row>
-				</Container>
-			</Section>
+			<PracticeIntro image={introImage} alt="Yoga a Belluno">
+				<p className="text--p-lg text--measure">
+					{t.rich("description", {
+						strong: (children) => <strong>{children}</strong>,
+					})}
+				</p>
+				<p className="text--p-lg text--measure">{t("description2")}</p>
+			</PracticeIntro>
 
 			<Section backgroundColor="var(--primary-active)">
 				<Container>
@@ -73,7 +56,6 @@ const YogaBellunoPage = () => {
 
 			<PracticesCards />
 			<BookCta image={pageImage} />
-			<Contact />
 			<Footer />
 		</main>
 	);
