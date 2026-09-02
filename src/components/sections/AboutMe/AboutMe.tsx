@@ -8,7 +8,7 @@ import classNames from "classnames";
 import { Instagram, Linkedin } from "@/components/atoms/SocialIcons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import aboutImage from "@public/images/PXL_20250112_213040356.jpg";
+import aboutImage from "@public/images/PXL_20260831_083240581.PORTRAIT.jpg";
 import styles from "./AboutMe.module.scss";
 
 export const AboutMe = () => {
@@ -40,17 +40,23 @@ export const AboutMe = () => {
 											<SectionTitle text={t("title")} />
 											<p className={classNames("text--p-lg")}>
 												{t.rich("description1", {
-													strong: (children) => <strong>{children}</strong>,
+													strong: (children) => (
+														<strong>{children}</strong>
+													),
 												})}
 											</p>
 											<p className={classNames("text--p-lg")}>
 												{t.rich("description2", {
-													strong: (children) => <strong>{children}</strong>,
+													strong: (children) => (
+														<strong>{children}</strong>
+													),
 												})}
 											</p>
 											<p className={classNames("text--p-lg")}>
 												{t.rich("description3", {
-													strong: (children) => <strong>{children}</strong>,
+													strong: (children) => (
+														<strong>{children}</strong>
+													),
 												})}
 											</p>
 										</Col>
@@ -59,16 +65,6 @@ export const AboutMe = () => {
 										<Col>
 											<div className={classNames(styles.socialContainer)}>
 												<Link
-													href={"https://www.instagram.com/smup_yoga/"}
-													target="_blank"
-													aria-description="Instagram Profile"
-												>
-													<Instagram
-														size={32}
-														className={classNames(styles.icon)}
-													/>
-												</Link>
-												<Link
 													href={
 														"https://www.linkedin.com/in/sarah-maria-ursula-pompanin-4492a1100/"
 													}
@@ -76,6 +72,16 @@ export const AboutMe = () => {
 													aria-description="LinkedIn Profile"
 												>
 													<Linkedin
+														size={32}
+														className={classNames(styles.icon)}
+													/>
+												</Link>
+												<Link
+													href={"https://www.instagram.com/smup_yoga/"}
+													target="_blank"
+													aria-description="Instagram Profile"
+												>
+													<Instagram
 														size={32}
 														className={classNames(styles.icon)}
 													/>
