@@ -1,10 +1,13 @@
 .contact {
+	// Wider than the Modal atom's default — the two-column email/name row needs
+	// more room to breathe than a generic modal (e.g. a confirmation dialog) would.
+	width: min(46rem, calc(100vw - 2rem));
+
 	// Brand-specific overrides on top of the shared Card atom (surface="shadow") —
 	// bigger radius and a warm background, matching the rest of the site's rounder,
 	// warmer surfaces. No hover override needed: the atom only applies hover/lift
 	// when it's rendered as a link, and this form card never is.
 	.formCard {
-		margin-top: 1.5rem;
 		// Set via the atom's custom properties, not a `padding` shorthand — the
 		// Card's divider bleeds using --card-padding-x, and a plain override here
 		// would silently break that math.

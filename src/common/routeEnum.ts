@@ -1,8 +1,8 @@
 export enum RouteEnum {
 	HOME = "/",
 	CONTACT = "/#contact",
-	CONTACT_HASH = "#contact",
 	EMAIL = "mailto:smup.yoga@gmail.com",
+	INSTAGRAM = "https://www.instagram.com/smup_yoga/",
 	ABOUT = "/about",
 	CORTINA = "/yoga-cortina",
 	BELLUNO = "/yoga-belluno",

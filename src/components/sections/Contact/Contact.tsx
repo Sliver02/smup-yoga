@@ -3,15 +3,15 @@ import { AlertResponse } from "@/common/globalInterfaces";
 import { Alert } from "@/components/atoms/Alert";
 import { Button } from "@/components/atoms/Button";
 import { Card } from "@/components/atoms/Card";
-import { Col, Container, Row } from "@/components/atoms/Grid";
+import { Col, Row } from "@/components/atoms/Grid";
 import { Input } from "@/components/atoms/Input";
-import { Section } from "@/components/organisms/Section";
+import { Modal } from "@/components/atoms/Modal";
 import emailjs from "@emailjs/browser";
 import { zodResolver } from "@hookform/resolvers/zod";
 import classNames from "classnames";
 import { Send } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useState } from "react";
+import { ReactElement, useState } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -32,7 +32,12 @@ const contactSchema = z.object({
 
 export type ContactFormProps = z.infer<typeof contactSchema>;
 
-export const Contact = () => {
+export interface ContactProps {
+	/** Element that opens the modal, e.g. a `Button` — rendered via Base UI's Dialog.Trigger. */
+	trigger: ReactElement;
+}
+
+export const Contact = ({ trigger }: ContactProps) => {
 	const t = useTranslations("contact");
 
 	const [loading, setLoading] = useState(false);
@@ -90,76 +95,62 @@ export const Contact = () => {
 	};
 
 	return (
-		<div id="contact" className={classNames(styles.contact)}>
-			<Section>
-				<form onSubmit={handleSubmit(submitForm)}>
-					<Container>
-						<Card
-							title={t("title")}
-							subtitle={t("description")}
-							surface="shadow"
-							size="large"
-							className={styles.formCard}
-						>
-							<Row>
-								<Col xs={12} lg={6}>
-									<Input
-										fullWidth
-										type="email"
-										label={t("email")}
-										error={errors.email?.message}
-										{...register("email")}
-									/>
-								</Col>
-								<Col xs={12} lg={6}>
-									<Input
-										fullWidth
-										label={t("name")}
-										error={errors.name?.message}
-										{...register("name")}
-									/>
-								</Col>
-								<Col xs={12}>
-									<Input
-										label={t("message")}
-										rows={8}
-										multiline
-										fullWidth
-										{...register("message")}
-									/>
-								</Col>
-								<Col xs={12}>
-									<Button
-										fullWidth
-										size="large"
-										type="submit"
-										variant="contained"
-										disabled={loading}
-										icon={<Send size={18} />}
-										iconPosition="start"
-									>
-										{loading ? "Loading..." : t("send")}
-									</Button>
-								</Col>
-							</Row>
+		<Modal trigger={trigger} label={t("title")} className={classNames(styles.contact)}>
+			<form onSubmit={handleSubmit(submitForm)}>
+				<Card
+					title={t("title")}
+					subtitle={t("description")}
+					surface="shadow"
+					size="large"
+					className={styles.formCard}
+				>
+					<Row>
+						<Col xs={12} lg={6}>
+							<Input
+								fullWidth
+								type="email"
+								label={t("email")}
+								error={errors.email?.message}
+								{...register("email")}
+							/>
+						</Col>
+						<Col xs={12} lg={6}>
+							<Input
+								fullWidth
+								label={t("name")}
+								error={errors.name?.message}
+								{...register("name")}
+							/>
+						</Col>
+						<Col xs={12}>
+							<Input label={t("message")} rows={8} multiline fullWidth {...register("message")} />
+						</Col>
+						<Col xs={12}>
+							<Button
+								fullWidth
+								size="large"
+								type="submit"
+								variant="contained"
+								disabled={loading}
+								icon={<Send size={18} />}
+								iconPosition="start"
+							>
+								{loading ? "Loading..." : t("send")}
+							</Button>
+						</Col>
+					</Row>
 
-							{alert && (
-								<Row>
-									<Col>
-										<Alert
-											variant="outlined"
-											severity={alert.severity}
-											onClose={() => setAlert(null)}
-										>
-											{alert.text}
-										</Alert>
-									</Col>
-								</Row>
-							)}
-						</Card>
-					</Container>
-				</form>
-			</Section>
-		</div>
+					{alert && (
+						<Row>
+							<Col>
+								<Alert variant="outlined" severity={alert.severity} onClose={() => setAlert(null)}>
+									{alert.text}
+								</Alert>
+							</Col>
+						</Row>
+					)}
+				</Card>
+			</form>
+		</Modal>
 	);
 };

@@ -2,9 +2,11 @@ import { RouteEnum } from "@/common/routeEnum";
 import { Button } from "@/components/atoms/Button";
 import { Col, Container, Row } from "@/components/atoms/Grid";
 import { Justify } from "@/components/atoms/Grid/interfaces";
+import { Instagram } from "@/components/atoms/SocialIcons";
 import { Section } from "@/components/organisms/Section";
+import { Contact } from "@/components/sections/Contact";
 import classNames from "classnames";
-import { Mail, MessageCircle } from "lucide-react";
+import { MessageCircle } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { StaticImageData } from "next/image";
 import defaultImage from "@public/images/IMG_2646.jpg";
@@ -19,7 +21,7 @@ export const BookCta = ({ image = defaultImage }: BookCtaProps) => {
 	const t = useTranslations("cta");
 
 	return (
-		<Section className={classNames(styles.band)} backgroundImage={image}>
+		<Section id="contact" className={classNames(styles.band)} backgroundImage={image}>
 			<Container>
 				<Row xsJustify={Justify.center}>
 					<Col xs={12} lg={8}>
@@ -36,17 +38,19 @@ export const BookCta = ({ image = defaultImage }: BookCtaProps) => {
 							{t("description")}
 						</p>
 						<div className={classNames(styles.actions)}>
-							<a href={RouteEnum.CONTACT_HASH}>
-								<Button size="large" icon={<MessageCircle size={18} />}>
-									{t("primary")}
-								</Button>
-							</a>
-							<a href={RouteEnum.EMAIL}>
+							<Contact
+								trigger={
+									<Button size="large" icon={<MessageCircle size={18} />}>
+										{t("primary")}
+									</Button>
+								}
+							/>
+							<a href={RouteEnum.INSTAGRAM} target="_blank" rel="noopener noreferrer">
 								<Button
 									size="large"
 									variant="outlined"
 									className={classNames(styles.secondaryButton)}
-									icon={<Mail size={18} />}
+									icon={<Instagram size={18} />}
 								>
 									{t("secondary")}
 								</Button>
