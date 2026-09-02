@@ -22,6 +22,15 @@
 		object-fit: cover;
 		object-position: left;
 		opacity: 0.5;
+
+		// Scaled up so the parallax translate never exposes an edge; offset is
+		// set inline from scroll position via the --parallax-offset var.
+		transform: scale(1.06) translateY(var(--parallax-offset, 0px));
+		will-change: transform;
+
+		@media (prefers-reduced-motion: reduce) {
+			transform: none;
+		}
 	}
 
 	.breadcrumbWrapper {
