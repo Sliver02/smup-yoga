@@ -10,8 +10,9 @@ import { BookCta } from "@/components/sections/BookCta";
 import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import pageImage from "@public/images/PXL_20250726_110233771.MP.jpg";
-import introImage from "@public/images/PXL_20260702_065722552.MP.jpg";
+import pageImage from "@public/images/PXL_20260702_065841694.jpg";
+import introImage from "@public/images/PXL_20260702_065841694.jpg";
+import misurinaImage from "@public/images/lago-di-misurina.jpg";
 import "@/designSystem/utils.scss";
 
 const OutdoorYogaPage = () => {
@@ -36,7 +37,24 @@ const OutdoorYogaPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<PracticeIntro image={introImage} alt="Outdoor Yoga">
+			<PracticeIntro
+				image={introImage}
+				alt="Outdoor Yoga"
+				insetImage={misurinaImage}
+				insetAlt="Lago di Misurina, Dolomiti di Cadore"
+				credit={
+					<>
+						Foto: Giampaolo Trapasso, ThomasKloiber,{" "}
+						<a
+							href="https://creativecommons.org/licenses/by-sa/3.0/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							CC BY-SA 3.0
+						</a>
+					</>
+				}
+			>
 				<p className="text--p-lg text--measure">
 					{t.rich("description1", {
 						strong: (children) => <strong>{children}</strong>,

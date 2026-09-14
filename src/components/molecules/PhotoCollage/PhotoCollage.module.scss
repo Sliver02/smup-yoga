@@ -1,0 +1,40 @@
+.collage {
+	--radius: 1.25rem;
+
+	margin: 3rem 1rem;
+	padding: 0 3rem 6rem;
+}
+
+.mainPhoto {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 4 / 3;
+}
+
+.mainImage {
+	object-fit: cover;
+	border-radius: var(--radius);
+}
+
+// Inset hangs past mainPhoto on both the right and bottom edges.
+.insetPhoto {
+	position: absolute;
+	right: -3rem;
+	bottom: -6rem;
+	width: 65%;
+	aspect-ratio: 4 / 3;
+	overflow: hidden;
+	border-radius: var(--radius);
+	box-shadow: 0 10px 24px rgba(0, 0, 0, 0.25);
+	z-index: 2;
+}
+
+.insetPhotoReverse {
+	right: auto;
+	left: -3rem;
+}
+
+.credit {
+	margin-top: 3rem;
+	opacity: 0.65;
+}

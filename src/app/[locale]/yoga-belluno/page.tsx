@@ -11,7 +11,8 @@ import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import pageImage from "@public/images/PXL_20250112_213048967.MP.jpg";
-import introImage from "@public/images/PXL_20260426_083248296.jpg";
+import aerialImage from "@public/images/belluno-aerial.jpg";
+import cathedralImage from "@public/images/belluno-cathedral-center.jpg";
 import "@/designSystem/utils.scss";
 
 const YogaBellunoPage = () => {
@@ -30,7 +31,32 @@ const YogaBellunoPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<PracticeIntro image={introImage} alt="Yoga a Belluno">
+			<PracticeIntro
+				image={aerialImage}
+				alt="Belluno vista dall'alto"
+				insetImage={cathedralImage}
+				insetAlt="Duomo di San Martino, centro storico di Belluno"
+				credit={
+					<>
+						Foto: Jacobus,{" "}
+						<a
+							href="https://creativecommons.org/licenses/by-sa/3.0/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							CC BY-SA 3.0
+						</a>
+						; Loris Tullio Moratti,{" "}
+						<a
+							href="https://creativecommons.org/licenses/by-sa/4.0/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							CC BY-SA 4.0
+						</a>
+					</>
+				}
+			>
 				<p className="text--p-lg text--measure">
 					{t.rich("description", {
 						strong: (children) => <strong>{children}</strong>,

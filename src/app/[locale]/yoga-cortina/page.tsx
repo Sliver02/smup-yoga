@@ -1,16 +1,17 @@
 "use client";
 import { Col, Container, Row } from "@/components/atoms/Grid";
-import { Align, Justify } from "@/components/atoms/Grid/interfaces";
+import { Justify } from "@/components/atoms/Grid/interfaces";
 import { SectionTitle } from "@/components/atoms/SectionTitle";
 import { Footer } from "@/components/organisms/Footer";
 import { Header } from "@/components/organisms/Header";
 import { Hero } from "@/components/organisms/Hero";
 import { Section } from "@/components/organisms/Section";
 import { BookCta } from "@/components/sections/BookCta";
+import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import Image from "next/image";
 import pageImage from "@public/images/lago-centro-cadore-pieve.jpg";
+import townMountainsImage from "@public/images/cortina-town-mountains.jpg";
 import "@/designSystem/utils.scss";
 
 const YogaCortinaPage = () => {
@@ -29,40 +30,39 @@ const YogaCortinaPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<Section>
-				<Container>
-					<Row xsJustify={Justify.center} mdAlign={Align.center} gap="2rem 0">
-						<Col xs={12} md={5}>
-							<Image
-								src={pageImage}
-								alt="Lago di Centro Cadore visto da Pieve di Cadore"
-								width={600}
-								height={400}
-								className="responsive-image"
-								placeholder="blur"
-							/>
-							<p className="text--p-sm">
-								Foto: Luca Mazzucco,{" "}
-								<a
-									href="https://creativecommons.org/licenses/by-sa/4.0/"
-									target="_blank"
-									rel="noopener noreferrer"
-								>
-									CC BY-SA 4.0
-								</a>
-							</p>
-						</Col>
-						<Col xs={12} md={6} mdOffset={1} mdAlignSelf={Align.center}>
-							<p className="text--p-lg text--measure">
-								{t.rich("description", {
-									strong: (children) => <strong>{children}</strong>,
-								})}
-							</p>
-							<p className="text--p-lg text--measure">{t("description2")}</p>
-						</Col>
-					</Row>
-				</Container>
-			</Section>
+			<PracticeIntro
+				image={townMountainsImage}
+				alt="Cortina d'Ampezzo con le Tofane sullo sfondo"
+				insetImage={pageImage}
+				insetAlt="Lago di Centro Cadore visto da Pieve di Cadore"
+				credit={
+					<>
+						Foto: Tiia Monto (Cortina e Tofane),{" "}
+						<a
+							href="https://creativecommons.org/licenses/by-sa/3.0/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							CC BY-SA 3.0
+						</a>
+						; Luca Mazzucco (Lago di Centro Cadore),{" "}
+						<a
+							href="https://creativecommons.org/licenses/by-sa/4.0/"
+							target="_blank"
+							rel="noopener noreferrer"
+						>
+							CC BY-SA 4.0
+						</a>
+					</>
+				}
+			>
+				<p className="text--p-lg text--measure">
+					{t.rich("description", {
+						strong: (children) => <strong>{children}</strong>,
+					})}
+				</p>
+				<p className="text--p-lg text--measure">{t("description2")}</p>
+			</PracticeIntro>
 
 			<Section backgroundColor="var(--primary-active)">
 				<Container>
