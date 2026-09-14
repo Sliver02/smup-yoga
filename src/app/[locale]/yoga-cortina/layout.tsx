@@ -26,10 +26,10 @@ export async function generateMetadata({
 			siteName: "SMUP Yoga",
 			images: [
 				{
-					url: "https://smupyoga.com/images/IMG_2646.jpg",
+					url: "https://smupyoga.com/images/lago-centro-cadore-pieve.jpg",
 					width: 1200,
 					height: 630,
-					alt: "Yoga a Cortina d'Ampezzo",
+					alt: "Lago di Centro Cadore visto da Pieve di Cadore",
 				},
 			],
 			locale: isItalian ? "it_IT" : "en_US",
