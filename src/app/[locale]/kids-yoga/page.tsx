@@ -10,7 +10,8 @@ import { BookCta } from "@/components/sections/BookCta";
 import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import pageImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
+import pageImage from "@public/newImages/photo_4_2025-09-03_09-38-20.jpg";
+import introImage from "@public/images/photo_2_2025-09-03_09-38-20.jpg";
 import "@/designSystem/utils.scss";
 
 const KidsYogaPage = () => {
@@ -29,7 +30,7 @@ const KidsYogaPage = () => {
 				breadcrumbItems={[{ label: tCommon("home"), href: "/" }, { label: t("title") }]}
 			/>
 
-			<PracticeIntro image={pageImage} alt="Kids Yoga">
+			<PracticeIntro image={introImage} alt="Kids Yoga">
 				<p className="text--p-lg text--measure">
 					{t.rich("description_long", {
 						strong: (children) => <strong>{children}</strong>,
@@ -63,7 +64,7 @@ const KidsYogaPage = () => {
 			</Section>
 
 			<PracticesCards exclude={RouteEnum.KID} title={tClasses("other_title")} />
-			<BookCta image={pageImage} />
+			<BookCta image={introImage} />
 			<Footer />
 		</main>
 	);

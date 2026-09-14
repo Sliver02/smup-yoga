@@ -10,7 +10,7 @@ import { BookCta } from "@/components/sections/BookCta";
 import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import pageImage from "@public/images/PXL_20250823_075608610.jpg";
+import pageImage from "@public/images/PXL_20250823_080536915.jpg";
 import introImage from "@public/images/PXL_20250823_075608610.jpg";
 import "@/designSystem/utils.scss";
 

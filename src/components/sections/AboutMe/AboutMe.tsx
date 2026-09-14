@@ -8,7 +8,7 @@ import classNames from "classnames";
 import { Instagram, Linkedin } from "@/components/atoms/SocialIcons";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import aboutImage from "@public/images/PXL_20260831_083240581.PORTRAIT.jpg";
+import aboutImage from "@public/newImages/aboutme_portrait2.jpg";
 import styles from "./AboutMe.module.scss";
 
 export const AboutMe = () => {

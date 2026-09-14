@@ -7,7 +7,7 @@ import { useScroll } from "@/hooks/useScroll";
 import classNames from "classnames";
 import Image, { StaticImageData } from "next/image";
 import { CSSProperties } from "react";
-import defaultBackground from "@public/images/IMG_2617.png";
+import defaultBackground from "@public/newImages/anukalana_card.jpg";
 import styles from "./Hero.module.scss";
 
 const PARALLAX_FACTOR = 0.05;

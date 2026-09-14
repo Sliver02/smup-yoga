@@ -10,8 +10,8 @@ import { BookCta } from "@/components/sections/BookCta";
 import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
-import pageImage from "@public/images/PXL_20250601_164142948.MP.jpg";
-import introImage from "@public/images/PXL_20260719_091513016.jpg";
+import pageImage from "@public/images/PXL_20250726_114904897.MP.jpg";
+import introImage from "@public/images/PXL_20250601_164142948.MP.jpg";
 import "@/designSystem/utils.scss";
 
 const YinYogaPage = () => {

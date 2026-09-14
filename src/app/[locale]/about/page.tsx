@@ -11,7 +11,7 @@ import { BookCta } from "@/components/sections/BookCta";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import pageImage from "@public/images/PXL_20260702_065829289.jpg";
-import aboutImage from "@public/images/PXL_20260831_083436827.PORTRAIT.jpg";
+import aboutImage from "@public/newImages/aboutme_portrait2.jpg";
 import "@/designSystem/utils.scss";
 
 const AboutPage = () => {

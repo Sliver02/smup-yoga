@@ -7,7 +7,7 @@
 	--radius1: 15rem;
 	--radius2: 1rem;
 
-	margin: 3rem 1rem;
+	margin: 3rem auto;
 
 	@include mediaQueries.media("lg") {
 		--width: 400px;

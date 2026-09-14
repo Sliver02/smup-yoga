@@ -11,7 +11,7 @@ import { PracticeIntro } from "@/components/sections/PracticeIntro";
 import { PracticesCards } from "@/components/sections/PracticesCards";
 import { useTranslations } from "next-intl";
 import pageImage from "@public/images/PXL_20260831_085105491.MP.jpg";
-import introImage from "@public/images/PXL_20260831_083240581.PORTRAIT.jpg";
+import introImage from "@public/images/PXL_20260831_085105491.MP.jpg";
 import "@/designSystem/utils.scss";
 
 const PrivateLessonsPage = () => {
