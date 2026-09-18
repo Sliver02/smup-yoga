@@ -186,6 +186,61 @@ a different box than the source aspect ratio (as the class detail images do).
 Images referenced from `openGraph` metadata stay plain absolute URL strings — those are
 consumed by external crawlers, not by `next/image`.
 
+## SEO — metadata, sitemap, robots
+
+SEO handling is **standardized across every project built on this template**. Only the
+content differs between projects; the code that turns content into metadata never does.
+
+| File                                  | Identical in every project?  | Role                                                                                      |
+| ------------------------------------- | ---------------------------- | ----------------------------------------------------------------------------------------- |
+| `src/common/seo.ts`                   | yes — never edit per project | `pageMetadata`, `pageMeta`, `rootMeta`, `pageUrl`, `localeUrls`, `indexableRoutes`        |
+| `src/app/sitemap.ts`, `robots.ts`     | yes                          | Generated from `pages` × locales; robots points at the sitemap                            |
+| `src/app/[locale]/<route>/layout.tsx` | same shape                   | One line: `export const generateMetadata = pageMeta(RouteEnum.X)`                         |
+| `src/common/seoContent.ts`            | **no — project content**     | `SITE_URL`, `SITE_NAME`, `OG_LOCALE`, `PageRoute`, `pages` (all copy), `structuredData()` |
+
+`seoContent.ts` holds a `Record<PageRoute, Page>`: for every route, a title + description
+per locale (optional `og` / `twitter` overrides), one OG image (a file in `public/images`),
+and an optional `noindex`. TypeScript fails the build when a route or a locale has no copy.
+
+Wiring:
+
+- Root `[locale]/layout.tsx`: `export const generateMetadata = rootMeta;` plus a
+  `<script type="application/ld+json">` in `<head>` rendering `structuredData(locale)`.
+  `rootMeta` uses the `HOME` entry and adds the `%s | SITE_NAME` title template.
+- Every other route gets a `layout.tsx` that only exports `generateMetadata` and renders
+  `children`. A layout works for `"use client"` pages too, which cannot export metadata.
+
+Rules the handling enforces (do not work around them):
+
+- URLs have **no trailing slash**: Next 308-redirects `/x/` to `/x`, so a canonical with a
+  slash would point at a redirect. Always build URLs with `pageUrl()`.
+- Canonical, hreflang alternates and sitemap entries are the same URLs. `x-default` is the
+  default locale's URL.
+- The sitemap is generated from `pages`, minus `noindex` routes. Never hand-write
+  `public/sitemap.xml` or `public/robots.txt` — they would conflict with the route handlers.
+- Never hard-code `canonical` or `<link rel="alternate">` in a layout: a parent's canonical
+  is inherited by every child that does not override it, so it would point every page at
+  the homepage.
+- Copy limits: title ≤ ~50 chars (`SITE_NAME` is appended), description ≤ ~160, OG image
+  1200×630 and under 5 MB (X rejects larger).
+- `structuredData()` only carries confirmed facts. Wrong data is worse than none.
+
+Adding a page:
+
+1. Add the `RouteEnum` entry (see `src/common/routeEnum.ts`).
+2. Add its `pages` entry in `seoContent.ts`, in every locale.
+3. Add the route's `layout.tsx` with `pageMeta(RouteEnum.X)`.
+
+It joins the sitemap automatically. Adding a locale: add its copy to every `pages` entry and
+its `og:locale` to `OG_LOCALE`.
+
+Starting a project from the template: set `SITE_URL` and `SITE_NAME`, add the OG image,
+replace the placeholder copy, and adapt `structuredData()` (e.g. a `LocalBusiness` subtype).
+
+Improving the handling: change `seo.ts`, `sitemap.ts` and `robots.ts` in
+`nextjs-simple-template` first, then copy them verbatim into each project so they stay
+byte-identical.
+
 ## Marquee
 
 Scrolling text bands use `react-fast-marquee` (see `molecules/InfiniteText`), separated
